@@ -10,94 +10,23 @@ const ProductCardList = ({ data }) => {
                 <div className="container-fluid">
                     <div className="box">
                         <div className="container-bx">
-                            <div className="product-item">
-                                <img src='https://i.ibb.co/dLP4swS/Adobe-Scan-17-Jul-2024-6.jpg' />
-                                <h2>Mandala Art</h2>
-                                <p>Description : art</p>
-                                <p>Price : <span className="price-tag">100</span></p>
-                                <p>rating : 1</p>
-                                <p>stockStatus: <span>On Stock</span></p>
-                                <p>Brand Name : PragyaAnirudh</p>
 
-                            </div>
+                            {
+                                data.length !== 0 && data.map((item, index) => {
+                                    return (
+                                        <div className="product-item">
+                                            <img src={item?.image}alt="Mydrawing-Image" />
+                                            <h2>Mandala Art</h2>
+                                            <p>Description : {item?.description}</p>
+                                            <p>Price : <span className="price-tag">{item?.price}</span></p>
+                                            <p>rating : {item?.rating}</p>
+                                            <p>stockStatus: <span>{item?.stockStatus}</span></p>
+                                            <p>Brand Name : {item?.brand}</p>
 
-                            <div className="product-item">
-                                <img src='https://i.ibb.co/dLP4swS/Adobe-Scan-17-Jul-2024-6.jpg' />
-                                <h2>Mandala Art</h2>
-                                <p>Description : art</p>
-                                <p>Price : <span className="price-tag">100</span></p>
-                                <p>rating : 1</p>
-                                <p>stockStatus: <span>On Stock</span></p>
-                                <p>Brand Name : PragyaAnirudh</p>
-
-                            </div>
-
-                            <div className="product-item">
-                                <img src='https://i.ibb.co/dLP4swS/Adobe-Scan-17-Jul-2024-6.jpg' />
-                                <h2>Mandala Art</h2>
-                                <p>Description : art</p>
-                                <p>Price : <span className="price-tag">100</span></p>
-                                <p>rating : 1</p>
-                                <p>stockStatus: <span>On Stock</span></p>
-                                <p>Brand Name : PragyaAnirudh</p>
-
-                            </div>
-
-                            <div className="product-item">
-                                <img src='https://i.ibb.co/dLP4swS/Adobe-Scan-17-Jul-2024-6.jpg' />
-                                <h2>Mandala Art</h2>
-                                <p>Description : art</p>
-                                <p>Price : <span className="price-tag">100</span></p>
-                                <p>rating : 1</p>
-                                <p>stockStatus: <span>On Stock</span></p>
-                                <p>Brand Name : PragyaAnirudh</p>
-
-                            </div>
-
-                            <div className="product-item">
-                                <img src='https://i.ibb.co/dLP4swS/Adobe-Scan-17-Jul-2024-6.jpg' />
-                                <h2>Mandala Art</h2>
-                                <p>Description : art</p>
-                                <p>Price : <span className="price-tag">100</span></p>
-                                <p>rating : 1</p>
-                                <p>stockStatus: <span>On Stock</span></p>
-                                <p>Brand Name : PragyaAnirudh</p>
-
-                            </div>
-
-                            <div className="product-item">
-                                <img src='https://i.ibb.co/dLP4swS/Adobe-Scan-17-Jul-2024-6.jpg' />
-                                <h2>Mandala Art</h2>
-                                <p>Description : art</p>
-                                <p>Price : <span className="price-tag">100</span></p>
-                                <p>rating : 1</p>
-                                <p>stockStatus: <span>On Stock</span></p>
-                                <p>Brand Name : PragyaAnirudh</p>
-
-                            </div>
-
-
-                            <div className="product-item">
-                                <img src='https://i.ibb.co/dLP4swS/Adobe-Scan-17-Jul-2024-6.jpg' />
-                                <h2>Mandala Art</h2>
-                                <p>Description : art</p>
-                                <p>Price : <span className="price-tag">100</span></p>
-                                <p>rating : 1</p>
-                                <p>stockStatus: <span>On Stock</span></p>
-                                <p>Brand Name : PragyaAnirudh</p>
-
-                            </div>
-
-                            <div className="product-item">
-                                <img src='https://i.ibb.co/dLP4swS/Adobe-Scan-17-Jul-2024-6.jpg' />
-                                <h2>Mandala Art</h2>
-                                <p>Description : art</p>
-                                <p>Price : <span className="price-tag">100</span></p>
-                                <p>rating : 1</p>
-                                <p>stockStatus: <span>On Stock</span></p>
-                                <p>Brand Name : PragyaAnirudh</p>
-
-                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
 
                         </div>
 
