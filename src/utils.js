@@ -167,20 +167,6 @@ const DesignDummyData = [
             { user: "Bob", comment: "Good value for money.", rating: 4 }
         ]
     },
-    {
-        id: 13,
-        name: 'Mandala Art',
-        image: "https://i.ibb.co/2cY0m3Z/Adobe-Scan-17-Jul-2024-9.jpg",
-        description: 'Latest Design',
-        price: 450,
-        rating: 4.9,
-        stockStatus: 'In Stock',
-        brand: 'PragyAni',
-        reviews: [
-            { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
-            { user: "Bob", comment: "Good value for money.", rating: 4 }
-        ]
-    }
 
 ]
 export default DesignDummyData;
