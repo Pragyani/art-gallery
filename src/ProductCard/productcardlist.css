@@ -1,0 +1,49 @@
+.item {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 50px;
+    height: auto;
+}
+
+.container-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.container-fluid .box {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.container-fluid .container-bx {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-fluid .product-item {
+    width: 18%;
+    border: 1px #808080 solid;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+
+.container-fluid .product-item img {
+    width: 100%;
+    height: 65%;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.container-fluid .product-item h2 {
+    color: aliceblue;
+    font-family: "Quicksand", sans-serif;
+    font-size: 19px;
+    font-weight: 350;
+    cursor: pointer;
+
+}
