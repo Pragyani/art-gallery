@@ -1,0 +1,31 @@
+.header-container {
+    width: 100%;
+}
+.content-header {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.content-header .heading-image {
+    width: 100%;
+}
+
+.heading-image img {
+    width: 100%;
+    height: 40pc;
+    opacity: .3;
+}
+
+.heading-image h1 {
+    position: absolute;
+    left: -3px;
+    right: 30px;
+    top: 179px;
+    text-align: center;
+    font-size: 60px;
+    word-spacing: 10px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    opacity: .7;
+}
