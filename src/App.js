@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/home';
 import About from './pages/About/About';
 import ProductDetail from './ProductDetails/productDetail';
+import Header from './header/header';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
       <BrowserRouter>
         <NavBAr />
         <Routes>
+          <Route path='/' element={<Header />} />
           <Route path='/' element={<Home data={productData} />} />
           <Route path='/about' element={<About />} />
           <Route path='/productDetail' element={<ProductDetail />} />
