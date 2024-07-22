@@ -1,5 +1,6 @@
 import React from "react";
 import './nav.css';
+import { Link } from "react-router-dom";
 import YoutubeSearchedForIcon from '@mui/icons-material/YoutubeSearchedFor';
 
 const NavBAr = () => {
@@ -15,10 +16,11 @@ const NavBAr = () => {
 
                     <div className="nav-p2">
                         <ul className="ul-list">
-                            <li>Home</li>
-                            <li>Blog</li>
-                            <li>About</li>
-                            <li>Contact </li>
+                         <Link to={'/'}><li>Home</li></Link>
+                         <Link to={'/about'}><li>About</li></Link>
+                          <li>Support</li>
+                          <li>FAQ</li>
+                          <li>Account</li>
                         </ul>
 
                     </div>
