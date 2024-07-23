@@ -29,8 +29,8 @@ function App() {
       <BrowserRouter>
         <NavBAr />
         <Routes>
-          <Route path='/' element={<Header />} />
-          <Route path='/' element={<Home data={productData} />} />
+          <Route path='/' element={<Header data={productData} />} />
+          <Route path='/' element={<Home/>} />
           <Route path='/about' element={<About />} />
           <Route path='/productDetail' element={<ProductDetail />} />
         </Routes>
