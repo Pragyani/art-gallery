@@ -1,33 +1,31 @@
 import React from "react";
 import './nav.css';
-import { Link } from "react-router-dom";
-import YoutubeSearchedForIcon from '@mui/icons-material/YoutubeSearchedFor';
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import HdrStrongRoundedIcon from '@mui/icons-material/HdrStrongRounded';
+import CallRoundedIcon from '@mui/icons-material/CallRounded';
+import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
 
 const NavBAr = () => {
     return (
         <>
-            <div className="collective-nav">
-                <div className="navigate-flex">
+            <div className="NavigationBar">
+                <div className="navBar">
                     <div className="nav-p1">
-                        <h3>PragyAnirudh</h3>
-                        <input type="text" placeholder="Search of New Design" /> <YoutubeSearchedForIcon className="searchIcon" />
-
+                        <h1>LOGO</h1>
                     </div>
-
                     <div className="nav-p2">
-                        <ul className="ul-list">
-                         <Link to={'/'}><li>Home</li></Link>
-                         <Link to={'/about'}><li>About</li></Link>
-                          <li>Support</li>
-                          <li>FAQ</li>
-                          <li>Account</li>
+                        <ul className="nav-ul">
+                            <li className="ul-li"><HdrStrongRoundedIcon className="material-icons"/>About us</li>
+                            <li className="ul-li"><HomeRoundedIcon className="material-icons"/>Home</li>
+                            <li className="ul-li"><CallRoundedIcon className="material-icons"/>Contact Us</li>
+                            <li className="ul-li"><SettingsSuggestRoundedIcon className="material-icons"/>Setting</li>
+
                         </ul>
-
                     </div>
-
                 </div>
             </div>
-            <hr />
+
+            <hr/>
         </>
     )
 }
