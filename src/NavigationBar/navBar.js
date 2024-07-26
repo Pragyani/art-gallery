@@ -4,6 +4,7 @@ import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import HdrStrongRoundedIcon from '@mui/icons-material/HdrStrongRounded';
 import CallRoundedIcon from '@mui/icons-material/CallRounded';
 import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
+import Header from "../header/header";
 
 const NavBAr = () => {
     return (
@@ -26,6 +27,7 @@ const NavBAr = () => {
             </div>
 
             <hr/>
+            <Header/>
         </>
     )
 }
