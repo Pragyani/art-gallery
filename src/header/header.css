@@ -1,31 +1,81 @@
-.header-container {
-    width: 100%;
-}
-.content-header {
+.header {
     width: 100%;
     height: auto;
-    position: relative;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-.content-header .heading-image {
+.header .container-header {
     width: 100%;
+    height: auto;
+    padding: 20px;
 }
 
-.heading-image img {
+.header .container-header .content-fluid {
+    display: flex;
     width: 100%;
-    height: 40pc;
-    opacity: .3;
+
 }
 
-.heading-image h1 {
-    position: absolute;
-    left: -3px;
-    right: 30px;
-    top: 179px;
+.header .container-header .content-fluid .content-p1 {
+    width: 50%;
+    padding: 50px;
     text-align: center;
-    font-size: 60px;
-    word-spacing: 10px;
-    font-weight: 200;
-    letter-spacing: 2px;
-    opacity: .7;
+    padding-left: 20px;
+    padding-top:100px;
+}
+
+
+.container-header .content-fluid .content-p1 h1 {
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 79px;
+    font-weight: 300;
+    padding-bottom: 30px;
+    margin-top: 40px;
+}
+
+.container-header .content-fluid .content-p1 h4{
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 85px;
+    margin-top: 38px;
+    font-weight: 450;
+    text-transform: capitalize;
+    text-align: start;
+    padding-left: 32px;
+}
+
+.container-header .content-fluid .content-p1 p{
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:30px;
+    font-weight: 300;
+    margin-top: 40px;
+    padding-left: 30px;
+    text-align: start;
+}
+
+.header .container-header .content-fluid .content-p2 {
+    width: 50%;
+    padding-right: 12px;
+    text-align: end;
+}
+
+.content-p2 img {
+    width: 74%;
+    border-radius: 35px;
+    margin-right: 32px;
+}
+
+.cntent-img{
+    padding-right: 55px;
+}
+
+.container-header .content-fluid .content-p1 .para{
+    font-size: smaller;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: start;
+    line-height: 26px;
 }
