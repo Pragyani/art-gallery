@@ -53,6 +53,7 @@ hr{
     transition: all  0.3s ease-in-out;
     border: none;
     padding: 10px;
+    color: black;
     letter-spacing: 1.5px;
     border-radius: 30px;
     font-size: 15px;
@@ -61,6 +62,12 @@ hr{
     padding-left: 60px;
     padding-right:25px;
     font-weight:500;
+}
+
+
+.nav-p2 .nav-ul a{
+    text-decoration: none;
+    list-style: none;
 }
 
 .nav-p2 .nav-ul .ul-li:hover{
