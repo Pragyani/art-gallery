@@ -27,12 +27,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <NavBAr />
+      <NavBAr/>
         <Routes>
-          <Route path='/' element={<Header data={productData} />} />
-          <Route path='/' element={<Home/>} />
+          <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/productDetail' element={<ProductDetail />} />
         </Routes>
       </BrowserRouter>
     </>
