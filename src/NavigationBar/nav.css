@@ -15,6 +15,16 @@
     width: 50%;
     padding: 25px;
 }
+
+.navBar .nav-p1 h1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 8.5px;
+    margin-left: 20px;
+    letter-spacing: 0.7px;
+    font-weight: 350;
+    font-size:38px;
+}
+
 .navBar .nav-p2 {
   width: 50%;
   padding: 25px;
@@ -23,43 +33,45 @@
 .navBar .nav-p2 .nav-ul{
     width: 100%;
     display: flex;
-    margin-left:20%;
+    margin-left:30%;
     margin-top: 8px;
-    /* justify-content: space-evenly; */
     list-style: none;
 }
 
 hr{
-    color:#eae3da;
+    color:#eae3dac4;
     border: 1px solid;
+    margin-left: 19px;
 }
 
 .nav-p2 .nav-ul .ul-li{
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 0px;
     margin-right: 20px;
     transition: all  0.3s ease-in-out;
-    border: 1px solid rgba(0, 0, 0, 0.327);
+    border: none;
     padding: 10px;
     letter-spacing: 1.5px;
     border-radius: 30px;
     font-size: 15px;
     margin-bottom: 14px;
     position: relative;
-    padding-left: 50px;
-    padding-right:15px;
+    padding-left: 60px;
+    padding-right:25px;
     font-weight:500;
 }
 
 .nav-p2 .nav-ul .ul-li:hover{
-    background-color: #DFD3C3;
-    border-color: #D0B8A8;
-    box-shadow: 3px 3px 7px #D0B8A8;
+    background-color: #6B8A7A;
+    border-color: #6B8A7A;
+    box-shadow: 3px 3px 7px #6B8A7A;
 }
+
 .nav-p2 .nav-ul .ul-li .material-icons{
     width: 30px;
-    /* border: 1px solid red; */
     position: absolute;
     left:10px;
     bottom: 8px;
+    font-weight: lighter;
+    font-size: 22px;
 }
