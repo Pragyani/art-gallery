@@ -1,0 +1,90 @@
+.container {
+    width: 20%;
+    /* border:2px solid black; */
+    padding: 20px;
+    height: auto;
+}
+
+.container .content {
+    width: 100%;
+    border: 0.5px solid beige;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.container .content:hover{
+    box-shadow: 2px 4px 7px beige;
+}
+
+.container .content .content-fluid {
+    display: block;
+    width: 100%;
+}
+
+.content-fluid .sidebar {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.content-fluid .sidebar .side-heading {
+    text-align: center;
+    margin-top: 22px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 12px;
+    border: 0.5px dotted beige;
+    font-size: 28px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 480;
+    color: #1A3636;
+    margin-bottom: 33px;
+}
+
+.content-fluid .sidebar .side-heading:hover{
+    border: 1px solid beige;
+}
+
+.content-fluid .sidebar .category-list{
+    width: 100%;
+    border: 1px solid beige;
+   padding: 20px;
+   height: auto;
+   border-radius: 15px;
+   margin-bottom: 30px;
+}
+
+.content-fluid .sidebar .category-list:hover{
+    box-shadow: 2px 2px 4px beige;
+}
+
+.content-fluid .sidebar .category-list ul{
+    list-style: none;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: capitalize;
+}
+
+.content-fluid .sidebar .category-list ul li{
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 30px;
+    border: beige 1px solid;
+    margin-top: 9px ;
+    margin-bottom: 9px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.content-fluid .sidebar .category-list ul li:hover{
+    border: #1A3636 1px solid;
+    color: beige;
+    /* font-size: 21px; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul li .forward-icon{
+    text-align: end;
+    cursor: pointer;
+}
