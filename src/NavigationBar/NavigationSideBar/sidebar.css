@@ -1,6 +1,5 @@
 .container {
-    width: 20%;
-    /* border:2px solid black; */
+    width: 28.5%;
     padding: 20px;
     height: auto;
 }
@@ -13,7 +12,7 @@
     border-radius: 20px;
 }
 
-.container .content:hover{
+.container .content:hover {
     box-shadow: 2px 4px 7px beige;
 }
 
@@ -42,49 +41,49 @@
     margin-bottom: 33px;
 }
 
-.content-fluid .sidebar .side-heading:hover{
+.content-fluid .sidebar .side-heading:hover {
     border: 1px solid beige;
 }
 
-.content-fluid .sidebar .category-list{
+.content-fluid .sidebar .category-list {
     width: 100%;
     border: 1px solid beige;
-   padding: 20px;
-   height: auto;
-   border-radius: 15px;
-   margin-bottom: 30px;
+    padding: 20px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 30px;
 }
 
-.content-fluid .sidebar .category-list:hover{
+.content-fluid .sidebar .category-list:hover {
     box-shadow: 2px 2px 4px beige;
 }
 
-.content-fluid .sidebar .category-list ul{
+.content-fluid .sidebar .category-list ul {
     list-style: none;
     width: 100%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-transform: capitalize;
 }
 
-.content-fluid .sidebar .category-list ul li{
+.content-fluid .sidebar .category-list ul li {
     font-size: 20px;
     padding: 10px;
     padding-left: 30px;
     border: beige 1px solid;
-    margin-top: 9px ;
-    margin-bottom: 9px;
+    margin-top: 11px;
+    margin-bottom: 11px;
     border-radius: 12px;
     cursor: pointer;
 }
 
-.content-fluid .sidebar .category-list ul li:hover{
+.content-fluid .sidebar .category-list ul li:hover {
     border: #1A3636 1px solid;
     color: beige;
     /* font-size: 21px; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-ul li .forward-icon{
+ul li .forward-icon {
     text-align: end;
     cursor: pointer;
 }
