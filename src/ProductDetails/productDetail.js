@@ -1,39 +1,53 @@
 import React from "react";
-import './productDetail.css'
+import './productDetail.css';
+import Rating from '@mui/material/Rating';
 
 const ProductDetail = ({ Products }) => {
-    // console.log('pragyaProductDetails',Products)  // working console
+
     return (
         <>
-            <div className="heading">
-                <h1>OUR PRODUCTS</h1>
 
-            </div>
+            <div className="detail-container">
+                <div className="container-box">
+                    <div className="heading">
+                        <h2>POSTERS</h2>
+                    </div>
 
-            <div className="productDetail-page">
-                <div className="prodPage">
-                    <div className="content-containerflex">
+                    <div className="re-container">
+                        <div className="product-fluid">
+                            {
+                                Products.length !== 0 && Products.map((item) => {
+                                    return (
+                                        <div className="products">
+                                            <div className="product-box">
+                                                <div className="product-img">
+                                                    <img src={item.image} alt="mS" />
+                                                </div>
+                                            </div>
 
-                        <div className="product-cont">
-                            <div className="product-boxf">
-                                <div className="box-image">
-                                    <img src="https://i.ibb.co/yFN9S23/Adobe-Scan-17-Jul-2024-2.jpg" alt="myProductImage" />
-                                </div>
+                                            <div className="product-breif">
+                                                <div className="info-prod">
+                                                    <div className="info-data">
+                                                        <h4>Desgined By Pragya</h4>
+                                                        <h5 className="price-tag">Price - <span>$126</span></h5>
+                                                        <h5>Rating -<Rating name="customized-10" defaultValue={5} max={5} className="rating-crd" /></h5>
+                                                        <p>StockStatus - <h6>Avalible</h6> </p>
+                                                        <h4>BrandName - <b>PragyAni</b></h4>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                <div className="box-content">
-                                    <h1>Pragya Drawing</h1>
-                                    <span>Price : <h3>12$</h3></span>
-                                    <h5>STOCK STAUS : Out</h5>
-                                    <h5>Brand Name : Art </h5>
-                                    <h5>Rating : 5</h5>
-                                </div>
-                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
 
+
+
                 </div>
             </div>
-
 
             <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />
         </>
