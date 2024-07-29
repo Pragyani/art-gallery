@@ -14,7 +14,6 @@ const SideBar = () => {
                             <div className="category-list">
                                 <ul>
                                     <li>Latest Posters <ArrowRightRoundedIcon className="forward-icon"/></li>
-                                    <li>Top Most Like Poster <ArrowRightRoundedIcon className="forward-icon"/></li>
                                     <li>Explore Your Feed <ArrowRightRoundedIcon className="forward-icon"/></li>
                                     <li>Your Account <ArrowRightRoundedIcon className="forward-icon"/></li>
                                     <li>Home Page </li>
