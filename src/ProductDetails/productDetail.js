@@ -10,7 +10,8 @@ const ProductDetail = ({ Products }) => {
             <div className="detail-container">
                 <div className="container-box">
                     <div className="heading">
-                        <h2>POSTERS</h2>
+                        <h2>Our Products</h2>
+                        <hr className="hr-line"/>
                     </div>
 
                     <div className="re-container">
@@ -29,10 +30,11 @@ const ProductDetail = ({ Products }) => {
                                                 <div className="info-prod">
                                                     <div className="info-data">
                                                         <h4>Desgined By Pragya</h4>
-                                                        <h5 className="price-tag">Price - <span>$126</span></h5>
-                                                        <h5>Rating -<Rating name="customized-10" defaultValue={5} max={5} className="rating-crd" /></h5>
-                                                        <p>StockStatus - <h6>Avalible</h6> </p>
-                                                        <h4>BrandName - <b>PragyAni</b></h4>
+                                                        <h5 className="name">{item.name}</h5>
+                                                        <h5 className="price-tag">Price - <span>{item?.price}</span></h5>
+                                                        <h5>Rating -<Rating name="customized-10" defaultValue={item?.rating} max={5} className="rating-crd" /></h5>
+                                                        <p>StockStatus - <h6>{item?.stockStatus}</h6> </p>
+                                                        <h4>Brand Name - <b>{item?.brand}</b></h4>
                                                     </div>
                                                 </div>
                                             </div>
@@ -41,11 +43,9 @@ const ProductDetail = ({ Products }) => {
                                     )
                                 })
                             }
+                            
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
 
