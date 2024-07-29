@@ -5,13 +5,12 @@ import NavBAr from './NavigationBar/navBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/home';
 import About from './pages/About/About';
-import ProductDetail from './ProductDetails/productDetail';
-import Header from './header/header';
 
 function App() {
 
   const [productData, setProductData] = useState([]);
 
+  // console.log('poroductItem',productData) //working console
   useEffect(() => {
     getProductData()
   }, [])
@@ -29,7 +28,7 @@ function App() {
       <BrowserRouter>
       <NavBAr/>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home data={productData} />} />
           <Route path='/about' element={<About />} />
         </Routes>
       </BrowserRouter>
