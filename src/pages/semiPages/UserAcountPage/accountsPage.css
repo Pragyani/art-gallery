@@ -1,0 +1,26 @@
+.slick-container{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.slick-container .slick-content{
+    width: 100%;
+}
+
+.slick-container .slick-content .account-section{
+    width: 100%;
+    height:  auto;
+    margin: 20px;
+    display: flex;
+}
+
+.slick-container .slick-content .account-section .page-image{
+    width: 100%;
+}
+
+.slick-container .slick-content .account-section .page-image img{
+    width:40%;
+    height: 54pc;
+    border-radius: 22px;
+}
