@@ -40,10 +40,11 @@
 }
 
 hr {
-    color: #eae3dac4;
+    color: #eae3dac7;
     border: 1px solid;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 40px;
 }
 
 .nav-p2 .nav-ul .ul-li {
