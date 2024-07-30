@@ -5,6 +5,7 @@ import NavBAr from './NavigationBar/navBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/home';
 import About from './pages/About/About';
+import AccountPage from './pages/semiPages/UserAcountPage/AccountPage';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home data={productData} />} />
           <Route path='/about' element={<About />} />
+          <Route path='/your-account' element={<AccountPage/>}/>
         </Routes>
       </BrowserRouter>
     </>
