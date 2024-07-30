@@ -75,12 +75,13 @@
 .content-fluid .sidebar .category-list ul li {
     font-size: 20px;
     padding: 10px;
-    padding-left: 30px;
+    padding-left: 35px;
     border: beige 1px solid;
     margin-top: 11px;
     margin-bottom: 11px;
     border-radius: 12px;
     cursor: pointer;
+    position: relative;
 }
 
 .content-fluid .sidebar .category-list ul li:hover {
@@ -93,4 +94,12 @@
 ul li .forward-icon {
     text-align: end;
     cursor: pointer;
+}
+
+.category-list ul li .user-prof-i{
+    position: relative;
+    right:0px;
+    top: 3px;
+    left: 10px;
+   
 }
