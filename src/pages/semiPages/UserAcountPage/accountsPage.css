@@ -1,26 +1,76 @@
-.slick-container{
+.acount-cl {
+    /* height: auto; */
+    padding: 22px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    width: 100%;
+}
+
+.acount-cl .cl-container {
+    width: 100%;
+    /* border: 2px solid black; */
+}
+
+.acount-cl .cl-container .boxes-ro {
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    border: 1px solid red;
+    /* height: 70%; */
+    padding: 3rem;
+}
+
+.boxes-ro .colum {
+    width: 100%;
+
+}
+
+.colum .col-lg {
+    width: 44%;
+    /* border: 1px solid black; */
+    height: 14pc;
+    margin-left: 25%;
+    /* margin-bottom: 10px; */
+}
+
+.colum .col-lg img {
+    width: 80%;
+    height: 12pc;
+    padding-left: 30px;
+}
+
+.boxes-ro .colum .content-field {
+    width: 100%;
+    margin-top: 0px;
+    height: auto;
+    padding: 12px;
+}
+
+.boxes-ro .colum .content-field .input-contaainer {
+    width: 100%;
+}
+
+.input-contaainer .text-flied h3 {
     width: 100%;
     height: auto;
-    padding: 20px;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 33px;
+    padding-left: 90px;
+    text-transform: capitalize;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
-.slick-container .slick-content{
+.input-contaainer .text-flied h4 {
+    margin-top: 28px;
+    padding-left: 200px;
     width: 100%;
-}
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 1px;
 
-.slick-container .slick-content .account-section{
-    width: 100%;
-    height:  auto;
-    margin: 20px;
-    display: flex;
-}
-
-.slick-container .slick-content .account-section .page-image{
-    width: 100%;
-}
-
-.slick-container .slick-content .account-section .page-image img{
-    width:40%;
-    height: 54pc;
-    border-radius: 22px;
 }
