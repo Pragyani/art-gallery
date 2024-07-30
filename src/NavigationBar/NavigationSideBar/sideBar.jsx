@@ -2,6 +2,7 @@ import React from "react";
 import './sidebar.css';
 import ArrowRightRoundedIcon from '@mui/icons-material/ArrowRightRounded';
 import { Link } from "react-router-dom";
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 
 const SideBar = () => {
     return (
@@ -14,20 +15,20 @@ const SideBar = () => {
 
                             <div className="category-list">
                                 <ul>
-                                    <li>Latest Posters <ArrowRightRoundedIcon className="forward-icon"/></li>
-                                    <li>Explore Your Feed <ArrowRightRoundedIcon className="forward-icon"/></li>
+                                    <li>Latest Posters <ArrowRightRoundedIcon className="forward-icon" /></li>
+                                    <li>Explore Your Feed <ArrowRightRoundedIcon className="forward-icon" /></li>
                                     <li>Home Page </li>
-                                    <li>Unavalibile Products <ArrowRightRoundedIcon className="forward-icon"/></li>
+                                    <li>Unavalibile Products <ArrowRightRoundedIcon className="forward-icon" /></li>
                                 </ul>
                             </div>
 
                             <div className="category-list">
                                 <ul>
-                
-                                    <li>FAQ <ArrowRightRoundedIcon className="forward-icon"/></li>
-                                    <Link to={'/your-account'} ><li>Create Account <ArrowRightRoundedIcon className="forward-icon"/></li></Link>
-                                    <li>User Profile<ArrowRightRoundedIcon className="forward-icon"/></li>
-                                  
+
+                                    <li>FAQ <ArrowRightRoundedIcon className="forward-icon" /></li>
+                                    <Link to={'/your-account'} ><li>Create Account <ArrowRightRoundedIcon className="forward-icon" /></li></Link>
+                                    <Link to={'./profilepage'}><li>Your Profile <AccountCircleRoundedIcon className="user-prof-i" /></li></Link>
+
                                 </ul>
                             </div>
 
@@ -36,7 +37,7 @@ const SideBar = () => {
                     </div>
                 </div>
             </div>
-            
+
         </>
     )
 }
