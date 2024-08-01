@@ -1,0 +1,111 @@
+.profile-prt {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    /* border: 1px solid black; */
+}
+
+.profile-prt .profile-content {
+    width: 100%;
+    /* border: 1px solid red; */
+    padding: 30px;
+}
+
+.profile-prt .profile-content .user-profile {
+    width: 100%;
+    /* border: 2px beige dotted; */
+    padding: 40px;
+}
+
+.profile-prt .profile-content .user-profile .text-file {
+    width: 100%;
+    border: 1px solid beige;
+    border-radius: 14px;
+    height: 240px;
+    background-color: rgba(147, 172, 172, 0.356);
+    position: relative;
+    margin-bottom: 4%;
+}
+
+.user-profile .text-file .user-pImg {
+    width: 20%;
+    /* border: 1px solid black; */
+
+}
+
+.text-file .user-pImg img {
+    width: 64%;
+    position: relative;
+    border-radius: 60%;
+    top: 90px;
+    border: 5px solid white;
+    left: 30px;
+}
+
+.profile-prt .profile-content .user-profile .profile-details {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+
+}
+
+.user-profile .profile-details .txt-container {
+    width: 100%;
+    padding-left: 35px;
+}
+
+.profile-details .txt-container .user-name {
+    width: 20%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.profile-details .txt-container .caption-area {
+    border: 1px solid rgba(245, 245, 220, 0.559);
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding: 2px;
+    width: 20%;
+    height: 10%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+    font-weight: 350;
+    color: rgb(117, 119, 120);
+}
+
+
+.profile-details .txt-container .caption-area input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding-left: 20px;
+    background-color: rgba(147, 172, 172, 0.356);
+    box-shadow: 2px 3px 9px rgba(100, 130, 130, 0.628);
+}
+
+
+.profile-prt .profile-content .user-profile .contentEdit-btn {
+    width: 8.5%;
+    padding: 7.5px;
+
+}
+
+
+.contentEdit-btn .edit-btn {
+    width: 100%;
+    background-color: black;
+    color: beige;
+    padding: 11.4px;
+    border-radius: 22px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.contentEdit-btn .edit-btn:hover {
+    background-color: rgb(123, 121, 118);
+}
