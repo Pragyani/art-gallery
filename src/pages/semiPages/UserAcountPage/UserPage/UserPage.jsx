@@ -8,11 +8,10 @@ import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
 
 
 const ProfilePage = ({ data }) => {
-    console.log('profile', data)
+  //  console.log('profile', data)
 
     const [prevDummyData, setPrevDummyData] = useState(data);
     const [showInput, setShowInput] = useState(false);
-
     const [inputName, setInputName] = useState('');
     const [inputPrice, setInputPrice] = useState('');
     const [inputStatus, setInputStatus] = useState('');
@@ -27,7 +26,6 @@ const ProfilePage = ({ data }) => {
     const handleChangeName = (e) => {
         setInputName(e.target.value)
     }
-
 
     const handleChangeImage = (e) => {
         const file = e.target.files[0];
@@ -59,7 +57,6 @@ const ProfilePage = ({ data }) => {
         }
 
         setPrevDummyData((prevArray) => [...prevArray, newData]);
-
         setInputName('');
         setInputPrice('');
         setInputStatus('');
@@ -67,10 +64,12 @@ const ProfilePage = ({ data }) => {
         setInputImage(null);
         setInputImageUrl('');
     }
+
     const removePost = (targetIndex) => {
         const newArray = prevDummyData.filter((item, index) => index !== targetIndex);
-        setPrevDummyData(newArray); 
-      };
+        setPrevDummyData(newArray);
+    };
+
     return (
         <>
             <div className="profile-prt">
@@ -82,22 +81,13 @@ const ProfilePage = ({ data }) => {
                             </div>
                         </div>
 
-                        <div className="profile-details">
-                            <div className="txt-container">
-                                {/* <h1 className="user-name">
-                                    Your Name
-                                </h1> */}
-                            </div>
-                        </div>
-                        <hr />
-
                         <div className="mega-userProfile">
                             <div className="cl-rowUser">
 
                                 <ul className="cl-ul">
                                     <li onClick={handleItemClick}> ADD <KeyboardArrowDownIcon /></li>
                                 </ul>
-
+                                <hr />
 
                                 {showInput && (
                                     <div className="input-container">
@@ -176,26 +166,19 @@ const ProfilePage = ({ data }) => {
                                                                     <h5>Rating -<Rating name="customized-10" defaultValue={item?.rating} max={5} className="rating-crd" /></h5>
                                                                     <p>StockStatus - <h6>{item?.stockStatus}</h6> </p>
                                                                     <h4>Brand Name - <b>{item?.brand}</b></h4>
-                                                                    <span className="product-chnges-icon" onClick={()=>removePost(index)}><DeleteForeverRoundedIcon className="dots-icon" /></span>
+                                                                    <span className="product-chnges-icon" onClick={() => removePost(index)}><DeleteForeverRoundedIcon className="dots-icon" /></span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
                                                     </div>
                                                 </div>
-
                                             )
                                         })
                                     }
                                 </div>
-
-                                <div className="txt-laign">
-
-                                </div>
                             </div>
                         </div>
-
-
                     </section>
                 </div>
             </div>
