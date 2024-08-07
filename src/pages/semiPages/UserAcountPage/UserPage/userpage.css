@@ -309,6 +309,17 @@
     letter-spacing: 1px;
 }
 
+.user-pic h4 input{
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    margin-left: 10px;
+    width: 100%;
+    /* text-transform: capitalize; */
+    background-color: transparent;
+    letter-spacing: 1px;
+}
+
 .local-input .cl-local .caption-block {
     width: 100%;
     margin-top: 8px;
@@ -326,4 +337,200 @@
     border: none;
     padding-left: 12px;
     padding-bottom: 45px;
+}
+
+.post-brief{
+width: 100%;
+padding: 3px;
+height: auto;
+}
+
+.post-brief .price-bref{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 12px;
+}
+
+.price-bref:hover{
+    background-color: rgba(0, 0, 0, 0.051);
+}
+
+.post-brief .price-tg-txt{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    /* border: 1px solid black; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:16px;
+    padding-left: 15px;
+    font-weight: 320;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-transform: capitalize
+}
+
+.post-brief input{
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    margin-left: 10px;
+    width: 64%;
+    /* text-transform: capitalize; */
+    background-color: transparent;
+    letter-spacing: 1px;
+}
+
+.post-brief input :hover{
+    border: none;
+    background-color: rgba(0, 0, 0, 0.086);
+}
+
+.post-brief .stock-bar{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 12px;
+    margin-top: 22px;
+}
+
+.stock-bar:hover{
+    background-color: rgba(0, 0, 0, 0.051);
+    cursor: pointer;
+}
+
+.stock-bar h5{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    /* border: 1px solid black; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:16px;
+    padding-left: 15px;
+    font-weight: 320;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    text-transform: capitalize
+}
+
+.post-brief .brand-bar{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 12px;
+    margin-top: 22px;
+}
+
+.brand-bar:hover{
+    background-color: rgba(0, 0, 0, 0.051);
+    cursor: pointer;
+}
+.brand-bar h5{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    /* border: 1px solid black; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:16px;
+    padding-left: 15px;
+    font-weight: 320;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    text-transform: capitalize
+}
+
+.submit-btn{
+    color: black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.re-contaier {
+    width: 101.5%;
+    margin-top: 10px;
+    display: flex;
+    gap: 4px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.re-contaier .product-fl {
+    /* margin: 12px; */
+}
+
+
+.container-box .re-contaier .product-fl {
+    margin: 12px;
+    display: flex;
+    gap: 4px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.re-contaier .product-fl .products-w {
+    width: 108%;
+    height: auto;
+    border: 2px solid beige;
+    border-radius: 12px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 35px;
+}
+
+.re-contaier .product-fl .products-w:hover {
+    box-shadow: 2px 4px 7px beige;
+}
+
+.re-contaier .product-fl .products-w:hover .product-box .product-img img {
+    cursor: pointer;
+    box-shadow: 2px 4px 7px beige;
+    transform: scale(0.9);
+    opacity: .9;
+}
+
+.re-contaier .product-fl .products-w .product-box {
+    /* margin: 12px; */
+    width: 100%;
+    padding: 5px;
+    border-radius: 12px;
+    border: 1px solid beige;
+}
+
+
+.products-w .product-box .product-img {
+    width: 100%;
+    height: 20pc;
+}
+
+.products-w .product-box .product-img img {
+    width: 100%;
+    height: 20pc;
+    border-radius: 22px;
+    transition: all 0.3s ease-in-out;
+    /* opacity: .9; */
+}
+
+.re-contaier .product-fl .products-w .product-breif {
+    width: 100%;
+    margin-top: 20px;
+    height: auto;
+    border: 1px solid beige;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.re-contaier .product-fl .products-w .product-breif:hover {
+    box-shadow: 2px 4px 7px beige;
+}
+
+
+.container-box .re-contaier {
+    width: 100%;
+    margin-top: 38px;
+}
+
+.container-box .re-contaier .product-fluid {
+    margin: 12px;
+    display: flex;
+    gap: 4px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
