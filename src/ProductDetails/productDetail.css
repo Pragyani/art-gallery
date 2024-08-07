@@ -172,7 +172,21 @@
     cursor: pointer;
 }
 
-/* 
-.products .product-img img:hover{
- 
-} */
+
+.info-data .product-chnges-icon .dots-icon {
+    width: 20%;
+    height: 32px;
+    padding-bottom: 13px;
+    padding-top: 15px;
+    padding: 1px;
+    margin-left: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.info-data .product-chnges-icon .dots-icon:hover {
+    background-color: rgba(14, 14, 14, 0.133);
+    border-radius: 20px;
+}
