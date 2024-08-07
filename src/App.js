@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/home';
 import About from './pages/About/About';
 import AccountPage from './pages/semiPages/UserAcountPage/AccountPage';
+import ProfilePage from './pages/semiPages/UserAcountPage/UserPage/UserPage';
 
 function App() {
 
@@ -27,11 +28,12 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <NavBAr/>
+        <NavBAr />
         <Routes>
           <Route path='/' element={<Home data={productData} />} />
           <Route path='/about' element={<About />} />
-          <Route path='/your-account' element={<AccountPage/>}/>
+          <Route path='/your-account' element={<AccountPage />} />
+          <Route path='/profilepage' element={<ProfilePage data={productData}/>} />
         </Routes>
       </BrowserRouter>
     </>
