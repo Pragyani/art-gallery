@@ -14,7 +14,7 @@
 .profile-prt .profile-content .user-profile {
     width: 100%;
     /* border: 2px beige dotted; */
-    padding: 40px;
+    padding: 25px;
 }
 
 .profile-prt .profile-content .user-profile .text-file {
@@ -116,8 +116,8 @@
     margin-top: 10px;
     /* border: 1px solid black; */
     width: 100%;
-    height: 10%;
-    padding: 30px;
+    /* height: 10%; */
+    padding: 10px;
 }
 
 .mega-userProfile .cl-rowUser {
@@ -443,7 +443,7 @@ height: auto;
 }
 
 .re-contaier {
-    width: 101.5%;
+    width: 100%;
     margin-top: 10px;
     display: flex;
     gap: 4px;
@@ -452,17 +452,11 @@ height: auto;
 }
 
 
-.re-contaier .product-fl {
-    /* margin: 12px; */
-}
 
-
-.container-box .re-contaier .product-fl {
+.re-contaier .product-fl{
     margin: 12px;
-    display: flex;
-    gap: 4px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    width: 17%;
+
 }
 
 .re-contaier .product-fl .products-w {
@@ -533,4 +527,37 @@ height: auto;
     gap: 4px;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+.info-data .products-icon{
+    width: 100%;
+    margin-top: 12px;
+    text-align: end;
+}
+
+.info-data .products-icon  .product-chnges-icon{
+    margin-right: 10px;
+} 
+
+.product-chnges-icon .dots-icon{
+    font-size: 21px;
+}
+
+.product-chnges-icon  .edit-icon{
+    font-weight: bolder;
+    font-size: 25px;
+    padding-top: 3px;
+}
+.dots-icon:hover{
+    background-color: rgba(14, 14, 14, 0.133);
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.edit-icon:hover{
+    background-color: rgba(14, 14, 14, 0.133);
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
 }
