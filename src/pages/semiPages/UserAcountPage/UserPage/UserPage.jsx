@@ -5,6 +5,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import FilterIcon from '@mui/icons-material/Filter';
 import Rating from '@mui/material/Rating';
 import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
+import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 
 
 const ProfilePage = ({ data }) => {
@@ -166,7 +167,11 @@ const ProfilePage = ({ data }) => {
                                                                     <h5>Rating -<Rating name="customized-10" defaultValue={item?.rating} max={5} className="rating-crd" /></h5>
                                                                     <p>StockStatus - <h6>{item?.stockStatus}</h6> </p>
                                                                     <h4>Brand Name - <b>{item?.brand}</b></h4>
+                                                                    <div className="products-icon">
                                                                     <span className="product-chnges-icon" onClick={() => removePost(index)}><DeleteForeverRoundedIcon className="dots-icon" /></span>
+                                                                    <span className="product-chnges-icon" ><EditNoteRoundedIcon className="edit-icon" /></span>
+                                                                    </div>
+                                                                  
                                                                 </div>
                                                             </div>
                                                         </div>
