@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@mui/material";
 import './modal.css';
 import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
@@ -23,6 +23,15 @@ export function BasicModal() {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    const [inputName , setInputName] = useState('');
+
+
+    const handleChangeName =(e)=>{
+    //    const newName = e.target.value; 
+    //    console.log('NAme CHange' , newName);
+       setInputName(e.target.value);
+    }
 
     return (
         <div>
@@ -56,7 +65,7 @@ export function BasicModal() {
                                 <form className="local-input" >
                                     <div className="cl-local">
                                         <div className="user-pic">
-                                            <h4><input type="text" placeholder="Your Name" /></h4>
+                                            <h4><input type="text" placeholder="Your Name" value={inputName} onChange={handleChangeName}/></h4>
                                         </div>
 
                                         <div className="post-brief">
