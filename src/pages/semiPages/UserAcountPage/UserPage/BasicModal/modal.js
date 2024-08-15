@@ -24,13 +24,18 @@ export function BasicModal() {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    const [inputName , setInputName] = useState('');
+    const [inputName, setInputName] = useState('');
+    const [inputPrice, setInputPrice] = useState('');
 
 
-    const handleChangeName =(e)=>{
-    //    const newName = e.target.value; 
-    //    console.log('NAme CHange' , newName);
-       setInputName(e.target.value);
+    const handleChangeName = (e) => {
+        //    const newName = e.target.value; 
+        //    console.log('NAme CHange' , newName);
+        setInputName(e.target.value);
+    }
+
+    const handleChangePrice = (e) => {
+        setInputPrice(e.target.value)
     }
 
     return (
@@ -61,17 +66,19 @@ export function BasicModal() {
                             </div>
                             <hr />
                             <div className='post-Detailcontent'>
-                                <Button type="submit">share</Button>
+
+                                <Button type="submit" className='sbmit-btnpost'>share</Button>
+
                                 <form className="local-input" >
                                     <div className="cl-local">
                                         <div className="user-pic">
-                                            <h4><input type="text" placeholder="Your Name" value={inputName} onChange={handleChangeName}/></h4>
+                                            <h4><input type="text" placeholder="Your Name" value={inputName} onChange={handleChangeName} /></h4>
                                         </div>
 
                                         <div className="post-brief">
                                             <div className="price-bref">
                                                 <h5 className="price-tg-txt">Add the price of drawing </h5>
-                                                <input type="number" placeholder="enter price..." />
+                                                <input type="number" placeholder="enter price..." value={inputPrice} onChange={handleChangePrice} />
                                             </div>
 
                                             <div className="stock-bar">
