@@ -26,16 +26,28 @@ export function BasicModal() {
 
     const [inputName, setInputName] = useState('');
     const [inputPrice, setInputPrice] = useState('');
-
+    const [inputBrand, setInputBrand] = useState('');
+    const [inputImage, setInputImage] = useState(null);
+    const [inputImageUrl, setInputImageUrl] = useState('');
 
     const handleChangeName = (e) => {
-        //    const newName = e.target.value; 
-        //    console.log('NAme CHange' , newName);
         setInputName(e.target.value);
     }
 
+    const handleChangeImage = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            setInputImage(file);
+            setInputImageUrl(URL.createObjectURL(file));
+        }
+    }
+
     const handleChangePrice = (e) => {
-        setInputPrice(e.target.value)
+        setInputPrice(e.target.value);
+    }
+
+    const handleChangeBrand = (e) =>{
+        setInputBrand(e.target.value);
     }
 
     return (
@@ -54,50 +66,67 @@ export function BasicModal() {
                         <div className='input-box'>
                             <div className='post-content'>
                                 <div className='picture-tl'>
-                                    < AddAPhotoOutlinedIcon className="select" />
-
-                                    <form >
-                                        <label htmlFor="myfile">Drag phots and videos here</label>
-                                        <input type="file" />
-                                        {/* {inputImageUrl && <img src={inputImageUrl} alt="Preview" className="preview-image" />} */}
-
+                                    <AddAPhotoOutlinedIcon className="select" />
+                                    <form>
+                                        <label htmlFor="myfile">Drag photos and videos here</label>
+                                        <input
+                                            type="file"
+                                            id="myfile"
+                                            onChange={handleChangeImage}
+                                        />
+                                        {inputImageUrl && (
+                                            <img
+                                                src={inputImageUrl}
+                                                alt="Preview"
+                                                className="preview-image"
+                                            />
+                                        )}
                                     </form>
                                 </div>
                             </div>
                             <hr />
                             <div className='post-Detailcontent'>
-
-                                <Button type="submit" className='sbmit-btnpost'>share</Button>
-
-                                <form className="local-input" >
+                                <Button type="submit" className='sbmit-btnpost'>Share</Button>
+                                <form className="local-input">
                                     <div className="cl-local">
                                         <div className="user-pic">
-                                            <h4><input type="text" placeholder="Your Name" value={inputName} onChange={handleChangeName} /></h4>
+                                            <h4>
+                                                <input
+                                                    type="text"
+                                                    placeholder="Your Name"
+                                                    value={inputName}
+                                                    onChange={handleChangeName}
+                                                />
+                                            </h4>
                                         </div>
-
                                         <div className="post-brief">
                                             <div className="price-bref">
-                                                <h5 className="price-tg-txt">Add the price of drawing </h5>
-                                                <input type="number" placeholder="enter price..." value={inputPrice} onChange={handleChangePrice} />
+                                                <h5 className="price-tg-txt">Add the price of drawing</h5>
+                                                <input
+                                                    type="number"
+                                                    placeholder="Enter price..."
+                                                    value={inputPrice}
+                                                    onChange={handleChangePrice}
+                                                />
                                             </div>
-
                                             <div className="stock-bar">
-                                                <h5>Stock Staus <BasicSelect /></h5>
+                                                <h5>Stock Status <BasicSelect /></h5>
                                             </div>
-
                                             <div className="brand-bar">
-                                                <h5>BRAND NAME</h5>
-                                                <input type="text" placeholder="enter your brand name..." />
+                                                <h5>Brand Name</h5>
+                                                <input
+                                                    type="text"
+                                                    placeholder="Enter your brand name..."
+                                                    value={inputBrand}
+                                                    onChange={handleChangeBrand}
+                                                />
                                             </div>
                                         </div>
-
                                     </div>
-
                                 </form>
                             </div>
                         </div>
                     </div>
-
                 </Box>
             </Modal>
         </div>
