@@ -57,9 +57,23 @@
     height: 3.5pc;
 }
 
-
-
 .box-flex .input-container .input-box .post-Detailcontent{
     width: 50%;
     height: 95%;
+}
+
+.box-flex .post-Detailcontent .sbmit-btnpost{
+    background-color: rgb(29, 152, 228);
+    color: white;
+    padding: 11px;
+    letter-spacing: 1px;
+    /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    font-size: 14px;
+    font-weight: 520;
+    margin-left: 80%;
+    border-radius: 25px;
+}
+.box-flex .post-Detailcontent .sbmit-btnpost:hover{
+    background-color: rgb(106, 177, 222);
+    color: black;
 }
