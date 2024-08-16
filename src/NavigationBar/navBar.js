@@ -16,8 +16,8 @@ const NavBAr = () => {
                     </div>
                     <div className="nav-p2">
                         <ul className="nav-ul">
-                            <Link to={'/about'}><li className="ul-li"><HdrStrongRoundedIcon className="material-icons" />About us</li></Link>
                             <Link to={'/'}><li className="ul-li"><HomeRoundedIcon className="material-icons" />Home</li></Link>
+                            <Link to={'/about'}><li className="ul-li"><HdrStrongRoundedIcon className="material-icons" />About us</li></Link>
                             <li className="ul-li"><CallRoundedIcon className="material-icons" />Contact Us</li>
                             <li className="ul-li"><SettingsSuggestRoundedIcon className="material-icons" />Setting</li>
 
