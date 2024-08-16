@@ -4,33 +4,27 @@ import Rating from '@mui/material/Rating';
 import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
 import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import { BasicModal } from "./BasicModal/modal";
+import ProfileColumn from "./ProfileBlock/ProfileColumn";
 
 const ProfilePage = ({ data }) => {
     const [artData, setArtData] = useState(data);
     console.log(artData)
-    
+
     const updateArtData = (newData) => {
         setArtData(newData);
     };
 
-    
-const removePost = (targetIndex) => {
-    const newArray = artData.filter((item, index) => index !== targetIndex);
-    setArtData(newArray);
-};
-
+    const removePost = (targetIndex) => {
+        const newArray = artData.filter((item, index) => index !== targetIndex);
+        setArtData(newArray);
+    };
 
     return (
         <>
             <div className="profile-prt">
                 <div className="profile-content">
                     <section className="user-profile">
-                        <div className="text-file">
-                            <div className="user-pImg">
-                                <img src="https://i.pinimg.com/564x/25/ee/de/25eedef494e9b4ce02b14990c9b5db2d.jpg" />
-                            </div>
-                        </div>
-
+                        <ProfileColumn/>
                         <div className="mega-userProfile">
                             <div className="cl-rowUser">
                                 <ul className="cl-ul">
@@ -58,7 +52,7 @@ const removePost = (targetIndex) => {
                                                             <p>Stock Status - <h6>{item.status}</h6></p>
                                                             <h4>Brand Name - <b>{item.brand}</b></h4>
                                                             <div className="products-icon">
-                                                                <span className="product-chnges-icon" onClick={()=> removePost(index)}>  <DeleteForeverRoundedIcon className="dots-icon" /> </span>
+                                                                <span className="product-chnges-icon" onClick={() => removePost(index)}>  <DeleteForeverRoundedIcon className="dots-icon" /> </span>
                                                                 <span className="product-chnges-icon"><EditNoteRoundedIcon className="edit-icon" /> </span>
                                                             </div>
                                                         </div>
