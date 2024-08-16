@@ -19,28 +19,25 @@
 
 .profile-prt .profile-content .user-profile .text-file {
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.239);
     border-radius: 14px;
     height: 240px;
-    background-color: rgba(147, 172, 172, 0.356);
     position: relative;
     margin-bottom: 4%;
 }
 
 .user-profile .text-file .user-pImg {
-    width: 20%;
-    /* border: 1px solid black; */
-
+    width: 32%;
+   
 }
 
 .text-file .user-pImg img {
-    width: 64%;
+    width: 144%;
     position: relative;
     border-radius: 60%;
-    top: 90px;
-    border: 5px solid white;
-    left: 30px;
-}
+    /* top: 10px; */
+    border: 3.5px solid rgba(0, 0, 0, 0.777);
+    left: 110px;
+} 
 
 .profile-prt .profile-content .user-profile .profile-details {
     width: 100%;
