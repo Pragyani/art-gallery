@@ -1,23 +1,29 @@
-.box-flex{
+.modal-btn {
+    color: black;
+}
+
+.box-flex {
     /* border: 3px solid black ; */
     height: auto;
 }
+
 .box-flex .input-container {
     width: 100%;
     padding: 1px;
     height: auto;
 }
 
-.box-flex h1{
+.box-flex h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size:38px;
+    font-size: 38px;
     font-weight: bolder;
     width: 100%;
     text-align: center;
     letter-spacing: 1px;
     margin-bottom: 22px;
 }
-.box-flex .input-container .input-box{
+
+.box-flex .input-container .input-box {
     /* border:  1px solid black; */
     width: 100%;
     height: 34pc;
@@ -26,21 +32,21 @@
     display: flex;
 }
 
-.box-flex .input-container .input-box .post-content{
+.box-flex .input-container .input-box .post-content {
     width: 50%;
     height: 95%;
-  
 }
 
-.box-flex .input-box .post-content .picture-tl{
+.box-flex .input-box .post-content .picture-tl {
     width: 100%;
     height: 10pc;
     margin-top: 28%;
     border: 1px solid black;
+    position: relative;
 }
 
 
-.box-flex .input-container .input-box .picture-tl label{
+.box-flex .input-container .input-box .picture-tl label {
     width: 100%;
     font-size: large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -48,7 +54,7 @@
     margin-left: 110px;
 }
 
-.post-content .picture-tl .select{
+.post-content .picture-tl .select {
     width: 50%;
     margin-left: 150px;
     margin-top: 20px;
@@ -57,12 +63,23 @@
     height: 3.5pc;
 }
 
-.box-flex .input-container .input-box .post-Detailcontent{
+.post-content .picture-tl .preview-image {
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 12px;
+    position: relative;
+    /* left: 10%; */
+    top: -280px;
+    height: 100%;
+
+}
+
+.box-flex .input-container .input-box .post-Detailcontent {
     width: 50%;
     height: 95%;
 }
 
-.box-flex .post-Detailcontent .sbmit-btnpost{
+.box-flex .post-Detailcontent .sbmit-btnpost {
     background-color: rgb(29, 152, 228);
     color: white;
     padding: 11px;
@@ -73,7 +90,8 @@
     margin-left: 80%;
     border-radius: 25px;
 }
-.box-flex .post-Detailcontent .sbmit-btnpost:hover{
+
+.box-flex .post-Detailcontent .sbmit-btnpost:hover {
     background-color: rgb(106, 177, 222);
     color: black;
 }
