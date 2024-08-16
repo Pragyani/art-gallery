@@ -1,6 +1,6 @@
 .detail-container {
     width: 100%;
-    border: 1px solid beige;
+    border: 1px solid rgba(0, 0, 0, 0.431);
     height: auto;
     margin-top: 30px;
     border-radius: 12px;
@@ -46,7 +46,7 @@
 .re-container .product-fluid .products {
     width: 22%;
     height: auto;
-    border: 2px solid beige;
+    border: 1px solid rgba(0, 0, 0, 0.431);
     border-radius: 12px;
     padding: 10px;
     transition: all 0.3s ease-in-out;
@@ -54,12 +54,12 @@
 }
 
 .re-container .product-fluid .products:hover {
-    box-shadow: 2px 4px 7px beige;
+    box-shadow: 2px 4px 7px rgba(34, 34, 34, 0.279);;
 }
 
 .re-container .product-fluid .products:hover .product-box .product-img img {
     cursor: pointer;
-    box-shadow: 2px 4px 7px beige;
+    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.431);
     transform: scale(0.9);
     opacity: .9;
 }
@@ -69,7 +69,7 @@
     width: 100%;
     padding: 5px;
     border-radius: 12px;
-    border: 1px solid beige;
+    border: 1px solid rgba(0, 0, 0, 0.381);
 }
 
 
@@ -90,13 +90,13 @@
     width: 100%;
     margin-top: 20px;
     height: auto;
-    border: 1px solid beige;
+    border: 1px solid rgba(0, 0, 0, 0.431);
     padding: 5px;
     border-radius: 10px;
 }
 
 .re-container .product-fluid .products .product-breif:hover {
-    box-shadow: 2px 4px 7px beige;
+    box-shadow: 2px 4px 7px rgba(34, 34, 34, 0.279);;
 }
 
 .products .product-breif .info-prod {
@@ -121,7 +121,7 @@
     margin-top: 7px;
     font-weight: 400;
     text-align: center;
-    background-color: beige;
+    background-color: rgba(34, 34, 34, 0.233);;
     border-radius: 30px;
 }
 
@@ -170,23 +170,4 @@
     padding: 5px;
     border-radius: 8px;
     cursor: pointer;
-}
-
-
-.info-data .product-chnges-icon .dots-icon {
-    width: 20%;
-    height: 32px;
-    padding-bottom: 13px;
-    padding-top: 15px;
-    padding: 1px;
-    margin-left: 200px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-
-
-.info-data .product-chnges-icon .dots-icon:hover {
-    background-color: rgba(14, 14, 14, 0.133);
-    border-radius: 20px;
 }
