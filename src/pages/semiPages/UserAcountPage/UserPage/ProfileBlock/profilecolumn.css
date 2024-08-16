@@ -1,0 +1,21 @@
+.column-box{
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 19px;
+    padding: 5px;
+}
+
+.column-box .column-mt-1{
+    margin: 5px;
+    width: 100%;
+}
+
+.column-box .column-mt-1 .colun-flexbox{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.column-hr{
+    margin-left: 120px;
+    margin-right: 120px;
+}
