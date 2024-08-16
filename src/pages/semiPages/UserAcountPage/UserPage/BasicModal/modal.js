@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Button } from "@mui/material";
 import './modal.css';
 import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
-import BasicSelect from '../BasicSelect/BasicSelect'; import Rating from '@mui/material/Rating';
+import BasicSelect from '../BasicSelect/BasicSelect';
 
 const style = {
     position: 'absolute',
@@ -21,21 +21,19 @@ const style = {
 
 export function BasicModal({ Data }) {
     const [artData, setArtData] = useState(Data);
-    // console.log('ARTPRODUCT DATA ' , artData)
-
     const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
-
     const [inputName, setInputName] = useState('');
     const [inputPrice, setInputPrice] = useState('');
     const [inputBrand, setInputBrand] = useState('');
     const [inputImage, setInputImage] = useState(null);
     const [inputImageUrl, setInputImageUrl] = useState('');
 
-    const handleChangeName = (e) => {
-        setInputName(e.target.value);
-    }
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const handleChangeName = (e) => setInputName(e.target.value);
+    const handleChangePrice = (e) => setInputPrice(e.target.value);
+    const handleChangeBrand = (e) => setInputBrand(e.target.value);
 
     const handleChangeImage = (e) => {
         const file = e.target.files[0];
@@ -43,14 +41,6 @@ export function BasicModal({ Data }) {
             setInputImage(file);
             setInputImageUrl(URL.createObjectURL(file));
         }
-    }
-
-    const handleChangePrice = (e) => {
-        setInputPrice(e.target.value);
-    }
-
-    const handleChangeBrand = (e) => {
-        setInputBrand(e.target.value);
     }
 
     const handleSubmit = (e) => {
@@ -62,17 +52,20 @@ export function BasicModal({ Data }) {
             brand: inputBrand,
             image: inputImageUrl,
         };
+
+        setArtData(prevData => [...prevData, newPost]);
+        console.log('New artData:', [...artData, newPost]);
         setInputName('');
         setInputPrice('');
         setInputBrand('');
         setInputImage(null);
         setInputImageUrl('');
+        handleClose();
     }
 
     return (
         <>
-
-            <Button onClick={handleOpen} >Open modal</Button>
+            <Button onClick={handleOpen}>Open modal</Button>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -81,7 +74,6 @@ export function BasicModal({ Data }) {
             >
                 <Box sx={style} className='box-flex'>
                     <h1>Create New Post</h1>
-
                     <div className='input-container'>
                         <div className='input-box'>
                             <div className='post-content'>
@@ -89,11 +81,7 @@ export function BasicModal({ Data }) {
                                     <AddAPhotoOutlinedIcon className="select" />
                                     <form onSubmit={handleSubmit}>
                                         <label htmlFor="myfile">Drag photos and videos here</label>
-                                        <input
-                                            type="file"
-                                            id="myfile"
-                                            onChange={handleChangeImage}
-                                        />
+                                        <input type="file" id="myfile" onChange={handleChangeImage} />
                                         {inputImageUrl && (
                                             <img
                                                 src={inputImageUrl}
@@ -106,7 +94,6 @@ export function BasicModal({ Data }) {
                             </div>
                             <hr />
                             <div className='post-Detailcontent'>
-                                <Button type="submit" className='sbmit-btnpost'>Share</Button>
                                 <form onSubmit={handleSubmit} className="local-input">
                                     <div className="cl-local">
                                         <div className="user-pic">
@@ -143,13 +130,13 @@ export function BasicModal({ Data }) {
                                             </div>
                                         </div>
                                     </div>
+                                    <Button type="submit" className='sbmit-btnpost'>Share</Button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </Box>
             </Modal>
-
         </>
     );
 }
