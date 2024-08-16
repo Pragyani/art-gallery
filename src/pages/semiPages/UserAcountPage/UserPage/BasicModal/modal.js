@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Button } from "@mui/material";
 import './modal.css';
 import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
-import BasicSelect from '../BasicSelect/BasicSelect';
+import BasicSelect from '../BasicSelect/BasicSelect'; import Rating from '@mui/material/Rating';
 
 const style = {
     position: 'absolute',
@@ -19,7 +19,10 @@ const style = {
     p: 4,
 };
 
-export function BasicModal() {
+export function BasicModal({ Data }) {
+    const [artData, setArtData] = useState(Data);
+    // console.log('ARTPRODUCT DATA ' , artData)
+
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -46,13 +49,30 @@ export function BasicModal() {
         setInputPrice(e.target.value);
     }
 
-    const handleChangeBrand = (e) =>{
+    const handleChangeBrand = (e) => {
         setInputBrand(e.target.value);
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const newPost = {
+            name: inputName,
+            price: inputPrice,
+            brand: inputBrand,
+            image: inputImageUrl,
+        };
+        setInputName('');
+        setInputPrice('');
+        setInputBrand('');
+        setInputImage(null);
+        setInputImageUrl('');
+    }
+
     return (
-        <div>
-            <Button onClick={handleOpen}>Open modal</Button>
+        <>
+
+            <Button onClick={handleOpen} >Open modal</Button>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -67,7 +87,7 @@ export function BasicModal() {
                             <div className='post-content'>
                                 <div className='picture-tl'>
                                     <AddAPhotoOutlinedIcon className="select" />
-                                    <form>
+                                    <form onSubmit={handleSubmit}>
                                         <label htmlFor="myfile">Drag photos and videos here</label>
                                         <input
                                             type="file"
@@ -87,7 +107,7 @@ export function BasicModal() {
                             <hr />
                             <div className='post-Detailcontent'>
                                 <Button type="submit" className='sbmit-btnpost'>Share</Button>
-                                <form className="local-input">
+                                <form onSubmit={handleSubmit} className="local-input">
                                     <div className="cl-local">
                                         <div className="user-pic">
                                             <h4>
@@ -129,6 +149,7 @@ export function BasicModal() {
                     </div>
                 </Box>
             </Modal>
-        </div>
+
+        </>
     );
 }
