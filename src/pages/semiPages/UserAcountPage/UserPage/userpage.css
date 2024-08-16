@@ -26,7 +26,7 @@
 }
 
 .user-profile .text-file .user-pImg {
-    width: 32%;
+    width: 45%;
    
 }
 
@@ -37,6 +37,7 @@
     /* top: 10px; */
     border: 3.5px solid rgba(0, 0, 0, 0.777);
     left: 110px;
+    bottom: 17px;
 } 
 
 .profile-prt .profile-content .user-profile .profile-details {
