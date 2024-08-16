@@ -19,8 +19,7 @@ const style = {
     p: 4,
 };
 
-export function BasicModal({ Data }) {
-    const [artData, setArtData] = useState(Data);
+export function BasicModal({ setArtData }) {
     const [open, setOpen] = React.useState(false);
     const [inputName, setInputName] = useState('');
     const [inputPrice, setInputPrice] = useState('');
@@ -42,10 +41,8 @@ export function BasicModal({ Data }) {
             setInputImageUrl(URL.createObjectURL(file));
         }
     }
-
     const handleSubmit = (e) => {
         e.preventDefault();
-
         const newPost = {
             name: inputName,
             price: inputPrice,
@@ -54,18 +51,17 @@ export function BasicModal({ Data }) {
         };
 
         setArtData(prevData => [...prevData, newPost]);
-        console.log('New artData:', [...artData, newPost]);
         setInputName('');
         setInputPrice('');
         setInputBrand('');
         setInputImage(null);
         setInputImageUrl('');
-        handleClose();
+        handleClose(); 
     }
 
     return (
         <>
-            <Button onClick={handleOpen}>Open modal</Button>
+            <Button onClick={handleOpen} className='modal-btn'>Open modal</Button>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -79,15 +75,11 @@ export function BasicModal({ Data }) {
                             <div className='post-content'>
                                 <div className='picture-tl'>
                                     <AddAPhotoOutlinedIcon className="select" />
-                                    <form onSubmit={handleSubmit}>
+                                    <form>
                                         <label htmlFor="myfile">Drag photos and videos here</label>
                                         <input type="file" id="myfile" onChange={handleChangeImage} />
                                         {inputImageUrl && (
-                                            <img
-                                                src={inputImageUrl}
-                                                alt="Preview"
-                                                className="preview-image"
-                                            />
+                                            <img src={inputImageUrl}  alt="Preview" className="preview-image" />
                                         )}
                                     </form>
                                 </div>
@@ -98,35 +90,20 @@ export function BasicModal({ Data }) {
                                     <div className="cl-local">
                                         <div className="user-pic">
                                             <h4>
-                                                <input
-                                                    type="text"
-                                                    placeholder="Your Name"
-                                                    value={inputName}
-                                                    onChange={handleChangeName}
-                                                />
+                                                <input type="text" placeholder="Your Name" value={inputName} onChange={handleChangeName} />
                                             </h4>
                                         </div>
                                         <div className="post-brief">
                                             <div className="price-bref">
                                                 <h5 className="price-tg-txt">Add the price of drawing</h5>
-                                                <input
-                                                    type="number"
-                                                    placeholder="Enter price..."
-                                                    value={inputPrice}
-                                                    onChange={handleChangePrice}
-                                                />
+                                                <input type="number" placeholder="Enter price..."value={inputPrice} onChange={handleChangePrice} />
                                             </div>
                                             <div className="stock-bar">
                                                 <h5>Stock Status <BasicSelect /></h5>
                                             </div>
                                             <div className="brand-bar">
                                                 <h5>Brand Name</h5>
-                                                <input
-                                                    type="text"
-                                                    placeholder="Enter your brand name..."
-                                                    value={inputBrand}
-                                                    onChange={handleChangeBrand}
-                                                />
+                                                <input type="text" placeholder="Enter your brand name..."value={inputBrand} onChange={handleChangeBrand}/>
                                             </div>
                                         </div>
                                     </div>
