@@ -15,9 +15,14 @@ const ProfileColumn = () => {
                             </div>
                         </div>
 
-                        <hr className="column-hr"/>
+                        {/* <hr className="column-hr"/> */}
+                        
                         <div className="user-data">
-                            <h3>PragyAni Gallery</h3>
+                            <span className="brnd-name">BRAND NAME : <h1>PragyAni Gallery</h1></span>
+                            <hr className="col-hr"/>
+                            <span className="user-id">user id: <h3>@anipragss</h3></span>
+                            <hr className="col-hr"/>
+                            <span className="totalpost">Your Posts: <h4>15</h4></span>
                         </div>
                     </div>
                 </div>
