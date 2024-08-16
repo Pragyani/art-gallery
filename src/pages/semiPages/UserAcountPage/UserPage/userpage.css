@@ -19,7 +19,7 @@
 
 .profile-prt .profile-content .user-profile .text-file {
     width: 100%;
-    border: 1px solid beige;
+    border: 1px solid rgba(0, 0, 0, 0.239);
     border-radius: 14px;
     height: 240px;
     background-color: rgba(147, 172, 172, 0.356);
@@ -136,7 +136,7 @@
 
 .cl-ul li {
     font-size: 20px;
-    background-color: #6B8A7A;
+    background-color: rgba(37, 36, 36, 0.208);
     color: beige;
     padding: 10px;
     text-transform: capitalize;
@@ -161,7 +161,6 @@
     width: 100%;
     padding: 30px;
     height: auto;
-
 }
 
 .input-container .input-box {
@@ -265,11 +264,12 @@
 
 
 .input-container .input-box .local-input {
-    width: 50%;
+    width: 100%;
     /* border: 1px solid black; */
     border-radius: 12px;
     height: auto;
-    /* padding: 10px; */
+    padding: 20px;
+    /* margin-top: 10px; */
 }
 
 
@@ -283,6 +283,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 15px;
     margin-top: 12px;
+    margin-bottom: 14px;
     height: 2.5pc;
     display: flex;
     flex-wrap: wrap;
@@ -299,27 +300,29 @@
 }
 
 .cl-local .user-pic h4 {
-    position: relative;
+    /* position: relative;
     left: 30px;
-    top: 10px;
+    top: 10px; */
     text-transform: capitalize;
     font-size: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 230;
     letter-spacing: 1px;
+    width: 100%;
 }
 
 .user-pic h4 input{
     border: none;
     padding: 8px;
     border-radius: 6px;
-    margin-left: 10px;
-    width: 100%;
+    margin-left: 20px;
+    width: 89%;
     /* text-transform: capitalize; */
     background-color: transparent;
     letter-spacing: 1px;
+    /* border: 1px solid black; */
+    outline: none;
 }
-
 .local-input .cl-local .caption-block {
     width: 100%;
     margin-top: 8px;
@@ -349,6 +352,7 @@ height: auto;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 12px;
+    margin-bottom: 30px;
 }
 
 .price-bref:hover{
@@ -374,10 +378,11 @@ height: auto;
     padding: 8px;
     border-radius: 6px;
     margin-left: 10px;
-    width: 64%;
+    width: 88%;
     /* text-transform: capitalize; */
     background-color: transparent;
     letter-spacing: 1px;
+    outline: none;
 }
 
 .post-brief input :hover{
@@ -390,6 +395,7 @@ height: auto;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 12px;
     margin-top: 22px;
+    margin-bottom: 30px;
 }
 
 .stock-bar:hover{
@@ -403,9 +409,9 @@ height: auto;
     margin-bottom: 6px;
     /* border: 1px solid black; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size:16px;
+    font-size:14px;
     padding-left: 15px;
-    font-weight: 320;
+    font-weight: 300;
     padding-top: 8px;
     padding-bottom: 6px;
     text-transform: capitalize
@@ -462,7 +468,7 @@ height: auto;
 .re-contaier .product-fl .products-w {
     width: 108%;
     height: auto;
-    border: 2px solid beige;
+    border: 1px solid rgba(0, 0, 0, 0.287);
     border-radius: 12px;
     padding: 10px;
     transition: all 0.3s ease-in-out;
@@ -470,12 +476,12 @@ height: auto;
 }
 
 .re-contaier .product-fl .products-w:hover {
-    box-shadow: 2px 4px 7px beige;
+    box-shadow: 2px 4px 7px rgba(34, 34, 34, 0.279);
 }
 
 .re-contaier .product-fl .products-w:hover .product-box .product-img img {
     cursor: pointer;
-    box-shadow: 2px 4px 7px beige;
+    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.287);
     transform: scale(0.9);
     opacity: .9;
 }
@@ -485,7 +491,7 @@ height: auto;
     width: 100%;
     padding: 5px;
     border-radius: 12px;
-    border: 1px solid beige;
+    border: 1px solid rgba(0, 0, 0, 0.287);
 }
 
 
@@ -506,13 +512,13 @@ height: auto;
     width: 100%;
     margin-top: 20px;
     height: auto;
-    border: 1px solid beige;
+    border: 1px solid rgba(0, 0, 0, 0.287);
     padding: 5px;
     border-radius: 10px;
 }
 
 .re-contaier .product-fl .products-w .product-breif:hover {
-    box-shadow: 2px 4px 7px beige;
+    box-shadow: 2px 4px 7px rgba(34, 34, 34, 0.279);
 }
 
 
@@ -549,15 +555,17 @@ height: auto;
     padding-top: 3px;
 }
 .dots-icon:hover{
-    background-color: rgba(14, 14, 14, 0.133);
     border-radius: 20px;
-    margin: 5px;
+    margin: 1px;
     cursor: pointer;
+    color: rgb(46, 111, 181);
+    font-size: 20px;
 }
 
 .edit-icon:hover{
-    background-color: rgba(14, 14, 14, 0.133);
     border-radius: 20px;
-    margin: 5px;
+    margin: 1px;
     cursor: pointer;
+    color: rgb(46, 111, 181);
+    font-size: 23px;
 }
