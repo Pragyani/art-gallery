@@ -1,8 +1,12 @@
 .input-label-mt{
     margin-top: 10px;
-    /* border: 1px solid black; */
 }
 .nme{
     margin-top: 12px;
-    /* border: 3px solid black; */
+}
+
+.menu_name{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: bold;
 }
