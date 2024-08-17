@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -7,12 +7,12 @@ import Select from '@mui/material/Select';
 import './basicselect.css';
 
 const BasicSelect =()=> {
-  const [age, setAge] = React.useState('');
+  const [age, setAge] = React.useState('in_stock');
 
   const handleChange = (event) => {
     setAge(event.target.value);
   };
-
+  
   return (
     <Box sx={{ minWidth: 120 }} className=" nme">
       <FormControl fullWidth>
@@ -24,8 +24,8 @@ const BasicSelect =()=> {
           label="Age"
           onChange={handleChange}
         >
-          <MenuItem value={"in_stock"}>In Stock</MenuItem>
-          <MenuItem value={"out_of_stock"}>Out of Stock</MenuItem>
+          <MenuItem value={"in_stock"} className="menu_name">In Stock</MenuItem>
+          <MenuItem value={"out_of_stock"}  className="menu_name">Out of Stock</MenuItem>
        
         </Select>
       </FormControl>
