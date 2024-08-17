@@ -1,6 +1,6 @@
 .column-box{
     width: 100%;
-     border: 1px solid rgba(0, 0, 0, 0.576);
+     border: 1px solid rgba(0, 0, 0, 0.866);
     border-radius: 19px; 
     padding: 30px;
 }
@@ -108,7 +108,9 @@
 
 .col-hr{
     margin-left: 10px;
-    margin-right: 30%;
+    margin-right: 50%;
     margin-bottom: 5px;
-    color: rgba(0, 0, 0, 0.34);
+    color: rgba(0, 0, 0, 0.547);
+    border: dotted 1px;
+    opacity:1.2;
 }
