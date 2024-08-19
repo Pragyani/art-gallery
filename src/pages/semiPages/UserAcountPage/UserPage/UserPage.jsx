@@ -5,6 +5,7 @@ import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
 import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import { BasicModal } from "./BasicModal/modal";
 import ProfileColumn from "./ProfileBlock/ProfileColumn";
+import NestedModal from "./EditModals/Editmodal";
 
 const ProfilePage = ({ data }) => {
     const [artData, setArtData] = useState(data);
@@ -53,7 +54,7 @@ const ProfilePage = ({ data }) => {
                                                             <h4>Brand Name - <b>{item.brand}</b></h4>
                                                             <div className="products-icon">
                                                                 <span className="product-chnges-icon" onClick={() => removePost(index)}>  <DeleteForeverRoundedIcon className="dots-icon" /> </span>
-                                                                <span className="product-chnges-icon"><EditNoteRoundedIcon className="edit-icon" /> </span>
+                                                                <span className="product-chnges-icon"><NestedModal/> </span>
                                                             </div>
                                                         </div>
                                                     </div>
