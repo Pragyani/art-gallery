@@ -534,9 +534,10 @@ height: auto;
 }
 
 .info-data .products-icon{
-    width: 100%;
     margin-top: 12px;
-    text-align: end;
+    display: flex;
+    margin-left: 70%;
+    margin-right: 5px;
 }
 
 .info-data .products-icon  .product-chnges-icon{
@@ -545,16 +546,17 @@ height: auto;
 
 .product-chnges-icon .dots-icon{
     font-size: 21px;
+margin-top: 9.5px;
 }
 
 .product-chnges-icon  .edit-icon{
     font-weight: bolder;
     font-size: 25px;
-    padding-top: 3px;
+    /* padding-top: 3px; */
 }
 .dots-icon:hover{
     border-radius: 20px;
-    margin: 1px;
+    /* margin: 1px; */
     cursor: pointer;
     color: rgb(46, 111, 181);
     font-size: 20px;
