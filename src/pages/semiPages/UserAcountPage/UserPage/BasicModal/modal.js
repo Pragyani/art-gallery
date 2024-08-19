@@ -15,7 +15,7 @@ const style = {
     bgcolor: '#f5f5f5',
     border: 'none',
     borderRadius: '12px',
-    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+    boxShadow: '0 8px 26px rgba(0, 0, 0, 0.6)',
     p: 4,
 };
 
@@ -56,7 +56,7 @@ export function BasicModal({ setArtData }) {
         setInputBrand('');
         setInputImage(null);
         setInputImageUrl('');
-        handleClose(); 
+        handleClose();
     }
 
     return (
@@ -66,8 +66,8 @@ export function BasicModal({ setArtData }) {
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
+                aria-describedby="modal-modal-description">
+
                 <Box sx={style} className='box-flex'>
                     <h1>Create New Post</h1>
                     <div className='input-container'>
@@ -79,7 +79,7 @@ export function BasicModal({ setArtData }) {
                                         <label htmlFor="myfile">Drag photos and videos here</label>
                                         <input type="file" id="myfile" onChange={handleChangeImage} />
                                         {inputImageUrl && (
-                                            <img src={inputImageUrl}  alt="Preview" className="preview-image" />
+                                            <img src={inputImageUrl} alt="Preview" className="preview-image" />
                                         )}
                                     </form>
                                 </div>
@@ -96,14 +96,14 @@ export function BasicModal({ setArtData }) {
                                         <div className="post-brief">
                                             <div className="price-bref">
                                                 <h5 className="price-tg-txt">Add the price of drawing</h5>
-                                                <input type="number" placeholder="Enter price..."value={inputPrice} onChange={handleChangePrice} />
+                                                <input type="number" placeholder="Enter price..." value={inputPrice} onChange={handleChangePrice} />
                                             </div>
                                             <div className="stock-bar">
                                                 <h5>Stock Status <BasicSelect /></h5>
                                             </div>
                                             <div className="brand-bar">
                                                 <h5>Brand Name</h5>
-                                                <input type="text" placeholder="Enter your brand name..."value={inputBrand} onChange={handleChangeBrand}/>
+                                                <input type="text" placeholder="Enter your brand name..." value={inputBrand} onChange={handleChangeBrand} />
                                             </div>
                                         </div>
                                     </div>
