@@ -4,6 +4,7 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import './editmodal.css';
 import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
+import { BasicModal } from '../BasicModal/modal';
 
 const style = {
   position: 'absolute',
@@ -12,8 +13,8 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 400,
   bgcolor: 'background.paper',
-  border: '2px solid #000',
   boxShadow: 24,
+  borderRadius: '22px',
   pt: 2,
   px: 4,
   pb: 3,
@@ -30,21 +31,7 @@ function ChildModal() {
 
   return (
     <>
-      <Button onClick={handleOpen}>Are you sure to edit the Product details</Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="child-modal-title"
-        aria-describedby="child-modal-description"
-      >
-        <Box sx={{ ...style, width: 200 }}>
-          <h2 id="child-modal-title">Text in a child modal</h2>
-          <p id="child-modal-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
-          <Button onClick={handleClose}>Close Child Modal</Button>
-        </Box>
-      </Modal>
+      <BasicModal className='child-modal-i' />
     </>
   );
 }
@@ -60,21 +47,19 @@ export default function NestedModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}><EditNoteRoundedIcon className="edit-icon" /> </Button>
+      <Button onClick={handleOpen} className='btn-edited'><EditNoteRoundedIcon className="edit-icon" /> </Button>
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
+        className='modal-Ie'
       >
-        <Box sx={{ ...style, width: 400 }}>
-          <h2 id="parent-modal-title">Text in a modal</h2>
-          <p id="parent-modal-description">
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </p>
+        <Box sx={{ ...style, width: 600 }} className='box-modal'>
+          <h2 id="parent-modal-title">You Selected The Product for Changes...!?</h2>
           <ChildModal />
         </Box>
       </Modal>
     </div>
   );
-}
+} 3
