@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from "@mui/material";
 import './modal.css';
 import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
@@ -19,16 +19,27 @@ const style = {
     p: 4,
 };
 
-export function BasicModal({ setArtData }) {
-    const [open, setOpen] = React.useState(false);
+export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
     const [inputName, setInputName] = useState('');
     const [inputPrice, setInputPrice] = useState('');
     const [inputBrand, setInputBrand] = useState('');
     const [inputImage, setInputImage] = useState(null);
     const [inputImageUrl, setInputImageUrl] = useState('');
 
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+
+    useEffect(() => {
+        if (postToEdit) {
+            setInputName(postToEdit.name || '');
+            setInputPrice(postToEdit.price || '');
+            setInputBrand(postToEdit.brand || '');
+            setInputImageUrl(postToEdit.image || '');
+        } else {
+            setInputName('');
+            setInputPrice('');
+            setInputBrand('');
+            setInputImageUrl('');
+        }
+    }, [postToEdit]);
 
     const handleChangeName = (e) => setInputName(e.target.value);
     const handleChangePrice = (e) => setInputPrice(e.target.value);
@@ -40,7 +51,8 @@ export function BasicModal({ setArtData }) {
             setInputImage(file);
             setInputImageUrl(URL.createObjectURL(file));
         }
-    }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const newPost = {
@@ -50,18 +62,21 @@ export function BasicModal({ setArtData }) {
             image: inputImageUrl,
         };
 
-        setArtData(prevData => [...prevData, newPost]);
-        setInputName('');
-        setInputPrice('');
-        setInputBrand('');
-        setInputImage(null);
-        setInputImageUrl('');
+        if (postToEdit) {
+            setArtData(prevData =>
+                prevData.map(post =>
+                    post === postToEdit ? newPost : post
+                )
+            );
+        } else {
+            setArtData(prevData => [...prevData, newPost]);
+        }
+
         handleClose();
-    }
+    };
 
     return (
         <>
-            <Button onClick={handleOpen} className='modal-btn'>Open modal</Button>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -69,7 +84,7 @@ export function BasicModal({ setArtData }) {
                 aria-describedby="modal-modal-description">
 
                 <Box sx={style} className='box-flex'>
-                    <h1>Create New Post</h1>
+                    <h1>{postToEdit ? 'Edit Post' : 'Create New Post'}</h1>
                     <div className='input-container'>
                         <div className='input-box'>
                             <div className='post-content'>
@@ -107,7 +122,7 @@ export function BasicModal({ setArtData }) {
                                             </div>
                                         </div>
                                     </div>
-                                    <Button type="submit" className='sbmit-btnpost'>Share</Button>
+                                    <Button type="submit" className='sbmit-btnpost'>{postToEdit ? 'Update' : 'Share'}</Button>
                                 </form>
                             </div>
                         </div>
