@@ -6,7 +6,7 @@
 
 .container .content {
     width: 100%;
-    border: 0.5px solid beige;
+    border: 0.5px solid rgba(0, 0, 0, 0.239);
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 12px;
@@ -14,7 +14,7 @@
 }
 
 .container .content:hover {
-    box-shadow: 2px 4px 7px beige;
+    box-shadow: 2px 4px 7px rgba(34, 34, 34, 0.279);
 }
 
 .container .content .content-fluid {
@@ -34,7 +34,7 @@
     padding: 10px;
     width: 100%;
     border-radius: 12px;
-    border: 0.5px dotted beige;
+    border: 0.5px dotted rgba(0, 0, 0, 0.239);
     font-size: 28px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 480;
@@ -43,12 +43,12 @@
 }
 
 .content-fluid .sidebar .side-heading:hover {
-    border: 1px solid beige;
+    border: 1px solid rgba(34, 34, 34, 0.279);
 }
 
 .content-fluid .sidebar .category-list {
     width: 100%;
-    border: 1px solid beige;
+    border: 1px solid rgba(0, 0, 0, 0.239);
     padding: 20px;
     height: auto;
     border-radius: 15px;
@@ -56,7 +56,7 @@
 }
 
 .content-fluid .sidebar .category-list:hover {
-    box-shadow: 2px 2px 4px beige;
+    box-shadow: 2px 2px 4px rgba(34, 34, 34, 0.279);
 }
 
 .content-fluid .sidebar .category-list ul {
@@ -86,7 +86,7 @@
 
 .content-fluid .sidebar .category-list ul li:hover {
     border: #1A3636 1px solid;
-    color: beige;
+    color: balck;
     /* font-size: 21px; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
