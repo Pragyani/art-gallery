@@ -27,7 +27,7 @@
 
 .user-profile .text-file .user-pImg {
     width: 45%;
-   
+
 }
 
 .text-file .user-pImg img {
@@ -38,7 +38,7 @@
     border: 3.5px solid rgba(0, 0, 0, 0.777);
     left: 110px;
     bottom: 17px;
-} 
+}
 
 .profile-prt .profile-content .user-profile .profile-details {
     width: 100%;
@@ -309,7 +309,7 @@
     width: 100%;
 }
 
-.user-pic h4 input{
+.user-pic h4 input {
     border: none;
     padding: 8px;
     border-radius: 6px;
@@ -321,6 +321,7 @@
     /* border: 1px solid black; */
     outline: none;
 }
+
 .local-input .cl-local .caption-block {
     width: 100%;
     margin-top: 8px;
@@ -340,30 +341,30 @@
     padding-bottom: 45px;
 }
 
-.post-brief{
-width: 100%;
-padding: 3px;
-height: auto;
+.post-brief {
+    width: 100%;
+    padding: 3px;
+    height: auto;
 }
 
-.post-brief .price-bref{
+.post-brief .price-bref {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 12px;
     margin-bottom: 30px;
 }
 
-.price-bref:hover{
+.price-bref:hover {
     background-color: rgba(0, 0, 0, 0.051);
 }
 
-.post-brief .price-tg-txt{
+.post-brief .price-tg-txt {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 6px;
     /* border: 1px solid black; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size:16px;
+    font-size: 16px;
     padding-left: 15px;
     font-weight: 320;
     padding-top: 8px;
@@ -371,7 +372,7 @@ height: auto;
     text-transform: capitalize
 }
 
-.post-brief input{
+.post-brief input {
     border: none;
     padding: 8px;
     border-radius: 6px;
@@ -383,12 +384,12 @@ height: auto;
     outline: none;
 }
 
-.post-brief input :hover{
+.post-brief input :hover {
     border: none;
     background-color: rgba(0, 0, 0, 0.086);
 }
 
-.post-brief .stock-bar{
+.post-brief .stock-bar {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 12px;
@@ -396,18 +397,18 @@ height: auto;
     margin-bottom: 30px;
 }
 
-.stock-bar:hover{
+.stock-bar:hover {
     background-color: rgba(0, 0, 0, 0.051);
     cursor: pointer;
 }
 
-.stock-bar h5{
+.stock-bar h5 {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 6px;
     /* border: 1px solid black; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size:14px;
+    font-size: 14px;
     padding-left: 15px;
     font-weight: 300;
     padding-top: 8px;
@@ -415,24 +416,25 @@ height: auto;
     text-transform: capitalize
 }
 
-.post-brief .brand-bar{
+.post-brief .brand-bar {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 12px;
     margin-top: 22px;
 }
 
-.brand-bar:hover{
+.brand-bar:hover {
     background-color: rgba(0, 0, 0, 0.051);
     cursor: pointer;
 }
-.brand-bar h5{
+
+.brand-bar h5 {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 6px;
     /* border: 1px solid black; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size:16px;
+    font-size: 16px;
     padding-left: 15px;
     font-weight: 320;
     padding-top: 8px;
@@ -440,7 +442,7 @@ height: auto;
     text-transform: capitalize
 }
 
-.submit-btn{
+.submit-btn {
     color: black;
     border-radius: 15px;
     cursor: pointer;
@@ -457,7 +459,7 @@ height: auto;
 
 
 
-.re-contaier .product-fl{
+.re-contaier .product-fl {
     margin: 12px;
     width: 17%;
 
@@ -533,28 +535,29 @@ height: auto;
     flex-wrap: wrap;
 }
 
-.info-data .products-icon{
+.info-data .products-icon {
     margin-top: 12px;
     display: flex;
     margin-left: 70%;
     margin-right: 5px;
 }
 
-.info-data .products-icon  .product-chnges-icon{
+.info-data .products-icon .product-chnges-icon {
     margin-right: 10px;
-} 
-
-.product-chnges-icon .dots-icon{
-    font-size: 21px;
-margin-top: 9.5px;
 }
 
-.product-chnges-icon  .edit-icon{
+.product-chnges-icon .dots-icon {
+    font-size: 21px;
+    margin-top: 9.5px;
+}
+
+.product-chnges-icon .edit-icon {
     font-weight: bolder;
     font-size: 25px;
     /* padding-top: 3px; */
 }
-.dots-icon:hover{
+
+.dots-icon:hover {
     border-radius: 20px;
     /* margin: 1px; */
     cursor: pointer;
@@ -562,10 +565,28 @@ margin-top: 9.5px;
     font-size: 20px;
 }
 
-.edit-icon:hover{
+.edit-icon:hover {
     border-radius: 20px;
     margin: 1px;
     cursor: pointer;
     color: rgb(46, 111, 181);
     font-size: 23px;
+}
+
+.add-new-post-btn {
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.add-new-post-btn:hover {
+    border: 2px solid rgba(0, 0, 0, 0.281);
+    cursor: pointer;
 }
