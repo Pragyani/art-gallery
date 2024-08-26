@@ -10,7 +10,7 @@ const ProductDetail = ({ Products }) => {
             <div className="detail-container">
                 <div className="container-box">
                     <div className="heading">
-                        <h2>Our Products</h2>
+                        <h2>Our Posts</h2>
                         <hr className="hr-line"/>
                     </div>
 
