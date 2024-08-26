@@ -15,10 +15,9 @@ const SideBar = () => {
 
                             <div className="category-list">
                                 <ul>
-                                    <li>Latest Posters <ArrowRightRoundedIcon className="forward-icon" /></li>
+                                    <li>Latest Post <ArrowRightRoundedIcon className="forward-icon" /></li>
                                     <li>Explore Your Feed <ArrowRightRoundedIcon className="forward-icon" /></li>
                                     <li>Home Page </li>
-                                    <li>Unavalibile Products <ArrowRightRoundedIcon className="forward-icon" /></li>
                                 </ul>
                             </div>
 
