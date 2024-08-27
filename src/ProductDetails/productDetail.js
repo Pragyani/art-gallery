@@ -1,6 +1,7 @@
 import React from "react";
 import './productDetail.css';
 import Rating from '@mui/material/Rating';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 
 const ProductDetail = ({ Products }) => {
 
@@ -11,7 +12,7 @@ const ProductDetail = ({ Products }) => {
                 <div className="container-box">
                     <div className="heading">
                         <h2>Our Posts</h2>
-                        <hr className="hr-line"/>
+                        <hr className="hr-line" />
                     </div>
 
                     <div className="re-container">
@@ -38,12 +39,14 @@ const ProductDetail = ({ Products }) => {
                                                     </div>
                                                 </div>
                                             </div>
-
+                                            <div className="saved-mark-product">
+                                                <h3><BookmarkIcon /></h3>
+                                            </div>
                                         </div>
                                     )
                                 })
                             }
-                            
+
                         </div>
                     </div>
                 </div>
