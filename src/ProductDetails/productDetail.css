@@ -171,3 +171,10 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+.products .saved-mark-product{
+    width: 16%;
+    border: 1px solid black;
+    margin-top: 1px ;
+    margin-bottom: 1px;
+}
