@@ -7,6 +7,7 @@ import Home from './pages/Home/home';
 import About from './pages/About/About';
 import AccountPage from './pages/semiPages/UserAcountPage/AccountPage';
 import ProfilePage from './pages/semiPages/UserAcountPage/UserPage/UserPage';
+import SavedPost from './pages/SavedPost/SavedPost';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/your-account' element={<AccountPage />} />
           <Route path='/profilepage' element={<ProfilePage data={productData}/>} />
+          <Route path='/saved-post' element={<SavedPost/>}/>
         </Routes>
       </BrowserRouter>
     </>
