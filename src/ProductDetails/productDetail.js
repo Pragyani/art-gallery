@@ -4,10 +4,12 @@ import Rating from '@mui/material/Rating';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 
 const ProductDetail = ({ Products }) => {
+    const handleAlert =()=>{
+        alert('You sure want to save this post');
+    }
 
-    return (
+    return (  
         <>
-
             <div className="detail-container">
                 <div className="container-box">
                     <div className="heading">
@@ -40,7 +42,7 @@ const ProductDetail = ({ Products }) => {
                                                 </div>
                                             </div>
                                             <div className="saved-mark-product">
-                                                <h3><BookmarkIcon /></h3>
+                                                <h3 onClick={()=>handleAlert()}><BookmarkIcon /></h3>
                                             </div>
                                         </div>
                                     )
