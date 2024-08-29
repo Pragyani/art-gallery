@@ -174,7 +174,6 @@
 }
 
 .products .saved-mark-product {
-    width: 16%;
     margin-top: 8px;
     margin-left: 88%;
     cursor: pointer;
@@ -182,5 +181,5 @@
 
 .products .saved-mark-product:hover {
     cursor: pointer;
-    color: rgba(0, 0, 0, 0.327);
+    color: rgba(64, 165, 212, 0.944);
 }
