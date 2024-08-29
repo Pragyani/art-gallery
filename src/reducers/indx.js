@@ -6,7 +6,7 @@ export const SavedPostSlice = createSlice({
     reducers:{
         addPosts : (state , action) =>{
             if(!state.find(product => product.id === action.payload.id)){
-                return(state.push(action.payload))
+               state.push(action.payload)
             }
         }
     }
