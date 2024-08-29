@@ -2,13 +2,18 @@ import React from "react";
 import './productDetail.css';
 import Rating from '@mui/material/Rating';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
+import { useDispatch } from "react-redux";
+import { addPosts } from "../reducers/indx";
 
 const ProductDetail = ({ Products }) => {
-    const handleAlert =()=>{
-        alert('You sure want to save this post');
-    }
+    const dispatch = useDispatch();
 
-    return (  
+    const handleSaveProduct = (product) => {
+        dispatch(addPosts(product));
+        alert('Product saved successfully!');
+    };
+
+    return (
         <>
             <div className="detail-container">
                 <div className="container-box">
@@ -25,7 +30,7 @@ const ProductDetail = ({ Products }) => {
                                         <div className="products">
                                             <div className="product-box">
                                                 <div className="product-img">
-                                                    <img src={item.image} alt="mS" />
+                                                    <img src={item?.image} alt="mS" />
                                                 </div>
                                             </div>
 
@@ -42,20 +47,18 @@ const ProductDetail = ({ Products }) => {
                                                 </div>
                                             </div>
                                             <div className="saved-mark-product">
-                                                <h3 onClick={()=>handleAlert()}><BookmarkIcon /></h3>
+                                                <h3 onClick={() => handleSaveProduct(item)}><BookmarkIcon /></h3>
                                             </div>
                                         </div>
                                     )
                                 })
                             }
-
                         </div>
                     </div>
                 </div>
             </div>
-
-            <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />
         </>
-    )
-}
+    );
+};
+
 export default ProductDetail;
