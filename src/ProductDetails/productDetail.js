@@ -51,7 +51,7 @@ const ProductDetail = ({ Products }) => {
                                             </div>
                                             <div className="saved-mark-product">
                                                 <h3 onClick={() => handleSaveProduct(item)}><BookmarkIcon /></h3>
-                                                <h3><ShoppingCartIcon /></h3>
+                                                <h3><ShoppingCartIcon  className="cart-ikn"/></h3>
                                             </div>
                                         </div>
                                     )
