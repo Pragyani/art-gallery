@@ -8,6 +8,7 @@ import About from './pages/About/About';
 import AccountPage from './pages/semiPages/UserAcountPage/AccountPage';
 import ProfilePage from './pages/semiPages/UserAcountPage/UserPage/UserPage';
 import SavedPost from './pages/SavedPost/SavedPost';
+import CartPage from './pages/CARTPAGE/CartPage';
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
           <Route path='/your-account' element={<AccountPage />} />
           <Route path='/profilepage' element={<ProfilePage data={productData}/>} />
           <Route path='/saved-post' element={<SavedPost/>}/>
+          <Route path='/add-to-cart' element={<CartPage/>}/>
         </Routes>
       </BrowserRouter>
     </>
