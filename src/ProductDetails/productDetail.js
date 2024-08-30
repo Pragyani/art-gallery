@@ -4,6 +4,7 @@ import Rating from '@mui/material/Rating';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { useDispatch } from "react-redux";
 import { addPosts } from "../reducers/indx";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
@@ -12,6 +13,8 @@ const ProductDetail = ({ Products }) => {
         dispatch(addPosts(product));
         alert('Product saved successfully!');
     };
+
+    console.log('PRODUCTS DISPATCHED', dispatch)
 
     return (
         <>
@@ -48,6 +51,7 @@ const ProductDetail = ({ Products }) => {
                                             </div>
                                             <div className="saved-mark-product">
                                                 <h3 onClick={() => handleSaveProduct(item)}><BookmarkIcon /></h3>
+                                                <h3><ShoppingCartIcon /></h3>
                                             </div>
                                         </div>
                                     )
