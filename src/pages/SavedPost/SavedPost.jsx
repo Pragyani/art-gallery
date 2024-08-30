@@ -8,6 +8,8 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const SavedProducts = () => {
     const savedProducts = useSelector((state) => state.savedProduct);
 
+    console.log('aniSAVEDPOS',savedProducts)
+
     return (
         <div className="saved-products-container">
             <h1>Saved Products</h1>
@@ -17,6 +19,7 @@ const SavedProducts = () => {
 
                 ) : (
                     savedProducts.map((product) => (
+                        <div className="fluid-post">
                         <div className="re-container">
                             <div className="product-fluid">
                                 <div key={product.id} className="products">
@@ -39,6 +42,7 @@ const SavedProducts = () => {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     ))
