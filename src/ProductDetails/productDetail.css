@@ -175,11 +175,13 @@
 
 .products .saved-mark-product {
     margin-top: 8px;
-    margin-left: 88%;
+    margin-left: 80%;
     cursor: pointer;
+    display: flex;
+    gap: 18%;
 }
 
-.products .saved-mark-product:hover {
+.products .saved-mark-product h3:hover {
     cursor: pointer;
     color: rgba(64, 165, 212, 0.944);
 }
