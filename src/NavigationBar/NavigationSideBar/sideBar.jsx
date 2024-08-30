@@ -17,16 +17,15 @@ const SideBar = () => {
                                 <ul>
                                     <li>Latest Post <ArrowRightRoundedIcon className="forward-icon" /></li>
                                     <Link to={'./saved-post'}><li>Saved Post  <ArrowRightRoundedIcon className="forward-icon" /></li></Link>
-                                    <li>Home Page </li>
                                 </ul>
                             </div>
 
                             <div className="category-list">
                                 <ul>
 
-                                    <li>FAQ <ArrowRightRoundedIcon className="forward-icon" /></li>
                                     <Link to={'/your-account'} ><li>Create Account <ArrowRightRoundedIcon className="forward-icon" /></li></Link>
                                     <Link to={'./profilepage'}><li>Your Profile <AccountCircleRoundedIcon className="user-prof-i" /></li></Link>
+                                    <li>FAQ <ArrowRightRoundedIcon className="forward-icon" /></li>
 
                                 </ul>
                             </div>
