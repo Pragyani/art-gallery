@@ -26,8 +26,8 @@ const SideBar = () => {
 
                                     <li>FAQ <ArrowRightRoundedIcon className="forward-icon" /></li>
                                     <Link to={'/your-account'} ><li>Create Account <ArrowRightRoundedIcon className="forward-icon" /></li></Link>
-                                    <Link to={'./profilepage'}><li>Your Profile <AccountCircleRoundedIcon className="user-prof-i" /></li></Link>
-                                    <Link><li>Your Carts <ShoppingCartIcon  className="user-prof-i"/></li></Link>
+                                    <Link to={'/profilepage'}><li>Your Profile <AccountCircleRoundedIcon className="user-prof-i" /></li></Link>
+                                    <Link to={'/add-to-cart'}><li>Your Carts <ShoppingCartIcon  className="user-prof-i"/></li></Link>
 
                                 </ul>
                             </div>
