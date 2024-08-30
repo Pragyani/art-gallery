@@ -3,6 +3,7 @@ import './sidebar.css';
 import ArrowRightRoundedIcon from '@mui/icons-material/ArrowRightRounded';
 import { Link } from "react-router-dom";
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const SideBar = () => {
     return (
@@ -23,9 +24,10 @@ const SideBar = () => {
                             <div className="category-list">
                                 <ul>
 
+                                    <li>FAQ <ArrowRightRoundedIcon className="forward-icon" /></li>
                                     <Link to={'/your-account'} ><li>Create Account <ArrowRightRoundedIcon className="forward-icon" /></li></Link>
                                     <Link to={'./profilepage'}><li>Your Profile <AccountCircleRoundedIcon className="user-prof-i" /></li></Link>
-                                    <li>FAQ <ArrowRightRoundedIcon className="forward-icon" /></li>
+                                    <Link><li>Your Carts <ShoppingCartIcon  className="user-prof-i"/></li></Link>
 
                                 </ul>
                             </div>
