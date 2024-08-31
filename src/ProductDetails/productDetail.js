@@ -3,7 +3,7 @@ import './productDetail.css';
 import Rating from '@mui/material/Rating';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { useDispatch } from "react-redux";
-import { addPosts } from "../reducers/indx";
+import { addCartPost, addPosts } from "../reducers/indx";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const ProductDetail = ({ Products }) => {
@@ -14,7 +14,10 @@ const ProductDetail = ({ Products }) => {
         alert('Product saved successfully!');
     };
 
-    console.log('PRODUCTS DISPATCHED', dispatch)
+    const addToCarthandle = (product) => {
+        dispatch(addCartPost(product));
+        alert('product cart item added')
+    }
 
     return (
         <>
@@ -51,7 +54,7 @@ const ProductDetail = ({ Products }) => {
                                             </div>
                                             <div className="saved-mark-product">
                                                 <h3 onClick={() => handleSaveProduct(item)}><BookmarkIcon /></h3>
-                                                <h3><ShoppingCartIcon  className="cart-ikn"/></h3>
+                                                <h3 onClick={() => addToCarthandle(item)}><ShoppingCartIcon className="cart-ikn" /></h3>
                                             </div>
                                         </div>
                                     )
