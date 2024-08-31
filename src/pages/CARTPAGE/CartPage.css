@@ -75,11 +75,11 @@
     width: 80%;
 }
 
-.fluid-post .product-box .product-img {
+.cart-products-list.fluid-post .product-box .product-img {
     width: 100%;
 }
 
-.fluid-post .product-breif {
+.cart-products-list.fluid-post .product-breif {
     margin-left: 20px;
     margin-bottom: 10px;
 }
