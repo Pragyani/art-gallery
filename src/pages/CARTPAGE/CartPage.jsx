@@ -11,9 +11,9 @@ const CartPage =()=>{
     console.log('aniSAVEDPOS',CartProducts)
 
     return (
-        <div className="saved-products-container">
-            <h1> ADD TO CART ITEMS</h1>
-            <div className="saved-products-list">
+        <div className="cart-products-container">
+            <h1>CART ITEMS</h1>
+            <div className="cart-products-list">
                 {CartProducts.length === 0 ? (
                     <p>No products saved yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
 
