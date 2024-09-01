@@ -24,6 +24,8 @@
     letter-spacing: 0.7px;
     font-weight: 350;
     font-size: 38px;
+    color: rgba(255, 255, 255, 0.812);
+    cursor: pointer;
 }
 
 .navBar .nav-p2 {
@@ -40,7 +42,7 @@
 }
 
 hr {
-    color: rgba(0, 0, 0, 0.612);
+    color: rgba(255, 255, 255, 0.526);
     border: 1px solid;
     margin-left: 10px;
     margin-right: 10px;
@@ -53,7 +55,7 @@ hr {
     transition: all 0.3s ease-in-out;
     border: none;
     padding: 10px;
-    color: black;
+    color: rgba(255, 255, 255, 0.812);
     letter-spacing: 1.5px;
     border-radius: 30px;
     font-size: 15px;
@@ -71,9 +73,9 @@ hr {
 }
 
 .nav-p2 .nav-ul .ul-li:hover {
-    background-color: #6B8A7A;
+    background-color: #4e97c4;
     border-color: #6B8A7A;
-    box-shadow: 3px 3px 7px #6B8A7A;
+    box-shadow: 3px 3px 7px #c9e1d5;
 }
 
 .nav-p2 .nav-ul .ul-li .material-icons {
