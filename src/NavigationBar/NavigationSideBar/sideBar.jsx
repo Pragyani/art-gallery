@@ -41,6 +41,14 @@ const SideBar = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="contnt-pt-2">
+                    <div className="pt-2-block">
+                        <div className="pt-II-img">
+                            <img src="https://i.pinimg.com/564x/18/cb/fc/18cbfc9c07ae20c17f2e8b54aa1a57a9.jpg" alt="mandlaimage" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     );
