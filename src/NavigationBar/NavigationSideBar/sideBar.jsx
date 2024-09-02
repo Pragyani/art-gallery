@@ -3,9 +3,14 @@ import './sidebar.css';
 import ArrowRightRoundedIcon from '@mui/icons-material/ArrowRightRounded';
 import { Link } from "react-router-dom";
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Button } from "@mui/material";
+import { useSelector } from "react-redux";
 
 const SideBar = () => {
+
+    const cartItems = useSelector(state => state.cartedProducts);
+    console.log('numberodCart', cartItems);
+
     return (
         <>
             <div className="container">
@@ -23,22 +28,20 @@ const SideBar = () => {
 
                             <div className="category-list">
                                 <ul>
-
                                     <li>FAQ <ArrowRightRoundedIcon className="forward-icon" /></li>
                                     <Link to={'/your-account'} ><li>Create Account <ArrowRightRoundedIcon className="forward-icon" /></li></Link>
                                     <Link to={'/profilepage'}><li>Your Profile <AccountCircleRoundedIcon className="user-prof-i" /></li></Link>
-                                    <Link to={'/add-to-cart'}><li>Your Carts <ShoppingCartIcon  className="user-prof-i"/></li></Link>
-
+                                    <Link to={'/add-to-cart'}>
+                                        <li>Your Cart <Button>{cartItems.length}</Button></li>
+                                    </Link>
                                 </ul>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </div>
-
         </>
-    )
+    );
 }
+
 export default SideBar;
