@@ -468,7 +468,7 @@
 .re-contaier .product-fl .products-w {
     width: 108%;
     height: auto;
-    border: 1px solid rgba(0, 0, 0, 0.287);
+    border: 1px solid rgba(255, 255, 255, 0.952);
     border-radius: 12px;
     padding: 10px;
     transition: all 0.3s ease-in-out;
@@ -476,12 +476,12 @@
 }
 
 .re-contaier .product-fl .products-w:hover {
-    box-shadow: 2px 4px 7px rgba(34, 34, 34, 0.279);
+    box-shadow: 2px 4px 7px rgba(255, 255, 255, 0.711);
 }
 
 .re-contaier .product-fl .products-w:hover .product-box .product-img img {
     cursor: pointer;
-    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.287);
+    box-shadow: 2px 4px 7px rgba(255, 255, 255, 0.711);
     transform: scale(0.9);
     opacity: .9;
 }
@@ -491,7 +491,7 @@
     width: 100%;
     padding: 5px;
     border-radius: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.287);
+    border: 1px solid rgba(255, 255, 255, 0.988);
 }
 
 
@@ -512,13 +512,13 @@
     width: 100%;
     margin-top: 20px;
     height: auto;
-    border: 1px solid rgba(0, 0, 0, 0.287);
+    border: 1px solid rgba(255, 255, 255, 0.988);
     padding: 5px;
     border-radius: 10px;
 }
 
 .re-contaier .product-fl .products-w .product-breif:hover {
-    box-shadow: 2px 4px 7px rgba(34, 34, 34, 0.279);
+    box-shadow: 2px 4px 7px rgba(255, 255, 255, 0.711);
 }
 
 
@@ -544,6 +544,12 @@
 
 .info-data .products-icon .product-chnges-icon {
     margin-right: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.info-data .products-icon .product-chnges-icon:hover {
+    color: red;
 }
 
 .product-chnges-icon .dots-icon {
@@ -554,6 +560,7 @@
 .product-chnges-icon .edit-icon {
     font-weight: bolder;
     font-size: 25px;
+    color: white;
     /* padding-top: 3px; */
 }
 
@@ -561,7 +568,7 @@
     border-radius: 20px;
     /* margin: 1px; */
     cursor: pointer;
-    color: rgb(46, 111, 181);
+    color: rgba(90, 178, 216, 0.909);
     font-size: 20px;
 }
 
