@@ -22,7 +22,6 @@ const ProfileColumn = () => {
                             <hr className="col-hr"/>
                             <span className="user-id">user id: <h3>@anipragss</h3></span>
                             <hr className="col-hr"/>
-                            <span className="totalpost">Your Posts: <h4>15</h4></span>
                         </div>
                     </div>
                 </div>
