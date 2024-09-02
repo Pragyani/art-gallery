@@ -1,6 +1,6 @@
 .column-box{
     width: 100%;
-     border: 1px solid rgba(0, 0, 0, 0.866);
+     border: 1px solid rgba(255, 255, 255, 0.952);
     border-radius: 19px; 
     padding: 30px;
 }
@@ -15,10 +15,10 @@
     /* justify-content: space-between; */
 }
 
-.column-hr{
+.col-hr{
     margin-left: 150px;
     margin-right: 100px;
-    color: rgba(0, 0, 0, 0.451);
+    background-color: rgba(255, 255, 255, 0.956);
     /* border: 1px; */
 }
 
@@ -41,6 +41,7 @@
     padding-left: 12px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
+    color: rgba(255, 255, 255, 0.956);
 }
 
 .colun-flexbox .user-data .brnd-name h1{
@@ -49,11 +50,12 @@
     bottom: 6px;
     font-weight: 480;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+    color: rgba(240, 248, 255, 0.946);
 }
 
 .colun-flexbox .user-data .brnd-name h1:hover{
-    color: rgba(0, 0, 0, 0.709);
+    color: rgba(255, 255, 255, 0.956);
     transform: scale(1.1);
 }
 
@@ -66,6 +68,7 @@
     padding-left: 12px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
+    color: rgba(240, 248, 255, 0.937);
 }
 
 .colun-flexbox .user-data .user-id h3{
@@ -78,7 +81,7 @@
 }
 
 .colun-flexbox .user-data .user-id h3:hover{
-    color:rgba(0, 0, 0, 0.709) ;
+    color:rgba(255, 255, 255, 0.956) ;
     transform: scale(1.1);
 }
 
