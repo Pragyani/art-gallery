@@ -1,6 +1,6 @@
 .detail-container {
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.431);
+    border: 1px solid rgba(255, 255, 255, 0.956);
     height: auto;
     margin-top: 30px;
     border-radius: 12px;
@@ -18,14 +18,14 @@
     text-align: center;
     width: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgba(27, 27, 27, 0.815);
+    color:white;
 }
 
 .hr-line {
     width: 30%;
     margin-left: 34%;
     margin-top: 10px;
-    color: rgba(27, 27, 27, 0.815);
+    color: rgba(255, 255, 255, 0.956);
     border-radius: 12px;
 }
 
@@ -46,7 +46,7 @@
 .re-container .product-fluid .products {
     width: 23.3%;
     height: auto;
-    border: 1px solid rgba(0, 0, 0, 0.431);
+    border: 1px solid rgba(255, 255, 255, 0.952);
     border-radius: 12px;
     padding: 10px;
     transition: all 0.3s ease-in-out;
@@ -54,13 +54,13 @@
 }
 
 .re-container .product-fluid .products:hover {
-    box-shadow: 2px 4px 7px rgba(34, 34, 34, 0.279);
+    box-shadow: 2px 4px 7px rgba(255, 255, 255, 0.711);
     ;
 }
 
 .re-container .product-fluid .products:hover .product-box .product-img img {
     cursor: pointer;
-    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.431);
+    box-shadow: 2px 4px 7px rgba(255, 255, 255, 0.711);
     transform: scale(0.9);
     opacity: .9;
 }
@@ -70,7 +70,7 @@
     width: 100%;
     padding: 5px;
     border-radius: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.381);
+    border: 1px solid rgba(255, 255, 255, 0.988);
 }
 
 
@@ -91,13 +91,10 @@
     width: 100%;
     margin-top: 20px;
     height: auto;
-    border: 1px solid rgba(0, 0, 0, 0.431);
-    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.984);
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-radius: 10px;
-}
-
-.re-container .product-fluid .products .product-breif:hover {
-    box-shadow: 2px 4px 7px rgba(34, 34, 34, 0.279);
 }
 
 .products .product-breif .info-prod {
@@ -115,15 +112,16 @@
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 6px;
+    color: rgba(255, 255, 255, 0.957);
 }
 
 .info-prod .info-data .name {
-    margin-bottom: 7px;
-    margin-top: 7px;
-    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 900;
     text-align: center;
-    background-color: rgba(34, 34, 34, 0.233);
-    border-radius: 30px;
+    background-color: rgba(90, 178, 216, 0.909);
+    border-radius: 12px;
 }
 
 .info-prod .info-data .price-tag {
@@ -131,6 +129,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     font-size: 14px;
+    color: rgba(255, 255, 255, 0.882);
 }
 
 .info-prod .info-data .price-tag span {
@@ -142,6 +141,7 @@
 .info-prod .info-data h5 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 14px;
+    color: rgba(255, 255, 255, 0.882);
 }
 
 .info-prod .info-data h5 .rating-crd {
@@ -149,7 +149,7 @@
     font-size: 20px;
     height: 25px;
     padding-top: 2px;
-    color: rgb(33, 150, 150);
+    color: rgb(213, 234, 234);
 }
 
 .info-prod .info-data p {
@@ -160,17 +160,19 @@
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.882);
 }
 
 .info-prod .info-data p h6 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 12px;
     font-size: 12px;
-    font-weight: 550;
-    background-color: rgb(101, 167, 167);
+    font-weight: 950;
+    background-color: rgba(90, 178, 216, 0.909);
     padding: 5px;
     border-radius: 8px;
     cursor: pointer;
+    color: black;
 }
 
 .products .saved-mark-product {
@@ -179,6 +181,7 @@
     cursor: pointer;
     display: flex;
     gap: 18%;
+    color: rgba(255, 255, 255, 0.882);
 }
 
 .products .saved-mark-product h3:hover {
