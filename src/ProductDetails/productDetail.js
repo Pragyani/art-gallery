@@ -4,7 +4,7 @@ import Rating from '@mui/material/Rating';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { useDispatch } from "react-redux";
 import { addCartPost, addPosts } from "../reducers/indx";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
@@ -54,7 +54,7 @@ const ProductDetail = ({ Products }) => {
                                             </div>
                                             <div className="saved-mark-product">
                                                 <h3 onClick={() => handleSaveProduct(item)}><BookmarkIcon /></h3>
-                                                <h3 onClick={() => addToCarthandle(item)}><ShoppingCartIcon className="cart-ikn" /></h3>
+                                                <h3 onClick={() => addToCarthandle(item)}><AddShoppingCartIcon className="cart-ikn" /></h3>
                                             </div>
                                         </div>
                                     )
