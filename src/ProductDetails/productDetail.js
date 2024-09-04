@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import './productDetail.css';
 import Rating from '@mui/material/Rating';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { useDispatch } from "react-redux";
 import { addCartPost, addPosts } from "../reducers/indx";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
+    const [bookmarkedProducts, setBookmarkedProducts] = useState({});
 
     const handleSaveProduct = (product) => {
         dispatch(addPosts(product));
@@ -16,8 +18,24 @@ const ProductDetail = ({ Products }) => {
 
     const addToCarthandle = (product) => {
         dispatch(addCartPost(product));
-        alert('product cart item added')
-    }
+        alert('Product added to cart');
+    };
+
+    const handleBookmarkToggle = (product) => {
+        setBookmarkedProducts((prev) => ({
+            ...prev,
+            [product.id]: !prev[product.id]
+        }));
+    };
+
+    console.log('r', handleBookmarkToggle)
+
+    const handleBookmarkClick = (product) => {
+        handleBookmarkToggle(product);
+        if (!bookmarkedProducts[product.id]) {
+            handleSaveProduct(product);
+        }
+    };
 
     return (
         <>
@@ -33,28 +51,32 @@ const ProductDetail = ({ Products }) => {
                             {
                                 Products.length !== 0 && Products.map((item) => {
                                     return (
-                                        <div className="products">
+                                        <div className="products" key={item.id}>
                                             <div className="product-box">
                                                 <div className="product-img">
-                                                    <img src={item?.image} alt="mS" />
+                                                    <img src={item?.image} alt="Product" />
                                                 </div>
                                             </div>
 
                                             <div className="product-breif">
                                                 <div className="info-prod">
                                                     <div className="info-data">
-                                                        <h4>Desgined By Pragya</h4>
+                                                        <h4>Designed By Pragya</h4>
                                                         <h5 className="name">{item.name}</h5>
                                                         <h5 className="price-tag">Price - <span>{item?.price}</span></h5>
-                                                        <h5>Rating -<Rating name="customized-10" defaultValue={item?.rating} max={5} className="rating-crd" /></h5>
-                                                        <p>StockStatus - <h6>{item?.stockStatus}</h6> </p>
+                                                        <h5>Rating - <Rating name="customized-10" defaultValue={item?.rating} max={5} className="rating-crd" /></h5>
+                                                        <p>Stock Status - <h6>{item?.stockStatus}</h6></p>
                                                         <h4>Brand Name - <b>{item?.brand}</b></h4>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="saved-mark-product">
-                                                <h3 onClick={() => handleSaveProduct(item)}><BookmarkIcon /></h3>
-                                                <h3 onClick={() => addToCarthandle(item)}><AddShoppingCartIcon className="cart-ikn" /></h3>
+                                                <h3 onClick={() => handleBookmarkClick(item)}>
+                                                    {bookmarkedProducts[item.id] ? <BookmarkIcon /> : <BookmarkBorderIcon />}
+                                                </h3>
+                                                <h3 onClick={() => addToCarthandle(item)}>
+                                                    <AddShoppingCartIcon className="cart-ikn" />
+                                                </h3>
                                             </div>
                                         </div>
                                     )
