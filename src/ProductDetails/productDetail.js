@@ -5,19 +5,19 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { useDispatch } from "react-redux";
-import { addCartPost, addPosts } from "../reducers/indx";
+import { addPost, addCartProducts } from "../reducers/indx";
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
     const [bookmarkedProducts, setBookmarkedProducts] = useState({});
 
     const handleSaveProduct = (product) => {
-        dispatch(addPosts(product));
+        dispatch(addPost(product));
         alert('Product saved successfully!');
     };
 
     const addToCarthandle = (product) => {
-        dispatch(addCartPost(product));
+        dispatch(addCartProducts(product));
         alert('Product added to cart');
     };
 
