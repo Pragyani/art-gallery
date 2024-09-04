@@ -4,19 +4,36 @@ export const SavedPostSlice = createSlice({
     name: 'savedPosts',
     initialState: [],
     reducers: {
-        addPosts: (state, action) => {
+        addPost: (state, action) => {
             if (!state.find(product => product.id === action.payload.id)) {
-                state.push(action.payload)
-            }
-        },
-        addCartPost: (state, action) => {
-            const postExists = state.filter(product => product.id === action.payload.id);
-            if (postExists.length === 0) {
                 state.push(action.payload);
             }
+        },
+        removePost: (state, action) => {
+            return state.filter(product => product.id !== action.payload.id);
+        }
+    }
+})
+export const { addPost, removePost } = SavedPostSlice.actions;
+
+export const cartProductsSlice = createSlice({
+    name: 'cartProducts',
+    initialState: [],
+    reducers: {
+        addCartProducts: (state, action) => {
+            if (!state.find(product => product.id === action.payload.id)) {
+                state.push(action.payload);
+            }
+        },
+        removeCartProduct: (state, action) => {
+            return state.filter(product => product.id !== action.payload.id);
         }
     }
 })
 
-export const { addPosts, addCartPost } = SavedPostSlice.actions;
-export default SavedPostSlice.reducer;
+export const { addCartProducts, removeCartProduct } = cartProductsSlice.actions;
+
+export default {
+    savedPostsReducer: SavedPostSlice.reducer,
+    cartProductsReducer: cartProductsSlice.reducer
+};
