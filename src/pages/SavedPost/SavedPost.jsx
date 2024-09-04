@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const SavedProducts = () => {
-    const savedProducts = useSelector((state) => state.savedProduct);
+    const savedProducts = useSelector((state) => state.savedPosts);
 
     console.log('aniSAVEDPOS',savedProducts)
 
