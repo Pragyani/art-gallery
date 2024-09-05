@@ -114,7 +114,7 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
                                                 <input type="number" placeholder="Enter price..." value={inputPrice} onChange={handleChangePrice} />
                                             </div>
                                             <div className="stock-bar">
-                                                <h5>Stock Status <BasicSelect /></h5>
+                                                <h5><BasicSelect /></h5>
                                             </div>
                                             <div className="brand-bar">
                                                 <h5>Brand Name</h5>
