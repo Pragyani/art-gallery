@@ -16,7 +16,7 @@ const BasicSelect =()=> {
   return (
     <Box sx={{ minWidth: 120 }} className=" nme">
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label" className="input-label-mt">stock option</InputLabel>
+        <InputLabel id="demo-simple-select-label" className="input-label-mt">Stock status</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
