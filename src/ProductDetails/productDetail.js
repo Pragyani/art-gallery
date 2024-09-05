@@ -6,10 +6,12 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { useDispatch } from "react-redux";
 import { addPost, addCartProducts } from "../reducers/indx";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
     const [bookmarkedProducts, setBookmarkedProducts] = useState({});
+    const [cartedmarkedProducts, setCartedMarkedProduct] = useState({});
 
     const handleSaveProduct = (product) => {
         dispatch(addPost(product));
@@ -28,8 +30,6 @@ const ProductDetail = ({ Products }) => {
         }));
     };
 
-    console.log('r', handleBookmarkToggle)
-
     const handleBookmarkClick = (product) => {
         handleBookmarkToggle(product);
         if (!bookmarkedProducts[product.id]) {
@@ -37,6 +37,20 @@ const ProductDetail = ({ Products }) => {
         }
     };
 
+    const carthandlemarked = (product) => {
+        setCartedMarkedProduct((prev) => ({
+            ...prev,
+            [product.id]: !prev[product.id]
+        }));
+    };
+
+    console.log('the cart icon clicked ', carthandlemarked);
+    const CartedHandleMarkedClicked = (product) => {
+        carthandlemarked(product);
+        if (!cartedmarkedProducts[product.id]) {
+            addToCarthandle(product);
+        }
+    }
     return (
         <>
             <div className="detail-container">
@@ -74,8 +88,8 @@ const ProductDetail = ({ Products }) => {
                                                 <h3 onClick={() => handleBookmarkClick(item)}>
                                                     {bookmarkedProducts[item.id] ? <BookmarkIcon /> : <BookmarkBorderIcon />}
                                                 </h3>
-                                                <h3 onClick={() => addToCarthandle(item)}>
-                                                    <AddShoppingCartIcon className="cart-ikn" />
+                                                <h3 onClick={() => CartedHandleMarkedClicked(item)}>
+                                                    {cartedmarkedProducts[item.id] ? <ShoppingCartIcon /> : <AddShoppingCartIcon />}
                                                 </h3>
                                             </div>
                                         </div>
@@ -89,5 +103,4 @@ const ProductDetail = ({ Products }) => {
         </>
     );
 };
-
 export default ProductDetail;
