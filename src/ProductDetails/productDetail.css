@@ -66,11 +66,9 @@
 }
 
 .re-container .product-fluid .products .product-box {
-    /* margin: 12px; */
     width: 100%;
     padding: 5px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.988);
 }
 
 
@@ -91,7 +89,6 @@
     width: 100%;
     margin-top: 20px;
     height: auto;
-    border: 1px solid rgba(255, 255, 255, 0.984);
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 10px;
@@ -150,6 +147,12 @@
     height: 25px;
     padding-top: 2px;
     color: rgb(213, 234, 234);
+    background-color: rgba(92, 187, 227, 0.909);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 12px;
 }
 
 .info-prod .info-data p {
