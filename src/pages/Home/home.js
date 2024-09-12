@@ -8,6 +8,7 @@ const Home = ({ data }) => {
         <>
             <div className="home-page">
                 <SideBar />
+                <hr className="hr-dep"/>
                 <ProductDetail Products={data} />
             </div>
         </>
