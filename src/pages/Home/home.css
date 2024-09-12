@@ -1,4 +1,11 @@
-.home-page{
+.home-page {
     display: flex;
     width: 100%;
+}
+
+.hr-dep {
+    color: #343a40;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    opacity: .2;
 }
