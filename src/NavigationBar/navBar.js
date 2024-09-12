@@ -12,7 +12,7 @@ const NavBAr = () => {
             <div className="NavigationBar">
                 <div className="navBar">
                     <div className="nav-p1">
-                        <h1>Art.Dribbles</h1>
+                        <h1>art.Gallery</h1>
                     </div>
                     <div className="nav-p2">
                         <ul className="nav-ul">
