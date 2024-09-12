@@ -21,15 +21,16 @@ const SideBar = () => {
                 <div className="content">
                     <div className="content-fluid">
                         <div className="sidebar">
-                            <h2 className="side-heading">Your Category</h2>
+                            <h1 className="side-heading">Category</h1>
+                            <hr />
 
                             <div className="category-list">
                                 <ul>
-                                    <Link to={'/'}> <li><SignpostIcon className="user-prof-i" />Our Post <ArrowRightRoundedIcon className="forward-icon" /></li></Link>
+                                    <Link to={'/'}> <li><SignpostIcon className="user-prof-i" />Your Post <ArrowRightRoundedIcon className="forward-icon" /></li></Link>
                                     <Link to={'./saved-post'}><li> <ClassIcon className="user-prof-i" />Saved Post  <ArrowRightRoundedIcon className="forward-icon" /></li></Link>
                                 </ul>
                             </div>
-
+                            <hr />
                             <div className="category-list">
                                 <ul>
                                     <li><QuizIcon className="user-prof-i" /> FAQ <ArrowRightRoundedIcon className="forward-icon" /></li>
@@ -41,14 +42,6 @@ const SideBar = () => {
                         </div>
                     </div>
                 </div>
-{/* 
-                <div className="contnt-pt-2">
-                    <div className="pt-2-block">
-                        <div className="pt-II-img">
-                            <img src="https://i.pinimg.com/564x/18/cb/fc/18cbfc9c07ae20c17f2e8b54aa1a57a9.jpg" alt="mandlaimage" />
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </>
     );
