@@ -15,12 +15,10 @@ const ProductDetail = ({ Products }) => {
 
     const handleSaveProduct = (product) => {
         dispatch(addPost(product));
-        alert('Product saved successfully!');
     };
 
     const addToCarthandle = (product) => {
         dispatch(addCartProducts(product));
-        alert('Product added to cart');
     };
 
     const handleBookmarkToggle = (product) => {
@@ -55,11 +53,6 @@ const ProductDetail = ({ Products }) => {
         <>
             <div className="detail-container">
                 <div className="container-box">
-                    <div className="heading">
-                        <h2>Your Posts</h2>
-                        <hr className="hr-line" />
-                    </div>
-
                     <div className="re-container">
                         <div className="product-fluid">
                             {
