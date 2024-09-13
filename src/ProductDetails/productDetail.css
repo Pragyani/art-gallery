@@ -1,14 +1,16 @@
 .detail-container {
     width: 100%;
     height: auto;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     border-radius: 12px;
     margin-right: 12px;
 }
 
 .detail-container .container-box {
     width: 100%;
-    padding: 15px;
+    /* padding: 15px; */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .detail-container .container-box .heading h2 {
@@ -24,42 +26,42 @@
     width: 30%;
     margin-left: 34%;
     margin-top: 10px;
-    color: #343a40;
+    color: #939ca6b7;
     opacity: .2;
     border-radius: 12px;
 }
 
 .container-box .re-container {
     width: 100%;
-    margin-top: 38px;
+    /* margin-top: 38px; */
     /* border:  2px solid red; */
 }
 
 .container-box .re-container .product-fluid {
-    margin: 10px;
+    margin-left: 6pc;
     display: flex;
-    gap: 25px;
-    justify-content: space-evenly;
+    /* gap: 55px; */
+    justify-content: space-evenly; 
     flex-wrap: wrap;
 }
 
 .re-container .product-fluid .products {
-    width: 23.3%;
+    width: 20.9%;
     height: auto;
-    border: 1px solid #343a40d5;
+    border: 1px solid rgba(255, 255, 255, 0.811);
     border-radius: 9.9px;
-    padding: 10px;
+    padding: 15px;
     transition: all 0.3s ease-in-out;
     margin-bottom: 35px;
 }
 
 .re-container .product-fluid .products:hover {
-    box-shadow: 2px 4px 7px #343a406f;
+    box-shadow: 2px 4px 14px #c3c6c9c8;
 }
 
 .re-container .product-fluid .products:hover .product-box .product-img img {
     cursor: pointer;
-    box-shadow: 2px 4px 7px #343a40a7;
+    box-shadow: 2px 4px 7px #c3c6c9c8;
     transform: scale(0.9);
     opacity: .9;
 }
@@ -111,7 +113,7 @@
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 6px;
-    color: #343a40;
+    color: rgba(255, 255, 255, 0.925);
 }
 
 .info-prod .info-data .name {
@@ -131,7 +133,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     font-size: 14px;
-    color: #343a40;
+    color: rgba(255, 255, 255, 0.925);
 }
 
 .info-prod .info-data .price-tag span {
@@ -143,7 +145,7 @@
 .info-prod .info-data h5 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 14px;
-    color: #343a40;
+    color: rgba(255, 255, 255, 0.925);
 }
 
 .info-prod .info-data h5 .rating-crd {
@@ -168,7 +170,7 @@
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 8px;
-    color: #343a40;
+    color: rgba(255, 255, 255, 0.925);
 }
 
 .info-prod .info-data p h6 {
@@ -180,7 +182,7 @@
     padding: 5px;
     border-radius: 8px;
     cursor: pointer;
-    color: black;
+    color: rgba(255, 255, 255, 0.925);
 }
 
 .products .saved-mark-product {
@@ -189,7 +191,7 @@
     cursor: pointer;
     display: flex;
     gap: 18%;
-    color: #343a40;
+    color: rgba(255, 255, 255, 0.925);
 }
 
 .products .saved-mark-product h3:hover {
