@@ -41,14 +41,14 @@
     margin-left: 6pc;
     display: flex;
     /* gap: 55px; */
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
 .re-container .product-fluid .products {
     width: 20.9%;
     height: auto;
-    border: 1px solid rgba(255, 255, 255, 0.811);
+    border: 1px solid var(--border-color);
     border-radius: 9.9px;
     padding: 15px;
     transition: all 0.3s ease-in-out;
@@ -56,12 +56,12 @@
 }
 
 .re-container .product-fluid .products:hover {
-    box-shadow: 2px 4px 14px #c3c6c9c8;
+    box-shadow: 2px 4px 14px var(--border-color);
 }
 
 .re-container .product-fluid .products:hover .product-box .product-img img {
     cursor: pointer;
-    box-shadow: 2px 4px 7px #c3c6c9c8;
+    box-shadow: 2px 4px 7px var(--border-color);
     transform: scale(0.9);
     opacity: .9;
 }
@@ -113,7 +113,7 @@
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 6px;
-    color: rgba(255, 255, 255, 0.925);
+    color: var(--color);
 }
 
 .info-prod .info-data .name {
@@ -133,7 +133,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.925);
+    color: var(--color);
 }
 
 .info-prod .info-data .price-tag span {
@@ -145,7 +145,7 @@
 .info-prod .info-data h5 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.925);
+    color: var(--color);
 }
 
 .info-prod .info-data h5 .rating-crd {
@@ -170,7 +170,7 @@
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.925);
+    color: var(--color);
 }
 
 .info-prod .info-data p h6 {
@@ -182,7 +182,7 @@
     padding: 5px;
     border-radius: 8px;
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.925);
+    color: var(--color);
 }
 
 .products .saved-mark-product {
@@ -191,7 +191,7 @@
     cursor: pointer;
     display: flex;
     gap: 18%;
-    color: rgba(255, 255, 255, 0.925);
+    color: var(--color);
 }
 
 .products .saved-mark-product h3:hover {
