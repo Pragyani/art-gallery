@@ -14,7 +14,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const SideBar = () => {
     const cartItems = useSelector(state => state.cartProducts);
-    console.log('numberodCart', cartItems);
+    
     const [dropdownVisible, setDropdownVisible] = useState(false);
 
     const handleToggleDropdown = () => {

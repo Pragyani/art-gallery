@@ -42,7 +42,6 @@ const ProductDetail = ({ Products }) => {
         }));
     };
 
-    console.log('the cart icon clicked ', carthandlemarked);
     const CartedHandleMarkedClicked = (product) => {
         carthandlemarked(product);
         if (!cartedmarkedProducts[product.id]) {
