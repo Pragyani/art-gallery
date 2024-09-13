@@ -7,8 +7,11 @@ import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRound
 import { Link } from "react-router-dom";
 import SearchSharpIcon from '@mui/icons-material/SearchSharp';
 import SideBar from "./NavigationSideBar/sideBar";
+import { UseTheme } from "../theme-context/theme-context";
 
 const NavBAr = () => {
+    const { theme, toogleTheme } = UseTheme();
+
     return (
         <>
             <div className="NavigationBar">
