@@ -48,7 +48,7 @@
     font-size: 28px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 480;
-    color: rgba(255, 255, 255, 0.925);
+    color: var(--color);
     margin-bottom: 33px;
     position: relative;
     margin-left: 10pc;
@@ -84,7 +84,7 @@
     height: 60px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-transform: capitalize;
-    color: rgba(255, 255, 255, 0.925);
+    color: var(--color);
     display: flex;
     /* justify-content: space-evenly; */
     gap: 3pc;
@@ -95,7 +95,7 @@
 
 .content-fluid .sidebar .category-list ul a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.925);
+    color: var(--color);
 }
 
 .content-fluid .sidebar .category-list ul li {
