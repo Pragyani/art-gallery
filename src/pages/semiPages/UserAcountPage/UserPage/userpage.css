@@ -468,7 +468,7 @@
 .re-contaier .product-fl .products-w {
     width: 108%;
     height: auto;
-    border: 1px solid rgba(255, 255, 255, 0.952);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 10px;
     transition: all 0.3s ease-in-out;
@@ -476,12 +476,12 @@
 }
 
 .re-contaier .product-fl .products-w:hover {
-    box-shadow: 2px 4px 7px rgba(255, 255, 255, 0.711);
+    box-shadow: 2px 4px 7px var(--border-color);
 }
 
 .re-contaier .product-fl .products-w:hover .product-box .product-img img {
     cursor: pointer;
-    box-shadow: 2px 4px 7px rgba(255, 255, 255, 0.711);
+    box-shadow: 2px 4px 7px var(--border-color);
     transform: scale(0.9);
     opacity: .9;
 }
@@ -491,7 +491,7 @@
     width: 100%;
     padding: 5px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.988);
+    border: 1px solid var(--border-color);
 }
 
 
@@ -512,7 +512,7 @@
     width: 100%;
     margin-top: 20px;
     height: auto;
-    border: 1px solid rgba(255, 255, 255, 0.988);
+    border: 1px solid var(--border-color);
     padding: 5px;
     border-radius: 10px;
 }
@@ -544,7 +544,7 @@
 
 .info-data .products-icon .product-chnges-icon {
     margin-right: 10px;
-    color: white;
+    color: var(--color);
     cursor: pointer;
 }
 
@@ -560,7 +560,7 @@
 .product-chnges-icon .edit-icon {
     font-weight: bolder;
     font-size: 25px;
-    color: white;
+    color: var(--color);
     /* padding-top: 3px; */
 }
 
