@@ -9,6 +9,7 @@ import AccountPage from './pages/semiPages/UserAcountPage/AccountPage';
 import ProfilePage from './pages/semiPages/UserAcountPage/UserPage/UserPage';
 import SavedPost from './pages/SavedPost/SavedPost';
 import CartPage from './pages/CARTPAGE/CartPage';
+import { ThemeProvider } from './theme-context/theme-context';
 
 function App() {
 
@@ -29,17 +30,19 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <NavBAr />
-        <Routes>
-          <Route path='/' element={<Home data={productData} />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/your-account' element={<AccountPage />} />
-          <Route path='/profilepage' element={<ProfilePage data={productData}/>} />
-          <Route path='/saved-post' element={<SavedPost/>}/>
-          <Route path='/add-to-cart' element={<CartPage/>}/>
-        </Routes>
-      </BrowserRouter>
+      <ThemeProvider>
+        <BrowserRouter>
+          <NavBAr />
+          <Routes>
+            <Route path='/' element={<Home data={productData} />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/your-account' element={<AccountPage />} />
+            <Route path='/profilepage' element={<ProfilePage data={productData} />} />
+            <Route path='/saved-post' element={<SavedPost />} />
+            <Route path='/add-to-cart' element={<CartPage />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
     </>
   );
 }
