@@ -5,6 +5,8 @@ import HdrStrongRoundedIcon from '@mui/icons-material/HdrStrongRounded';
 import CallRoundedIcon from '@mui/icons-material/CallRounded';
 import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
 import { Link } from "react-router-dom";
+import SearchSharpIcon from '@mui/icons-material/SearchSharp';
+import SideBar from "./NavigationSideBar/sideBar";
 
 const NavBAr = () => {
     return (
@@ -14,12 +16,19 @@ const NavBAr = () => {
                     <div className="nav-p1">
                         <h1>art.Gallery</h1>
                     </div>
+
+                    <div className="input-field">
+                        <div className="searchbox">
+                            <input type="text" placeholder="Search your item...." />
+                            <SearchSharpIcon className="shrp-i" />
+                        </div>
+                    </div>
+
                     <div className="nav-p2">
                         <ul className="nav-ul">
                             <Link to={'/'}><li className="ul-li"><HomeRoundedIcon className="material-icons" />Home</li></Link>
                             <Link to={'/about'}><li className="ul-li"><HdrStrongRoundedIcon className="material-icons" />About us</li></Link>
                             <li className="ul-li"><CallRoundedIcon className="material-icons" />Contact Us</li>
-                            <li className="ul-li"><SettingsSuggestRoundedIcon className="material-icons" />Setting</li>
 
                         </ul>
                     </div>
@@ -27,6 +36,7 @@ const NavBAr = () => {
             </div>
 
             <hr />
+            <SideBar />
         </>
     )
 }
