@@ -31,7 +31,7 @@ const NavBAr = () => {
                         <ul className="nav-ul">
                             <Link to={'/'}><li className="ul-li"><HomeRoundedIcon className="material-icons" />Home</li></Link>
                             <Link to={'/about'}><li className="ul-li"><HdrStrongRoundedIcon className="material-icons" />About us</li></Link>
-                            <li className="ul-li">Theme Mode<input type="checkbox" onChange={toogleTheme} checked={theme === 'light'}/><BasicSwitches/></li>
+                            <li className="ul-li">Theme Mode<input type="checkbox" onChange={toogleTheme} checked={theme === 'light'}/></li>
 
                         </ul>
                     </div>
