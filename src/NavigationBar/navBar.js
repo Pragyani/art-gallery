@@ -10,7 +10,7 @@ import SideBar from "./NavigationSideBar/sideBar";
 import { UseTheme } from "../theme-context/theme-context";
 
 const NavBAr = () => {
-    const { theme, toogleTheme } = UseTheme();
+    const {toogleTheme , theme} = UseTheme();
 
     return (
         <>
@@ -31,7 +31,7 @@ const NavBAr = () => {
                         <ul className="nav-ul">
                             <Link to={'/'}><li className="ul-li"><HomeRoundedIcon className="material-icons" />Home</li></Link>
                             <Link to={'/about'}><li className="ul-li"><HdrStrongRoundedIcon className="material-icons" />About us</li></Link>
-                            <li className="ul-li"><CallRoundedIcon className="material-icons" />Contact Us</li>
+                            <li className="ul-li">Theme Mode<input type="checkbox" onChange={toogleTheme} checked={theme === 'light'}/><BasicSwitches/></li>
 
                         </ul>
                     </div>
