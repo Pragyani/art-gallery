@@ -1,0 +1,76 @@
+.art-bar {
+    margin-top: 30px;
+    border: 1px solid var(--border-color);
+    padding: 6px;
+    border-radius: 10px;
+    height: 25pc;
+    width: 21.4%;
+}
+
+.art-bar .art-side-bar {
+    width: 100%;
+}
+
+.art-bar .art-side-bar .poppulr-arts {
+    width: 100%;
+    margin-bottom: 44px;
+}
+
+.art-side-bar .poppulr-arts h3 {
+    color: var(--color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-weight: 380;
+    font-size: larger;
+    letter-spacing: 1px;
+    padding: 2.8px;
+    padding-left: 10px;
+}
+
+
+.art-side-bar .cl-list {
+    width: 100%;
+    padding: 4px;
+    /* border: 1px solid yellow; */
+}
+
+.art-side-bar .cl-list .art-list {
+    width: 100%;
+    list-style: none;
+    color: var(--color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+.cl-list .art-list li {
+    margin-bottom: 11.9px;
+    letter-spacing: 1px;
+    display: flex;
+    cursor: pointer;
+    /* position: relative; */
+}
+
+.cl-list .art-list li:hover {
+    font-weight: lighter;
+}
+
+.art-list li .page-a-icon {
+    margin: 10px;
+    /* border: 1px solid var(--border-color); */
+    height: 30px;
+    width: auto;
+    padding: 2px;
+    border-radius: 12px;
+    background-color: var(--bg-color);
+}
+
+.art-list li .nmes-li {
+    padding-top: 10px;
+}
+
+.art-bar h4 {
+    color: var(--color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    margin-left: 25px;
+    cursor: default;
+}
