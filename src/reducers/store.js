@@ -4,7 +4,8 @@ import reducer from './indx';
 const store = configureStore({
     reducer: {
         savedPosts: reducer.savedPostsReducer,
-        cartProducts: reducer.cartProductsReducer
+        cartProducts: reducer.cartProductsReducer,
+        popularPost: reducer.popularPostReducer
     }
 });
 
