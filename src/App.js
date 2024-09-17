@@ -10,6 +10,7 @@ import ProfilePage from './pages/semiPages/UserAcountPage/UserPage/UserPage';
 import SavedPost from './pages/SavedPost/SavedPost';
 import CartPage from './pages/CARTPAGE/CartPage';
 import { ThemeProvider } from './theme-context/theme-context';
+import PopularPost from './pages/popularPostPage/PopularPost';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
             <Route path='/profilepage' element={<ProfilePage data={productData} />} />
             <Route path='/saved-post' element={<SavedPost />} />
             <Route path='/add-to-cart' element={<CartPage />} />
+            <Route path='/popular-page' element={<PopularPost/>}/>
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
