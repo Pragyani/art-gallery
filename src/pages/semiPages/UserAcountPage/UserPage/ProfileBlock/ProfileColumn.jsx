@@ -10,7 +10,7 @@ const ProfileColumn = () => {
                         <div className="user-block">
                             <div className="text-file">
                                 <div className="user-pImg">
-                                    <img src="https://i.pinimg.com/564x/e7/79/9a/e7799a6ef00324ffb2b3351e061a9259.jpg" alt="image" />
+                                    <img src="https://i.pinimg.com/564x/aa/b2/03/aab2036f11e01e7bc615488478e36568.jpg" alt="image" />
                                 </div>
                             </div>
                         </div>
