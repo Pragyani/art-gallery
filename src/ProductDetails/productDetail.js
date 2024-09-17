@@ -10,6 +10,8 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonPinIcon from '@mui/icons-material/PersonPin';
 import FavoriteBorderSharpIcon from '@mui/icons-material/FavoriteBorderSharp';
 import ShareIcon from '@mui/icons-material/Share';
+import { BiUpvote } from "react-icons/bi";
+import { BiDownvote } from "react-icons/bi";
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
@@ -66,23 +68,25 @@ const ProductDetail = ({ Products }) => {
                                                 <div>Your Post : <b><span>{item?.brand}</span></b></div>
                                             </div>
 
-                                            <p>
-                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                when an unknown printer
-                                                took a galley of type and scrambled it to make a type specimen book.
-                                            </p>
 
                                             <div className="product-box">
                                                 <div className="product-img">
                                                     <img src={item?.image} alt="Product" />
                                                 </div>
                                             </div>
-
                                             <div className="product-breif">
                                                 <div className="info-prod">
                                                     <div className="info-data">
+                                                        <span className="info-data-p">
+                                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                                            when an unknown printer
+                                                            took a galley of type and scrambled it to make a type specimen book.
+                                                        </span>
                                                         <div className="post-icons">
-                                                            <FavoriteBorderSharpIcon className="hrt-st" />
+                                                            <div className="liked-ico">
+                                                                <BiUpvote className="vote-bicon" />
+                                                                <BiDownvote className="vote-bicon" />
+                                                            </div>
                                                             <ShareIcon className="hrt-st" />
                                                             <h3 onClick={() => handleBookmarkClick(item)} className="hrt-st">
                                                                 {bookmarkedProducts[item.id] ? <BookmarkIcon /> : <BookmarkBorderIcon />}
@@ -93,10 +97,12 @@ const ProductDetail = ({ Products }) => {
                                                         </div>
 
                                                         <h4>Designed By Pragya</h4>
-                                                        <h5 className="name">{item.name}</h5>
                                                         <h5 className="price-tag">Price - <span>{item?.price}</span></h5>
                                                         {/* <h5>Rating - <Rating name="customized-10" defaultValue={item?.rating} max={5} className="rating-crd" /></h5> */}
                                                         <p>Stock Status - <h6>{item?.stockStatus}</h6></p>
+                                                        {/* <h5 className="name">{item.name}</h5> */}
+                                                        <span className="input-span-tag"><input placeholder="Add Comment ...." type="text"/></span>
+
                                                         {/* <h4>Brand Name - <b>{item?.brand}</b></h4> */}
                                                     </div>
                                                 </div>
