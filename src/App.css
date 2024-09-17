@@ -5,7 +5,7 @@
 }
 
 [data-theme="light"] {
-  --bg-color: #f0ebeb;
+  --bg-color: #fff;
   --text-color: black;
   --border-color: rgba(32, 31, 31, 0.249);
   --color: black;
