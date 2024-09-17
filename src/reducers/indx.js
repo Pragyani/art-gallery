@@ -33,7 +33,25 @@ export const cartProductsSlice = createSlice({
 
 export const { addCartProducts, removeCartProduct } = cartProductsSlice.actions;
 
+export const popularPostSlice = createSlice({
+    name: 'popularPost',
+    initialState: [],
+    reducers: {
+        addPopularPost: (state, action) => {
+            if (!state.find(product => product.id === action.payload.id)) {
+                state.push(action.payload);
+            }
+        },
+        removePopularPost: (state, action) => {
+            return state.filter(product => product.id !== action.payload.id);
+        }
+    }
+})
+
+export const { addPopularPost, removePopularPost } = popularPostSlice.actions;
+
 export default {
     savedPostsReducer: SavedPostSlice.reducer,
-    cartProductsReducer: cartProductsSlice.reducer
+    cartProductsReducer: cartProductsSlice.reducer,
+    popularPostReducer: popularPostSlice.reducer
 };
