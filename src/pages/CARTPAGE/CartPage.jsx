@@ -4,12 +4,15 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Rating from '@mui/material/Rating';
+import SideBar from "../../NavigationBar/NavigationSideBar/sideBar";
 
 const CartPage = () => {
     const cartProducts = useSelector((state) => state.cartProducts);
 
     return (
         <div className="cart-products-container">
+            <SideBar /> <hr />
+
             <h1>CART ITEMS</h1>
             <div className="cart-products-list">
                 {cartProducts.length === 0 ? (

@@ -1,11 +1,13 @@
 import React from "react";
 import './accountsPage.css';
 import Button from '@mui/material/Button';
+import SideBar from "../../../NavigationBar/NavigationSideBar/sideBar";
 
 const AccountPage = () => {
     return (
         <>
             <div className="acount-cl">
+                <SideBar /><hr />
                 <div className="cl-container">
                     <div className="boxes-ro">
                         <div className="colum">
