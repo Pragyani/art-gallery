@@ -40,6 +40,7 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
             setInputBrand('');
             setInputImageUrl('');
             setStockStatus('In Stock');
+
         }
     }, [postToEdit]);
 
@@ -72,8 +73,14 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
                 )
             );
         } else {
-            setArtData(prevData => [...prevData, newPost]);
+            setArtData(prevData => [newPost, ...prevData]);
         }
+        setInputName('');
+        setInputPrice('');
+        setInputBrand('');
+        setInputImage(null);
+        setInputImageUrl('');
+        setStockStatus('In Stock');
 
         handleClose();
     };
