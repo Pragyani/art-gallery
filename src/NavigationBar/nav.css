@@ -1,6 +1,6 @@
 .NavigationBar {
     width: 100%;
-    height: 90px;
+    height: 82px;
     padding-left: 20px;
     padding-right: 20px;
     overflow: hidden;
@@ -10,6 +10,7 @@
 .NavigationBar .navBar {
     width: 100%;
     display: flex;
+    /* position: fixed; */
 }
 
 .navBar .nav-p1 {
@@ -21,36 +22,39 @@
     /* border: 1px solid black; */
 }
 
+.navBar .nav-p1 a {
+    text-decoration: none;
+    color: var(--color);
+}
+
 .navBar .nav-p1 h1 {
-    font-family: "Dancing Script", cursive;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding-top: 20px;
-    margin-left: 34px;
-    letter-spacing: 0.7px;
-    font-weight: 350;
-    font-size: 38px;
+    /* margin-left: 34px; */
+    letter-spacing: 1px;
+    font-weight: lighter;
+    font-size: 34px;
     color: var(--color);
     cursor: pointer;
 }
 
 .navBar .nav-p2 {
-    width: 60%;
-    /* border: 1px solid black; */
+    width: 42%;
+    /* border: 1px solid yellow; */
     padding: 3px;
+    padding-left: 80px;
 }
 
 .navBar .nav-p2 .nav-ul {
     width: 100%;
     display: flex;
     /* margin-left: 20%; */
-    padding-top: 26px;
+    padding-top: 19px;
     list-style: none;
 }
 
 hr {
     color: var(--color);
-    border: 1px solid;
-    margin-left: 10px;
-    margin-right: 10px;
     opacity: .2;
 }
 
@@ -67,17 +71,19 @@ hr {
     font-size: 17.5px;
     margin-bottom: 14px;
     position: relative;
-    padding-left: 60px;
+    padding-left: 25px;
+    /* border: 1px solid white; */
     padding-right: 25px;
     font-weight: 500;
 }
 
 .nav-p2 .nav-ul li input {
-    padding: 4px;
+    padding: 40px;
     margin-left: 8px;
     outline: none;
     border: none;
     cursor: pointer;
+    border: 1px solid whitesmoke;
 }
 
 
@@ -89,7 +95,7 @@ hr {
 .nav-p2 .nav-ul .ul-li:hover {
     background-color: #4e97c4;
     border-color: #6B8A7A;
-    box-shadow: 3px 3px 7px #c9e1d5;
+    box-shadow: 3px 3px 12px #c9e1d5;
     color: white;
 }
 
@@ -103,12 +109,12 @@ hr {
 }
 
 .input-field {
-    width: 50%;
-    margin-left: 25pc;
+    width: 59%;
+    margin-left: 15pc;
     margin-right: 1pc;
     height: auto;
     padding: 8px;
-    /* border: 1px solid black; */
+    /* border: 1px solid white; */
 }
 
 .input-field .searchbox {
@@ -120,16 +126,16 @@ hr {
     padding: 17px;
     outline: none;
     border: none;
-    margin-top: 15px;
-    border-radius: 12px;
+    margin-top: 8px;
+    border-radius: 52px;
     width: 100%;
-    height: 50px;
+    height: 52px;
     position: relative;
     letter-spacing: 1px;
     text-transform: capitalize;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-left: 2pc;
-    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 4pc;
+    font-size: 14px;
     background-color: var(--border-color);
 }
 
@@ -143,12 +149,35 @@ hr {
 .input-field .searchbox .shrp-i {
     position: absolute;
     /* right: -10px; */
-    left: 73pc;
-    top: 2.4pc;
+    left: 30.3pc;
+    top: 2pc;
     cursor: pointer;
-    color: #343a40ad;
+    color: rgb(175, 175, 174);
 }
 
 .shrp-i:hover {
     color: #343a40;
+}
+
+.cntrst-mode {
+    position: relative;
+    top: 5px;
+}
+
+.ul-l {
+    border: none;
+}
+
+.ul-l:hover {
+    border: none;
+}
+
+.li-span-img {
+    margin-left: 25px;
+}
+
+.li-span-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 52px;
 }
