@@ -5,6 +5,8 @@
     border-radius: 10px;
     height: 25pc;
     width: 21.4%;
+    position: fixed;
+    left: 90pc;
 }
 
 .art-bar .art-side-bar {
