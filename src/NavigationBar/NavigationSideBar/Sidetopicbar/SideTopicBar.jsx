@@ -7,7 +7,7 @@ const SideTopicBar = () => {
         <>
             <div className="category-lst">
                 <ul>
-
+                    
                     <span className="nme-cl-cr">Topics <ArrowDropDownRoundedIcon /></span>
                     <li><img src="https://i.pinimg.com/564x/a0/ca/a4/a0caa4c1da70e2bd26c0d636cb42278a.jpg" /><span className="li-cl-name">Mandala </span></li>
                     <li><img src="https://i.pinimg.com/564x/56/44/a4/5644a47fc82ee64bb2cdc7166c813eb0.jpg" /><span className="li-cl-name">Sketeches</span></li>

@@ -1,7 +1,6 @@
 .cart-products-container {
     width: 100%;
-    margin-top: 50px;
-    padding: 40px;
+    display: flex;
 }
 
 .cart-products-container h1 {
