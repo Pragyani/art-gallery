@@ -4,7 +4,6 @@
     padding-left: 20px;
     padding-right: 20px;
     overflow: hidden;
-    /* margin-bottom: 20px; */
 }
 
 .NavigationBar .navBar {
@@ -53,6 +52,11 @@
     list-style: none;
 }
 
+
+.nav-hr{
+    color: var(--color);
+    opacity: .2;
+}
 hr {
     color: var(--color);
     opacity: .2;
