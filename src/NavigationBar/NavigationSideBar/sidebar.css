@@ -1,8 +1,13 @@
 .container {
     width: 20%;
-    height: auto;
-    /* border: 1px solid aqua; */
-    margin-top: 30px;
+    position: sticky;
+    /* or fixed */
+    top: 30px;
+    /* adjust based on your layout */
+    height: calc(100vh - 30px);
+    /* adjust based on your layout */
+    overflow-y: auto;
+    /* allows scrolling if content exceeds the viewport */
 }
 
 .container .content .content-fluid {
@@ -11,7 +16,6 @@
 
 .container .content .content-fluid .sidebar {
     width: 100%;
-    /* padding: 10px; */
 }
 
 .sidebar .side-heading {
@@ -20,10 +24,8 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-
 .category-list {
     width: 100%;
-    /* border: 1PX SOLID yellow; */
 }
 
 .sidebar .category-list ul {
@@ -32,7 +34,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     color: var(--color);
-
 }
 
 .sidebar .category-list ul a {
@@ -40,25 +41,22 @@
     color: var(--color);
 }
 
-
 .sidebar .category-list ul a li {
-    /* margin: 40px; */
     width: 88.5%;
-    margin-left: 40px;
+    margin-left: 25px;
     margin-bottom: 20px;
     margin-right: 5px;
     letter-spacing: 1.3px;
-    font-weight: 300;
+    font-weight: 350;
     padding: 13px;
-    /* border: 1px solid wheat; */
+    font-size: 21px;
     border-radius: 15px;
-    /* transition: all 0.3s ease-in; */
 }
 
-.category-list ul a li .user-prof-i{
-   position: relative;
-   top: 4px;
-   left: -12px;
+.category-list ul a li .user-prof-i {
+    position: relative;
+    top: 4px;
+    left: -12px;
 }
 
 .sidebar .category-list ul a li:hover {
@@ -66,7 +64,25 @@
     font-weight: 400;
 }
 
-.matrl-list{
-    /* border: 1px solid white ; */
+.matrl-list {
     margin-top: 20px;
+}
+
+
+.crt-btn {
+    width: 36px;
+    /* padding: 4px; */
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: center;
+    border-radius: 33px;
+    /* height: 20px; */
+    margin-left: 43px;
+    /* border: 1px solid white; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    background-color: transparent;
+    color: var(--color);
+    outline: none;
 }
