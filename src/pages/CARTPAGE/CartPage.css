@@ -73,11 +73,20 @@
     width: 80%;
 }
 
-.cart-products-list.fluid-post .product-box .product-img {
+.cart-products-list .fluid-post .product-box .product-img {
     width: 100%;
 }
 
-.cart-products-list.fluid-post .product-breif {
-    margin-left: 20px;
-    margin-bottom: 10px;
+
+.cart-products-container .cart-products-list .product-img img {
+    width: 100%;
+    height: 28pc;
+    /* border: 3px solid yellow; */
+}
+
+.cart-products-container .cart-products-list .fluid-post .product-breif {
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    position: relative;
+    bottom: 13pc;
 }
