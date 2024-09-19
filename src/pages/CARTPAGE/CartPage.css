@@ -7,8 +7,13 @@
     /* text-align: center; */
     font-size: 50px;
     font-weight: lighter;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 28px;
+    margin-left: 30pc;
+    /* margin-bottom: 20px; */
+    padding-top: 4pc;
+    padding-left: 2pc;
+    color: var(--color);
 }
 
 .cart-products-container p {
