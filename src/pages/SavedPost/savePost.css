@@ -1,3 +1,13 @@
+.saved-semiConatiner{
+    display: flex;
+    width: 100%;
+}
+
+
+.saved-semiConatiner .side-sectionBar{
+    width: 20%;
+    border: 1px solid white;
+}
 .saved-products-container {
     width: 100%;
     margin-top: 50px;
