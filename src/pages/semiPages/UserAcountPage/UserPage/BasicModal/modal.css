@@ -12,7 +12,7 @@
     height: auto;
 }
 
-.box-flex h1{
+.box-flex h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 38px;
     font-weight: bolder;
@@ -41,36 +41,45 @@
 .box-flex .input-box .post-content .picture-tl {
     width: 100%;
     height: 10pc;
-    margin-top: 28%;
-    border: 1px solid black;
+    margin-top: 20%;
+    /* border: 1px solid black; */
     position: relative;
 }
 
 
 .box-flex .input-container .input-box .picture-tl label {
     width: 100%;
-    font-size: large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: italic;
-    margin-left: 110px;
+    font-size: larger;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10pc;
 }
 
+
+.box-flex .input-container .input-box .picture-tl form input{
+margin-left: 11.6rem;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 14px;
+font-weight: 400;
+margin-top: 13px;
+cursor: pointer;
+}
 .post-content .picture-tl .select {
-    width: 50%;
-    margin-left: 150px;
+    width: 47%;
+    margin-left: 135px;
     margin-top: 20px;
     margin-bottom: 10px;
     margin-right: 30px;
-    height: 3.5pc;
+    height: 4pc;
 }
 
 .post-content .picture-tl .preview-image {
     border: 1px solid black;
-    width: 101%;
+    width: 98.6%;
     border-radius: 22px;
     position: relative;
     top: -280px;
-    height: 33pc;
+    height: 34pc;
 }
 
 .box-flex .input-container .input-box .post-Detailcontent {
@@ -89,7 +98,8 @@
     font-size: 14px;
     font-weight: 520;
     margin-left: 80%;
-    border-radius: 25px;
+    border-radius: 22px;
+    margin-top: 43px;
 }
 
 .box-flex .post-Detailcontent .sbmit-btnpost:hover {
