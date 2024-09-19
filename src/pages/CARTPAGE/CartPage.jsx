@@ -13,8 +13,9 @@ const CartPage = () => {
         <div className="cart-products-container">
             <SideBar /> <hr />
 
-            <h1>CART ITEMS</h1>
             <div className="cart-products-list">
+                
+            <h1>CART ITEMS</h1>
                 {cartProducts.length === 0 ? (
                     <p>No products in cart yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
                 ) : (

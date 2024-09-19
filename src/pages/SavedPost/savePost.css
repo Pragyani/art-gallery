@@ -20,6 +20,7 @@
     font-size: 50px;
     font-weight: 340;
     margin-bottom: 28px;
+    color: var(--color);
 }
 
 .saved-products-container p {
@@ -54,11 +55,22 @@
 }
 
 .saved-products-container .saved-products-list .products {
-    width: 18%;
+    width: 80%;
 }
 
 .saved-products-container .saved-products-list {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-left: 80px;
+    margin-top: 70px;
+    margin-left: 30px;
+}
+
+.saved-products-list .fluid-post{
+    width: 50%;
+    margin-bottom: 6px;
 }
 
 /* 
