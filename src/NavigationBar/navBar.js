@@ -36,7 +36,7 @@ const NavBAr = () => {
                     </div>
                 </div>
             </div>
-            <hr />
+            <hr className="nav-hr"/>
         </>
     )
 }
