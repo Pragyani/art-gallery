@@ -1,0 +1,34 @@
+.footer-section{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.footer-section .cl-foterr-class{
+    width: 100%;
+    padding: 10px;
+    height: 15pc;
+    border: 1px solid yellow;
+}
+
+
+.cl-foterr-class .footer-slics{
+    width: 100%;
+}
+
+.cl-foterr-class .footer-slics h1{
+    font-size: 34px;
+    margin-left: 19px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+    color: var(--color);
+    font-weight: lighter;
+    cursor: pointer;
+    margin-bottom: 35px;
+}
+
+
+.cl-foterr-class .footer-slics a{
+    text-decoration: none;
+}
+
