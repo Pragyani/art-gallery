@@ -7,8 +7,10 @@
 .footer-section .cl-foterr-class {
     width: 100%;
     padding: 10px;
-    height: 15pc;
-    border: 1px solid yellow;
+    height: 13.8pc;
+    border-radius: 4px;
+    margin-bottom: 3px;
+    border: 1px solid var(--border-color);
 }
 
 
@@ -29,9 +31,9 @@
     width: 15%;
 }
 
-
-.cl-foterr-class .footer-slics a {
+.cl-foterr-class .footer-slics h1 a {
     text-decoration: none;
+    color: var(--color);
 }
 
 .web-info {
@@ -74,7 +76,7 @@
 
 h3 {
     color: var(--color);
-    margin-top: 30px;
+    margin-top: 10px;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: larger;
