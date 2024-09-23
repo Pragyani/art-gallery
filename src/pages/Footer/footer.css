@@ -1,10 +1,10 @@
-.footer-section{
+.footer-section {
     width: 100%;
     height: auto;
     overflow: hidden;
 }
 
-.footer-section .cl-foterr-class{
+.footer-section .cl-foterr-class {
     width: 100%;
     padding: 10px;
     height: 15pc;
@@ -12,11 +12,11 @@
 }
 
 
-.cl-foterr-class .footer-slics{
+.cl-foterr-class .footer-slics {
     width: 100%;
 }
 
-.cl-foterr-class .footer-slics h1{
+.cl-foterr-class .footer-slics h1 {
     font-size: 34px;
     margin-left: 19px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -24,11 +24,26 @@
     color: var(--color);
     font-weight: lighter;
     cursor: pointer;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+    /* border: 1px solid white; */
+    width: 15%;
 }
 
 
-.cl-foterr-class .footer-slics a{
+.cl-foterr-class .footer-slics a {
     text-decoration: none;
 }
 
+
+.cl-foterr-class .web-info .cl-web-add {
+    /* border: 1px solid white; */
+    width: 15%;
+    color: var(--color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    margin-left: 19px;
+}
+
+.cl-web-add .br-letter {
+    margin-left: 20px;
+}
