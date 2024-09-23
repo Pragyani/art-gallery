@@ -8,7 +8,7 @@ const Footer = () => {
             <section className="footer-section">
                 <div className="cl-foterr-class">
                     <div className="footer-slics">
-                        <Link to={'./'}> <h1>art.Gallery</h1></Link>
+                        <h1> <Link to={'./'}>art.Gallery</Link></h1>
 
                         <div className="web-info">
                             <span className="cl-web-add">
