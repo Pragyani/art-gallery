@@ -8,7 +8,7 @@ import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import TurnedInRoundedIcon from '@mui/icons-material/TurnedInRounded';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import SideTopicBar from "./Sidetopicbar/SideTopicBar";
-
+import Button from '@mui/material/Button';
 const SideBar = () => {
 
     const cartItems = useSelector(state => state.cartProducts);
@@ -27,7 +27,7 @@ const SideBar = () => {
                                     <div className="matrl-list">
                                         <Link to={'/saved-post'}><li><TurnedInRoundedIcon className="user-prof-i" />Saved Post</li></Link>
                                         <Link to={'/your-account'}><li><PersonAddIcon className="user-prof-i" />Create Account</li></Link>
-                                        <Link to={'/add-to-cart'}><li><ShoppingCartIcon className="user-prof-i" />Your Cart<button className="crt-btn">{cartItems.length}</button></li></Link>
+                                        <Link to={'/add-to-cart'}><li><ShoppingCartIcon className="user-prof-i" />Your Cart<Button variant="text" className="crt-btn">{cartItems.length}</Button></li></Link>
                                     </div>
                                     <hr />
 
