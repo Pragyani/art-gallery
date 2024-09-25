@@ -13,9 +13,9 @@ const PopularPost = () => {
         <div className="sidesection">
             
     <SideBar/><hr />
-        <div className="saved-products-container">
+        <div className="popular-products-container">
             <h1>Popular Posts</h1>
-            <div className="saved-products-list">
+            <div className="popular-products-list">
                 {PostPopulars.length === 0 ? (
                     <p>No Post Are Popular yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
 
