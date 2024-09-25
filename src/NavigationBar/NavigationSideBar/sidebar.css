@@ -70,20 +70,9 @@
 }
 
 
-.crt-btn {
-    width: 36px;
-    /* padding: 4px; */
-    padding-top: 4px;
-    padding-bottom: 4px;
-    text-align: center;
-    border-radius: 33px;
-    /* height: 20px; */
-    margin-left: 43px;
-    /* border: 1px solid white; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: medium;
-    font-weight: bold;
-    background-color: transparent;
-    color: var(--color);
-    outline: none;
+ .category-list ul a li .crt-btn{
+    /* width: 1pc; */
+   /* border: 1px solid white; */
+   color: var(--color);
+   font-size: large;
 }
