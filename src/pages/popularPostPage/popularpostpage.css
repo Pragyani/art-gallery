@@ -1,7 +1,74 @@
-h1{
-    color: yellowgreen;
-}
-
-.sidesection{
+.sidesection {
     display: flex;
 }
+
+.popular-products-container {
+    width: 70%;
+    margin-top: 50px;
+    padding: 40px;
+}
+
+.popular-products-container h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 340;
+    margin-bottom: 28px;
+    color: var(--color);
+}
+
+.popular-products-container p {
+    font-size: 25px;
+    font-weight: 250;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    text-align: center;
+    margin-top: 12pc;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.popular-products-container p span {
+    color: blueviolet;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.popular-products-container p span a {
+    margin-top: 12pc;
+}
+
+.popular-products-container p span a:hover {
+    color: rgb(37, 175, 244);
+}
+
+.popular-products-container p span .arr {
+    margin-top: 45px;
+    padding-top: 6.5px;
+    padding-left: 2px;
+}
+
+.popular-products-container .popular-products-list .products {
+    width: 80%;
+}
+
+.popular-products-container .popular-products-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-left: 80px;
+    margin-top: 70px;
+    margin-left: 30px;
+}
+
+.popular-products-list .fluid-post {
+    width: 50%;
+    margin-bottom: 6px;
+}
+
+/* 
+.saved-products-container .re-container{
+    display: flex;
+    width: %;
+    border: 1px solid black;
+} */
