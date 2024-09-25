@@ -240,6 +240,12 @@
 .hrt-st{
     color: var(--color);
     cursor: pointer;
+    margin-top: 12px;
+    
+}
+
+.hrt-st :hover{
+    color: rgb(90, 199, 218);
 }
 
 .post-icons{
