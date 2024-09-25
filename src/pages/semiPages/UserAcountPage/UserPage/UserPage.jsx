@@ -32,9 +32,10 @@ const ProfilePage = ({ data }) => {
                 <div className="profile-content">
                     <section className="user-profile">
                         <ProfileColumn />
+                        <button onClick={handleAddNewClick} className="add-new-post-btn">Add New Post</button>
+
                         <div className="mega-userProfile">
                             <div className="cl-rowUser">
-                                <button onClick={handleAddNewClick} className="add-new-post-btn">Add New Post</button>
                                 <div className="re-contaier">
                                     {artData.map((item, index) => (
                                         <div className="product-fl" key={index}>
