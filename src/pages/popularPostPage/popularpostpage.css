@@ -3,8 +3,8 @@
 }
 
 .popular-products-container {
-    width: 70%;
-    margin-top: 50px;
+    width: 67%;
+    /* margin-top: 50px; */
     padding: 40px;
 }
 
@@ -13,6 +13,7 @@
     font-size: 50px;
     font-weight: 340;
     margin-bottom: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--color);
 }
 
@@ -62,7 +63,7 @@
 }
 
 .popular-products-list .fluid-post {
-    width: 50%;
+    width: 88%;
     margin-bottom: 6px;
 }
 
