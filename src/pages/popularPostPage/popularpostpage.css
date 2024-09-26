@@ -3,9 +3,10 @@
 }
 
 .popular-products-container {
-    width: 67%;
+    width: 75%;
     /* margin-top: 50px; */
-    padding: 40px;
+    margin-left: 13px;
+    padding: 35px;
 }
 
 .popular-products-container h1 {
@@ -26,6 +27,7 @@
     margin-top: 12pc;
     margin-bottom: 20px;
     cursor: pointer;
+    color: var(--color);
 }
 
 .popular-products-container p span {
@@ -66,10 +68,3 @@
     width: 88%;
     margin-bottom: 6px;
 }
-
-/* 
-.saved-products-container .re-container{
-    display: flex;
-    width: %;
-    border: 1px solid black;
-} */
