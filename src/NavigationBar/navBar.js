@@ -35,8 +35,9 @@ const NavBAr = () => {
                         </ul>
                     </div>
                 </div>
+                <hr className="nav-hr"/>
             </div>
-            <hr className="nav-hr"/>
+           
         </>
     )
 }
