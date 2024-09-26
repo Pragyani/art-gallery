@@ -1,0 +1,41 @@
+
+.page-cl-content {
+    width: 100%;
+    padding: 10px;
+}
+
+.page-cl-content .popular-page-item{
+    width: 100%;
+    height: auto;
+}
+
+.popular-page-item .item-page{
+    width: 100%;
+}
+
+.popular-page-item .item-page ul{
+    width: 100%;
+    /* height: 12pc; */
+    padding: 10px;
+    /* border: 1px solid wheat; */
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.item-page ul li{
+    width:10pc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: 1px solid white; */
+}
+
+.item-page ul li:hover{
+    border: none;
+}
+
+.item-page ul li img{
+    width: 100%;
+    height: 9.8pc;
+    border-radius: 10pc;
+}
