@@ -9,7 +9,7 @@ const Home = ({ data }) => {
         <>
             <div className="home-page">
                 <SideBar />
-                <hr className="hr-dep" />
+                <hr className="home-hr" />
                 <ProductDetail Products={data} />
                 <CommunitySideBar />
             </div>
