@@ -10,6 +10,7 @@ import PersonPinIcon from '@mui/icons-material/PersonPin';
 import ShareIcon from '@mui/icons-material/Share';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
@@ -115,7 +116,7 @@ const ProductDetail = ({ Products }) => {
                                                             </h3>
                                                         </div>
                                                         <h4>Designed By Pragya</h4>
-                                                        <h5 className="price-tag">Price - <span>{item?.price}</span></h5>
+                                                        <h5 className="price-tag"> <CurrencyRupeeIcon className="price-tag-ruppee" /><span>{item?.price}</span></h5>
                                                         <p>Stock Status - <h6>{item?.stockStatus}</h6></p>
                                                         <span className="input-span-tag"><input placeholder="Add Comment ...." type="text" /></span>
                                                         {/* <h4>Brand Name - <b>{item?.brand}</b></h4> */}
