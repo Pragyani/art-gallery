@@ -313,3 +313,12 @@ margin-left: 36pc;
 .info-data .input-span-tag:hover{
     border: 1px solid rgba(255, 255, 255, 0.387);
 }
+
+
+.price-tag-ruppee{
+    position: relative;
+    padding: 3.9px;
+    bottom: 3px;
+    left: 12px;
+    height: 20px;
+}
