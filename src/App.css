@@ -9,6 +9,7 @@
   --text-color: black;
   --border-color: rgba(32, 31, 31, 0.249);
   --color: black;
+  --nav-bg-color:#ffffffdd;
 }
 
 [data-theme="dark"] {
@@ -16,6 +17,7 @@
   --text-color: white;
   --border-color: white;
   --color: white;
+  --nav-bg-color:rgba(0, 0, 0, 0.521);
 }
 
 body {
