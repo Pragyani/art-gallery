@@ -497,8 +497,6 @@
 .re-contaier .product-fl .products-w:hover .product-box .product-img img {
     cursor: pointer;
     box-shadow: 2px 4px 7px var(--border-color);
-    transform: scale(0.9);
-    opacity: .9;
 }
 
 .re-contaier .product-fl .products-w .product-box {
