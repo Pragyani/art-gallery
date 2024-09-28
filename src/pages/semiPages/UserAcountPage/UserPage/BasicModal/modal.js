@@ -5,6 +5,7 @@ import { Button } from "@mui/material";
 import './modal.css';
 import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
 import BasicSelect from '../BasicSelect/BasicSelect';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 const style = {
     position: 'absolute',
@@ -85,6 +86,11 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
         handleClose();
     };
 
+    const handleCancle = () => {
+        setInputImage(null);
+        setInputImageUrl('');
+    }
+
     return (
         <Modal
             open={open}
@@ -95,6 +101,7 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
                 <h1>{postToEdit ? 'Edit Post' : 'Create New Post'}</h1>
                 <div className='input-container'>
                     <div className='input-box'>
+                        <CloseRoundedIcon className='close-image-icon' onClick={() => handleCancle()} />
                         <div className='post-content'>
                             <div className='picture-tl'>
                                 <AddAPhotoOutlinedIcon className="select" />
