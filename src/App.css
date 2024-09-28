@@ -5,11 +5,11 @@
 }
 
 [data-theme="light"] {
-  --bg-color: #fff;
+  --bg-color: white;
   --text-color: black;
   --border-color: rgba(32, 31, 31, 0.249);
   --color: black;
-  --nav-bg-color:#ffffffdd;
+  --nav-bg-color:#ffffffeb;
 }
 
 [data-theme="dark"] {
@@ -17,7 +17,7 @@
   --text-color: white;
   --border-color: white;
   --color: white;
-  --nav-bg-color:rgba(0, 0, 0, 0.521);
+  --nav-bg-color:rgba(0, 0, 0, 0.712);
 }
 
 body {
