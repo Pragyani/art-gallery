@@ -25,17 +25,18 @@
 
 .box-flex .input-container .input-box {
     width: 100%;
-    height: 36.5pc;
+    height: 37.5pc;
     box-shadow: rgba(30, 30, 30, 0.45) 0px 5px 25px;
     padding: 18px;
     display: flex;
 }
 
 .box-flex .input-container .input-box .post-content {
-    width: 52%;
+    width: 53%;
     height: 95%;
-    margin-left: 5px;
+    margin-left: -15px;
     margin-right: 5px;
+    margin-top: 5px;
 }
 
 .box-flex .input-box .post-content .picture-tl {
@@ -56,14 +57,15 @@
 }
 
 
-.box-flex .input-container .input-box .picture-tl form input{
-margin-left: 11.6rem;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 14px;
-font-weight: 400;
-margin-top: 13px;
-cursor: pointer;
+.box-flex .input-container .input-box .picture-tl form input {
+    margin-left: 11.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 13px;
+    cursor: pointer;
 }
+
 .post-content .picture-tl .select {
     width: 47%;
     margin-left: 135px;
@@ -74,8 +76,8 @@ cursor: pointer;
 }
 
 .post-content .picture-tl .preview-image {
-    border: 1px solid black;
-    width: 98.6%;
+    border: 1px solid rgba(0, 0, 0, 0.133);
+    width: 95%;
     border-radius: 22px;
     position: relative;
     top: -280px;
@@ -94,15 +96,31 @@ cursor: pointer;
     color: white;
     padding: 11px;
     letter-spacing: 1px;
-    /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
-    font-weight: 520;
+    font-weight: 500;
     margin-left: 80%;
-    border-radius: 22px;
-    margin-top: 43px;
+    border-radius: 20px;
+    margin-top: 55px;
 }
 
 .box-flex .post-Detailcontent .sbmit-btnpost:hover {
     background-color: rgb(106, 177, 222);
     color: black;
+}
+
+.close-image-icon {
+    position: relative;
+    left: 39pc;
+    top: -2px;
+}
+
+.close-image-icon:hover {
+    padding: 2px;
+    border-radius: 12px;
+    background-color: rgba(253, 67, 43, 0.925);
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    font-size: 25px;
 }
