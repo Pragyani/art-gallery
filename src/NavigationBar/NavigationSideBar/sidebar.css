@@ -1,14 +1,10 @@
 .container {
     width: 20%;
     position: fixed;
-    /* or fixed */
     top: 30px;
-    /* adjust based on your layout */
     height: calc(100vh - 30px);
-    /* adjust based on your layout */
     overflow-y: auto;
-    margin-top: 5pc;
-    /* allows scrolling if content exceeds the viewport */
+    margin-top: 3.5pc;
 }
 
 .container .content .content-fluid {
