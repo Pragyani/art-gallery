@@ -53,12 +53,6 @@
 .re-container .product-fluid .products:hover {
     box-shadow: 2px 4px 14px var(--border-color);
 }
-/* 
-.re-container .product-fluid .products:hover .product-box .product-img img {
-    cursor: pointer;
- 
-    opacity: .9;
-} */
 
 .re-container .product-fluid .products .product-box {
     width: 100%;
@@ -104,10 +98,11 @@
 
 
 .info-prod .info-data h4 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 6px;
+    margin-top: 12px;
     color: var(--color);
 }
 
@@ -125,16 +120,20 @@
 
 .info-prod .info-data .price-tag {
     width: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 400;
     color: var(--color);
 }
 
 .info-prod .info-data .price-tag span {
-    font-size: 14px;
-    font-weight: lighter;
-    margin-left: 10px;
+    font-size: 14.4px;
+    /* font-weight: lighter; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: -2px;
+    position: relative;
+    bottom: 2px;
 }
 
 .info-prod .info-data h5 {
@@ -161,10 +160,9 @@
     display: flex;
     width: 100%;
     margin-top: 7.5px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
     color: var(--color);
 }
 
@@ -236,54 +234,70 @@
 }
 
 
-.hrt-st{
-    color: var(--color);
+.share-icon {
+    font-size: 1.9pc;
     cursor: pointer;
-    margin-top: 12px;
-    
+    padding-top: 4px;
+    position: relative;
+    left: -6px;
 }
 
-.hrt-st :hover{
-    color: rgb(90, 199, 218);
+.bookedMarks {
+    /* border: 1px solid wheat; */
+    font-size: 1.6pc;
+    cursor: pointer;
+    color: var(--color);
+    position: relative;
+    top: 5px;
 }
 
-.post-icons{
+
+.post-icons {
     width: 100%;
     /* border:1px solid white ; */
     display: flex;
-    gap: 18px;
-    /* font-size: 14px; */
-    margin-top: 7.9px;
-    margin-bottom: 10px;
+    /* gap: 18px; */
+    justify-content: space-evenly;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 7px;
 }
 
-.post-icons .crt-st{
-color: var(--color);
-cursor: pointer;
-margin-left: 36pc;
+.post-icons .crt-st {
+    color: var(--color);
+    cursor: pointer;
+    margin-left: 38.5pc;
 }
 
-.vote-bicon{
+.post-icons .crt-st:hover {
+    color: rgb(90, 199, 218);
+}
+
+.crt-st .shopin-crt {
+    font-size: 1.5pc;
+}
+
+.vote-bicon {
     color: white;
     /* border: 1px solid white; */
-    width:40px;
+    width: 40px;
     height: 25px;
 }
 
-.liked-ico{
+.liked-ico {
     padding-top: 2px;
     padding-bottom: 2px;
-    width: 2%;
-    /* border: 1px solid white; */
-    display: flex;
-    border-radius: 12px;
 }
 
-.liked-ico .vote-bicon{
+.liked-ico .fc-like-i {
+    font-size: 1.6pc;
+    position: relative;
+    left: -9px;
+    top: 2px;
     cursor: pointer;
 }
 
-.info-data .info-data-p{
+.info-data .info-data-p {
     font-weight: lighter;
     /* letter-spacing: ; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -291,10 +305,10 @@ margin-left: 36pc;
     margin-bottom: 4px;
 }
 
-.info-data .input-span-tag input{
+.info-data .input-span-tag input {
     width: 50%;
     padding: 5px;
-    border:1px solid transparent;
+    border: 1px solid transparent;
     outline: none;
     border-radius: 12px;
     letter-spacing: 1px;
@@ -303,21 +317,21 @@ margin-left: 36pc;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.info-data .input-span-tag{
+.info-data .input-span-tag {
     padding: 9px;
     border-radius: 12px;
     /* width: 70% ; */
 }
 
-.info-data .input-span-tag:hover{
+.info-data .input-span-tag:hover {
     border: 1px solid rgba(255, 255, 255, 0.387);
 }
 
 
-.price-tag-ruppee{
+.price-tag-ruppee {
     position: relative;
-    padding: 3.9px;
+    padding: 5px;
     bottom: 3px;
-    left: 12px;
+    left: 3px;
     height: 20px;
 }
