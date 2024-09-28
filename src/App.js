@@ -11,7 +11,6 @@ import SavedPost from './pages/SavedPost/SavedPost';
 import CartPage from './pages/CARTPAGE/CartPage';
 import { ThemeProvider } from './theme-context/theme-context';
 import PopularPost from './pages/popularPostPage/PopularPost';
-import Footer from './pages/Footer/footer';
 
 function App() {
 
@@ -44,7 +43,7 @@ function App() {
             <Route path='/add-to-cart' element={<CartPage />} />
             <Route path='/popular-page' element={<PopularPost />} />
           </Routes>
-          <Footer />
+       
         </BrowserRouter>
       </ThemeProvider>
     </>
