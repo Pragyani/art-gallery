@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import './productDetail.css';
-import BookmarkIcon from '@mui/icons-material/Bookmark';
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { useDispatch } from "react-redux";
 import { addPost, addCartProducts, addPopularPost } from "../reducers/indx";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonPinIcon from '@mui/icons-material/PersonPin';
-import ShareIcon from '@mui/icons-material/Share';
-import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
-import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import { FcLikePlaceholder } from "react-icons/fc";
+import { FcLike } from "react-icons/fc";
+import { FcShare } from "react-icons/fc";
+import { FcBookmark } from "react-icons/fc";
+import { FiBookmark } from "react-icons/fi";
+import { HiOutlineShoppingCart } from "react-icons/hi2";
+import { HiShoppingCart } from "react-icons/hi2";
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
@@ -100,26 +100,27 @@ const ProductDetail = ({ Products }) => {
                                                             when an unknown printer
                                                             took a galley of type and scrambled it to make a type specimen book.
                                                         </span>
+
+                                                        <h4>Designed By Pragya</h4>
+                                                        <p>Stock Status - <h6>{item?.stockStatus}</h6></p>
+                                                        <h5 className="price-tag">MRP - <CurrencyRupeeIcon className="price-tag-ruppee" /><span>{item?.price}</span></h5>
+
                                                         <div className="post-icons">
                                                             <div className="liked-ico">
-                                                                <h3 onClick={() => handlePopularPost(item)} className="hrt-st">
-                                                                    {voteMarked[item.id] ? <ThumbUpAltIcon /> : <ThumbUpOffAltIcon />}
-                                                                </h3>
+                                                                <span onClick={() => handlePopularPost(item)} className="hrt-st">
+                                                                    {voteMarked[item.id] ? <FcLike className="fc-like-i" /> : <FcLikePlaceholder className="fc-like-i" />}
+                                                                </span>
                                                             </div>
-                                                            <ShareIcon className="hrt-st" />
-                                                            <h3 onClick={() => handleBookmarkClick(item)} className="hrt-st">
-                                                                {bookmarkedProducts[item.id] ? <BookmarkIcon /> : <BookmarkBorderIcon />}
-                                                            </h3>
+                                                            <FcShare className="share-icon" />
+                                                            <span onClick={() => handleBookmarkClick(item)} className="hrt-st">
+                                                                {bookmarkedProducts[item.id] ? <FcBookmark className="bookedMarks" /> : <FiBookmark className="bookedMarks" />}
+                                                            </span>
 
                                                             <h3 onClick={() => CartedHandleMarkedClicked(item)} className="crt-st">
-                                                                {cartedmarkedProducts[item.id] ? <ShoppingCartIcon /> : <AddShoppingCartIcon />}
+                                                                {cartedmarkedProducts[item.id] ? <HiShoppingCart className="shopin-crt" /> : <HiOutlineShoppingCart className="shopin-crt" />}
                                                             </h3>
                                                         </div>
-                                                        <h4>Designed By Pragya</h4>
-                                                        <h5 className="price-tag"> <CurrencyRupeeIcon className="price-tag-ruppee" /><span>{item?.price}</span></h5>
-                                                        <p>Stock Status - <h6>{item?.stockStatus}</h6></p>
                                                         <span className="input-span-tag"><input placeholder="Add Comment ...." type="text" /></span>
-                                                        {/* <h4>Brand Name - <b>{item?.brand}</b></h4> */}
                                                     </div>
                                                 </div>
                                             </div>
