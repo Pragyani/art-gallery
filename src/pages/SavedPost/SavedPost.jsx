@@ -14,7 +14,7 @@ const SavedProducts = () => {
     return (<>
         <div className="saved-semiConatiner">
             <SideBar />
-            <hr />
+            <hr className="saved-hr" />
             <div className="saved-products-container">
                 <h1>Saved Products</h1>
                 <div className="saved-products-list">

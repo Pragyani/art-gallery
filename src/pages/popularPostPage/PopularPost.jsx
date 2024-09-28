@@ -13,7 +13,7 @@ const PopularPost = () => {
         <>
             <div className="sidesection">
 
-                <SideBar /><hr />
+                <SideBar /><hr className="popularpage-hr" />
                 <div className="popular-products-container">
                     <h1>Popular Posts</h1>
                     <TopBar />

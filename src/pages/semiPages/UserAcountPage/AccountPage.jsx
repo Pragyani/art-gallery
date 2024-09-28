@@ -7,7 +7,7 @@ const AccountPage = () => {
     return (
         <>
             <div className="acount-cl">
-                <SideBar /><hr />
+                <SideBar /><hr className="accountpage-hr" />
                 <div className="cl-container">
                     <div className="boxes-ro">
                         <div className="colum">

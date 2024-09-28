@@ -11,7 +11,7 @@ const CartPage = () => {
 
     return (
         <div className="cart-products-container">
-            <SideBar /> <hr />
+            <SideBar /> <hr className="cartpage-hr"/>
 
             <div className="cart-products-list">
                 
