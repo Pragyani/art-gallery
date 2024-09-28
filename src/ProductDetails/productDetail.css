@@ -53,13 +53,12 @@
 .re-container .product-fluid .products:hover {
     box-shadow: 2px 4px 14px var(--border-color);
 }
-
+/* 
 .re-container .product-fluid .products:hover .product-box .product-img img {
     cursor: pointer;
-    /* box-shadow: 2px 4px 5.5px var(--border-color); */
-    /* transform: scaleY(); */
+ 
     opacity: .9;
-}
+} */
 
 .re-container .product-fluid .products .product-box {
     width: 100%;
