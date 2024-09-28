@@ -52,7 +52,6 @@ const ProfilePage = ({ data }) => {
                                                             <h4>Designed By Pragya</h4>
                                                             <h5 className="name">{item.name}</h5>
                                                             <h5 className="price-tag">Price - <span>{item.price}</span></h5>
-                                                            <h5>Rating - <Rating name="customized-10" defaultValue={item.rating} max={5} className="rating-crd" /></h5>
                                                             <p>Stock Status - <h6>{item.stockStatus}</h6></p>
                                                             <h4>Brand Name - <b>{item.brand}</b></h4>
                                                             <div className="products-icon">
