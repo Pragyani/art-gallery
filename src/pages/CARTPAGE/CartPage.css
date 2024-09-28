@@ -95,3 +95,12 @@
     position: relative;
     bottom: 13pc;
 }
+
+.cartpage-hr{
+    color: var(--color);
+    opacity: .2;
+    margin-left: 23.8pc;
+    position: fixed;
+    margin-top: 82px;
+    height:100%;
+}

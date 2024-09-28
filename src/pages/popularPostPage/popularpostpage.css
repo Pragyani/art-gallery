@@ -4,8 +4,8 @@
 
 .popular-products-container {
     width: 75%;
-    /* margin-top: 50px; */
-    margin-left: 13px;
+    margin-top: 70px;
+    margin-left: 25.7pc;
     padding: 35px;
 }
 
@@ -67,4 +67,13 @@
 .popular-products-list .fluid-post {
     width: 88%;
     margin-bottom: 6px;
+}
+
+.popularpage-hr{
+    color: var(--color);
+    opacity: .2;
+    margin-left: 23.5pc;
+    position: fixed;
+    margin-top: 82px;
+    height:100%;
 }

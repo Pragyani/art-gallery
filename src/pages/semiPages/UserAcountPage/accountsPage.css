@@ -191,3 +191,12 @@ display: flex;
     color: rgba(245, 245, 220, 0.708);
     background-color: #a3aa89;
 }
+
+.accountpage-hr{
+    color: var(--color);
+    opacity: .2;
+    margin-left: 23.8pc;
+    position: fixed;
+    margin-top: 82px;
+    height:100%;
+}

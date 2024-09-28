@@ -11,8 +11,9 @@
 
 .saved-products-container {
     width: 70%;
-    margin-top: 50px;
+    margin-top: 100px;
     padding: 40px;
+    margin-left: 25pc;
 }
 
 .saved-products-container h1 {
@@ -72,10 +73,12 @@
     width: 50%;
     margin-bottom: 6px;
 }
-
-/* 
-.saved-products-container .re-container{
-    display: flex;
-    width: %;
-    border: 1px solid black;
-} */
+ 
+.saved-hr{
+    color: var(--color);
+    opacity: .2;
+    margin-left: 23.8pc;
+    position: fixed;
+    margin-top: 82px;
+    height:100%;
+}
