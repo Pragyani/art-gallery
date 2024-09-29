@@ -5,6 +5,7 @@ import SearchSharpIcon from '@mui/icons-material/SearchSharp';
 import { UseTheme } from "../theme-context/theme-context";
 import { useDispatch, useSelector } from "react-redux";
 import { setInput } from "../reducers/indx";
+import { UserIMAGE } from "../utils";
 
 const NavBAr = () => {
     const { toogleTheme, theme } = UseTheme();
@@ -38,7 +39,7 @@ const NavBAr = () => {
                             <li className="ul-li">Default Mode<input type="checkbox" onChange={toogleTheme} checked={theme === 'light'} /></li>
                             <li className="ul-l">
                                 <span className="li-span-img">
-                                    <Link to={'/profilepage'}> <img src="https://i.pinimg.com/564x/aa/b2/03/aab2036f11e01e7bc615488478e36568.jpg" /></Link>
+                                    <Link to={'/profilepage'}> <img src={UserIMAGE} /></Link>
                                 </span>
                             </li>
 
