@@ -5,7 +5,8 @@ const store = configureStore({
     reducer: {
         savedPosts: reducer.savedPostsReducer,
         cartProducts: reducer.cartProductsReducer,
-        popularPost: reducer.popularPostReducer
+        popularPost: reducer.popularPostReducer,
+        inputSlice: reducer.inputSliceIndexReducer
     }
 });
 
