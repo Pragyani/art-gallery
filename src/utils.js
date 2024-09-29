@@ -173,7 +173,19 @@ export default DesignDummyData;
 
 
 
-//topbar image url's
+//sidebar image url's
+
+export const UserIMAGE = 'https://i.pinimg.com/564x/aa/b2/03/aab2036f11e01e7bc615488478e36568.jpg';
+
+export const SideBarImage1 = 'https://i.pinimg.com/564x/a0/ca/a4/a0caa4c1da70e2bd26c0d636cb42278a.jpg';
+
+export const SideBarImage2 ='https://i.pinimg.com/564x/56/44/a4/5644a47fc82ee64bb2cdc7166c813eb0.jpg';
+
+export const SideBarImage3 = 'https://i.pinimg.com/564x/46/0d/e9/460de961b583cf5830763826c68a947a.jpg';
+
+export const SideBarImage4 = 'https://i.pinimg.com/564x/23/5b/61/235b616e260c0ddd19a9a59ff9283bf2.jpg';
+
+//topbar images url's
 
 export const TopBarImage1 = "https://i.pinimg.com/564x/b7/95/57/b79557f6abce348236d43109ca7e4d8f.jpg";
 
@@ -188,3 +200,8 @@ export const TopBarImage5 = "https://i.pinimg.com/564x/89/88/7d/89887d794ec77f8c
 export const TopBarImage6 = "https://i.pinimg.com/564x/e4/6d/49/e46d49c313d82c8d107893f37528b24d.jpg";
 
 export const TopBarImage7 = "https://i.pinimg.com/564x/83/0c/76/830c76e330d0a8eb207182abfecf6715.jpg";
+
+
+// Account page image url's
+
+export const AccountPageIMg = 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp';
