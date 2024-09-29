@@ -3,10 +3,20 @@ import './nav.css';
 import { Link } from "react-router-dom";
 import SearchSharpIcon from '@mui/icons-material/SearchSharp';
 import { UseTheme } from "../theme-context/theme-context";
+import { useDispatch, useSelector } from "react-redux";
+import { setInput } from "../reducers/indx";
 
 const NavBAr = () => {
     const { toogleTheme, theme } = UseTheme();
 
+    const inputValue = useSelector((state) => state.inputSlice);
+
+    const dispatch = useDispatch();
+
+    const handleInputChange = (e) => {
+        console.log("Input changed:", e.target.value);
+        dispatch(setInput(e.target.value));
+    };
     return (
         <>
             <div className="NavigationBar">
@@ -17,7 +27,7 @@ const NavBAr = () => {
 
                     <div className="input-field">
                         <div className="searchbox">
-                            <input type="text" placeholder="Search your item...." />
+                            <input type="text" placeholder="Search your item...." onChange={handleInputChange} value={inputValue} />
                             <SearchSharpIcon className="shrp-i" />
                         </div>
                     </div>
@@ -35,9 +45,9 @@ const NavBAr = () => {
                         </ul>
                     </div>
                 </div>
-                <hr className="nav-hr"/>
+                <hr className="nav-hr" />
             </div>
-           
+
         </>
     )
 }
