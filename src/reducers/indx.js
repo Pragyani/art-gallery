@@ -50,8 +50,19 @@ export const popularPostSlice = createSlice({
 
 export const { addPopularPost, removePopularPost } = popularPostSlice.actions;
 
+export const inputSliceIndex = createSlice({
+    name: 'inputslice',
+    initialState: '',
+    reducers: {
+        setInput: (state, action) => action.payload
+    }
+})
+
+export const { setInput } = inputSliceIndex.actions;
+
 export default {
     savedPostsReducer: SavedPostSlice.reducer,
     cartProductsReducer: cartProductsSlice.reducer,
-    popularPostReducer: popularPostSlice.reducer
+    popularPostReducer: popularPostSlice.reducer,
+    inputSliceIndexReducer: inputSliceIndex.reducer
 };
