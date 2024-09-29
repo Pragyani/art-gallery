@@ -101,7 +101,7 @@ const ProductDetail = ({ Products }) => {
                                                             took a galley of type and scrambled it to make a type specimen book.
                                                         </span>
 
-                                                        <h4>Designed By Pragya</h4>
+                                                        <h4>Designed By {item?.brand}</h4>
                                                         <p>Stock Status - <h6>{item?.stockStatus}</h6></p>
                                                         <h5 className="price-tag">MRP - <CurrencyRupeeIcon className="price-tag-ruppee" /><span>{item?.price}</span></h5>
 
