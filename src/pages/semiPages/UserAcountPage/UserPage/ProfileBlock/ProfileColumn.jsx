@@ -1,5 +1,6 @@
 import React from "react";
 import './profilecolumn.css';
+import { UserIMAGE } from "../../../../../utils";
 
 const ProfileColumn = () => {
     return (
@@ -10,7 +11,7 @@ const ProfileColumn = () => {
                         <div className="user-block">
                             <div className="text-file">
                                 <div className="user-pImg">
-                                    <img src="https://i.pinimg.com/564x/aa/b2/03/aab2036f11e01e7bc615488478e36568.jpg" alt="image" />
+                                    <img src={UserIMAGE} alt="image" />
                                 </div>
                             </div>
                         </div>

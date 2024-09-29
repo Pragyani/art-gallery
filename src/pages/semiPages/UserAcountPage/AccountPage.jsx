@@ -2,6 +2,7 @@ import React from "react";
 import './accountsPage.css';
 import Button from '@mui/material/Button';
 import SideBar from "../../../NavigationBar/NavigationSideBar/sideBar";
+import { AccountPageIMg } from "../../../utils";
 
 const AccountPage = () => {
     return (
@@ -12,7 +13,7 @@ const AccountPage = () => {
                     <div className="boxes-ro">
                         <div className="colum">
                             <div className="col-lg">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" alt="" />
+                                <img src={AccountPageIMg} alt="acountimg-logo" />
                             </div>
 
                             <div className="content-field">
