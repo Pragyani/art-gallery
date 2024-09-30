@@ -5,6 +5,9 @@ import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
 import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import { BasicModal } from './BasicModal/modal';
 import ProfileColumn from './ProfileBlock/ProfileColumn';
+import { LuLayoutGrid } from "react-icons/lu";
+import { FaRegBookmark } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const ProfilePage = ({ data }) => {
     const [artData, setArtData] = useState(data);
@@ -17,7 +20,7 @@ const ProfilePage = ({ data }) => {
     };
 
     const handleAddNewClick = () => {
-        setSelectedItem(null);  
+        setSelectedItem(null);
         setModalOpen(true);
     };
 
@@ -32,10 +35,14 @@ const ProfilePage = ({ data }) => {
                 <div className="profile-content">
                     <section className="user-profile">
                         <ProfileColumn />
-                        <button onClick={handleAddNewClick} className="add-new-post-btn">Add New Post</button>
+                        <hr />
 
                         <div className="mega-userProfile">
                             <div className="cl-rowUser">
+                                <div className="cl-as-post">
+                                    <button onClick={handleAddNewClick} className="add-new-post-btn"><LuLayoutGrid className='grid-layOut' />Add New Post</button>
+                                    <button className="add-new-post-btn"><Link to={'/saved-post'}><FaRegBookmark className='grid-layOut' />Saved Post</Link></button>
+                                </div>
                                 <div className="re-contaier">
                                     {artData.map((item, index) => (
                                         <div className="product-fl" key={index}>
