@@ -1,7 +1,7 @@
 const DesignDummyData = [
     {
         id: 1,
-        name: 'Mandala Art',
+        name: 'Doddle Art',
         image: "https://i.ibb.co/vjD9smd/Adobe-Scan-17-Jul-2024-14.jpg",
         description: 'Latest Design ',
         price: 699,
@@ -29,7 +29,7 @@ const DesignDummyData = [
     },
     {
         id: 3,
-        name: 'Mandala Art',
+        name: 'Doddle Art',
         image: "https://i.ibb.co/Q6BvTGk/Adobe-Scan-17-Jul-2024-1.jpg",
         description: 'Latest Desgin',
         price: 589,
@@ -43,7 +43,7 @@ const DesignDummyData = [
     },
     {
         id: 4,
-        name: 'Mandala Art',
+        name: 'Seketch',
         image: "https://i.ibb.co/f0WGJTS/Adobe-Scan-17-Jul-2024-8.jpg",
         description: 'Latest Design',
         price: 550,
@@ -99,7 +99,7 @@ const DesignDummyData = [
     },
     {
         id: 8,
-        name: 'Mandala Art',
+        name: 'Sketech',
         image: "https://i.ibb.co/YRX1Rqc/Adobe-Scan-17-Jul-2024-11.jpg",
         description: 'Latest Design',
         price: 350,
@@ -113,7 +113,7 @@ const DesignDummyData = [
     },
     {
         id: 9,
-        name: 'Mandala Art',
+        name: 'Doodle Art',
         image: "https://i.ibb.co/dLP4swS/Adobe-Scan-17-Jul-2024-6.jpg",
         description: 'Latest Design',
         price: 680,
@@ -155,7 +155,7 @@ const DesignDummyData = [
     },
     {
         id: 12,
-        name: 'Mandala Art',
+        name: 'Seketch',
         image: "https://i.ibb.co/f0WGJTS/Adobe-Scan-17-Jul-2024-8.jpg",
         description: 'Latest Design',
         price: 500,
@@ -179,7 +179,7 @@ export const UserIMAGE = 'https://i.pinimg.com/564x/aa/b2/03/aab2036f11e01e7bc61
 
 export const SideBarImage1 = 'https://i.pinimg.com/564x/a0/ca/a4/a0caa4c1da70e2bd26c0d636cb42278a.jpg';
 
-export const SideBarImage2 ='https://i.pinimg.com/564x/56/44/a4/5644a47fc82ee64bb2cdc7166c813eb0.jpg';
+export const SideBarImage2 = 'https://i.pinimg.com/564x/56/44/a4/5644a47fc82ee64bb2cdc7166c813eb0.jpg';
 
 export const SideBarImage3 = 'https://i.pinimg.com/564x/46/0d/e9/460de961b583cf5830763826c68a947a.jpg';
 
