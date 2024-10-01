@@ -113,6 +113,8 @@
     position: relative;
     left: 37pc;
     top: -2px;
+    border: 1px solid black;
+  
 }
 
 .close-image-icon:hover {
