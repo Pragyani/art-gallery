@@ -1,15 +1,12 @@
 .acount-cl {
-    /* height: auto; */
-    /* padding: 22px; */
-    /* padding-left: 50px; */
-    /* padding-right: 50px; */
-display: flex;
+    display: flex;
     width: 100%;
 }
 
 .acount-cl .cl-container {
-    width: 70%;
-    /* border: 2px solid black; */
+    width: 78%;
+    margin-top: 10pc;
+    margin-left: 20pc;
 }
 
 .acount-cl .cl-container .boxes-ro {
@@ -64,6 +61,7 @@ display: flex;
     text-transform: capitalize;
     font-weight: 400;
     letter-spacing: 1px;
+    color: var(--color);
 }
 
 .input-contaainer .text-flied h4 {
@@ -74,7 +72,7 @@ display: flex;
     font-size: 20px;
     font-weight: lighter;
     letter-spacing: 1px;
-
+    color: var(--color);
 }
 
 .content-field .input-contaainer .input-section {
@@ -119,7 +117,7 @@ display: flex;
     width: 50%;
     align-items: center;
     margin-left: 130px;
-    color: rgba(0, 0, 0, 0.666);
+    color: var(--color);
     font-size: 17px;
     letter-spacing: 1px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -148,17 +146,17 @@ display: flex;
     /* letter-spacing: 0.9px; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     cursor: pointer;
+    color: var(--color);
 }
 
 .input-contaainer .reset-password h5:hover {
-    color: rgba(0, 0, 0, 0.596);
+    color: black;
 }
 
 .input-contaainer .sign-up-box {
     width: 100%;
     padding: 22px;
     margin-top: 30px;
-    /* border: 1px solid black; */
 }
 
 .input-contaainer .sign-up-box .col-flexbox {
@@ -172,19 +170,18 @@ display: flex;
     font-size: 23px;
     font-weight: 350;
     padding: 8px;
-
+    color: var(--color);
 }
 
 .input-contaainer .sign-up-box .bttn-bar {
     width: 30%;
     padding: 3.5px;
-    /* border: 1px solid black; */
 }
 
 .bttn-bar .buton {
     background-color: #88a18a;
     padding: 8px;
-    color: rgba(0, 0, 0, 0.666);
+    color: var(--color);
 }
 
 .bttn-bar .buton:hover {
@@ -192,11 +189,11 @@ display: flex;
     background-color: #a3aa89;
 }
 
-.accountpage-hr{
+.accountpage-hr {
     color: var(--color);
     opacity: .2;
     margin-left: 23.8pc;
     position: fixed;
     margin-top: 82px;
-    height:100%;
+    height: 100%;
 }
