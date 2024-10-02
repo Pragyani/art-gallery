@@ -8,6 +8,7 @@ import ProfileColumn from './ProfileBlock/ProfileColumn';
 import { LuLayoutGrid } from "react-icons/lu";
 import { FaRegBookmark } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { MdOutlineCurrencyRupee } from "react-icons/md"
 
 const ProfilePage = ({ data }) => {
     const [artData, setArtData] = useState(data);
@@ -58,9 +59,9 @@ const ProfilePage = ({ data }) => {
                                                         <div className="info-data">
                                                             <h4>Designed By Pragya</h4>
                                                             <h5 className="name">{item.name}</h5>
-                                                            <h5 className="price-tag">Price - <span>{item.price}</span></h5>
-                                                            <p>Stock Status - <h6>{item.stockStatus}</h6></p>
-                                                            <h4>Brand Name - <b>{item.brand}</b></h4>
+                                                            <h5 className="price-tag">Price : <MdOutlineCurrencyRupee className='re-i-rupee' /><span>{item.price}</span></h5>
+                                                            <p>Stock Status :<h6>{item.stockStatus}</h6></p>
+                                                            <h4>Brand Name : <b>{item.brand}</b></h4>
                                                             <div className="products-icon">
                                                                 <span className="product-chnges-icon" onClick={() => handleEditClick(item)}>
                                                                     <EditNoteRoundedIcon className="edit-icon" />
@@ -84,7 +85,6 @@ const ProfilePage = ({ data }) => {
                     </section>
                 </div>
             </div>
-
             <BasicModal
                 open={modalOpen}
                 handleClose={handleCloseModal}
@@ -94,5 +94,4 @@ const ProfilePage = ({ data }) => {
         </>
     );
 };
-
 export default ProfilePage;
