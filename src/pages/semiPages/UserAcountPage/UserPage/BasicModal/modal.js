@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import './modal.css';
 import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
 import BasicSelect from '../BasicSelect/BasicSelect';
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import { RxCross1 } from "react-icons/rx";
 
 const style = {
     position: 'absolute',
@@ -90,6 +90,9 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
         setInputImage(null);
         setInputImageUrl('');
     }
+    const modalClose = () => {
+        handleClose()
+    }
 
     return (
         <Modal
@@ -101,7 +104,7 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
                 <h1>{postToEdit ? 'Edit Post' : 'Create New Post'}</h1>
                 <div className='input-container'>
                     <div className='input-box'>
-                        <CloseRoundedIcon className='close-image-icon' onClick={() => handleCancle()} />
+                        <RxCross1 className='close-image-icon' onClick={() => handleCancle()} />
                         <div className='post-content'>
                             <div className='picture-tl'>
                                 <AddAPhotoOutlinedIcon className="select" />
@@ -137,6 +140,7 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
                                         </div>
                                     </div>
                                 </div>
+                                <Button onClick={() => modalClose()} className='sbmit-btnpost'>Cancle</Button>
                                 <Button type="submit" className='sbmit-btnpost'>{postToEdit ? 'Update' : 'Share'}</Button>
                             </form>
                         </div>
