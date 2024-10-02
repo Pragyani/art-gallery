@@ -7,7 +7,7 @@ const DesignDummyData = [
         price: 699,
         rating: 4,
         stockStatus: 'In Stock',
-        brand: 'PragyAni',
+        brand: 'artGallery',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
             { user: "Bob", comment: "Good value for money.", rating: 4 }
@@ -35,7 +35,7 @@ const DesignDummyData = [
         price: 589,
         rating: 4,
         stockStatus: 'In Stock',
-        brand: 'PragyAni',
+        brand: 'Pragya',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
             { user: "Bob", comment: "Good value for money.", rating: 4 }
@@ -49,7 +49,7 @@ const DesignDummyData = [
         price: 550,
         rating: 4,
         stockStatus: 'In Stock',
-        brand: 'PragyAni',
+        brand: 'shinoyee_pragya',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
             { user: "Bob", comment: "Good value for money.", rating: 4 }
@@ -91,7 +91,7 @@ const DesignDummyData = [
         price: 580,
         rating: 5,
         stockStatus: 'In Stock',
-        brand: 'PragyAni',
+        brand: 'Pragya Pandey',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
             { user: "Bob", comment: "Good value for money.", rating: 4 }
@@ -119,7 +119,7 @@ const DesignDummyData = [
         price: 680,
         rating: 5,
         stockStatus: 'In Stock',
-        brand: 'PragyAni',
+        brand: 'aniPragya',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
             { user: "Bob", comment: "Good value for money.", rating: 4 }
@@ -133,7 +133,7 @@ const DesignDummyData = [
         price: 570,
         rating: 4,
         stockStatus: 'In Stock',
-        brand: 'PragyAni',
+        brand: 'shinoyee_pragya',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
             { user: "Bob", comment: "Good value for money.", rating: 4 }
