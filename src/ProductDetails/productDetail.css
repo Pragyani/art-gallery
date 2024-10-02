@@ -133,7 +133,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: -2px;
     position: relative;
-    bottom: 2px;
+    bottom: 0px;
+    left: 5px;
 }
 
 .info-prod .info-data h5 {
