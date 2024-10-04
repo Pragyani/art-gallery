@@ -336,3 +336,28 @@
     left: 3px;
     height: 20px;
 }
+
+.nf-post {
+    padding: 30px;
+    margin-top: 32px;
+    width: 80%;
+    color: var(--color);
+}
+
+.nf-post .content-post-nf {
+    width: 100%;
+    margin: 10px;
+}
+
+.content-post-nf h1 {
+    margin-left: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 45px;
+    font-weight: lighter;
+}
+
+.content-post-nf h1 .sad-emoji {
+    position: relative;
+    top: 5px;
+    padding: 2px;
+}
