@@ -7,6 +7,7 @@ import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import { FcLikePlaceholder, FcLike, FcShare, FcBookmark } from "react-icons/fc";
 import { FiBookmark } from "react-icons/fi";
 import { HiOutlineShoppingCart, HiShoppingCart } from "react-icons/hi2";
+import { PiSmileySadLight } from "react-icons/pi";
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
@@ -106,7 +107,15 @@ const ProductDetail = ({ Products }) => {
                                     </div>
                                 </div>
                             </div>
-                        )) : <div> </div>}
+                        )) :
+                            <div className="nf-post">
+                                <div className="content-post-nf">
+                                    <h1>
+                                        Searched Post Not Found .....<PiSmileySadLight className="sad-emoji" />
+                                    </h1>
+                                </div>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>
