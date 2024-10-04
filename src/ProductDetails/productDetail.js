@@ -14,6 +14,13 @@ const ProductDetail = ({ Products }) => {
     const [voteMarked, setVoteMarked] = useState({});
 
     const cartProducts = useSelector(state => state.cartProducts);
+    const inputValue = useSelector(state => state.inputSlice);
+
+    const filteredProducts = Products.filter(product =>
+        product?.brand.toLowerCase().includes(inputValue?.toLowerCase())
+    );
+    // console.log('filterPRduct' , filteredProducts)
+
 
     const handleSaveProduct = (product) => {
         dispatch(addPost(product));
@@ -56,7 +63,7 @@ const ProductDetail = ({ Products }) => {
             <div className="container-box">
                 <div className="re-container">
                     <div className="product-fluid">
-                        {Products.length !== 0 && Products.map((item) => (
+                        {filteredProducts.length !== 0 ? filteredProducts.map((item) => (
                             <div className="products" key={item.id}>
                                 <div className="user-plug">
                                     <PersonPinIcon className="user-i-post" />
@@ -71,8 +78,7 @@ const ProductDetail = ({ Products }) => {
                                     <div className="info-prod">
                                         <div className="info-data">
                                             <span className="info-data-p">
-                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                                Lorem Ipsum has been the industry's standard dummy text  ever since the 1500s...
                                             </span>
                                             <h4>Designed By {item?.brand}</h4>
                                             <p>Stock Status - <h6>{item?.stockStatus}</h6></p>
@@ -100,12 +106,11 @@ const ProductDetail = ({ Products }) => {
                                     </div>
                                 </div>
                             </div>
-                        ))}
+                        )) : <div> </div>}
                     </div>
                 </div>
             </div>
         </div>
     );
 };
-
 export default ProductDetail;
