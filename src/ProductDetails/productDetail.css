@@ -319,15 +319,18 @@
 }
 
 .info-data .input-span-tag {
-    padding: 9px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
     border-radius: 12px;
-    /* width: 70% ; */
+    color: var(--color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .info-data .input-span-tag:hover {
-    border: 1px solid rgba(255, 255, 255, 0.387);
+    color: rgb(87, 190, 242);
+    font-weight: bold;
 }
-
 
 .price-tag-ruppee {
     position: relative;
@@ -360,4 +363,16 @@
     position: relative;
     top: 5px;
     padding: 2px;
+}
+
+.cmnt-rct-i {
+    position: relative;
+    top: 4px;
+    left: 5px;
+    color: var(--color);
+}
+
+.cmnt-rct-i:hover {
+    font-weight: bold;
+    color: rgb(87, 190, 242);
 }
