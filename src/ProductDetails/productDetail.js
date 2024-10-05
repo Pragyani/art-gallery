@@ -8,6 +8,7 @@ import { FcLikePlaceholder, FcLike, FcShare, FcBookmark } from "react-icons/fc";
 import { FiBookmark } from "react-icons/fi";
 import { HiOutlineShoppingCart, HiShoppingCart } from "react-icons/hi2";
 import { PiSmileySadLight } from "react-icons/pi";
+import { FaRegComment } from "react-icons/fa6";
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
@@ -102,7 +103,8 @@ const ProductDetail = ({ Products }) => {
                                                     )}
                                                 </h3>
                                             </div>
-                                            <span className="input-span-tag"><input placeholder="Add Comment ...." type="text" /></span>
+                                            <span className="input-span-tag">Read Comments....<FaRegComment className="cmnt-rct-i"/></span>
+
                                         </div>
                                     </div>
                                 </div>
