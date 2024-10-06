@@ -5,9 +5,9 @@
 }
 
 [data-theme="light"] {
-  --bg-color: white;
+  --bg-color: rgb(255, 255, 255);
   --text-color: black;
-  --border-color: rgba(32, 31, 31, 0.249);
+  --border-color: rgba(25, 25, 25, 0.469);
   --color: black;
   --nav-bg-color:#ffffffeb;
 }
