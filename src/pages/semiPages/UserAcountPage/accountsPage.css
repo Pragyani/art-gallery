@@ -191,8 +191,8 @@
 
 .accountpage-hr {
     color: var(--color);
-    opacity: .2;
-    margin-left: 23.8pc;
+    /* opacity: .2; */
+    margin-left: 23.5pc;
     position: fixed;
     margin-top: 82px;
     height: 100%;

@@ -57,11 +57,11 @@
 
 .nav-hr{
     color: var(--color);
-    opacity: .2;
+    opacity: .8;
 }
 hr {
     color: var(--color);
-    opacity: .2;
+    opacity: .8;
 }
 
 .nav-p2 .nav-ul .ul-li {

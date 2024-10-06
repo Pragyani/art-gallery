@@ -71,8 +71,8 @@
 
 .popularpage-hr{
     color: var(--color);
-    opacity: .2;
-    margin-left: 23.5pc;
+    /* opacity: .2; */
+    margin-left: 23.9pc;
     position: fixed;
     margin-top: 82px;
     height:100%;
