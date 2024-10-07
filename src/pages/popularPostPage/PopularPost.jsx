@@ -15,11 +15,13 @@ const PopularPost = () => {
 
                 <SideBar /><hr className="popularpage-hr" />
                 <div className="popular-products-container">
-                    <h1>Popular Posts</h1>
+                    <h1>Popular Posts
+                    <hr className="headline-hr" />
+                    </h1>
                     <TopBar />
                     <div className="popular-products-list">
                         {PostPopulars.length === 0 ? (
-                            <p>Latest Post Are Popular yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
+                            <p className="home-cl-pge">Latest Post Are Popular yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
 
                         ) : (
                             PostPopulars.map((product) => (
