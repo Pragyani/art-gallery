@@ -4,7 +4,7 @@
     top: 30px;
     height: calc(100vh - 30px);
     overflow-y: auto;
-    margin-top: 3.5pc;
+    margin-top: 3.7pc;
 }
 
 .container .content .content-fluid {
@@ -42,11 +42,11 @@
 .sidebar .category-list ul a li {
     width: 88.5%;
     margin-left: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
     margin-right: 5px;
     letter-spacing: 1.3px;
     font-weight: 350;
-    padding: 13px;
+    padding: 15px;
     font-size: 21px;
     border-radius: 15px;
 }
@@ -58,7 +58,7 @@
 }
 
 .sidebar .category-list ul a li:hover {
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.31);
     font-weight: 400;
 }
 
