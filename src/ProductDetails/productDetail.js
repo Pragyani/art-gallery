@@ -21,8 +21,6 @@ const ProductDetail = ({ Products }) => {
     const filteredProducts = Products.filter(product =>
         product?.brand.toLowerCase().includes(inputValue?.toLowerCase())
     );
-    // console.log('filterPRduct' , filteredProducts)
-
 
     const handleSaveProduct = (product) => {
         dispatch(addPost(product));
@@ -30,6 +28,12 @@ const ProductDetail = ({ Products }) => {
 
     const addToCarthandle = (product) => {
         dispatch(toggleCartProduct(product));
+
+        const updatedCart = cartProducts.find(item => item.id === product.id)
+            ? cartProducts.filter(item => item.id !== product.id)
+            : [...cartProducts, product];
+
+        localStorage.setItem('cartProducts', JSON.stringify(updatedCart));
     };
 
     const handleBookmarkToggle = (product) => {
@@ -103,8 +107,7 @@ const ProductDetail = ({ Products }) => {
                                                     )}
                                                 </h3>
                                             </div>
-                                            <span className="input-span-tag">Read Comments....<FaRegComment className="cmnt-rct-i"/></span>
-
+                                            <span className="input-span-tag">Read Comments....<FaRegComment className="cmnt-rct-i" /></span>
                                         </div>
                                     </div>
                                 </div>
