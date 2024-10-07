@@ -38,11 +38,14 @@ export const cartProductsSlice = createSlice({
             } else {
                 state.push(action.payload);
             }
+        },
+        setCartProducts: (state, action) => {
+            return action.payload;
         }
     }
 });
 
-export const { addCartProducts, removeCartProduct, toggleCartProduct } = cartProductsSlice.actions;
+export const { addCartProducts, removeCartProduct, toggleCartProduct, setCartProducts } = cartProductsSlice.actions;
 
 // Popular Posts Slice
 export const popularPostSlice = createSlice({
