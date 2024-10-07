@@ -28,8 +28,8 @@
     font-size: 50px;
     font-weight: 340;
     margin-bottom: 20px;
-    margin-top: 15px;
-    margin-left: 35%;
+    margin-top: 5px;
+    margin-left: 30%;
     color: var(--color);
     width: 37%;
 }
@@ -39,7 +39,7 @@
     font-weight: 250;
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
     margin-top: 12pc;
     margin-bottom: 20px;
     cursor: pointer;
@@ -50,6 +50,7 @@
     color: blueviolet;
     cursor: pointer;
     padding: 2px;
+    padding-left: 20px;
 }
 
 .saved-products-container p span a {

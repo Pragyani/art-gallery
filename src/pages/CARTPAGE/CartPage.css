@@ -4,16 +4,21 @@
 }
 
 .cart-products-container h1 {
-    /* text-align: center; */
-    font-size: 50px;
-    font-weight: lighter;
+    font-size: 53px;
+    font-weight:350;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 28px;
-    margin-left: 24pc;
-    /* margin-bottom: 20px; */
-    padding-top: 4pc;
-    padding-left: 2pc;
+    margin-left: 20pc;
+    margin-top: 8pc;
+    text-align: center;
     color: var(--color);
+    letter-spacing: 1px;
+    width: 37%;
+}
+.cart-healine-hr{
+    color: var(--color);
+    width: 59%;
+   margin-left: 7pc;
 }
 
 .cart-products-container p {
@@ -21,16 +26,31 @@
     font-weight: 250;
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
     margin-top: 12pc;
     margin-bottom: 20px;
     cursor: pointer;
+    /* padding-left: 30%; */
+}
+
+.home-cl-pge{
+    font-size: 25px;
+    font-weight: 250;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    /* text-align: center; */
+    padding-left: 30%;
+    margin-top: 10pc;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: var(--color);
 }
 
 .cart-products-container p span {
     color: blueviolet;
     cursor: pointer;
     padding: 2px;
+    padding-left: 30px;
 }
 
 .cart-products-container p span a {
