@@ -19,7 +19,7 @@ const SavedProducts = () => {
                 <h1>Saved Products  <hr className="saved-headline-hr" /></h1>
                 <div className="saved-products-list">
                     {savedProducts.length === 0 ? (
-                        <p>No products saved yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
+                        <p className="home-cl-pge">No products saved yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
 
                     ) : (
                         savedProducts.map((product) => (

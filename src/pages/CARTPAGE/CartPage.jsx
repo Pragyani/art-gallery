@@ -26,9 +26,9 @@ const CartPage = () => {
         <div className="cart-products-container">
             <SideBar /> <hr className="cartpage-hr"/>
             <div className="cart-products-list">
-                <h1>CART ITEMS</h1>
+                <h1>CART ITEMS <hr className="cart-healine-hr"/></h1>
                 {cartProducts.length === 0 ? (
-                    <p>No products in cart yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
+                    <p className="home-cl-pge">No products in cart yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
                 ) : (
                     cartProducts.map((product) => (
                         <div className="fluid-post" key={product.id}>
