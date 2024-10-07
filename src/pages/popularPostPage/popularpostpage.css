@@ -4,18 +4,26 @@
 
 .popular-products-container {
     width: 75%;
-    margin-top: 70px;
+    margin-top: 80px;
     margin-left: 25.7pc;
     padding: 35px;
 }
 
 .popular-products-container h1 {
-    text-align: center;
+    /* text-align: center; */
     font-size: 50px;
     font-weight: 340;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-left: 26%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--color);
+    width: 37%;
+    text-align: center;
+}
+
+.popular-products-container h1 .headline-hr{
+  margin-top: 8px;margin-left: 8%;margin-right: 8%;
 }
 
 .popular-products-container p {
@@ -23,8 +31,22 @@
     font-weight: 250;
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 100%;
-    text-align: center;
-    margin-top: 12pc;
+    /* text-align: center; */
+    /* padding-left: 30%; */
+    margin-top: 10pc;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: var(--color);
+}
+
+.popular-products-container .popular-products-list .home-cl-pge{
+    font-size: 25px;
+    font-weight: 250;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    /* text-align: center; */
+    padding-left: 30%;
+    margin-top: 10pc;
     margin-bottom: 20px;
     cursor: pointer;
     color: var(--color);
@@ -34,6 +56,7 @@
     color: blueviolet;
     cursor: pointer;
     padding: 2px;
+    padding-left: 5%;
 }
 
 .popular-products-container p span a {
@@ -60,8 +83,8 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding-left: 80px;
-    margin-top: 70px;
-    margin-left: 30px;
+    margin-top: 10px;
+    margin-left: 50px;
 }
 
 .popular-products-list .fluid-post {
