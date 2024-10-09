@@ -22,13 +22,17 @@ const CartPage = () => {
         localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
     }, [cartProducts]);
 
+    const removeItem = (productID) => {
+        const updatedCartItem = cartProducts.filter((product) => product.id !== productID);
+    }
+
     return (
         <div className="cart-products-container">
-            <SideBar /> <hr className="cartpage-hr"/>
+            <SideBar /> <hr className="cartpage-hr" />
             <div className="cart-products-list">
-                <h1>CART ITEMS <hr className="cart-healine-hr"/></h1>
+                <h1>CART ITEMS</h1>
                 {cartProducts.length === 0 ? (
-                    <p className="home-cl-pge">No products in cart yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
+                    <p>No products in cart yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
                 ) : (
                     cartProducts.map((product) => (
                         <div className="fluid-post" key={product.id}>
@@ -52,9 +56,7 @@ const CartPage = () => {
                                                     <h4>Brand Name - <b>{product.brand}</b></h4>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                     
+                                            <button className="remove-item-button"onClick={() => removeItem(product.id)}>REMOVE ITEM</button></div>
                                     </div>
                                 </div>
                             </div>
