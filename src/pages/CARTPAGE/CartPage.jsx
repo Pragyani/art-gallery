@@ -6,6 +6,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Rating from '@mui/material/Rating';
 import SideBar from "../../NavigationBar/NavigationSideBar/sideBar";
 import { setCartProducts } from "../../reducers/indx";
+import { IoMdRemoveCircle } from "react-icons/io";
 
 const CartPage = () => {
     const dispatch = useDispatch();
@@ -23,6 +24,7 @@ const CartPage = () => {
     }, [cartProducts]);
 
     const removeItem = (productID) => {
+        alert('Sure !! Your Post will removed from Cart Items')
         const updatedCartItem = cartProducts.filter((product) => product.id !== productID);
         dispatch(setCartProducts(updatedCartItem))
     }
@@ -57,7 +59,8 @@ const CartPage = () => {
                                                     <h4>Brand Name - <b>{product.brand}</b></h4>
                                                 </div>
                                             </div>
-                                            <button className="remove-item-button"onClick={() => removeItem(product.id)}>REMOVE ITEM</button></div>
+                                            <div className="remove-item-button"  onClick={() => removeItem(product.id)}><IoMdRemoveCircle /></div >
+                                        </div>
                                     </div>
                                 </div>
                             </div>
