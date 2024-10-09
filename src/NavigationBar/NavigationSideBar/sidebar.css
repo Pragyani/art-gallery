@@ -40,15 +40,17 @@
 }
 
 .sidebar .category-list ul a li {
-    width: 88.5%;
-    margin-left: 25px;
+    width: 95%;
+    margin-left: 5px;
     margin-bottom: 23px;
-    margin-right: 5px;
+    /* margin-right: 5px; */
     letter-spacing: 1.3px;
     font-weight: 350;
     padding: 15px;
     font-size: 21px;
-    border-radius: 15px;
+    border-radius: 70px;
+    padding-left: 50px;
+    /* border: 2px solid white; */
 }
 
 .category-list ul a li .user-prof-i {
@@ -58,8 +60,8 @@
 }
 
 .sidebar .category-list ul a li:hover {
-    border: 1px solid rgba(255, 255, 255, 0.31);
-    font-weight: 400;
+    border: 1px solid var(--color);
+    font-weight: 300;
 }
 
 .matrl-list {
@@ -67,9 +69,9 @@
 }
 
 
- .category-list ul a li .crt-btn{
+.category-list ul a li .crt-btn {
     /* width: 1pc; */
-   /* border: 1px solid white; */
-   color: var(--color);
-   font-size: large;
+    /* border: 1px solid white; */
+    color: var(--color);
+    font-size: large;
 }
