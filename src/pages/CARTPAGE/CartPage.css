@@ -114,6 +114,12 @@
     height: 18.7pc;
     margin-left: 10px;
     /* border: 3px solid yellow; */
+    transition: all 0.1s ease-in-out;
+}
+
+.cart-products-container .cart-products-list .products:hover .product-img img{
+ box-shadow: 2px 4px 12px var(--border-color);
+
 }
 
 .cart-products-container .cart-products-list .fluid-post .product-breif {
@@ -134,18 +140,19 @@
     height: 100%;
 }
 
-.remove-item-button{
+.remove-item-button {
     color: var(--color);
     text-align: end;
     font-size: 30px;
     margin-top: 13px;
+    position: relative;bottom: 25px;
 }
 
-.remove-item-button:hover{
+.remove-item-button:hover {
     opacity: .2;
 }
 
-.cart-products-container .cart-products-list .info-prod .info-data h4{
+.cart-products-container .cart-products-list .info-prod .info-data h4 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -154,7 +161,7 @@
     color: var(--color);
 }
 
-.cart-products-container .cart-products-list .info-prod .info-data .name{
+.cart-products-container .cart-products-list .info-prod .info-data .name {
     margin-bottom: 10px;
     margin-top: 10px;
     font-weight: 900;
@@ -167,7 +174,7 @@
     width: 69%;
 }
 
-.cart-products-container .cart-products-list .info-prod .info-data .price-tag{
+.cart-products-container .cart-products-list .info-prod .info-data .price-tag {
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -177,12 +184,25 @@
     letter-spacing: 1px;
 }
 
-.cart-products-container .cart-products-list .info-prod .info-data .price-tag span{
+.cart-products-container .cart-products-list .info-prod .info-data .price-tag span {
     font-size: 14.4px;
     font-weight: 480;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: -2px;
     position: relative;
+    top: 3px;
     bottom: 0px;
     left: 5px;
+}
+
+.cart-products-container .cart-products-list .info-prod .info-data h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 560;
+    color: var(--color);
+}
+
+.cart-products-container .cart-products-list .info-prod .info-data p{
+    font-weight: 550;
+    color: var(--color);
 }
