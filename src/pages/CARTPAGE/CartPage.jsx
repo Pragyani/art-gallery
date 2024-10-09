@@ -24,6 +24,7 @@ const CartPage = () => {
 
     const removeItem = (productID) => {
         const updatedCartItem = cartProducts.filter((product) => product.id !== productID);
+        dispatch(setCartProducts(updatedCartItem))
     }
 
     return (
