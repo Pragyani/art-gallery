@@ -537,12 +537,13 @@
     box-shadow: 2px 4px 7px rgba(255, 255, 255, 0.711);
 }
 
-.re-i-rupee{
+.re-i-rupee {
     position: relative;
     top: 4px;
     left: 4px;
     font-size: 14px;
 }
+
 .container-box .re-contaier {
     width: 100%;
     margin-top: 38px;
@@ -557,9 +558,9 @@
 }
 
 .info-data .products-icon {
-    margin-top: 12px;
+    margin-top: 16px;
     display: flex;
-    margin-left: 70%;
+    margin-left: 81%;
     margin-right: 5px;
 }
 
@@ -567,10 +568,7 @@
     margin-right: 10px;
     color: var(--color);
     cursor: pointer;
-}
-
-.info-data .products-icon .product-chnges-icon:hover {
-    color: red;
+    /* font-size: large; */
 }
 
 .product-chnges-icon .dots-icon {
@@ -579,10 +577,22 @@
 }
 
 .product-chnges-icon .edit-icon {
-    font-weight: bolder;
-    font-size: 25px;
-    color: var(--color);
-    /* padding-top: 3px; */
+    font-size: 20px;
+}
+
+.edit-icon:hover {
+    color: rgb(0, 187, 255);
+    font-size: 21px;
+}
+
+.product-chnges-icon .delete-icon {
+    font-size: 22px;
+    margin-left: 5px;
+}
+
+.delete-icon:hover {
+    color: rgb(255, 80, 22);
+    font-size: 21px;
 }
 
 .dots-icon:hover {
@@ -593,15 +603,7 @@
     font-size: 20px;
 }
 
-.edit-icon:hover {
-    border-radius: 20px;
-    margin: 1px;
-    cursor: pointer;
-    color: rgb(46, 111, 181);
-    font-size: 23px;
-}
-
-.cl-as-post{
+.cl-as-post {
     margin-left: 31pc;
     /* text-align: center; */
 }
@@ -612,7 +614,7 @@
     margin-top: 30px;
     margin-left: 34px;
     border: none;
-    outline: none;  
+    outline: none;
     font-size: 20px;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -625,11 +627,12 @@
     bottom: 45px;
 }
 
-.add-new-post-btn a{
+.add-new-post-btn a {
     text-decoration: none;
-   color: var(--color);
+    color: var(--color);
 }
-.grid-layOut{
+
+.grid-layOut {
     position: relative;
     right: 5px;
     top: 2px;
