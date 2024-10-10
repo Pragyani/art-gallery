@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import './userpage.css';
-import Rating from '@mui/material/Rating';
-import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
-import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import { BasicModal } from './BasicModal/modal';
 import ProfileColumn from './ProfileBlock/ProfileColumn';
 import { LuLayoutGrid } from "react-icons/lu";
 import { FaRegBookmark } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { MdOutlineCurrencyRupee } from "react-icons/md"
+import { MdOutlineCurrencyRupee } from "react-icons/md";
+import { FaEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
 const ProfilePage = ({ data }) => {
     const [artData, setArtData] = useState(data);
@@ -64,13 +63,13 @@ const ProfilePage = ({ data }) => {
                                                             <h4>Brand Name : <b>{item.brand}</b></h4>
                                                             <div className="products-icon">
                                                                 <span className="product-chnges-icon" onClick={() => handleEditClick(item)}>
-                                                                    <EditNoteRoundedIcon className="edit-icon" />
+                                                                    <FaEdit className="edit-icon" />
                                                                 </span>
                                                                 <span className="product-chnges-icon" onClick={() => {
                                                                     const newArray = artData.filter((_, idx) => idx !== index);
                                                                     setArtData(newArray);
                                                                 }}>
-                                                                    <DeleteForeverRoundedIcon className="delete-icon" />
+                                                                    <MdDelete className="delete-icon" />
                                                                 </span>
                                                             </div>
                                                         </div>
