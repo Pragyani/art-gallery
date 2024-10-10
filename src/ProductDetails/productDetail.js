@@ -9,11 +9,13 @@ import { FiBookmark } from "react-icons/fi";
 import { HiOutlineShoppingCart, HiShoppingCart } from "react-icons/hi2";
 import { PiSmileySadLight } from "react-icons/pi";
 import { FaRegComment } from "react-icons/fa6";
+import BasicCommentMODAL from "./CommentModal/CommetnModal";
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
     const [bookmarkedProducts, setBookmarkedProducts] = useState({});
     const [voteMarked, setVoteMarked] = useState({});
+    const [commentModalOpen, setCommentMOdalOpen] = useState(false);
 
     const cartProducts = useSelector(state => state.cartProducts);
     const inputValue = useSelector(state => state.inputSlice);
@@ -64,67 +66,77 @@ const ProductDetail = ({ Products }) => {
         }
     };
 
+    const handleMdodal = () => {
+        setCommentMOdalOpen(true);
+    }
+    const handleCloseMdodal = () => {
+        setCommentMOdalOpen(false)
+    }
+
     return (
-        <div className="detail-container">
-            <div className="container-box">
-                <div className="re-container">
-                    <div className="product-fluid">
-                        {filteredProducts.length !== 0 ? filteredProducts.map((item) => (
-                            <div className="products" key={item.id}>
-                                <div className="user-plug">
-                                    <PersonPinIcon className="user-i-post" />
-                                    <div>Your Post : <b><span>{item?.brand}</span></b></div>
-                                </div>
-                                <div className="product-box">
-                                    <div className="product-img">
-                                        <img src={item?.image} alt="Product" />
+        <>
+            <div className="detail-container">
+                <div className="container-box">
+                    <div className="re-container">
+                        <div className="product-fluid">
+                            {filteredProducts.length !== 0 ? filteredProducts.map((item) => (
+                                <div className="products" key={item.id}>
+                                    <div className="user-plug">
+                                        <PersonPinIcon className="user-i-post" />
+                                        <div>Your Post : <b><span>{item?.brand}</span></b></div>
                                     </div>
-                                </div>
-                                <div className="product-breif">
-                                    <div className="info-prod">
-                                        <div className="info-data">
-                                            <span className="info-data-p">
-                                                Lorem Ipsum has been the industry's standard dummy text  ever since the 1500s...
-                                            </span>
-                                            <h4>Designed By {item?.brand}</h4>
-                                            <p>Stock Status - <h6>{item?.stockStatus}</h6></p>
-                                            <h5 className="price-tag">MRP - <CurrencyRupeeIcon className="price-tag-ruppee" /><span>{item?.price}</span></h5>
-                                            <div className="post-icons">
-                                                <div className="liked-ico">
-                                                    <span onClick={() => handlePopularPost(item)} className="hrt-st">
-                                                        {voteMarked[item.id] ? <FcLike className="fc-like-i" /> : <FcLikePlaceholder className="fc-like-i" />}
-                                                    </span>
-                                                </div>
-                                                <FcShare className="share-icon" />
-                                                <span onClick={() => handleBookmarkClick(item)} className="hrt-st">
-                                                    {bookmarkedProducts[item.id] ? <FcBookmark className="bookedMarks" /> : <FiBookmark className="bookedMarks" />}
+                                    <div className="product-box">
+                                        <div className="product-img">
+                                            <img src={item?.image} alt="Product" />
+                                        </div>
+                                    </div>
+                                    <div className="product-breif">
+                                        <div className="info-prod">
+                                            <div className="info-data">
+                                                <span className="info-data-p">
+                                                    Lorem Ipsum has been the industry's standard dummy text  ever since the 1500s...
                                                 </span>
-                                                <h3 onClick={() => addToCarthandle(item)} className="crt-st">
-                                                    {cartProducts.find(product => product.id === item.id) ? (
-                                                        <HiShoppingCart className="shopin-crt" />
-                                                    ) : (
-                                                        <HiOutlineShoppingCart className="shopin-crt" />
-                                                    )}
-                                                </h3>
+                                                <h4>Designed By {item?.brand}</h4>
+                                                <p>Stock Status - <h6>{item?.stockStatus}</h6></p>
+                                                <h5 className="price-tag">MRP - <CurrencyRupeeIcon className="price-tag-ruppee" /><span>{item?.price}</span></h5>
+                                                <div className="post-icons">
+                                                    <div className="liked-ico">
+                                                        <span onClick={() => handlePopularPost(item)} className="hrt-st">
+                                                            {voteMarked[item.id] ? <FcLike className="fc-like-i" /> : <FcLikePlaceholder className="fc-like-i" />}
+                                                        </span>
+                                                    </div>
+                                                    <FcShare className="share-icon" />
+                                                    <span onClick={() => handleBookmarkClick(item)} className="hrt-st">
+                                                        {bookmarkedProducts[item.id] ? <FcBookmark className="bookedMarks" /> : <FiBookmark className="bookedMarks" />}
+                                                    </span>
+                                                    <h3 onClick={() => addToCarthandle(item)} className="crt-st">
+                                                        {cartProducts.find(product => product.id === item.id) ? (
+                                                            <HiShoppingCart className="shopin-crt" />
+                                                        ) : (
+                                                            <HiOutlineShoppingCart className="shopin-crt" />
+                                                        )}
+                                                    </h3>
+                                                </div>
+                                                <span className="input-span-tag" onClick={() => handleMdodal()}>Read Comments....<FaRegComment className="cmnt-rct-i" /></span>
                                             </div>
-                                            <span className="input-span-tag">Read Comments....<FaRegComment className="cmnt-rct-i" /></span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        )) :
-                            <div className="nf-post">
-                                <div className="content-post-nf">
-                                    <h1>
-                                        Searched Post Not Found .....<PiSmileySadLight className="sad-emoji" />
-                                    </h1>
+                            )) :
+                                <div className="nf-post">
+                                    <div className="content-post-nf">
+                                        <h1>
+                                            Searched Post Not Found .....<PiSmileySadLight className="sad-emoji" />
+                                        </h1>
+                                    </div>
                                 </div>
-                            </div>
-                        }
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <BasicCommentMODAL commentOPen={commentModalOpen} CommentClose={handleCloseMdodal} />
+        </>
     );
 };
 export default ProductDetail;
