@@ -135,7 +135,7 @@ const ProductDetail = ({ Products }) => {
                     </div>
                 </div>
             </div>
-            <BasicCommentMODAL commentOPen={commentModalOpen} CommentClose={handleCloseMdodal} />
+            <BasicCommentMODAL commentOPen={commentModalOpen} CommentClose={handleCloseMdodal} postData={Products}/>
         </>
     );
 };
