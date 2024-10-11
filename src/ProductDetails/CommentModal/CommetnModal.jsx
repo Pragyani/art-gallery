@@ -5,16 +5,16 @@ import Modal from '@mui/material/Modal';
 
 const style = {
     position: 'absolute',
-    top: '50%',
+    top: '40%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 790,
+    width: 600,
     bgcolor: 'background.paper',
     boxShadow: 24,
 };
 
-export default function BasicCommentMODAL({ commentOPen, CommentClose }) {
-
+export default function BasicCommentMODAL({ commentOPen, CommentClose ,postData}) {
+console.log('mango', postData)
     return (
         <>
             <div>
@@ -28,6 +28,13 @@ export default function BasicCommentMODAL({ commentOPen, CommentClose }) {
                     <Box sx={style} className="comment-boxModal">
                         <h1>Comment Section <hr className="comment-sec-hr" /></h1>
 
+                        <div className="commt-scl">
+                            <div className="cmmt-contentmodal">
+                                <div className="user-commtns">
+
+                                </div>
+                            </div>
+                        </div>
                     </Box>
 
                 </Modal>
