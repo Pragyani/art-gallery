@@ -14,7 +14,7 @@ const ProfilePage = ({ data }) => {
     const [artData, setArtData] = useState(data);
     const [selectedItem, setSelectedItem] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
-    const[dropdown , setDropDown] = useState(null);
+    const [dropdown, setDropDown] = useState(null);
 
     const handleEditClick = (item) => {
         setSelectedItem(item);
@@ -31,8 +31,8 @@ const ProfilePage = ({ data }) => {
         setSelectedItem(null);
     };
 
-    const DroprDownToggle = ()=>{
-        
+    const DroprDownToggle = (index) => {
+        setDropDown(dropdown === index ? null : index);
     }
 
     return (
@@ -68,19 +68,20 @@ const ProfilePage = ({ data }) => {
                                                             <p>Stock Status :<h6>{item.stockStatus}</h6></p>
                                                             <h4>Brand Name : <b>{item.brand}</b></h4>
                                                             <div className="dropdown-e-d">
-                                                                <RiArrowDropDownLine onClick={()=>DroprDownToggle(index)}/>
+                                                                <RiArrowDropDownLine onClick={() => DroprDownToggle(index)} />
                                                             </div>
-                                                            <div className="products-icon">
-                                                                <span className="product-chnges-icon" onClick={() => handleEditClick(item)}>
-                                                                    <FaEdit className="edit-icon" />
-                                                                </span>
-                                                                <span className="product-chnges-icon" onClick={() => {
-                                                                    const newArray = artData.filter((_, idx) => idx !== index);
-                                                                    setArtData(newArray);
-                                                                }}>
-                                                                    <MdDelete className="delete-icon" />
-                                                                </span>
-                                                            </div>
+                                                            {dropdown === index &&
+                                                                <div className="products-icon">
+                                                                    <span className="product-chnges-icon" onClick={() => handleEditClick(item)}>
+                                                                        <FaEdit className="edit-icon" />
+                                                                    </span>
+                                                                    <span className="product-chnges-icon" onClick={() => {
+                                                                        const newArray = artData.filter((_, idx) => idx !== index);
+                                                                        setArtData(newArray);
+                                                                    }}>
+                                                                        <MdDelete className="delete-icon" />
+                                                                    </span>
+                                                                </div>}
                                                         </div>
                                                     </div>
                                                 </div>
