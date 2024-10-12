@@ -8,13 +8,13 @@ import { Link } from 'react-router-dom';
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const ProfilePage = ({ data }) => {
     const [artData, setArtData] = useState(data);
     const [selectedItem, setSelectedItem] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
-    const[dropdown , setDropDown] = useState(false)
+    const[dropdown , setDropDown] = useState(null);
 
     const handleEditClick = (item) => {
         setSelectedItem(item);
@@ -30,6 +30,10 @@ const ProfilePage = ({ data }) => {
         setModalOpen(false);
         setSelectedItem(null);
     };
+
+    const DroprDownToggle = ()=>{
+        
+    }
 
     return (
         <>
@@ -64,7 +68,7 @@ const ProfilePage = ({ data }) => {
                                                             <p>Stock Status :<h6>{item.stockStatus}</h6></p>
                                                             <h4>Brand Name : <b>{item.brand}</b></h4>
                                                             <div className="dropdown-e-d">
-                                                                <BsThreeDotsVertical/>
+                                                                <RiArrowDropDownLine onClick={()=>DroprDownToggle(index)}/>
                                                             </div>
                                                             <div className="products-icon">
                                                                 <span className="product-chnges-icon" onClick={() => handleEditClick(item)}>
