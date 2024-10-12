@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import { RiArrowDropDownLine } from "react-icons/ri";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 const ProfilePage = ({ data }) => {
     const [artData, setArtData] = useState(data);
@@ -68,7 +68,7 @@ const ProfilePage = ({ data }) => {
                                                             <p>Stock Status :<h6>{item.stockStatus}</h6></p>
                                                             <h4>Brand Name : <b>{item.brand}</b></h4>
                                                             <div className="dropdown-e-d">
-                                                                <RiArrowDropDownLine onClick={() => DroprDownToggle(index)} />
+                                                                <BsThreeDotsVertical onClick={() => DroprDownToggle(index)} />
                                                             </div>
                                                             {dropdown === index &&
                                                                 <div className="products-icon">
