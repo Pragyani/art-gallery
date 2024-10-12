@@ -8,11 +8,13 @@ import { Link } from 'react-router-dom';
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 const ProfilePage = ({ data }) => {
     const [artData, setArtData] = useState(data);
     const [selectedItem, setSelectedItem] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
+    const[dropdown , setDropDown] = useState(false)
 
     const handleEditClick = (item) => {
         setSelectedItem(item);
@@ -61,6 +63,9 @@ const ProfilePage = ({ data }) => {
                                                             <h5 className="price-tag">Price : <MdOutlineCurrencyRupee className='re-i-rupee' /><span>{item.price}</span></h5>
                                                             <p>Stock Status :<h6>{item.stockStatus}</h6></p>
                                                             <h4>Brand Name : <b>{item.brand}</b></h4>
+                                                            <div className="dropdown-e-d">
+                                                                <BsThreeDotsVertical/>
+                                                            </div>
                                                             <div className="products-icon">
                                                                 <span className="product-chnges-icon" onClick={() => handleEditClick(item)}>
                                                                     <FaEdit className="edit-icon" />
