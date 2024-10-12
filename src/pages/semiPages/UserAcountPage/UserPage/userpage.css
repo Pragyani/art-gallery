@@ -533,10 +533,6 @@
     border-radius: 10px;
 }
 
-.re-contaier .product-fl .products-w .product-breif:hover {
-    box-shadow: 2px 4px 7px rgba(255, 255, 255, 0.711);
-}
-
 .re-i-rupee {
     position: relative;
     top: 4px;
@@ -558,9 +554,9 @@
 }
 
 .info-data .products-icon {
-    margin-top: 16px;
+    margin-top: 6px;
     display: flex;
-    margin-left: 81%;
+    margin-left: 72%;
     margin-right: 5px;
 }
 
@@ -577,22 +573,23 @@
 }
 
 .product-chnges-icon .edit-icon {
-    font-size: 20px;
+    font-size: 24px;
+    margin-right: 5px;
 }
 
 .edit-icon:hover {
     color: rgb(0, 187, 255);
-    font-size: 21px;
+    font-size: 26px;
 }
 
 .product-chnges-icon .delete-icon {
-    font-size: 22px;
+    font-size: 25px;
     margin-left: 5px;
 }
 
 .delete-icon:hover {
     color: rgb(255, 80, 22);
-    font-size: 21px;
+    font-size: 27px;
 }
 
 .dots-icon:hover {
@@ -637,4 +634,16 @@
     right: 5px;
     top: 2px;
     font-weight: bolder;
+}
+
+.dropdown-e-d {
+    width: 20%;
+    /* border: 2px solid wheat; */
+    /* height: 12px; */
+    color: var(--color);
+    font-size: 20px;
+    cursor: pointer;
+    text-align: end;
+    position: relative;
+    left: 15.7pc;
 }
