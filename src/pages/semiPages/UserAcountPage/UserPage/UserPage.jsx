@@ -42,7 +42,6 @@ const ProfilePage = ({ data }) => {
                     <section className="user-profile">
                         <ProfileColumn />
                         <hr />
-
                         <div className="mega-userProfile">
                             <div className="cl-rowUser">
                                 <div className="cl-as-post">
@@ -94,12 +93,7 @@ const ProfilePage = ({ data }) => {
                     </section>
                 </div>
             </div>
-            <BasicModal
-                open={modalOpen}
-                handleClose={handleCloseModal}
-                postToEdit={selectedItem}
-                setArtData={setArtData}
-            />
+            <BasicModal open={modalOpen} handleClose={handleCloseModal} postToEdit={selectedItem} setArtData={setArtData} />
         </>
     );
 };
