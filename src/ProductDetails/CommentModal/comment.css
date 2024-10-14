@@ -9,6 +9,8 @@
     padding-left: 15px;
     padding-bottom: 15px;
     border-radius: 33px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.363);
+
 }
 
 .comment-boxModal h1{
@@ -20,4 +22,18 @@
 .comment-boxModal h1 .comment-sec-hr{
     width:35%;
     color: black;
+}
+
+.comment-boxModal .commt-cl{
+    width: 100%;
+    /* border: 1px solid olive; */
+    padding: 12px;
+    margin-top: 22px;
+}
+
+.comment-boxModal .cmmt-contentmodal{
+    width:94%;
+    padding: 10px;
+    border-radius: 12px;
+   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.363);
 }
