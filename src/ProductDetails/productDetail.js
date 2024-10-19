@@ -3,19 +3,18 @@ import './productDetail.css';
 import { useDispatch, useSelector } from "react-redux";
 import { addPost, toggleCartProduct, addPopularPost } from "../reducers/indx";
 import PersonPinIcon from '@mui/icons-material/PersonPin';
-import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import { FcLikePlaceholder, FcLike, FcShare, FcBookmark } from "react-icons/fc";
 import { FiBookmark } from "react-icons/fi";
 import { HiOutlineShoppingCart, HiShoppingCart } from "react-icons/hi2";
 import { PiSmileySadLight } from "react-icons/pi";
 import { FaRegComment } from "react-icons/fa6";
-import BasicCommentMODAL from "./CommentModal/CommetnModal";
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
     const [bookmarkedProducts, setBookmarkedProducts] = useState({});
     const [voteMarked, setVoteMarked] = useState({});
-    const [commentModalOpen, setCommentMOdalOpen] = useState(false);
+    const [showCommentBox, setShowCommentBox] = useState(false)
 
     const cartProducts = useSelector(state => state.cartProducts);
     const inputValue = useSelector(state => state.inputSlice);
@@ -30,11 +29,9 @@ const ProductDetail = ({ Products }) => {
 
     const addToCarthandle = (product) => {
         dispatch(toggleCartProduct(product));
-
         const updatedCart = cartProducts.find(item => item.id === product.id)
             ? cartProducts.filter(item => item.id !== product.id)
             : [...cartProducts, product];
-
         localStorage.setItem('cartProducts', JSON.stringify(updatedCart));
     };
 
@@ -45,33 +42,12 @@ const ProductDetail = ({ Products }) => {
         }));
     };
 
-    const handleBookmarkClick = (product) => {
-        handleBookmarkToggle(product);
-        if (!bookmarkedProducts[product.id]) {
-            handleSaveProduct(product);
-        }
-    };
-
     const handleVoteMarkToggle = (product) => {
         setVoteMarked((prev) => ({
             ...prev,
             [product.id]: !prev[product.id]
         }));
     };
-
-    const handlePopularPost = (product) => {
-        handleVoteMarkToggle(product);
-        if (!voteMarked[product.id]) {
-            dispatch(addPopularPost(product));
-        }
-    };
-
-    const handleMdodal = () => {
-        setCommentMOdalOpen(true);
-    }
-    const handleCloseMdodal = () => {
-        setCommentMOdalOpen(false)
-    }
 
     return (
         <>
@@ -94,19 +70,19 @@ const ProductDetail = ({ Products }) => {
                                         <div className="info-prod">
                                             <div className="info-data">
                                                 <span className="info-data-p">
-                                                    Lorem Ipsum has been the industry's standard dummy text  ever since the 1500s...
+                                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
                                                 </span>
                                                 <h4>Designed By {item?.brand}</h4>
                                                 <p>Stock Status - <h6>{item?.stockStatus}</h6></p>
                                                 <h5 className="price-tag">MRP - <CurrencyRupeeIcon className="price-tag-ruppee" /><span>{item?.price}</span></h5>
                                                 <div className="post-icons">
                                                     <div className="liked-ico">
-                                                        <span onClick={() => handlePopularPost(item)} className="hrt-st">
+                                                        <span onClick={() => handleVoteMarkToggle(item)} className="hrt-st">
                                                             {voteMarked[item.id] ? <FcLike className="fc-like-i" /> : <FcLikePlaceholder className="fc-like-i" />}
                                                         </span>
                                                     </div>
                                                     <FcShare className="share-icon" />
-                                                    <span onClick={() => handleBookmarkClick(item)} className="hrt-st">
+                                                    <span onClick={() => handleBookmarkToggle(item)} className="hrt-st">
                                                         {bookmarkedProducts[item.id] ? <FcBookmark className="bookedMarks" /> : <FiBookmark className="bookedMarks" />}
                                                     </span>
                                                     <h3 onClick={() => addToCarthandle(item)} className="crt-st">
@@ -117,7 +93,9 @@ const ProductDetail = ({ Products }) => {
                                                         )}
                                                     </h3>
                                                 </div>
-                                                <span className="input-span-tag" onClick={() => handleMdodal()}>Read Comments....<FaRegComment className="cmnt-rct-i" /></span>
+                                                <span
+                                                    className="input-span-tag" onClick={()=>setShowCommentBox(prev => !prev)} > Read Comments....<FaRegComment className="cmnt-rct-i" />
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -135,8 +113,20 @@ const ProductDetail = ({ Products }) => {
                     </div>
                 </div>
             </div>
-            <BasicCommentMODAL commentOPen={commentModalOpen} CommentClose={handleCloseMdodal} postData={Products}/>
+            {
+                showCommentBox && (<div className="comment-section">
+                    <h2>Comments</h2>
+                    <form>
+                        <textarea />
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div className="comments-list">
+
+                    </div>
+                </div>)
+            }
         </>
     );
 };
+
 export default ProductDetail;
