@@ -380,17 +380,17 @@
 
 .comment-section {
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 20px;
     margin-top: 20px;
-    width: 27.4%;
+    width:24.5%;
     position: fixed;
     right: 0;
-    top: 12%;
-    background: #fff;
+    top: 11%;
+    background: var(--nav-bg-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-right: 12px;
-    height: 20%;
+    margin-right: 26px;
+    height: 26pc;
     z-index: 10;
 }
 
