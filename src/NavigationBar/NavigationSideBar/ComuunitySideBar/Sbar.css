@@ -7,6 +7,7 @@
     width: 21.4%;
     position: fixed;
     left: 90pc;
+    z-index: 5;
 }
 
 .art-bar .art-side-bar {
