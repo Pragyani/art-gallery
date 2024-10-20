@@ -92,10 +92,11 @@ const ProductDetail = ({ Products }) => {
                                                             <HiOutlineShoppingCart className="shopin-crt" />
                                                         )}
                                                     </h3>
-                                                </div>
-                                                <span
-                                                    className="input-span-tag" onClick={()=>setShowCommentBox(prev => !prev)} > Read Comments....<FaRegComment className="cmnt-rct-i" />
+                                                    <span
+                                                    className="input-span-tag" onClick={()=>setShowCommentBox(prev => !prev)} > <FaRegComment className="cmnt-rct-i" />
                                                 </span>
+                                                </div>
+                                               
                                             </div>
                                         </div>
                                     </div>
