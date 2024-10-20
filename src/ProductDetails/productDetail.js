@@ -93,10 +93,10 @@ const ProductDetail = ({ Products }) => {
                                                         )}
                                                     </h3>
                                                     <span
-                                                    className="input-span-tag" onClick={()=>setShowCommentBox(prev => !prev)} > <FaRegComment className="cmnt-rct-i" />
-                                                </span>
+                                                        className="input-span-tag" onClick={() => setShowCommentBox(prev => !prev)} > <FaRegComment className="cmnt-rct-i" />
+                                                    </span>
                                                 </div>
-                                               
+
                                             </div>
                                         </div>
                                     </div>
@@ -115,16 +115,15 @@ const ProductDetail = ({ Products }) => {
                 </div>
             </div>
             {
-                showCommentBox && (<div className="comment-section">
-                    <h2>Comments</h2>
-                    <form>
-                        <textarea />
-                        <button type="submit">Submit</button>
-                    </form>
-                    <div className="comments-list">
+                showCommentBox && (
+                    <div className="comment-section">
+                        <h2>Comments</h2>
+                        <hr />
 
-                    </div>
-                </div>)
+                        <div className="comments-list">
+
+                        </div>
+                    </div>)
             }
         </>
     );
