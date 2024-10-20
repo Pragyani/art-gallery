@@ -320,11 +320,12 @@
 
 .info-data .input-span-tag {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 17px;
+    font-size: 21.2px;
     border-radius: 12px;
     color: var(--color);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    margin-left: 5px;
 }
 
 .info-data .input-span-tag:hover {
@@ -382,12 +383,15 @@
     border-radius: 8px;
     padding: 20px;
     margin-top: 20px;
-    width: 50%;
-    position: absolute;
+    width: 27.4%;
+    position: fixed;
     right: 0;
-    top: 10%;
+    top: 12%;
     background: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 12px;
+    height: 20%;
+    z-index: 10;
 }
 
 .comment-section h2 {
