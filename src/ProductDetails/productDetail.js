@@ -9,7 +9,7 @@ import { FiBookmark } from "react-icons/fi";
 import { HiOutlineShoppingCart, HiShoppingCart } from "react-icons/hi2";
 import { PiSmileySadLight } from "react-icons/pi";
 import { FaRegComment } from "react-icons/fa6";
-import { SideBarImage3, TopBarImage4 } from "../utils";
+import CommentBox from "./CommentModal/CommetnModal";
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
@@ -116,18 +116,8 @@ const ProductDetail = ({ Products }) => {
                 </div>
             </div>
             {
-                showCommentBox && (
-                    <div className="comment-section">
-                        <h2>Comments</h2>
-                        <hr />
-                        <div className="comments-list">
-                            <div className="commet-col">
-                                <div className="user-coment-selection">
-                                    <div className="user-img"><img src={TopBarImage4} alt="user-img"/></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>)
+                showCommentBox && <CommentBox postDatas={Products}/>
+                   
             }
         </>
     );
