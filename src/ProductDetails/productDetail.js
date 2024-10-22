@@ -115,10 +115,7 @@ const ProductDetail = ({ Products }) => {
                     </div>
                 </div>
             </div>
-            {
-                showCommentBox && <CommentBox postDatas={Products}/>
-                   
-            }
+            {showCommentBox && <CommentBox />}
         </>
     );
 };
