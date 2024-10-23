@@ -123,7 +123,7 @@ const ProductDetail = ({ Products }) => {
                     </div>
                 </div>
             </div>
-            {showCommentBox && <CommentBox />}
+            {showCommentBox && <CommentBox postComment={Products}/>}
         </>
     );
 };
