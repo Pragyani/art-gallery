@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import './comment.css';
 import { TopBarImage1, TopBarImage2, TopBarImage4, TopBarImage7 } from "../../utils";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
-const CommentBox = () => {
+const CommentBox = ({ postComment }) => {
+    console.log(postComment);
 
+    const [newComment, setNewComment] = useState();
+    console.log(newComment)
+
+    const handleCommentSubmmit = (e) => {
+        e.preventDefault();
+    }
     return (
         <>
             <div className="comment-section">
@@ -12,56 +19,28 @@ const CommentBox = () => {
                 <hr />
 
                 <div className="comments-list">
-                    <div className="commet-col">
-                        <div className="user-coment-selection">
-                            <div className="user-img">
-                                <img src={TopBarImage4} alt="user-img" />
-                                <p>Lorem Ipsum has been the industry's ...</p>
-                                <BsThreeDotsVertical className="cmnt-edits" />
-                            </div>
+                    {postComment.map((element) => (
+                        <div key={element.id}>
+                            {element.reviews.map((review, index) => (
+                                <div className="commet-col" key={index}>
+                                    <div className="user-coment-selection">
+                                        <div className="user-img">
+                                            <img src={element.image} alt="user-img" />
+                                            <p><strong>{review.user}</strong>: {review.comment}</p>
+                                            <BsThreeDotsVertical className="cmnt-edits" />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    </div>
-                </div>
-                <hr className="coment-horizontalLine" />
-                <div className="comments-list">
-                    <div className="commet-col">
-                        <div className="user-coment-selection">
-                            <div className="user-img">
-                                <img src={TopBarImage2} alt="user-img" />
-                                <p>Lorem Ipsum has been the industry's ...</p>
-                                <BsThreeDotsVertical className="cmnt-edits" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr className="coment-horizontalLine" />
-                <div className="comments-list">
-                    <div className="commet-col">
-                        <div className="user-coment-selection">
-                            <div className="user-img">
-                                <img src={TopBarImage7} alt="user-img" />
-                                <p>Lorem Ipsum has been the industry's ...</p>
-                                <BsThreeDotsVertical className="cmnt-edits" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr className="coment-horizontalLine" />
-                <div className="comments-list">
-                    <div className="commet-col">
-                        <div className="user-coment-selection">
-                            <div className="user-img">
-                                <img src={TopBarImage1} alt="user-img" />
-                                <p>Lorem Ipsum has been the industry's ...</p>
-                                <BsThreeDotsVertical className="cmnt-edits" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                  <hr className="coment-horizontalLine" />
+                    ))}
 
-                <form>
-                    <textarea placeholder="Add your comment" className="txt-wrp"/>
+
+                </div>
+                <hr className="coment-horizontalLine" />
+                <form onSubmit={handleCommentSubmmit}>
+                    <textarea placeholder="Add your comment" value={newComment} onChange={(e) => setNewComment(e.target.value)} className="txt-wrp" />
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         </>
