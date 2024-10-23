@@ -4,7 +4,7 @@
     /* padding: 20px; */
     padding-top: 10px;
     margin-top: 20px;
-    width: 24.5%;
+    width: 23%;
     position: fixed;
     right: 0;
     top: 11%;
@@ -67,8 +67,48 @@
     font-weight: lighter;
     font-size: 14.5px;
     letter-spacing: 1px;
+    opacity: .7;
+}
+
+.user-img p:hover{
+    opacity: .9;
+    cursor: pointer;
 }
 
 .coment-horizontalLine {
     opacity: .1;
 }
+
+.cmnt-edits{
+    position: relative;
+    font-size: 20px;
+    left: 65px;
+    top: 7px;
+    cursor: pointer;
+    opacity: .7;
+}
+
+.cmnt-edits:hover{
+    font-size: 22px;
+    opacity: .9;
+}
+
+.comment-section form{
+    padding: 14px;
+    width: 100%;
+    position: relative;
+    top: 40px;
+    height: auto;
+    border-radius: 14px;
+}
+
+.comment-section form .txt-wrp{
+    width: 100%;
+    background-color: var(--nav-bg-color);
+    color: var(--color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+} 
