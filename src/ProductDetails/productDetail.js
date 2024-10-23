@@ -41,6 +41,10 @@ const ProductDetail = ({ Products }) => {
             ...prev,
             [product.id]: !prev[product.id]
         }));
+
+        if (!bookmarkedProducts[product.id]) {
+            handleSaveProduct(product);
+        }
     };
 
     const handleVoteMarkToggle = (product) => {
@@ -48,6 +52,11 @@ const ProductDetail = ({ Products }) => {
             ...prev,
             [product.id]: !prev[product.id]
         }));
+
+        if (!voteMarked[product.id]) {
+            handleSaveProduct(product);
+            dispatch(addPopularPost(product));
+        }
     };
 
     return (
@@ -93,11 +102,10 @@ const ProductDetail = ({ Products }) => {
                                                             <HiOutlineShoppingCart className="shopin-crt" />
                                                         )}
                                                     </h3>
-                                                    <span
-                                                        className="input-span-tag" onClick={() => setShowCommentBox(prev => !prev)} > <FaRegComment className="cmnt-rct-i" />
+                                                    <span className="input-span-tag">
+                                                        <FaRegComment className="cmnt-rct-i" onClick={() => setShowCommentBox(prev => !prev)} />
                                                     </span>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
@@ -110,7 +118,7 @@ const ProductDetail = ({ Products }) => {
                                         </h1>
                                     </div>
                                 </div>
-                            }s
+                            }
                         </div>
                     </div>
                 </div>
