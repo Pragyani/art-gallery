@@ -7,9 +7,9 @@ import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import { FcLikePlaceholder, FcLike, FcShare, FcBookmark } from "react-icons/fc";
 import { FiBookmark } from "react-icons/fi";
 import { HiOutlineShoppingCart, HiShoppingCart } from "react-icons/hi2";
-import { PiSmileySadLight } from "react-icons/pi";
 import { FaRegComment } from "react-icons/fa6";
 import CommentBox from "./CommentModal/CommetnModal";
+import NotFoundPage from "../pages/notfoundpage/NotFoundPage";
 
 const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
@@ -61,8 +61,8 @@ const ProductDetail = ({ Products }) => {
     };
 
     const handleShowComments = (product) => {
-        setSelectedPost(product); 
-        setShowCommentBox(true); 
+        setSelectedPost(product);
+        setShowCommentBox(true);
     };
 
     return (
@@ -102,11 +102,7 @@ const ProductDetail = ({ Products }) => {
                                                         {bookmarkedProducts[item.id] ? <FcBookmark className="bookedMarks" /> : <FiBookmark className="bookedMarks" />}
                                                     </span>
                                                     <h3 onClick={() => addToCarthandle(item)} className="crt-st">
-                                                        {cartProducts.find(product => product.id === item.id) ? (
-                                                            <HiShoppingCart className="shopin-crt" />
-                                                        ) : (
-                                                            <HiOutlineShoppingCart className="shopin-crt" />
-                                                        )}
+                                                        {cartProducts.find(product => product.id === item.id) ? (<HiShoppingCart className="shopin-crt" />) : (<HiOutlineShoppingCart className="shopin-crt" />)}
                                                     </h3>
                                                     <span className="input-span-tag">
                                                         <FaRegComment className="cmnt-rct-i" onClick={() => handleShowComments(item)} />
@@ -115,16 +111,7 @@ const ProductDetail = ({ Products }) => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            )) :
-                                <div className="nf-post">
-                                    <div className="content-post-nf">
-                                        <h1>
-                                            Searched Post Not Found .....<PiSmileySadLight className="sad-emoji" />
-                                        </h1>
-                                    </div>
-                                </div>
-                            }
+                                </div>)) : <NotFoundPage />}
                         </div>
                     </div>
                 </div>
