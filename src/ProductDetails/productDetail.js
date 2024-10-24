@@ -15,7 +15,8 @@ const ProductDetail = ({ Products }) => {
     const dispatch = useDispatch();
     const [bookmarkedProducts, setBookmarkedProducts] = useState({});
     const [voteMarked, setVoteMarked] = useState({});
-    const [showCommentBox, setShowCommentBox] = useState(false)
+    const [showCommentBox, setShowCommentBox] = useState(false);
+    const [selectedPost, setSelectedPost] = useState(null);
 
     const cartProducts = useSelector(state => state.cartProducts);
     const inputValue = useSelector(state => state.inputSlice);
@@ -57,6 +58,11 @@ const ProductDetail = ({ Products }) => {
             handleSaveProduct(product);
             dispatch(addPopularPost(product));
         }
+    };
+
+    const handleShowComments = (product) => {
+        setSelectedPost(product); 
+        setShowCommentBox(true); 
     };
 
     return (
@@ -103,7 +109,7 @@ const ProductDetail = ({ Products }) => {
                                                         )}
                                                     </h3>
                                                     <span className="input-span-tag">
-                                                        <FaRegComment className="cmnt-rct-i" onClick={() => setShowCommentBox(prev => !prev)} />
+                                                        <FaRegComment className="cmnt-rct-i" onClick={() => handleShowComments(item)} />
                                                     </span>
                                                 </div>
                                             </div>
@@ -123,9 +129,8 @@ const ProductDetail = ({ Products }) => {
                     </div>
                 </div>
             </div>
-            {showCommentBox && <CommentBox postComment={Products}/>}
+            {showCommentBox && selectedPost && (<CommentBox postComment={selectedPost} onClose={() => setShowCommentBox(false)} />)}
         </>
     );
 };
-
 export default ProductDetail;
