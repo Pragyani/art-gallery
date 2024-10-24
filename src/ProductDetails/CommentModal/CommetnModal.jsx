@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import './comment.css';
 import { IoClose } from "react-icons/io5";
 import { BsFillSendFill } from "react-icons/bs";
+import { RiDeleteBin2Fill } from "react-icons/ri";
 
 const CommentBox = ({ postComment, onClose }) => {
     const [newComment, setNewComment] = useState("");
+    const [reviews, setReviews] = useState(postComment.reviews || []);
 
     const handleCommentSubmit = (e) => {
         e.preventDefault();
@@ -13,12 +15,15 @@ const CommentBox = ({ postComment, onClose }) => {
                 user: 'Your Comment',
                 comment: newComment,
             };
-            postComment.reviews.push(commentData);
+            setReviews([...reviews, commentData]);
             setNewComment("");
         }
     };
 
-    const reviews = postComment?.reviews || [];
+    const handleDeleteComment = (index) => {
+        const updatedReviews = reviews.filter((_, i) => i !== index);
+        setReviews(updatedReviews);
+    };
 
     return (
         <div className="comment-section">
@@ -32,11 +37,11 @@ const CommentBox = ({ postComment, onClose }) => {
                         <div className="user-coment-selection">
                             <div className="user-img">
                                 <p><strong>{review.user}</strong> : {review.comment}</p>
+                                <button onClick={() => handleDeleteComment(index)} className="delete-button"><RiDeleteBin2Fill /></button>
                             </div>
                         </div>
                         <hr className="coment-horizontalLine" />
                     </div>
-
                 ))}
             </div>
 
@@ -52,4 +57,5 @@ const CommentBox = ({ postComment, onClose }) => {
         </div>
     );
 };
+
 export default CommentBox;
