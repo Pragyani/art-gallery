@@ -70,7 +70,7 @@
     opacity: .7;
 }
 
-.user-img p:hover{
+.user-img p:hover {
     opacity: .9;
     cursor: pointer;
 }
@@ -79,7 +79,7 @@
     opacity: .1;
 }
 
-.cmnt-edits{
+.cmnt-edits {
     position: relative;
     font-size: 20px;
     left: 65px;
@@ -88,12 +88,12 @@
     opacity: .7;
 }
 
-.cmnt-edits:hover{
+.cmnt-edits:hover {
     font-size: 22px;
     opacity: .9;
 }
 
-.comment-section form{
+.comment-section form {
     padding: 14px;
     width: 100%;
     position: relative;
@@ -102,7 +102,7 @@
     border-radius: 14px;
 }
 
-.comment-section form .txt-wrp{
+.comment-section form .txt-wrp {
     width: 100%;
     background-color: var(--nav-bg-color);
     color: var(--color);
@@ -111,4 +111,24 @@
     letter-spacing: 1px;
     border: none;
     outline: none;
-} 
+    /* border: 1px solid red; */
+    position: relative;
+    top: 7rem;
+}
+
+.sent-box {
+    position: relative;
+    top: 78px;
+    left: 91%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+}
+
+.sent-box:hover{
+    color: rgb(0, 183, 255);
+    cursor: pointer;
+}
+
+span {
+    color: var(--color);
+}
