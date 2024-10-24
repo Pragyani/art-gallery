@@ -22,7 +22,7 @@ const CommentBox = ({ postComment, onClose }) => {
 
     return (
         <div className="comment-section">
-            <h2>Comments for {postComment?.name || "Post"}</h2>
+            <h2>Comments for {postComment?.brand || "Post"}</h2>
             <span onClick={onClose} className="closed-icona"><IoClose /></span>
             <hr />
 
