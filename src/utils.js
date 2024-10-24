@@ -205,3 +205,7 @@ export const TopBarImage7 = "https://i.pinimg.com/564x/83/0c/76/830c76e330d0a8eb
 // Account page image url's
 
 export const AccountPageIMg = 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp';
+
+// about page imageurl
+
+export const AboutPageImage = "https://i.pinimg.com/736x/29/a9/90/29a990a1762ef68b956765ad266b019f.jpg"
