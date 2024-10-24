@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './comment.css';
-import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
 import { BsFillSendFill } from "react-icons/bs";
 
@@ -24,7 +23,7 @@ const CommentBox = ({ postComment, onClose }) => {
     return (
         <div className="comment-section">
             <h2>Comments for {postComment?.name || "Post"}</h2>
-            <span onClick={onClose}><IoClose /></span>
+            <span onClick={onClose} className="closed-icona"><IoClose /></span>
             <hr />
 
             <div className="comments-list">
@@ -32,8 +31,7 @@ const CommentBox = ({ postComment, onClose }) => {
                     <div className="commet-col" key={index}>
                         <div className="user-coment-selection">
                             <div className="user-img">
-                                <p><strong>{review.user}</strong>: {review.comment}</p>
-                                <BsThreeDotsVertical className="cmnt-edits" />
+                                <p><strong>{review.user}</strong> : {review.comment}</p>
                             </div>
                         </div>
                         <hr className="coment-horizontalLine" />
@@ -49,7 +47,7 @@ const CommentBox = ({ postComment, onClose }) => {
                     onChange={(e) => setNewComment(e.target.value)}
                     className="txt-wrp"
                 />
-                <span type="submit" className="sent-box"><BsFillSendFill /></span>
+                <button type="submit" className="sent-box"><BsFillSendFill /></button>
             </form>
         </div>
     );
