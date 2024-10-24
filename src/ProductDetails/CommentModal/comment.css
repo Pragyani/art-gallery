@@ -106,7 +106,7 @@
 }
 
 .comment-section form .txt-wrp {
-    width:25pc;
+    width: 25pc;
     background-color: var(--nav-bg-color);
     color: var(--color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -121,17 +121,17 @@
 
 .sent-box {
     position: fixed;
-    top:31.5rem;
+    top: 31.5rem;
     left: 95.4%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: large;
     color: var(--color);
     background: none;
-    padding:3px;
+    padding: 3px;
     border: none;
 }
 
-.sent-box:hover{
+.sent-box:hover {
     color: rgb(0, 183, 255);
     cursor: pointer;
 }
@@ -146,7 +146,23 @@
     cursor: pointer;
 }
 
-.closed-icona:hover{
+.closed-icona:hover {
     color: rgb(49, 185, 169);
     opacity: .5;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    color: var(--color);
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    margin-top: 12px;
+    position: fixed;
+    left: 114.4rem;
+}
+
+.delete-button:hover {
+    color: rgb(241, 31, 31);
 }
