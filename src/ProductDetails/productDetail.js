@@ -48,7 +48,7 @@ const ProductDetail = ({ Products }) => {
         }
     };
 
-    const handleVoteMarkToggle = (product) => {
+    const handleVoteMarkToggle = (product, event) => {
         setVoteMarked((prev) => ({
             ...prev,
             [product.id]: !prev[product.id]
@@ -57,6 +57,20 @@ const ProductDetail = ({ Products }) => {
         if (!voteMarked[product.id]) {
             handleSaveProduct(product);
             dispatch(addPopularPost(product));
+
+            const heart = document.createElement('span');
+            heart.innerText = '❤️';
+            heart.classList.add('heart-animation');
+
+            const rect = event.currentTarget.getBoundingClientRect();
+            heart.style.left = `${rect.left + rect.width / 7}px`;
+            heart.style.top = `${rect.top + rect.height / 7}px`;
+
+            document.body.appendChild(heart);
+
+            heart.addEventListener('animationend', () => {
+                heart.remove();
+            });
         }
     };
 
@@ -93,7 +107,7 @@ const ProductDetail = ({ Products }) => {
                                                 <h5 className="price-tag">MRP - <CurrencyRupeeIcon className="price-tag-ruppee" /><span>{item?.price}</span></h5>
                                                 <div className="post-icons">
                                                     <div className="liked-ico">
-                                                        <span onClick={() => handleVoteMarkToggle(item)} className="hrt-st">
+                                                        <span onClick={(event) => handleVoteMarkToggle(item, event)} className="hrt-st">
                                                             {voteMarked[item.id] ? <FcLike className="fc-like-i" /> : <FcLikePlaceholder className="fc-like-i" />}
                                                         </span>
                                                     </div>
@@ -120,4 +134,5 @@ const ProductDetail = ({ Products }) => {
         </>
     );
 };
+
 export default ProductDetail;
