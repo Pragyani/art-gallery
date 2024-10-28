@@ -81,13 +81,13 @@
     cursor: pointer;
 }
 
-.user-img p .user-comt{
+.user-img p .user-comt {
     /* border: 1px solid beige; */
     width: 93%;
     padding: 4px;
 }
 
-.user-img p strong{
+.user-img p strong {
     width: 11%;
     padding: 4px;
     position: relative;
@@ -134,8 +134,8 @@
     border: none;
     outline: none;
     position: fixed;
-    top:54rem;
-    height:4.2pc ;
+    top: 54rem;
+    height: 4.2pc;
     padding-top: 5px;
     padding-left: 6px;
     padding-bottom: 5px;
@@ -190,7 +190,7 @@
     color: rgb(241, 31, 31);
 }
 
-.user-edit-btn{
+.user-edit-btn {
     background: none;
     border: none;
     color: var(--color);
@@ -199,32 +199,40 @@
     font-size: larger;
     margin-top: 12px;
     position: fixed;
-    left: 113rem;
+    left: 112.5rem;
 }
 
-.coment-horizontaline{
+.user-edit-btn:hover {
+    color: rgb(10, 170, 112);
+}
+
+.coment-horizontaline {
     opacity: .2;
     position: relative;
-    top:33pc;
+    top: 33pc;
 }
 
 .txt-wrp {
-    resize: none; 
+    resize: none;
 }
 
 .txt-wrp::-webkit-scrollbar {
-    width: 4px; 
+    width: 4px;
 }
 
 .txt-wrp::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Background of the scrollbar track */
+    background: #f1f1f1;
+    /* Background of the scrollbar track */
 }
 
 .txt-wrp::-webkit-scrollbar-thumb {
-    background: #888; /* Color of the scrollbar thumb */
-    border-radius: 7px; /* Rounded corners for the scrollbar thumb */
+    background: #888;
+    /* Color of the scrollbar thumb */
+    border-radius: 7px;
+    /* Rounded corners for the scrollbar thumb */
 }
 
 .txt-wrp::-webkit-scrollbar-thumb:hover {
-    background: #555555; /* Color when hovering over the scrollbar thumb */
+    background: #555555;
+    /* Color when hovering over the scrollbar thumb */
 }
