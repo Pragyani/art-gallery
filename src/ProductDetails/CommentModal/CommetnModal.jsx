@@ -3,8 +3,7 @@ import './comment.css';
 import { IoClose } from "react-icons/io5";
 import { BsFillSendFill } from "react-icons/bs";
 import { RiDeleteBin2Fill } from "react-icons/ri";
-import { MdModeEditOutline } from "react-icons/md";
-
+import { MdModeEdit } from "react-icons/md";
 
 const CommentBox = ({ postComment, onClose }) => {
     const [newComment, setNewComment] = useState("");
@@ -27,8 +26,8 @@ const CommentBox = ({ postComment, onClose }) => {
         setReviews(updatedReviews);
     };
 
-    const handleEditComment =()=>{
-        
+    const handleEditComment = () => {
+
     }
 
     return (
@@ -42,9 +41,9 @@ const CommentBox = ({ postComment, onClose }) => {
                     <div className="commet-col" key={index}>
                         <div className="user-coment-selection">
                             <div className="user-img">
-                                <p><strong>{review.user}</strong> : {review.comment}</p>
+                                <p><strong>{review.user}:</strong> <span className="user-comt">{review.comment}</span></p>
                                 <button onClick={() => handleDeleteComment(index)} className="delete-button"><RiDeleteBin2Fill /></button>
-                                <button><MdModeEditOutline onClick={()=>handleEditComment()}/></button>
+                                <button onClick={() => handleEditComment()} className="user-edit-btn"><MdModeEdit /></button>
                             </div>
                         </div>
                         <hr className="coment-horizontalLine" />
