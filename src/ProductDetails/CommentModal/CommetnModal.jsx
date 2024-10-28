@@ -8,16 +8,23 @@ import { MdModeEdit } from "react-icons/md";
 const CommentBox = ({ postComment, onClose }) => {
     const [newComment, setNewComment] = useState("");
     const [reviews, setReviews] = useState(postComment.reviews || []);
+    const [editngIndex, setEditingIndex] = useState(null);
 
     const handleCommentSubmit = (e) => {
         e.preventDefault();
         if (newComment.trim()) {
-            const commentData = {
-                user: 'You',
-                comment: newComment,
-            };
-            setReviews([...reviews, commentData]);
-            setNewComment("");
+            if (editngIndex !== null) {
+                const updatedReviews = reviews.map((review, index) => index === editngIndex ? { ...review, comment: newComment } : review)
+                setReviews(updatedReviews)
+                setEditingIndex(null);
+            } else {
+                const commentData = {
+                    user: 'You',
+                    comment: newComment,
+                };
+                setReviews([...reviews, commentData]);
+                setNewComment("");
+            }
         }
     };
 
@@ -26,8 +33,9 @@ const CommentBox = ({ postComment, onClose }) => {
         setReviews(updatedReviews);
     };
 
-    const handleEditComment = () => {
-
+    const handleEditComment = (index) => {
+        setNewComment(reviews[index].comment);
+        setEditingIndex(index);
     }
 
     return (
@@ -43,7 +51,7 @@ const CommentBox = ({ postComment, onClose }) => {
                             <div className="user-img">
                                 <p><strong>{review.user}:</strong> <span className="user-comt">{review.comment}</span></p>
                                 <button onClick={() => handleDeleteComment(index)} className="delete-button"><RiDeleteBin2Fill /></button>
-                                <button onClick={() => handleEditComment()} className="user-edit-btn"><MdModeEdit /></button>
+                                <button onClick={() => handleEditComment(index)} className="user-edit-btn"><MdModeEdit /></button>
                             </div>
                         </div>
                         <hr className="coment-horizontalLine" />
