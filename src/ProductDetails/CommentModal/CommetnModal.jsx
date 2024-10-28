@@ -3,6 +3,8 @@ import './comment.css';
 import { IoClose } from "react-icons/io5";
 import { BsFillSendFill } from "react-icons/bs";
 import { RiDeleteBin2Fill } from "react-icons/ri";
+import { MdModeEditOutline } from "react-icons/md";
+
 
 const CommentBox = ({ postComment, onClose }) => {
     const [newComment, setNewComment] = useState("");
@@ -38,6 +40,7 @@ const CommentBox = ({ postComment, onClose }) => {
                             <div className="user-img">
                                 <p><strong>{review.user}</strong> : {review.comment}</p>
                                 <button onClick={() => handleDeleteComment(index)} className="delete-button"><RiDeleteBin2Fill /></button>
+                                <button><MdModeEditOutline/></button>
                             </div>
                         </div>
                         <hr className="coment-horizontalLine" />
