@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './comment.css';
 import { IoClose } from "react-icons/io5";
-import { BsFillSendFill } from "react-icons/bs";
+import { FaCheck } from "react-icons/fa";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import { MdModeEdit } from "react-icons/md";
 
@@ -13,7 +13,7 @@ const CommentBox = ({ postComment, onClose }) => {
         e.preventDefault();
         if (newComment.trim()) {
             const commentData = {
-                user: 'Your Comment',
+                user: 'You',
                 comment: newComment,
             };
             setReviews([...reviews, commentData]);
@@ -50,6 +50,7 @@ const CommentBox = ({ postComment, onClose }) => {
                     </div>
                 ))}
             </div>
+            <hr className="coment-horizontaline" />
 
             <form onSubmit={handleCommentSubmit}>
                 <textarea
@@ -58,7 +59,7 @@ const CommentBox = ({ postComment, onClose }) => {
                     onChange={(e) => setNewComment(e.target.value)}
                     className="txt-wrp"
                 />
-                <button type="submit" className="sent-box"><BsFillSendFill /></button>
+                <button type="submit" className="sent-box"><FaCheck /></button>
             </form>
         </div>
     );
