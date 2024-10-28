@@ -125,7 +125,7 @@
 }
 
 .comment-section form .txt-wrp {
-    width: 26.5pc;
+    width: 24.3pc;
     background-color: var(--nav-bg-color);
     color: var(--color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -134,9 +134,9 @@
     border: none;
     outline: none;
     position: fixed;
-    top:54.5rem;
+    top:54rem;
     height:4.2pc ;
-    padding-top: 6px;
+    padding-top: 5px;
     padding-left: 6px;
     padding-bottom: 5px;
     padding-right: 8px;
@@ -145,7 +145,7 @@
 .sent-box {
     position: fixed;
     top: 55pc;
-    left: 96%;
+    left: 96.5%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
     color: var(--color);
@@ -206,4 +206,25 @@
     opacity: .2;
     position: relative;
     top:33pc;
+}
+
+.txt-wrp {
+    resize: none; 
+}
+
+.txt-wrp::-webkit-scrollbar {
+    width: 4px; 
+}
+
+.txt-wrp::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+.txt-wrp::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 7px; /* Rounded corners for the scrollbar thumb */
+}
+
+.txt-wrp::-webkit-scrollbar-thumb:hover {
+    background: #555555; /* Color when hovering over the scrollbar thumb */
 }
