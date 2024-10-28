@@ -27,6 +27,10 @@ const CommentBox = ({ postComment, onClose }) => {
         setReviews(updatedReviews);
     };
 
+    const handleEditComment =()=>{
+        
+    }
+
     return (
         <div className="comment-section">
             <h2>Comments for {postComment?.brand || "Post"}</h2>
@@ -40,7 +44,7 @@ const CommentBox = ({ postComment, onClose }) => {
                             <div className="user-img">
                                 <p><strong>{review.user}</strong> : {review.comment}</p>
                                 <button onClick={() => handleDeleteComment(index)} className="delete-button"><RiDeleteBin2Fill /></button>
-                                <button><MdModeEditOutline/></button>
+                                <button><MdModeEditOutline onClick={()=>handleEditComment()}/></button>
                             </div>
                         </div>
                         <hr className="coment-horizontalLine" />
@@ -59,6 +63,5 @@ const CommentBox = ({ postComment, onClose }) => {
             </form>
         </div>
     );
-};
-
+}
 export default CommentBox;
