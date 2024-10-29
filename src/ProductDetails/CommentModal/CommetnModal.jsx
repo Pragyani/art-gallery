@@ -17,6 +17,7 @@ const CommentBox = ({ postComment, onClose }) => {
                 const updatedReviews = reviews.map((review, index) => index === editngIndex ? { ...review, comment: newComment } : review)
                 setReviews(updatedReviews)
                 setEditingIndex(null);
+                setNewComment('');
             } else {
                 const commentData = {
                     user: 'You',
@@ -53,6 +54,10 @@ const CommentBox = ({ postComment, onClose }) => {
                                 <button onClick={() => handleDeleteComment(index)} className="delete-button"><RiDeleteBin2Fill /></button>
                                 <button onClick={() => handleEditComment(index)} className="user-edit-btn"><MdModeEdit /></button>
                             </div>
+                            {/* <span>
+                                <h3>HELLOO
+                                emoji addd krni hein muje</h3>
+                            </span> */}
                         </div>
                         <hr className="coment-horizontalLine" />
                     </div>
