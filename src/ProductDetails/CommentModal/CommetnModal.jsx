@@ -4,6 +4,7 @@ import { IoClose } from "react-icons/io5";
 import { FaCheck } from "react-icons/fa";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import { MdModeEdit } from "react-icons/md";
+import { TopBarImage5 } from "../../utils";
 
 const CommentBox = ({ postComment, onClose }) => {
     const [newComment, setNewComment] = useState("");
@@ -50,14 +51,15 @@ const CommentBox = ({ postComment, onClose }) => {
                     <div className="commet-col" key={index}>
                         <div className="user-coment-selection">
                             <div className="user-img">
-                                <p><strong>{review.user}:</strong> <span className="user-comt">{review.comment}</span></p>
+                                <img src={TopBarImage5} alt="" />
+                                <p><strong>{review.user}</strong></p>
                                 <button onClick={() => handleDeleteComment(index)} className="delete-button"><RiDeleteBin2Fill /></button>
                                 <button onClick={() => handleEditComment(index)} className="user-edit-btn"><MdModeEdit /></button>
                             </div>
-                            {/* <span>
-                                <h3>HELLOO
-                                emoji addd krni hein muje</h3>
-                            </span> */}
+                            <div className="user-cmnt-fun">
+                                <p> <span className="user-comt">{review.comment}</span></p>
+                            </div>
+
                         </div>
                         <hr className="coment-horizontalLine" />
                     </div>
