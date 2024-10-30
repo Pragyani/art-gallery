@@ -56,11 +56,13 @@
 }
 
 .user-img img {
-    width: 7%;
-    height: 30px;
+    width: 6%;
+    height: 25px;
     border-radius: 39px;
     margin-left: 12px;
     margin-top: 5px;
+    position: relative;
+    top: 9px;
 }
 
 .user-img p {
@@ -219,7 +221,7 @@
 
 .txt-wrp::-webkit-scrollbar {
     width: 4px;
-}   
+}
 
 .txt-wrp::-webkit-scrollbar-track {
     background: #f1f1f1;
@@ -236,4 +238,18 @@
 .txt-wrp::-webkit-scrollbar-thumb:hover {
     background: #555555;
     /* Color when hovering over the scrollbar thumb */
+}
+
+.user-cmnt-fun {
+    color: var(--color);
+    margin-top: 3px;
+    margin-left: 12%;
+}
+
+.user-cmnt-fun p {
+    opacity: .8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    font-weight: 440;
+    letter-spacing: 0.7px;
 }
