@@ -3,7 +3,7 @@
 }
 
 .popular-products-container {
-    width: 75%;
+    width: 74%;
     margin-top: 80px;
     margin-left: 25.7pc;
     padding: 35px;
@@ -99,4 +99,11 @@
     position: fixed;
     margin-top: 82px;
     height:100%;
+}
+
+.mdl{
+    border: 4px solid beige;
+    text-align: center;
+    width: 50%;
+    height: 40%;
 }
