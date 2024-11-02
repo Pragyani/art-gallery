@@ -15,9 +15,6 @@ const PopularPost = () => {
 
                 <SideBar /><hr className="popularpage-hr" />
                 <div className="popular-products-container">
-                    <h1>Popular Posts
-                    <hr className="headline-hr" />
-                    </h1>
                     <TopBar />
                     <div className="popular-products-list">
                         {PostPopulars.length === 0 ? (
