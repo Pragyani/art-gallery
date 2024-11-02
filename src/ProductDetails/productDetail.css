@@ -4,7 +4,7 @@
     /* border-radius: 100px; */
     margin-right: 12px;
     margin-left: 32pc;
-    margin-top: 10pc;
+    margin-top: 7.3pc;
 }
 
 .detail-container .container-box {
@@ -376,3 +376,34 @@
     font-weight: bold;
     color: rgb(87, 190, 242);
 }
+
+/* .heart-animation {
+    position: absolute;
+    font-size: 50px;
+    color: rgb(255, 0, 123);
+    animation: scaleHeart 0.6s forwards;
+    pointer-events: none; 
+}
+
+@keyframes scaleHeart {
+    0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(1.5) translate(-10px, -10px); 
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5) translate(10px, -10px); 
+        opacity: 1;
+    }
+    75% {
+        transform: scale(1.5) translate(10px, 10px); 
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0) translate(-10px, 10px); 
+        opacity: 0;
+    }
+} */
