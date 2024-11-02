@@ -18,20 +18,23 @@
 .saved-products-container {
     width: 70%;
     margin-top: 100px;
-    padding: 40px;
+    padding: 30px;
     margin-left: 25pc;
 }
 
 .saved-products-container h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    font-size: 50px;
+    font-size: 36px;
     font-weight: 340;
     margin-bottom: 20px;
     margin-top: 5px;
-    margin-left: 30%;
+    margin-left: 7%;
     color: var(--color);
-    width: 37%;
+    width: 30%;
+    border-radius: 55px;
+    padding: 3px;
+    border: 1px solid var(--color);
 }
 
 .saved-products-container p {
