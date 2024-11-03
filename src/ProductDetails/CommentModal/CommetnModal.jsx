@@ -7,26 +7,20 @@ import { MdModeEdit } from "react-icons/md";
 import { TopBarImage5 } from "../../utils";
 
 const CommentBox = ({ postComment, onClose }) => {
-    const [newComment, setNewComment] = useState("");
+    const [newComment, setNewComment] = useState(""); // For new comments
+    const [editingComment, setEditingComment] = useState(""); // For editing comments
     const [reviews, setReviews] = useState(postComment.reviews || []);
-    const [editngIndex, setEditingIndex] = useState(null);
+    const [editingIndex, setEditingIndex] = useState(null);
 
     const handleCommentSubmit = (e) => {
         e.preventDefault();
         if (newComment.trim()) {
-            if (editngIndex !== null) {
-                const updatedReviews = reviews.map((review, index) => index === editngIndex ? { ...review, comment: newComment } : review)
-                setReviews(updatedReviews)
-                setEditingIndex(null);
-                setNewComment('');
-            } else {
-                const commentData = {
-                    user: 'You',
-                    comment: newComment,
-                };
-                setReviews([...reviews, commentData]);
-                setNewComment("");
-            }
+            const commentData = {
+                user: 'You',
+                comment: newComment,
+            };
+            setReviews([...reviews, commentData]);
+            setNewComment("");
         }
     };
 
@@ -36,9 +30,20 @@ const CommentBox = ({ postComment, onClose }) => {
     };
 
     const handleEditComment = (index) => {
-        setNewComment(reviews[index].comment);
+        setEditingComment(reviews[index].comment);
         setEditingIndex(index);
-    }
+    };
+
+    const handleUpdateComment = () => {
+        if (editingComment.trim()) {
+            const updatedReviews = reviews.map((review, index) =>
+                index === editingIndex ? { ...review, comment: editingComment } : review
+            );
+            setReviews(updatedReviews);
+            setEditingIndex(null);
+            setEditingComment('');
+        }
+    };
 
     return (
         <div className="comment-section">
@@ -57,17 +62,20 @@ const CommentBox = ({ postComment, onClose }) => {
                                 <button onClick={() => handleEditComment(index)} className="user-edit-btn"><MdModeEdit /></button>
                             </div>
                             <div className="user-cmnt-fun">
-
-                                {
-                                    editngIndex === index ? (
-                                        <textarea value={newComment} placeholder="edit the comment" onChange={(e) => setNewComment(e.target.value)} />
-                                    ) : (
-                                        <p> <span className="user-comt">{review.comment}</span></p>
-                                    )
-                                }
-
+                                {editingIndex === index ? (
+                                    <div>
+                                        <textarea
+                                            value={editingComment}
+                                            onChange={(e) => setEditingComment(e.target.value)}
+                                            placeholder="Edit your comment"
+                                            className="edit-textarea"
+                                        />
+                                        <button onClick={handleUpdateComment} className="sent-box"><FaCheck /></button>
+                                    </div>
+                                ) : (
+                                    <p><span className="user-comt">{review.comment}</span></p>
+                                )}
                             </div>
-
                         </div>
                         <hr className="coment-horizontalLine" />
                     </div>
@@ -87,4 +95,5 @@ const CommentBox = ({ postComment, onClose }) => {
         </div>
     );
 }
+
 export default CommentBox;
