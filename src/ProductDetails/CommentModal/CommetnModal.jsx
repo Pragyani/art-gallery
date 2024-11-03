@@ -57,7 +57,15 @@ const CommentBox = ({ postComment, onClose }) => {
                                 <button onClick={() => handleEditComment(index)} className="user-edit-btn"><MdModeEdit /></button>
                             </div>
                             <div className="user-cmnt-fun">
-                                <p> <span className="user-comt">{review.comment}</span></p>
+
+                                {
+                                    editngIndex === index ? (
+                                        <textarea value={newComment} placeholder="edit the comment" onChange={(e) => setNewComment(e.target.value)} />
+                                    ) : (
+                                        <p> <span className="user-comt">{review.comment}</span></p>
+                                    )
+                                }
+
                             </div>
 
                         </div>
