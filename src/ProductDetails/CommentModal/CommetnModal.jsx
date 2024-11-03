@@ -7,8 +7,8 @@ import { MdModeEdit } from "react-icons/md";
 import { TopBarImage5 } from "../../utils";
 
 const CommentBox = ({ postComment, onClose }) => {
-    const [newComment, setNewComment] = useState(""); // For new comments
-    const [editingComment, setEditingComment] = useState(""); // For editing comments
+    const [newComment, setNewComment] = useState(""); 
+    const [editingComment, setEditingComment] = useState("");
     const [reviews, setReviews] = useState(postComment.reviews || []);
     const [editingIndex, setEditingIndex] = useState(null);
 
@@ -68,9 +68,9 @@ const CommentBox = ({ postComment, onClose }) => {
                                             value={editingComment}
                                             onChange={(e) => setEditingComment(e.target.value)}
                                             placeholder="Edit your comment"
-                                            className="edit-textarea"
+                                            className="txt-wrmp"
                                         />
-                                        <button onClick={handleUpdateComment} className="sent-box"><FaCheck /></button>
+                                        <button onClick={handleUpdateComment} ><FaCheck />checkbox</button>
                                     </div>
                                 ) : (
                                     <p><span className="user-comt">{review.comment}</span></p>
