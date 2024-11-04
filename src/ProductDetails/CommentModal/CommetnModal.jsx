@@ -5,9 +5,11 @@ import { FaCheck } from "react-icons/fa";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import { MdModeEdit } from "react-icons/md";
 import { TopBarImage5 } from "../../utils";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 const CommentBox = ({ postComment, onClose }) => {
-    const [newComment, setNewComment] = useState(""); 
+    const [newComment, setNewComment] = useState("");
     const [editingComment, setEditingComment] = useState("");
     const [reviews, setReviews] = useState(postComment.reviews || []);
     const [editingIndex, setEditingIndex] = useState(null);
@@ -64,36 +66,31 @@ const CommentBox = ({ postComment, onClose }) => {
                             <div className="user-cmnt-fun">
                                 {editingIndex === index ? (
                                     <div>
-                                        <textarea
+                                        <ReactQuill
                                             value={editingComment}
-                                            onChange={(e) => setEditingComment(e.target.value)}
+                                            onChange={setEditingComment}
                                             placeholder="Edit your comment"
-                                            className="txt-wrmp"
-                                        />
-                                        <button onClick={handleUpdateComment} ><FaCheck />checkbox</button>
+                                            className="quill-editor" />
+                                        <button onClick={handleUpdateComment}><FaCheck /></button>
                                     </div>
                                 ) : (
-                                    <p><span className="user-comt">{review.comment}</span></p>
+                                    <div dangerouslySetInnerHTML={{ __html: review.comment }} />
                                 )}
                             </div>
                         </div>
                         <hr className="coment-horizontalLine" />
-                    </div>
-                ))}
+                    </div>))}
             </div>
             <hr className="coment-horizontaline" />
-
             <form onSubmit={handleCommentSubmit}>
                 <textarea
                     placeholder="Add your comment"
                     value={newComment}
                     onChange={(e) => setNewComment(e.target.value)}
-                    className="txt-wrp"
-                />
+                    className="txt-wrp" />
                 <button type="submit" className="sent-box"><FaCheck /></button>
             </form>
         </div>
     );
 }
-
 export default CommentBox;
