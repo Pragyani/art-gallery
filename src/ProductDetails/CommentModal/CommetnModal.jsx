@@ -70,12 +70,20 @@ const CommentBox = ({ postComment, onClose }) => {
                                             value={editingComment}
                                             onChange={setEditingComment}
                                             placeholder="Edit your comment"
-                                            className="quill-editor" />
-                                        <button onClick={handleUpdateComment}><FaCheck /></button>
+                                            className="quill-editor"
+                                            modules={{
+                                                toolbar: [
+                                                    [{ 'header': '1' }],
+                                                    [{ 'list': 'ordered' }],
+                                                    ['bold', 'italic', 'underline'],
+                                                    ['link'],
+                                                    ['image']
+                                                ]
+                                            }}
+                                        />
+                                        <button onClick={handleUpdateComment} className="save-btn"><FaCheck /></button>
                                     </div>
-                                ) : (
-                                    <div dangerouslySetInnerHTML={{ __html: review.comment }} />
-                                )}
+                                ) : (<div dangerouslySetInnerHTML={{ __html: review.comment }} className="p-sdelf" />)}
                             </div>
                         </div>
                         <hr className="coment-horizontalLine" />
@@ -92,5 +100,6 @@ const CommentBox = ({ postComment, onClose }) => {
             </form>
         </div>
     );
-}
+};
+
 export default CommentBox;
