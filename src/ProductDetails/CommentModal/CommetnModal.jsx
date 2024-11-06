@@ -7,6 +7,8 @@ import { MdModeEdit } from "react-icons/md";
 import { TopBarImage5 } from "../../utils";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import { FaArrowUp } from "react-icons/fa";
+
 
 const CommentBox = ({ postComment, onClose }) => {
     const [newComment, setNewComment] = useState("");
@@ -60,7 +62,7 @@ const CommentBox = ({ postComment, onClose }) => {
                                 <div className="user-img">
                                     <img src={TopBarImage5} alt="" />
                                     {editingIndex === index ? (
-                                        <div>
+                                        <div className="react-quilling-block">
                                             <ReactQuill
                                                 value={editingComment}
                                                 onChange={setEditingComment}
@@ -75,7 +77,7 @@ const CommentBox = ({ postComment, onClose }) => {
                                                         ['image']
                                                     ]
                                                 }} />
-                                            <button onClick={handleUpdateComment} className="save-btn"><FaCheck /></button>
+                                            <button onClick={handleUpdateComment} className="save-btn"><FaArrowUp /></button>
                                         </div>) : (<div dangerouslySetInnerHTML={{ __html: review.comment }} className="p-sdelf" />)}
 
                                     {editingIndex !== index && (
