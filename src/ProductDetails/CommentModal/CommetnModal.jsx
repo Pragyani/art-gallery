@@ -86,7 +86,7 @@ const CommentBox = ({ postComment, onClose }) => {
                                     )}
                                 </div>
                             </div>
-                            <div className="user-"><p><strong>Commented by {review.user}</strong></p></div>
+                            <div className="user-"><p>Commented by {review.user}</p></div>
                         </div>
                         <hr className="coment-horizontalLine" />
                     </div>))}
