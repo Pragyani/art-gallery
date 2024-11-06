@@ -12,6 +12,7 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin-right: 26px;
     height: 52pc;
+    color: var(--color);
     z-index: 10;
 }
 
@@ -29,10 +30,6 @@
 }
 
 .comment-section .comments-list {
-    margin-top: 10px;
-    /* border: 2px solid red; */
-    /* padding: 12px; */
-    padding-top: 7px;
     margin-bottom: 4px;
     height: auto;
     width: 100%;
@@ -62,11 +59,11 @@
     margin-left: 12px;
     margin-top: 5px;
     position: relative;
-    top: 9px;
+    top: 4px;
 }
 
 .user-img p {
-    margin-left: 12px;
+    margin-left: 5px;
     padding-top: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: lighter;
@@ -185,7 +182,7 @@
     font-size: larger;
     margin-top: 12px;
     position: fixed;
-    left: 114.4rem;
+    left: 113.4rem;
 }
 
 .delete-button:hover {
@@ -201,7 +198,7 @@
     font-size: larger;
     margin-top: 12px;
     position: fixed;
-    left: 112.5rem;
+    left: 111.5rem;
 }
 
 .user-edit-btn:hover {
@@ -225,14 +222,11 @@
 
 .txt-wrp::-webkit-scrollbar-track {
     background: #f1f1f1;
-    /* Background of the scrollbar track */
 }
 
 .txt-wrp::-webkit-scrollbar-thumb {
     background: #888;
-    /* Color of the scrollbar thumb */
     border-radius: 7px;
-    /* Rounded corners for the scrollbar thumb */
 }
 
 .txt-wrp::-webkit-scrollbar-thumb:hover {
@@ -242,8 +236,10 @@
 
 .user-cmnt-fun {
     color: var(--color);
-    margin-top: 3px;
-    margin-left: 12%;
+    margin-top: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
 }
 
 .user-cmnt-fun p {
@@ -252,4 +248,105 @@
     font-size: 13px;
     font-weight: 440;
     letter-spacing: 0.7px;
+}
+
+/* Style for the ReactQuill editor */
+.quill-editor {
+    width: 97%;
+    height: 2%;
+    padding: 10px;
+
+    border-radius: 20px;
+    background-color: #fffffff3;
+    resize: none;
+}
+
+.save-btn {
+    background-color: #4caf4fd3;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 13px;
+    margin-top: 10px;
+    font-size: larger;
+    height: 32px;
+    position: relative;
+    top: -60px;
+    left: 83%;
+}
+
+.save-btn:hover {
+    background-color: #45a049;
+}
+
+.comment-section {
+    padding: 20px;
+}
+
+.commet-col {
+    padding: 10px 0;
+}
+
+.user-img {
+    display: flex;
+    align-items: center;
+}
+
+.user-img img {
+    width: 30px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.delete-button,
+.user-edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-button:hover,
+.user-edit-btn:hover {
+    color: red;
+}
+
+.txt-wrp {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+
+.sent-box {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.sent-box:hover {
+    background-color: #45a049;
+}
+
+.p-sdelf {
+    color: var(--color);
+}
+
+.ql-editor ol li {
+    padding-left: 1.5em;
+    color: black;
+}
+
+.quill-editor {
+    color: black;
+}
+
+.ql-toolbar.ql-snow {
+    color: white;
 }
