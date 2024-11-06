@@ -43,7 +43,7 @@
     /* width: 34px; */
     height: auto;
     /* border: 1px solid white; */
-    padding-bottom: 13px;
+    padding-bottom: 12.4px;
 }
 
 .user-coment-selection .user-img {
@@ -181,8 +181,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: larger;
     margin-top: 12px;
+    margin-left: 5px;
     position: fixed;
     left: 113.4rem;
+    /* top: 12px; */
 }
 
 .delete-button:hover {
@@ -237,7 +239,7 @@
 .user-cmnt-fun {
     color: var(--color);
     margin-top: 10px;
-    margin-left: 2%;
+    /* margin-left: 2%; */
     margin-right: 2%;
     display: flex;
 }
@@ -299,14 +301,14 @@
     border-radius: 50%;
     margin-right: 10px;
 }
-
+/* 
 .delete-button,
 .user-edit-btn {
     background: none;
     border: none;
     cursor: pointer;
     margin-left: 10px;
-}
+} */
 
 .delete-button:hover,
 .user-edit-btn:hover {
@@ -336,6 +338,12 @@
 
 .p-sdelf {
     color: var(--color);
+    width: 90%;
+    /* border: 1px solid greenyellow; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    position: relative;
+    top: 9.1px;
 }
 
 .ql-editor ol li {
