@@ -52,12 +52,10 @@ const CommentBox = ({ postComment, onClose }) => {
             <h2>Comments for {postComment?.brand || "Post"}</h2>
             <span onClick={onClose} className="closed-icona"><IoClose /></span>
             <hr />
-
             <div className="comments-list">
                 {reviews.map((review, index) => (
                     <div className="commet-col" key={index}>
                         <div className="user-coment-selection">
-
                             <div className="user-cmnt-fun">
                                 <div className="user-img">
                                     <img src={TopBarImage5} alt="" />
@@ -76,19 +74,19 @@ const CommentBox = ({ postComment, onClose }) => {
                                                         ['link'],
                                                         ['image']
                                                     ]
-                                                }}
-                                            />
+                                                }} />
                                             <button onClick={handleUpdateComment} className="save-btn"><FaCheck /></button>
-                                        </div>
-                                    ) : (<div dangerouslySetInnerHTML={{ __html: review.comment }} className="p-sdelf" />)}
+                                        </div>) : (<div dangerouslySetInnerHTML={{ __html: review.comment }} className="p-sdelf" />)}
+
+                                    {editingIndex !== index && (
+                                        <>
+                                            <button onClick={() => handleDeleteComment(index)} className="delete-button"><RiDeleteBin2Fill /></button>
+                                            <button onClick={() => handleEditComment(index)} className="user-edit-btn"><MdModeEdit /></button>
+                                        </>
+                                    )}
                                 </div>
                             </div>
-
-                            <div className="user-img">
-                                <p><strong>Commented by {review.user}</strong></p>
-                                <button onClick={() => handleDeleteComment(index)} className="delete-button"><RiDeleteBin2Fill /></button>
-                                <button onClick={() => handleEditComment(index)} className="user-edit-btn"><MdModeEdit /></button>
-                            </div>
+                            <div className="user-"><p><strong>Commented by {review.user}</strong></p></div>
                         </div>
                         <hr className="coment-horizontalLine" />
                     </div>))}
@@ -105,5 +103,4 @@ const CommentBox = ({ postComment, onClose }) => {
         </div>
     );
 };
-
 export default CommentBox;
