@@ -92,16 +92,25 @@ const CommentBox = ({ postComment, onClose }) => {
                             </div>
                             {editingIndex !== index && (<div className="user-"><p>Commented by {review.user}</p></div>)}
                         </div>
-                        <hr className="coment-horizontalLine" />
+                    
                     </div>))}
             </div>
             <hr className="coment-horizontaline" />
             <form onSubmit={handleCommentSubmit}>
-                <textarea
+                <ReactQuill
                     placeholder="Add your comment"
                     value={newComment}
-                    onChange={(e) => setNewComment(e.target.value)}
-                    className="txt-wrp" />
+                    onChange={setNewComment}
+                    className="txt-wrp" 
+                    modules={{
+                        toolbar: [
+                            [{ 'header': '1' }],
+                            [{ 'list': 'ordered' }],
+                            ['bold', 'italic', 'underline'],
+                            ['link'],
+                            ['image']
+                        ]
+                    }}/>
                 <button type="submit" className="sent-box"><FaCheck /></button>
             </form>
         </div>
