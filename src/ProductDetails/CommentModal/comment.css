@@ -121,7 +121,11 @@
 
 .comment-section form .txt-wrp {
     width: 24pc;
-    background-color: var(--nav-bg-color);
+    /* background-color: var(--nav-bg-color); */
+    height: 92px !important;
+    /* border: 1px solid gold; */
+    border-radius: 18px;
+    background: #ffffffdc;
     color: var(--color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
@@ -129,7 +133,7 @@
     border: none;
     outline: none;
     position: fixed;
-    top: 55rem;
+    top: 54.2rem;
     height: 4.2pc;
     padding-top: 5px;
     padding-left: 6px;
@@ -137,6 +141,25 @@
     padding-right: 8px;
 }
 
+.txt-wrp .ql-toolbar.ql-snow {
+    padding: 5px !important;
+}
+
+.txt-wrp .ql-container.ql-snow {
+    height: 64% !important;
+    /* border: 1px solid green !important; */
+}
+.txt-wrp .ql-container.ql-snow .ql-editor{
+    /* padding: 2px !important; */
+    height: 100% !important;
+    /* border: 2px solid olive; */
+}
+
+ .ql-editor .ql-blank{
+    width: 100% !important;
+    /* height: 12px !important; */
+    border: 2px solid greenyellow;
+}
 .sent-box {
     position: fixed;
     top: 56pc;
@@ -246,8 +269,8 @@
     font-size: 13px;
     font-weight: 440;
     letter-spacing: 0.7px;
-    width: 100%;
-    /* border: 1px solid greenyellow; */
+    width: 80%;
+    line-height: 18px;
 }
 
 /* Style for the ReactQuill editor */
