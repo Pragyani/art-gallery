@@ -95,7 +95,7 @@ const CommentBox = ({ postComment, onClose }) => {
                     
                     </div>))}
             </div>
-            <hr className="coment-horizontaline" />
+            
             <form onSubmit={handleCommentSubmit}>
                 <ReactQuill
                     placeholder="Add your comment"
