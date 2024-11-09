@@ -119,7 +119,7 @@
 }
 
 .comment-section form .txt-wrp {
-    width: 25.4pc;
+    width: 25.5pc;
     /* background-color: var(--nav-bg-color); */
     height: 118px !important;
     border-radius: 18px;
@@ -131,7 +131,7 @@
     border: none;
     outline: none;
     position: fixed;
-    top: 50.5rem;
+    top: 50.8rem;
     /* top: 32rem; */
     right: 1.2rem;
     height: 4.2pc;
