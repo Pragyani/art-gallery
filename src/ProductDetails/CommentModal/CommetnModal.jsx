@@ -92,16 +92,15 @@ const CommentBox = ({ postComment, onClose }) => {
                             </div>
                             {editingIndex !== index && (<div className="user-"><p>Commented by {review.user}</p></div>)}
                         </div>
-                    
+
                     </div>))}
             </div>
-            {/* <hr className="coment-horizontaline" /> */}
             <form onSubmit={handleCommentSubmit}>
                 <ReactQuill
                     placeholder="Add your comment"
                     value={newComment}
                     onChange={setNewComment}
-                    className="txt-wrp" 
+                    className="txt-wrp"
                     modules={{
                         toolbar: [
                             [{ 'header': '1' }],
@@ -110,7 +109,7 @@ const CommentBox = ({ postComment, onClose }) => {
                             ['link'],
                             ['image']
                         ]
-                    }}/>
+                    }} />
                 <button type="submit" className="sent-box"><FaCheck /></button>
             </form>
         </div>
