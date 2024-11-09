@@ -119,12 +119,12 @@
 }
 
 .comment-section form .txt-wrp {
-    width: 26.8pc;
+    width: 26.2pc;
     /* background-color: var(--nav-bg-color); */
     height: 118px !important;
     /* border: 1px solid gold; */
     border-radius: 18px;
-    /* background: #ffffffe6; */
+    background: #ffffffe6;
     color: var(--color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
@@ -132,14 +132,15 @@
     border: none;
     outline: none;
     position: fixed;
-    top: 52.6rem;
+    top: 51.2rem;
     /* top: 32rem; */
-    right: 1.8rem;
+    right: 1.2rem;
     height: 4.2pc;
-    padding-top: 5px;
-    padding-left: 6px;
+    padding-top: 10px;
+    padding-left: 9px;
     padding-bottom: 5px;
     padding-right: 8px;
+    margin: 24px;
     /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
     /* box-shadow: rgba(0, 0, 0, 0.35) 3px 5px 15px; */
     border: 1px solid #cccccc2b;
@@ -148,21 +149,6 @@
 
 .txt-wrp .ql-blank {
     width: 100%;
-}
-
-.ql-snow .ql-fill,
-.ql-snow .ql-stroke.ql-fill {
-    /* color: var(--color); */
-    fill: var(--color) !important;
-}
-
-.ql-snow .ql-stroke {
-    stroke: var(--color) !important;
-}
-
-.ql-snow.ql-toolbar button svg {
-
-    color: var(--color) !important;
 }
 
 .txt-wrp .ql-editor {
@@ -187,6 +173,8 @@
 
 .txt-wrp .ql-container.ql-snow .ql-editor {
     /* padding: 2px !important; */
+    padding-top: 6.6px !important;
+    padding-left: 20px !important;
     height: 100% !important;
     width: 100%;
     /* border: 2px solid olive; */
@@ -198,7 +186,8 @@
 
 .txt-wrp .ql-editor p {
     width: 230px !important;
-    color: var(--color) !important;
+    /* color: var(--color) !important; */
+    color: black !important;
 }
 
 .sent-box {
@@ -312,10 +301,10 @@
     padding: 2px;
     margin-left: 12px;
     border-radius: 20px;
-    /* background-color: #ffffffdc; */
+    background-color: #ffffffdc;
     resize: none;
-    border: 1px solid #cccccc2b;
-    box-shadow: rgba(0, 0, 0, 0.234) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.064) -3px -3px 6px 1px inset;
+    /* border: 1px solid #cccccc2b;
+    box-shadow: rgba(0, 0, 0, 0.234) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.064) -3px -3px 6px 1px inset; */
 }
 
 .save-btn {
@@ -444,7 +433,7 @@
 .ql-editor p {
     width: 13.5pc !important;
     max-width: 14pc;
-    color: var(--color) !important;
+    color: black !important;
 }
 
 .quill-editor {
@@ -502,8 +491,13 @@
 }
 
 .ql-editor.ql-blank::before {
-    color: var(--color) !important;
+    color: rgb(104 100 100 / 60%) !important;
     font-style: normal !important;
     font-size: smaller;
-    font-weight: 100 !important;
+    font-weight: 350 !important;
+    /* padding: 16px; */
+    padding: 3px 3px 4px 6px ;
+    letter-spacing: 2px;
+    /* margin: 16px; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
