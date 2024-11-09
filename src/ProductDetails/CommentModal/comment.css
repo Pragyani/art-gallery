@@ -122,7 +122,7 @@
     width: 25.5pc;
     /* background-color: var(--nav-bg-color); */
     height: 118px !important;
-    border-radius: 18px;
+    border-radius: 15px;
     background: #ffffffe6;
     color: var(--color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
