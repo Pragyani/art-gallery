@@ -9,7 +9,8 @@
   --text-color: black;
   --border-color: rgba(25, 25, 25, 0.469);
   --color: black;
-  --nav-bg-color:#ffffff;
+  --nav-bg-color: #ffffff;
+  --userName-color: rgb(104 100 100 / 60%);
 }
 
 [data-theme="dark"] {
@@ -17,7 +18,8 @@
   --text-color: white;
   --border-color: white;
   --color: white;
-  --nav-bg-color:#232222;
+  --nav-bg-color: #232222;
+  --userName-color: rgba(233, 231, 231, 0.604);
 }
 
 body {
