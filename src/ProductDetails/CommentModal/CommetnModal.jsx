@@ -97,7 +97,7 @@ const CommentBox = ({ postComment, onClose }) => {
             </div>
             <form onSubmit={handleCommentSubmit}>
                 <ReactQuill
-                    placeholder="Add your comment"
+                    placeholder="Add your comment..."
                     value={newComment}
                     onChange={setNewComment}
                     className="txt-wrp"
