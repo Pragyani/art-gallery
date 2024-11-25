@@ -308,17 +308,17 @@
     color: white;
     border: none;
     /* padding: 6.4px; */
-    padding-left: 4.9px;
+    padding-left: 5.9px;
     padding-right: 4.9px;
-
+    padding-top: 4px;
     cursor: pointer;
     border-radius: 13px;
     /* margin-top: 10px; */
     font-size: 17px;
     height: 25px;
     position: relative;
-    top: -48px;
-    left: 94%;
+    top: -47px;
+    left: 93%;
 }
 
 .save-btn:hover {
