@@ -17,6 +17,7 @@ const ProductDetail = ({ Products }) => {
     const [voteMarked, setVoteMarked] = useState({});
     const [showCommentBox, setShowCommentBox] = useState(false);
     const [selectedPost, setSelectedPost] = useState(null);
+    const [heartAnimation, setHeartAnimation] = useState(null); 
 
     const cartProducts = useSelector(state => state.cartProducts);
     const inputValue = useSelector(state => state.inputSlice);
@@ -57,21 +58,12 @@ const ProductDetail = ({ Products }) => {
         if (!voteMarked[product.id]) {
             handleSaveProduct(product);
             dispatch(addPopularPost(product));
-
-            const heart = document.createElement('span');
-            heart.innerText = '❤️';
-            heart.classList.add('heart-animation');
-
-            const rect = event.currentTarget.getBoundingClientRect();
-            heart.style.left = `${rect.left + rect.width / 7}px`;
-            heart.style.top = `${rect.top + rect.height / 7}px`;
-
-            document.body.appendChild(heart);
-
-            heart.addEventListener('animationend', () => {
-                heart.remove();
-            });
         }
+
+        // Trigger heart animation when liked
+        if (!voteMarked[product.id]) {
+            setHeartAnimation(product.id);
+            setTimeout(() => setHeartAnimation(null), 600); }
     };
 
     const handleShowComments = (product) => {
@@ -94,6 +86,9 @@ const ProductDetail = ({ Products }) => {
                                     <div className="product-box">
                                         <div className="product-img">
                                             <img src={item?.image} alt="Product" />
+                                            {/* Heart animation */}
+                                            {heartAnimation === item.id && (
+                                                <div className="heart-animation"> ❤️ </div>)}
                                         </div>
                                     </div>
                                     <div className="product-breif">
