@@ -25,7 +25,6 @@ const CartPage = () => {
     }, [cartProducts]);
 
     const removeItem = (productID) => {
-        alert('Sure !! Your Post will removed from Cart Items')
         const updatedCartItem = cartProducts.filter((product) => product.id !== productID);
         dispatch(setCartProducts(updatedCartItem))
     }
