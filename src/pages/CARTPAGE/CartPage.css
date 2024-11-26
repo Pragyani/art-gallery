@@ -151,11 +151,13 @@
 
 .remove-item-button {
     color: var(--color);
-    text-align: end;
+    /* text-align: end; */
     font-size: 30px;
-    margin-top: 13px;
+    /* margin-top: 13px; */
     position: relative;
+    left: 440px;
     bottom: 25px;
+    width: 38px;
 }
 
 .remove-item-button:hover {
