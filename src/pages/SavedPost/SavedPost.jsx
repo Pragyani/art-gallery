@@ -38,8 +38,6 @@ const SavedProducts = () => {
                                                     <div className="info-data">
                                                         <h4>Desgined By Pragya</h4>
                                                         <h5 className="name">{product.name}</h5>
-                                                        <h5 className="price-tag">Price - <span>{product.price}</span></h5>
-                                                        <h5>Rating -<Rating name="customized-10" defaultValue={product.rating} max={5} className="rating-crd" /></h5>
                                                         <p>StockStatus - <h6>{product.stockStatus}</h6> </p>
                                                         <h4>Brand Name - <b>{product.brand}</b></h4>
                                                     </div>
