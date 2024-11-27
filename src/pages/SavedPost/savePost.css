@@ -44,7 +44,7 @@
     width: 100%;
     /* text-align: center; */
     margin-top: 12pc;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     cursor: pointer;
     color: var(--color);
 }
@@ -68,6 +68,10 @@
     margin-top: 45px;
     padding-top: 6.5px;
     padding-left: 2px;
+}
+
+.saved-products-container .info-prod .info-data h4 {
+    margin-top: 0px !important;
 }
 
 .saved-products-container .saved-products-list .products {
