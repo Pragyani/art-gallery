@@ -42,9 +42,7 @@
     font-weight: 250;
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 100%;
-    /* text-align: center; */
     margin-top: 12pc;
-    /* margin-bottom: 20px; */
     cursor: pointer;
     color: var(--color);
 }
@@ -95,7 +93,6 @@
 
 .saved-hr {
     color: var(--color);
-    /* opacity: .2; */
     margin-left: 23.8pc;
     position: fixed;
     margin-top: 82px;
