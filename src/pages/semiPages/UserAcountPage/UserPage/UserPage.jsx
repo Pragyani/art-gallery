@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './userpage.css';
 import { BasicModal } from './BasicModal/modal';
 import ProfileColumn from './ProfileBlock/ProfileColumn';
@@ -11,10 +11,18 @@ import { MdDelete } from "react-icons/md";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
 const ProfilePage = ({ data }) => {
-    const [artData, setArtData] = useState(data);
+
+    const [artData, setArtData] = useState(() => {
+        const savedData = localStorage.getItem('artData');
+        return savedData ? JSON.parse(savedData) : data;
+    });
     const [selectedItem, setSelectedItem] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
     const [dropdown, setDropDown] = useState(null);
+
+    useEffect(() => {
+        localStorage.setItem('artData', JSON.stringify(artData));
+    }, [artData]);
 
     const handleEditClick = (item) => {
         setSelectedItem(item);
