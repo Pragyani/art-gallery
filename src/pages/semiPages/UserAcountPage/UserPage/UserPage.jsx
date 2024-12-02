@@ -9,6 +9,7 @@ import { MdOutlineCurrencyRupee } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { BiSolidEditAlt } from "react-icons/bi";
 import { RiDeleteBin2Line } from "react-icons/ri";
+import { RiArrowDropUpLine } from "react-icons/ri";
 
 const ProfilePage = ({ data }) => {
 
@@ -19,6 +20,7 @@ const ProfilePage = ({ data }) => {
     const [selectedItem, setSelectedItem] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
     const [dropdown, setDropDown] = useState(null);
+    const [OpenDropDown, setOpenDrown] = useState(false);
 
     useEffect(() => {
         localStorage.setItem('artData', JSON.stringify(artData));
