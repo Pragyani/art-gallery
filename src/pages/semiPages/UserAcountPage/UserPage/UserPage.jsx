@@ -6,9 +6,9 @@ import { LuLayoutGrid } from "react-icons/lu";
 import { FaRegBookmark } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { MdOutlineCurrencyRupee } from "react-icons/md";
-import { FaEdit } from "react-icons/fa";
-import { MdDelete } from "react-icons/md";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import { BiSolidEditAlt } from "react-icons/bi";
+import { RiDeleteBin2Line } from "react-icons/ri";
 
 const ProfilePage = ({ data }) => {
 
@@ -75,18 +75,18 @@ const ProfilePage = ({ data }) => {
                                                             <p>Stock Status :<h6>{item.stockStatus}</h6></p>
                                                             <h4>Brand Name : <b>{item.brand}</b></h4>
                                                             <div className="dropdown-e-d">
-                                                                <BsThreeDotsVertical onClick={() => DroprDownToggle(index)} />
+                                                                <RiArrowDropDownLine onClick={() => DroprDownToggle(index)} />
                                                             </div>
                                                             {dropdown === index &&
                                                                 <div className="products-icon">
                                                                     <span className="product-chnges-icon" onClick={() => handleEditClick(item)}>
-                                                                        <FaEdit className="edit-icon" />
+                                                                        <BiSolidEditAlt className="edit-icon" />
                                                                     </span>
                                                                     <span className="product-chnges-icon" onClick={() => {
                                                                         const newArray = artData.filter((_, idx) => idx !== index);
                                                                         setArtData(newArray);
                                                                     }}>
-                                                                        <MdDelete className="delete-icon" />
+                                                                        <RiDeleteBin2Line className="delete-icon" />
                                                                     </span>
                                                                 </div>}
                                                         </div>
