@@ -12,15 +12,14 @@ import { RiDeleteBin2Line } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
 
 const ProfilePage = ({ data }) => {
-
     const [artData, setArtData] = useState(() => {
         const savedData = localStorage.getItem('artData');
         return savedData ? JSON.parse(savedData) : data;
     });
+
     const [selectedItem, setSelectedItem] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
-    const [dropdown, setDropDown] = useState(null);
-    const [OpenDropDown, setOpenDrown] = useState(false);
+    const [dropdownIndex, setDropdownIndex] = useState(null);
 
     useEffect(() => {
         localStorage.setItem('artData', JSON.stringify(artData));
@@ -29,6 +28,7 @@ const ProfilePage = ({ data }) => {
     const handleEditClick = (item) => {
         setSelectedItem(item);
         setModalOpen(true);
+        setDropdownIndex(null);
     };
 
     const handleAddNewClick = () => {
@@ -42,8 +42,8 @@ const ProfilePage = ({ data }) => {
     };
 
     const DroprDownToggle = (index) => {
-        setDropDown(dropdown === index ? null : index);
-    }
+        setDropdownIndex(dropdownIndex === index ? null : index);
+    };
 
     return (
         <>
@@ -77,9 +77,13 @@ const ProfilePage = ({ data }) => {
                                                             <p>Stock Status :<h6>{item.stockStatus}</h6></p>
                                                             <h4>Brand Name : <b>{item.brand}</b></h4>
                                                             <div className="dropdown-e-d">
-                                                                <RiArrowDropDownLine onClick={() => DroprDownToggle(index)} />
+                                                                {dropdownIndex === index ? (
+                                                                    <RiArrowDropUpLine onClick={() => DroprDownToggle(index)} />
+                                                                ) : (
+                                                                    <RiArrowDropDownLine onClick={() => DroprDownToggle(index)} />
+                                                                )}
                                                             </div>
-                                                            {dropdown === index &&
+                                                            {dropdownIndex === index && (
                                                                 <div className="products-icon">
                                                                     <span className="product-chnges-icon" onClick={() => handleEditClick(item)}>
                                                                         <BiSolidEditAlt className="edit-icon" />
@@ -90,7 +94,8 @@ const ProfilePage = ({ data }) => {
                                                                     }}>
                                                                         <RiDeleteBin2Line className="delete-icon" />
                                                                     </span>
-                                                                </div>}
+                                                                </div>
+                                                            )}
                                                         </div>
                                                     </div>
                                                 </div>
