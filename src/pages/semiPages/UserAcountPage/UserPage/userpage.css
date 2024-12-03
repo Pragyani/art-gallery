@@ -638,10 +638,10 @@
 
 .dropdown-e-d {
     width: 20%;
+    height: 32px !important;
     /* border: 2px solid wheat; */
-    /* height: 12px; */
     color: var(--color);
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     text-align: end;
     position: relative;
