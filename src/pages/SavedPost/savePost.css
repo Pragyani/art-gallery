@@ -17,24 +17,27 @@
 
 .saved-products-container {
     width: 70%;
-    margin-top: 100px;
-    padding: 30px;
-    margin-left: 25pc;
+    margin-top: 90px;
+    height: auto;
+    padding: 20px;
+    margin-left: 26pc;
+    /* border: 1px solid white; */
 }
 
-.saved-products-container h1 {
+.saved-products-container h6 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    font-size: 36px;
+    /* text-align: center; */
+    font-size: 16px;
     font-weight: 340;
     margin-bottom: 20px;
-    margin-top: 5px;
-    margin-left: 7%;
+    /* margin-top: 5px; */
+    margin-left: 3%;
     color: var(--color);
     width: 30%;
-    border-radius: 55px;
+    /* border-radius: 55px;*/
     padding: 3px;
-    border: 1px solid var(--color);
+    /* border: 1px solid var(--color); */
+    letter-spacing: 1px;
 }
 
 .saved-products-container p {
@@ -97,4 +100,10 @@
     position: fixed;
     margin-top: 82px;
     height: 100%;
+}
+
+h1 {
+    color: var(--color);
+    position: relative;
+    /* right: 12pc; */
 }
