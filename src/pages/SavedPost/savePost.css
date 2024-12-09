@@ -24,13 +24,13 @@
     /* border: 1px solid white; */
 }
 
-.saved-products-container h6 {
+.saved-products-container h4 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* text-align: center; */
-    font-size: 16px;
+    font-size: 25px;
     font-weight: 340;
     margin-bottom: 20px;
-    /* margin-top: 5px; */
+    margin-top: 5px;
     margin-left: 3%;
     color: var(--color);
     width: 30%;
@@ -85,7 +85,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding-left: 80px;
-    margin-top: 70px;
+    margin-top: 61px;
     margin-left: 30px;
 }
 
