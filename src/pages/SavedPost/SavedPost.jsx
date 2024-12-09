@@ -16,7 +16,7 @@ const SavedProducts = () => {
             <SideBar />
             <hr className="saved-hr" />
             <div className="saved-products-container">
-                <h6>Your saved item save here..</h6>
+                <h4>Your saved items..</h4>
                 <div className="saved-products-list">
                     {savedProducts.length === 0 ? (
                         <p className="home-cl-pge">No products saved yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
