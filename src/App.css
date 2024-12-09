@@ -16,7 +16,7 @@
 [data-theme="dark"] {
   --bg-color: rgba(0, 0, 0, 0.87);
   --text-color: white;
-  --border-color: white;
+  --border-color: rgba(255, 255, 255, 0.758);
   --color: white;
   --nav-bg-color: #232222;
   --userName-color: rgba(233, 231, 231, 0.604);
