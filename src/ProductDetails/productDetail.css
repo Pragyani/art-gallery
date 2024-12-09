@@ -178,6 +178,7 @@
     cursor: pointer;
     color: var(--color);
     margin-bottom: 9.5px;
+    text-align: center;
 }
 
 .products .saved-mark-product {
