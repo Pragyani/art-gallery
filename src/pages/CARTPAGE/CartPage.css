@@ -161,7 +161,7 @@
 }
 
 .remove-item-button:hover {
-    opacity: .2;
+    color: rgb(255, 54, 54);
 }
 
 .cart-products-container .cart-products-list .info-prod .info-data h4 {
