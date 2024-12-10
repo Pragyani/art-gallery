@@ -141,7 +141,7 @@ hr {
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding-left: 4pc;
     font-size: 14px;
-    background-color: var(--border-color);
+    background-color: var(---navigation-search-color);
 }
 
 .input-field .searchbox input:hover {
@@ -154,10 +154,10 @@ hr {
 .input-field .searchbox .shrp-i {
     position: absolute;
     /* right: -10px; */
-    left: 30.3pc;
-    top: 2pc;
+    left: 30pc;
+    top: 1.8pc;
     cursor: pointer;
-    color: rgb(175, 175, 174);
+    color: rgba(0, 0, 0, 0.685);
 }
 
 .shrp-i:hover {
