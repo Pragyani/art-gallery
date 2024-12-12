@@ -4,7 +4,7 @@
     top: 30px;
     height: calc(100vh - 30px);
     overflow-y: auto;
-    margin-top: 3.7pc;
+    margin-top: 3.1pc;
 }
 
 .container .content .content-fluid {
@@ -40,7 +40,7 @@
 }
 
 .sidebar .category-list ul a li {
-    width: 95%;
+    width: 360px;
     margin-left: 5px;
     margin-bottom: 23px;
     /* margin-right: 5px; */
@@ -50,7 +50,6 @@
     font-size: 21px;
     border-radius: 70px;
     padding-left: 50px;
-    /* border: 2px solid white; */
 }
 
 .category-list ul a li .user-prof-i {
@@ -60,12 +59,13 @@
 }
 
 .sidebar .category-list ul a li:hover {
-    border: 1px solid var(--color);
+    border: 1px solid rgba(255, 255, 255, 0.926);
     font-weight: 300;
 }
 
 .matrl-list {
     margin-top: 20px;
+    padding-top: 20px;
 }
 
 
@@ -74,4 +74,9 @@
     /* border: 1px solid white; */
     color: var(--color);
     font-size: large;
+}
+
+.sidar-line {
+    position: fixed;
+    width: 376.8px;
 }
