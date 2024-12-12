@@ -1,6 +1,6 @@
 .category-lst {
     width: 100%;
-    margin-top: 20px;
+    padding-top: 10px;
 }
 
 .nme-cl-cr {
@@ -14,7 +14,7 @@
 }
 
 .category-lst li {
-    width: 93%;
+    width: 360px;
     padding-left: 22px;
     margin-top: 20px;
     padding-top: 4px;
