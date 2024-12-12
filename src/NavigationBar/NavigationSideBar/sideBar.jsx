@@ -22,13 +22,13 @@ const SideBar = () => {
                             <ul>
                                 <Link to={'/'}><li><HomeRoundedIcon className="user-prof-i" /> Home</li></Link>
                                 <Link to={'/popular-page'}><li><GoHeartFill className="user-prof-i" /> Liked Post</li></Link>
-                                <hr />
+                                <hr className="sidar-line" />
                                 <div className="matrl-list">
                                     <Link to={'/saved-post'}><li><TurnedInRoundedIcon className="user-prof-i" /> Saved Post</li></Link>
                                     <Link to={'/your-account'}><li><PersonAddIcon className="user-prof-i" /> Create Account</li></Link>
                                     <Link to={'/add-to-cart'}><li><ShoppingCartIcon className="user-prof-i" />Your Cart <Button variant="text" className="crt-btn">{cartItems.length}</Button></li></Link>
                                 </div>
-                                <hr />
+                                <hr className="sidar-line" />
 
                                 <SideTopicBar />
                             </ul>
