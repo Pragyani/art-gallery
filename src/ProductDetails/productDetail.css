@@ -1,9 +1,12 @@
 .detail-container {
-    width: 50%;
+    width:230%;
     height: auto;
     /* border-radius: 100px; */
     margin-right: 12px;
     margin-left: 32pc;
+    /* position: relative;
+    left: 133%; */
+    /* border: 2px solid white; */
     margin-top: 7.3pc;
 }
 
