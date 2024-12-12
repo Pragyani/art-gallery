@@ -2,6 +2,7 @@
 .page-cl-content {
     width: 100%;
     padding: 10px;
+    margin-left: 22px;
 }
 
 .page-cl-content .popular-page-item{
@@ -19,7 +20,7 @@
     padding: 10px;
     /* border: 1px solid wheat; */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     list-style: none;
 }
 
