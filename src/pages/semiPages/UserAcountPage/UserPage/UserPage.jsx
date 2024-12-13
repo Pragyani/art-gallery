@@ -51,7 +51,6 @@ const ProfilePage = ({ data }) => {
                 <div className="profile-content">
                     <section className="user-profile">
                         <ProfileColumn />
-                        <hr />
                         <div className="mega-userProfile">
                             <div className="cl-rowUser">
                                 <div className="cl-as-post">
