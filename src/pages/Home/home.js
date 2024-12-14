@@ -7,9 +7,8 @@ import CommunitySideBar from "../../NavigationBar/NavigationSideBar/ComuunitySid
 const Home = ({ data }) => {
     return (
         <>
-            <div className="home-page">
+            <div className="home-page" >
                 <SideBar />
-                <hr className="home-hr" />
                 <ProductDetail Products={data} />
                 <CommunitySideBar />
             </div>
