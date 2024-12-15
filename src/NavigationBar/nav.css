@@ -159,7 +159,7 @@ hr {
 .input-field .searchbox .shrp-i {
     position: absolute;
     /* right: -10px; */
-    left: 760px;
+    left: 750px;
     top: 25px;
     cursor: pointer;
     color: var(--color);
