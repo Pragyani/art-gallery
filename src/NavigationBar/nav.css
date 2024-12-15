@@ -1,8 +1,8 @@
 .NavigationBar {
     width: 100%;
-    height: 82px;
-    padding-left: 5px;
-    padding-right: 5px;
+    height: 72px;
+    /* padding-left: 5px; */
+    /* padding-right: 5px; */
     overflow: hidden;
     background-color: var(--nav-bg-color);
     position: fixed;
@@ -11,6 +11,8 @@
 
 .NavigationBar .navBar {
     width: 100%;
+    height: 100%;
+    /* border: 1px solid white; */
     display: flex;
     /* position: fixed; */
 }
@@ -30,11 +32,11 @@
 }
 
 .navBar .nav-p1 h1 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 10px;
     /* margin-left: 34px; */
-    letter-spacing: 1px;
-    font-weight: lighter;
+    /* letter-spacing: 1px; */
+    font-weight: 580;
     font-size: 34px;
     color: var(--color);
     cursor: pointer;
@@ -90,7 +92,7 @@ hr {
     outline: none;
     border: none;
     cursor: pointer;
-    border: 1px solid whitesmoke;
+    /* border: 1px solid whitesmoke; */
 }
 
 
@@ -116,9 +118,9 @@ hr {
 }
 
 .input-field {
-    width: 59%;
-    margin-left: 15pc;
-    margin-right: 1pc;
+    width: 55%;
+    margin-left: 100px;
+    /* margin-right: 1pc; */
     height: auto;
     padding: 8px;
     /* border: 1px solid white; */
@@ -136,13 +138,13 @@ hr {
     margin-top: 8px;
     border-radius: 52px;
     width: 100%;
-    height: 52px;
+    height: 40px;
     position: relative;
     letter-spacing: 1px;
     text-transform: capitalize;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-left: 4pc;
-    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 38px;
+    font-size: 8px;
     border: 1px solid var(--color);
     background-color: var(---navigation-search-color);
     color: var(--color);
@@ -158,8 +160,8 @@ hr {
 .input-field .searchbox .shrp-i {
     position: absolute;
     /* right: -10px; */
-    left: 30pc;
-    top: 1.8pc;
+    left: 760px;
+    top: 25px;
     cursor: pointer;
     color: var(--color);
 }
