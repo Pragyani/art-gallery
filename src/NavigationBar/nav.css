@@ -18,7 +18,7 @@
 }
 
 .navBar .nav-p1 {
-    /* width: 50%; */
+    width: 21%;
     /* padding: 18px; */
     padding-left: 18px;
     padding-right: 18px;
@@ -43,17 +43,16 @@
 }
 
 .navBar .nav-p2 {
-    width: 42%;
-    /* border: 1px solid yellow; */
+    width: 46%;
     padding: 3px;
-    padding-left: 80px;
+
 }
 
 .navBar .nav-p2 .nav-ul {
     width: 100%;
     display: flex;
-    margin-left: 12%;
-    padding-top: 19px;
+    margin-left: 17%;
+    padding-top: 12px;
     list-style: none;
 }
 
@@ -71,18 +70,18 @@ hr {
 .nav-p2 .nav-ul .ul-li {
     cursor: pointer;
     margin-left: 0px;
-    margin-right: 20px;
+    margin-right: 12px;
     transition: all 0.3s ease-in-out;
     border: none;
     padding: 10px;
     color: var(--color);
     letter-spacing: 1.5px;
     border-radius: 30px;
-    font-size: 15px;
-    margin-bottom: 14px;
+    font-size: 12px;
+    /* margin-bottom: 14px; */
     position: relative;
-    padding-left: 24px;
-    font-weight: 480;
+    padding-left: 18px;
+    font-weight: 400;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -118,8 +117,8 @@ hr {
 }
 
 .input-field {
-    width: 55%;
-    margin-left: 100px;
+    width: 51%;
+    margin-left: 49px;
     /* margin-right: 1pc; */
     height: auto;
     padding: 8px;
