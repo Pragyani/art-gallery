@@ -3,8 +3,13 @@
     position: fixed;
     top: 30px;
     height: calc(100vh - 30px);
-    overflow-y: auto;
+    overflow: hidden;
     margin-top: 3.1pc;
+    box-sizing: border-box;
+}
+
+.container .content {
+    width: 100%;
 }
 
 .container .content .content-fluid {
@@ -40,14 +45,13 @@
 }
 
 .sidebar .category-list ul a li {
-    width: 360px;
-    margin-left: 5px;
-    margin-bottom: 23px;
-    /* margin-right: 5px; */
+    width: 250px;
+    /* margin-left: 5px; */
+    margin-bottom: 15px;
     letter-spacing: 1.3px;
     font-weight: 350;
-    padding: 15px;
-    font-size: 21px;
+    padding: 20px 10px 8px 4px;
+    font-size: 15px;
     border-radius: 70px;
     padding-left: 50px;
 }
@@ -60,7 +64,7 @@
 
 .sidebar .category-list ul a li:hover {
     border: 1px solid rgba(255, 255, 255, 0.926);
-    font-weight: 300;
+    /* font-weight: 300; */
 }
 
 .matrl-list {
@@ -68,10 +72,7 @@
     padding-top: 20px;
 }
 
-
 .category-list ul a li .crt-btn {
-    /* width: 1pc; */
-    /* border: 1px solid white; */
     color: var(--color);
     font-size: large;
 }
