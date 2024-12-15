@@ -4,8 +4,9 @@
     padding-left: 5px;
     padding-right: 5px;
     overflow: hidden;
-    background-color:var(--nav-bg-color) ;
+    background-color: var(--nav-bg-color);
     position: fixed;
+    z-index: 6;
 }
 
 .NavigationBar .navBar {
@@ -55,10 +56,11 @@
 }
 
 
-.nav-hr{
+.nav-hr {
     color: var(--color);
     opacity: .8;
 }
+
 hr {
     color: var(--color);
     opacity: .8;
