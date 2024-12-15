@@ -1,17 +1,13 @@
 .detail-container {
-    width: 230%;
-    height: auto;
-    /* border-radius: 100px; */
-    margin-right: 12px;
-    margin-left: 33pc;
-    /* border: 2px solid white; */
+    width: 100%;
+    height:810px;
     margin-top: 7.3pc;
+    position: relative;
+    left: 350px;
 }
 
 .detail-container .container-box {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 202%;
 }
 
 .detail-container .container-box .heading h2 {
@@ -42,7 +38,8 @@
 }
 
 .re-container .product-fluid .products {
-    width: 88%;
+    width: 100%;
+    /* height: 550px; */
     height: auto;
     border: 1px solid var(--border-color);
     border-radius: 9.9px;
@@ -67,12 +64,12 @@
 
 .products .product-box .product-img {
     width: 100%;
-    height: 20pc;
+    /* height: 20pc; */
 }
 
 .products .product-box .product-img img {
     width: 100%;
-    height: 34pc;
+    height: 22pc;
     border-radius: 12px;
     transition: all 0.3s ease-in-out;
 
@@ -80,7 +77,7 @@
 
 .re-container .product-fluid .products .product-breif {
     width: 100%;
-    margin-top: 14pc;
+    /* margin-top: 14pc; */
     height: auto;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -100,10 +97,10 @@
 
 .info-prod .info-data h4 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 19px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 370;
     margin-bottom: 6px;
-    margin-top: 12px;
+    margin-top: 9px;
     color: var(--color);
 }
 
@@ -305,6 +302,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--color);
     margin-bottom: 4px;
+    font-size: 13px;
 }
 
 .info-data .input-span-tag input {
