@@ -1,6 +1,6 @@
 .detail-container {
     width: 100%;
-    height:810px;
+    height: 810px;
     margin-top: 7.3pc;
     position: relative;
     left: 350px;
@@ -80,7 +80,7 @@
     /* margin-top: 14pc; */
     height: auto;
     padding-top: 3px;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
     border-radius: 10px;
     /* border: 1px solid red; */
 }
@@ -91,7 +91,7 @@
 
 .products .product-breif .info-prod .info-data {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
 }
 
 
@@ -120,19 +120,19 @@
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    font-size: 15px;
+    font-size: 10.5px;
     font-weight: 400;
     color: var(--color);
 }
 
 .info-prod .info-data .price-tag span {
-    font-size: 14.4px;
+    font-size: 10.8px;
     /* font-weight: lighter; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: -2px;
     position: relative;
     bottom: 0px;
-    left: 5px;
+    left: -8px;
 }
 
 .info-prod .info-data h5 {
@@ -158,25 +158,26 @@
 .info-prod .info-data p {
     display: flex;
     width: 100%;
-    margin-top: 7.5px;
+    margin-top: 6.5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     color: var(--color);
 }
 
 .info-prod .info-data p h6 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-left: 12px;
-    font-size: 12px;
-    font-weight: 950;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 2px;
+    font-size: 8.6px;
+    font-weight: 550;
     background-color: rgba(90, 178, 216, 0.909);
     padding: 5px;
     border-radius: 8px;
     cursor: pointer;
     color: var(--color);
-    margin-bottom: 9.5px;
+    margin-bottom: 5px;
     text-align: center;
+    letter-spacing: 0.5px;
 }
 
 .products .saved-mark-product {
@@ -192,13 +193,6 @@
     cursor: pointer;
     color: rgba(64, 165, 212, 0.944);
 }
-
-
-
-
-
-
-
 
 
 
@@ -235,20 +229,21 @@
 
 
 .share-icon {
-    font-size: 1.9pc;
+    font-size: 26px;
     cursor: pointer;
     padding-top: 4px;
     position: relative;
-    left: -6px;
+    left: -10px;
 }
 
 .bookedMarks {
     /* border: 1px solid wheat; */
-    font-size: 1.6pc;
+    font-size: 19px;
     cursor: pointer;
     color: var(--color);
     position: relative;
     top: 5px;
+    left: -10px;
 }
 
 
@@ -259,13 +254,13 @@
     /* gap: 18px; */
     justify-content: space-evenly;
     font-size: 14px;
-    margin-top: 9px;
+    margin-top: -3px;
 }
 
 .post-icons .crt-st {
     color: var(--color);
     cursor: pointer;
-    margin-left: 36pc;
+    margin-left: 330px;
 }
 
 .post-icons .crt-st:hover {
@@ -273,7 +268,9 @@
 }
 
 .crt-st .shopin-crt {
-    font-size: 1.5pc;
+    font-size: 20px;
+    position: relative;
+    left: 8px;
 }
 
 .vote-bicon {
@@ -289,7 +286,7 @@
 }
 
 .liked-ico .fc-like-i {
-    font-size: 1.6pc;
+    font-size: 21px;
     position: relative;
     left: -9px;
     top: 2px;
@@ -319,12 +316,14 @@
 
 .info-data .input-span-tag {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 21.2px;
+    font-size: 16.7px;
     border-radius: 12px;
     color: var(--color);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     margin-left: 5px;
+    position: relative;
+    left: 5px;
 }
 
 .info-data .input-span-tag:hover {
@@ -334,9 +333,9 @@
 
 .price-tag-ruppee {
     position: relative;
-    padding: 5px;
-    bottom: 3px;
-    left: 3px;
+    padding: 7px;
+    bottom: 4px;
+    left: -3px;
     height: 20px;
 }
 
