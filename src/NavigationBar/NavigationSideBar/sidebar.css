@@ -2,21 +2,18 @@
     width: 20%;
     position: fixed;
     top: 30px;
-    height: calc(100vh - 30px);
     overflow: hidden;
     margin-top: 3.1pc;
     box-sizing: border-box;
+    height: calc(100vh - 30px);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    overflow-y: auto;
 }
 
 .container .content {
-    width: 100%;
-}
-
-.container .content .content-fluid {
-    padding: 2px;
-}
-
-.container .content .content-fluid .sidebar {
     width: 100%;
 }
 
@@ -46,7 +43,6 @@
 
 .sidebar .category-list ul a li {
     width: 250px;
-    /* margin-left: 5px; */
     margin-bottom: 15px;
     letter-spacing: 1.3px;
     font-weight: 350;
@@ -56,20 +52,19 @@
     padding-left: 50px;
 }
 
-.category-list ul a li .user-prof-i {
-    position: relative;
-    top: 4px;
-    left: -12px;
-}
-
 .sidebar .category-list ul a li:hover {
     border: 1px solid rgba(255, 255, 255, 0.926);
-    /* font-weight: 300; */
 }
 
 .matrl-list {
     margin-top: 20px;
     padding-top: 20px;
+}
+
+.category-list ul a li .user-prof-i {
+    position: relative;
+    top: 4px;
+    left: -12px;
 }
 
 .category-list ul a li .crt-btn {
@@ -80,4 +75,31 @@
 .sidar-line {
     position: fixed;
     width: 376.8px;
+}
+
+.container::-webkit-scrollbar {
+    width: 3px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: #fffdfdbd;
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #757575eb;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.container:hover::-webkit-scrollbar {
+    width: 6px;
+}
+
+.container::-webkit-scrollbar {
+    transition: width 0.3s ease;
 }
