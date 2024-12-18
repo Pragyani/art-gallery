@@ -1,12 +1,11 @@
 .container {
-    width: 20%;
-    position: fixed;
+    width: 100%;
+    position: relative;
     top: 30px;
-    overflow: hidden;
     margin-top: 3.1pc;
     box-sizing: border-box;
-    height: calc(100vh - 30px);
-    transition: all 0.3s ease;
+    height: 100vh;
+    /* Full screen height */
 }
 
 .container:hover {
