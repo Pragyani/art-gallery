@@ -1,15 +1,16 @@
 .home-page {
     display: grid;
     grid-template-columns: 20% 1fr 30%;
+    gap: 20px;
     width: 100%;
     box-sizing: border-box;
 }
 
+/* 
 .home-hr {
     color: var(--color);
-    /* opacity: .2; */
     margin-left: 23.6rem;
     margin-top: 5pc;
     position: fixed;
     height: 100%;
-}
+} */
