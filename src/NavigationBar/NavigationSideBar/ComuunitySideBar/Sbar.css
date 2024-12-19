@@ -1,17 +1,20 @@
 .art-bar {
     margin-top: 145px;
-    border: 1px solid var(--border-color);
     padding: 6px;
-    border-radius: 10px;
     height: 310px;
-    width: 21.4%;
-    position: fixed;
-    left: 60.3rem;
+    width: 100%; /* Ensure it takes full available width in grid */
+    position: relative;
+    left: 0;
     z-index: 5;
 }
 
+
 .art-bar .art-side-bar {
-    width: 100%;
+    width: 90%;
+    height: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 6px;
 }
 
 .art-bar .art-side-bar .poppulr-arts {
