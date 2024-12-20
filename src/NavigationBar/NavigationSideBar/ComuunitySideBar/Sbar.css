@@ -2,10 +2,9 @@
     margin-top: 145px;
     padding: 6px;
     height: 310px;
-    width: 100%; /* Ensure it takes full available width in grid */
-    position: relative;
-    left: 0;
-    z-index: 5;
+    width: 100%;
+    position: sticky;
+    top: 97px;
 }
 
 
