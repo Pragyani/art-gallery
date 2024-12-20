@@ -1,11 +1,10 @@
 .container {
     width: 100%;
-    position: relative;
-    top: 30px;
     margin-top: 3.1pc;
     box-sizing: border-box;
     height: 100vh;
-    /* Full screen height */
+    position: sticky;
+    top: 73px;
 }
 
 .container:hover {
