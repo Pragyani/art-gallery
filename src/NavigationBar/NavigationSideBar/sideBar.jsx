@@ -16,7 +16,7 @@ const SideBar = () => {
     return (
         <div className="container">
             <div className="content">
-                <div className="content-fluid">
+                
                     <div className="sidebar">
                         <div className="category-list">
                             <ul>
@@ -29,11 +29,11 @@ const SideBar = () => {
                                 {/* <hr className="sidar-line" /> */}
 
 
-                                <SideTopicBar />
+                                {/* <SideTopicBar /> */}
                             </ul>
                         </div>
                     </div>
-                </div>
+             
             </div>
         </div>
     );
