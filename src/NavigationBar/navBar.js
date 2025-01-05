@@ -6,6 +6,7 @@ import { UseTheme } from "../theme-context/theme-context";
 import { useDispatch, useSelector } from "react-redux";
 import { setInput } from "../reducers/indx";
 import { UserIMAGE } from "../utils";
+import Toggle from "../components/toggle";
 
 const NavBAr = () => {
     const { toogleTheme, theme } = UseTheme();
@@ -23,7 +24,7 @@ const NavBAr = () => {
             <div className="NavigationBar">
                 <div className="navBar">
                     <div className="nav-p1">
-                        <Link to={'./'}><h1>art.Gallery</h1></Link>
+                        <Link to={'./'}><h1>🖌️ Pragya's Art</h1></Link>
                     </div>
 
                     <div className="input-field">
@@ -35,12 +36,11 @@ const NavBAr = () => {
 
                     <div className="nav-p2">
                         <ul className="nav-ul">
-                            <Link to={'/'}><li className="ul-li"> Home</li> </Link>
                             <Link to={'/about'}><li className="ul-li">About Us</li></Link>
-                            <li className="ul-li">Theme <input type="checkbox" onChange={toogleTheme} checked={theme === 'light'} /></li>
+                            <Toggle checked={theme === 'dark'} onChange={toogleTheme} label={'Dark mode'} />
                             <li className="ul-l">
                                 <span className="li-span-img">
-                                    <Link to={'/profilepage'}> <img src={UserIMAGE} /></Link>
+                                    <Link to={'/profilepage'}> <img src={UserIMAGE} alt="profile" /></Link>
                                 </span>
                             </li>
 

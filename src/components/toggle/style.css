@@ -1,0 +1,62 @@
+
+.toggle-switch {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #2d3748;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.toggle-circle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #718096;
+  border-radius: 50%;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #3182ce;
+}
+
+input:checked + .slider .toggle-circle {
+  transform: translateX(16px);
+  background-color: white;
+}
+
+/* Hover effect */
+.toggle-switch:hover .slider {
+  background-color: #3d4756;
+}
+
+.toggle-switch:hover input:checked + .slider {
+  background-color: #4299e1;
+}
+
+.toggle-label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
