@@ -1,6 +1,6 @@
 import './style.css';
 
-const Toggle = ({ checked = "", onChange = () => { }, label = "" }) => {
+const Toggle = ({ checked = false, onChange = () => { }, label = "" }) => {
     return <div className="display-flex">
         <label className="toggle-switch">
             <input
