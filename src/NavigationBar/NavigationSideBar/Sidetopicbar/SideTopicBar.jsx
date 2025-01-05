@@ -1,23 +1,55 @@
-import React from "react";
+/**
+ * React dependencies
+ */
+import { useState } from "react";
+
+/**
+ * Internal dependencies
+ */
 import './sidetopic.css';
-import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded';
-import { SideBarImage1, SideBarImage2, SideBarImage3, SideBarImage4 } from "../../../utils";
+import { SideBarImage2 } from "../../../utils";
+import { dropdownSections } from "./utils";
+
+
 
 const SideTopicBar = () => {
-    return (
-        <>
-            <div className="category-lst">
-                <ul>
-                    
-                    <span className="nme-cl-cr">Topics <ArrowDropDownRoundedIcon /></span>
-                    <li><img src={SideBarImage1} /><span className="li-cl-name">Mandala </span></li>
-                    <li><img src={SideBarImage2} /><span className="li-cl-name">Sketeches</span></li>
-                    <li><img src={SideBarImage3} /><span className="li-cl-name">Quilling</span></li>
-                    <li><img src={SideBarImage4} /><span className="li-cl-name">Painting</span></li>
-                </ul>
-            </div>
+    const [expandedSections, setExpandedSections] = useState({
+        artTypes: false,
+        artist: false,
+        material: false,
+        timePeriod: false,
+        priceRange: false,
+        sizeDimensions: false,
+        artistNationality: false
+    });
 
-        </>
+    const toggleSection = (section) => {
+        setExpandedSections((prev) => ({
+            ...prev,
+            [section]: !prev[section],
+        }));
+    };
+
+    return (
+        <div className="dropdown-section">
+            {dropdownSections.map(({ id = "", label = "", options = [] }) => (
+                <div key={id} className="mt-8">
+                    <div key={id} onClick={() => toggleSection(id)} className="dropdown-header menu-item">
+                        <span>{label}</span>
+                        <span
+                            className={`arrow ${expandedSections[id] ? "arrow-up" : "arrow-down"
+                                }`}
+                        />
+                    </div>
+
+                    {expandedSections[id] && (
+                        options?.map(({ id = "", label = "" }) => {
+                            return <div className="dropdown-content menu-item"><img src={SideBarImage2} key={id} alt={id} /><span className="li-cl-name">{label}</span></div>
+                        })
+                    )}
+                </div>
+            ))}
+        </div>
     )
 }
 export default SideTopicBar;

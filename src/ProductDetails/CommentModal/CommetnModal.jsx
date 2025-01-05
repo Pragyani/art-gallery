@@ -51,67 +51,75 @@ const CommentBox = ({ postComment, onClose }) => {
 
     return (
         <div className="comment-section">
-            <h2>Comments for {postComment?.brand || "Post"}</h2>
-            <span onClick={onClose} className="closed-icona"><IoClose /></span>
-            <hr />
-            <div className="comments-list">
-                {reviews.map((review, index) => (
-                    <div className="commet-col" key={index}>
-                        <div className="user-coment-selection">
-                            <div className="user-cmnt-fun">
-                                <div className="user-img">
-                                    <div className="modal-image">
-                                        <img src={TopBarImage5} alt="" />
-                                    </div>
-                                    {editingIndex === index ? (
-                                        <div className="react-quilling-block">
-                                            <ReactQuill
-                                                value={editingComment}
-                                                onChange={setEditingComment}
-                                                placeholder="Edit your comment"
-                                                className="quill-editor"
-                                                modules={{
-                                                    toolbar: [
-                                                        [{ 'header': '1' }],
-                                                        [{ 'list': 'ordered' }],
-                                                        ['bold', 'italic', 'underline'],
-                                                        ['link'],
-                                                        ['image']
-                                                    ]
-                                                }} />
-                                            <button onClick={handleUpdateComment} className="save-btn"><FaArrowUp /></button>
-                                        </div>) : (<div dangerouslySetInnerHTML={{ __html: review.comment }} className="p-sdelf" />)}
+            <div className="comment-section-wrapper">
+                <div className="comment-section-header">
+                    <h2>Comments for {postComment?.brand || "Post"}</h2>
+                    <span onClick={onClose} className="closed-icona"><IoClose /></span>
+                </div>
+                <hr />
+                <div className="comments-list">
+                    {reviews.map((review, index) => (
+                        <div className="commet-col" key={index}>
+                            <div className="user-coment-selection">
+                                <div className="user-cmnt-fun">
+                                    <div className={`user-wrapper user-img ${editingIndex === index ? 'has-no-action' : ''}`}>
+                                        <div className="modal-image">
+                                            <img src={TopBarImage5} alt="" />
+                                        </div>
+                                        {editingIndex === index ? (
+                                            <div className="react-quilling-block">
+                                                <ReactQuill
+                                                    value={editingComment}
+                                                    onChange={setEditingComment}
+                                                    placeholder="Edit your comment"
+                                                    className="quill-editor"
+                                                    modules={{
+                                                        toolbar: [
+                                                            [{ 'header': '1' }],
+                                                            [{ 'list': 'ordered' }],
+                                                            ['bold', 'italic', 'underline'],
+                                                            ['link'],
+                                                            ['image']
+                                                        ]
+                                                    }} />
+                                                <button onClick={handleUpdateComment} className="save-btn"><FaArrowUp /></button>
+                                            </div>) : (<div className="display-flex-column">
+                                                <div dangerouslySetInnerHTML={{ __html: review.comment }} className="p-sdelf" />
+                                                <div className="user-commented"><p>Commented by {review.user}</p></div>
+                                            </div>)}
 
-                                    {editingIndex !== index && (
-                                        <>
-                                            <button onClick={() => handleDeleteComment(index)} className="delete-button"><RiDeleteBin2Fill /></button>
-                                            <button onClick={() => handleEditComment(index)} className="user-edit-btn"><MdModeEdit /></button>
-                                        </>
-                                    )}
+                                        {editingIndex !== index && (
+                                            <div className="display-flex">
+                                                <button onClick={() => handleDeleteComment(index)} className="delete-button"><RiDeleteBin2Fill /></button>
+                                                <button onClick={() => handleEditComment(index)} className="user-edit-btn"><MdModeEdit /></button>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
-                            {editingIndex !== index && (<div className="user-"><p>Commented by {review.user}</p></div>)}
-                        </div>
 
-                    </div>))}
+                        </div>))}
+                </div>
+                <form onSubmit={handleCommentSubmit}>
+                    <div className="position-relative">
+                        <ReactQuill
+                            placeholder="Add your comment..."
+                            value={newComment}
+                            onChange={setNewComment}
+                            className="txt-wrp"
+                            modules={{
+                                toolbar: [
+                                    [{ 'header': '1' }],
+                                    [{ 'list': 'ordered' }],
+                                    ['bold', 'italic', 'underline'],
+                                    ['link'],
+                                    ['image']
+                                ]
+                            }} />
+                        <button type="submit" className="sent-box"><FaCheck /></button>
+                    </div>
+                </form>
             </div>
-            <form onSubmit={handleCommentSubmit}>
-                <ReactQuill
-                    placeholder="Add your comment..."
-                    value={newComment}
-                    onChange={setNewComment}
-                    className="txt-wrp"
-                    modules={{
-                        toolbar: [
-                            [{ 'header': '1' }],
-                            [{ 'list': 'ordered' }],
-                            ['bold', 'italic', 'underline'],
-                            ['link'],
-                            ['image']
-                        ]
-                    }} />
-                <button type="submit" className="sent-box"><FaCheck /></button>
-            </form>
         </div>
     );
 };
