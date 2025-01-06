@@ -1,5 +1,5 @@
 .detail-container {
-  width: 800px;
+  width: 650px;
   margin-left: auto;
   margin-right: auto;
   height: auto;
@@ -57,17 +57,13 @@
 
 .re-container .product-fluid .products .product-box {
   width: 100%;
-  padding: 5px 7px 3px 5px;
-  /* padding-top: 5px; */
-  /* padding-bottom: 3px; */
-  /* padding-left: 7px; */
+  padding: 12px 14px 7px 14px;
   border-radius: 12px;
 }
 
 .products .product-box .product-img {
   position: relative;
   width: 100%;
-  /* height: 20pc; */
 }
 
 .products .product-box .product-img img {
@@ -79,12 +75,10 @@
 
 .re-container .product-fluid .products .product-breif {
   width: 100%;
-  /* margin-top: 14pc; */
   height: auto;
   padding-top: 3px;
   padding-bottom: 1px;
   border-radius: 10px;
-  /* border: 1px solid red; */
 }
 
 .products .product-breif .info-prod {
@@ -200,8 +194,6 @@
 
 .user-plug {
   width: 100%;
-  /* padding: 1px; */
-  /* border: 2px solid white; */
   display: flex;
   color: var(--color);
   margin-bottom: 6px;
@@ -233,7 +225,6 @@
 }
 
 .bookedMarks {
-  /* border: 1px solid wheat; */
   font-size: 20px;
   cursor: pointer;
   color: var(--color);
@@ -241,9 +232,7 @@
 
 .post-icons {
   width: 100%;
-  /* border:1px solid white ; */
   display: flex;
-  /* gap: 18px; */
   justify-content: space-evenly;
   font-size: 14px;
   margin-top: -3px;
@@ -267,7 +256,6 @@
 
 .vote-bicon {
   color: white;
-  /* border: 1px solid white; */
   width: 40px;
   height: 25px;
 }
@@ -284,7 +272,6 @@
 
 .info-data .info-data-p {
   font-weight: lighter;
-  /* letter-spacing: ; */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color);
   margin-bottom: 4px;
