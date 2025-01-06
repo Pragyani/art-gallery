@@ -1,16 +1,7 @@
 .home-page {
     display: grid;
-    grid-template-columns: 272px 1fr 500px;
+    grid-template-columns: 300px 1fr 500px;
     gap: 20px;
     width: 100%;
     box-sizing: border-box;
 }
-
-/* 
-.home-hr {
-    color: var(--color);
-    margin-left: 23.6rem;
-    margin-top: 5pc;
-    position: fixed;
-    height: 100%;
-} */
