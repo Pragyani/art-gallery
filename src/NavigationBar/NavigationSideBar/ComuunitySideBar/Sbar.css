@@ -2,14 +2,13 @@
     background: #1a1a1a;
     border: 1px solid #666666;
     border-radius: 8px;
-    padding: 16px;
+    padding: 30px 16px 48px 16px;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: fit-content;
-    width: 90%;
+    width: 80%;
     position: sticky;
     top: 100px;
-
 }
 
 .art-side-bar {
