@@ -13,8 +13,6 @@ const SavedProducts = () => {
 
     return (<>
         <div className="saved-semiConatiner">
-            <SideBar />
-            <hr className="saved-hr" />
             <div className="saved-products-container">
                 <h4>Your saved items..</h4>
                 <div className="saved-products-list">

@@ -8,7 +8,6 @@ const Home = ({ data }) => {
     return (
         <>
             <div className="home-page" >
-                <SideBar />
                 <ProductDetail Products={data} />
                 <CommunitySideBar />
             </div>

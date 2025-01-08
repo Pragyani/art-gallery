@@ -12,8 +12,6 @@ const PopularPost = () => {
     return (
         <>
             <div className="sidesection">
-
-                <SideBar /><hr className="popularpage-hr" />
                 <div className="popular-products-container">
                     <TopBar />
                     <div className="popular-products-list">

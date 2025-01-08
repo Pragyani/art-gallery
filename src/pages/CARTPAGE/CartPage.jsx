@@ -31,7 +31,6 @@ const CartPage = () => {
 
     return (
         <div className="cart-products-container">
-            <SideBar /> <hr className="cartpage-hr" />
             <div className="cart-products-list">
                 <h1><FaOpencart className="open-cart"/>CART ITEMS</h1>
                 {cartProducts.length === 0 ? (
