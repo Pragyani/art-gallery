@@ -51,3 +51,14 @@ body {
 .position-relative {
   position: relative;
 }
+
+.main-content{
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
