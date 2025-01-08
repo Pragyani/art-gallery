@@ -3,14 +3,10 @@
 }
 
 .popular-products-container {
-    width: 74%;
-    margin-top: 80px;
-    margin-left: 25.7pc;
-    padding: 35px;
+    width: 96%;
 }
 
 .popular-products-container h1 {
-    /* text-align: center; */
     font-size: 50px;
     font-weight: 340;
     margin-bottom: 30px;
