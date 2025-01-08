@@ -11,6 +11,7 @@ import SavedPost from './pages/SavedPost/SavedPost';
 import CartPage from './pages/CARTPAGE/CartPage';
 import { ThemeProvider } from './theme-context/theme-context';
 import PopularPost from './pages/popularPostPage/PopularPost';
+import Sidebar from './NavigationBar/NavigationSideBar/sideBar';
 
 function App() {
 
@@ -34,16 +35,20 @@ function App() {
       <ThemeProvider>
         <BrowserRouter>
           <NavBAr />
-          <Routes>
-            <Route path='/' element={<Home data={productData} />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/your-account' element={<AccountPage />} />
-            <Route path='/profilepage' element={<ProfilePage data={productData} />} />
-            <Route path='/saved-post' element={<SavedPost />} />
-            <Route path='/add-to-cart' element={<CartPage />} />
-            <Route path='/popular-page' element={<PopularPost />} />
-          </Routes>
-       
+          <div className="main-content">
+            <Sidebar />
+            <div className="content">
+              <Routes>
+                <Route path="/" element={<Home data={productData} />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/your-account" element={<AccountPage />} />
+                <Route path="/profilepage" element={<ProfilePage data={productData} />} />
+                <Route path="/saved-post" element={<SavedPost />} />
+                <Route path="/add-to-cart" element={<CartPage />} />
+                <Route path="/popular-page" element={<PopularPost />} />
+              </Routes>
+            </div>
+          </div>
         </BrowserRouter>
       </ThemeProvider>
     </>
