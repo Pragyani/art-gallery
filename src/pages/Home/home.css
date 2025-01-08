@@ -1,7 +1,6 @@
 .home-page {
     display: grid;
-    grid-template-columns: 300px 1fr 500px;
+    grid-template-columns: 800px 1fr;
     gap: 20px;
     width: 100%;
-    box-sizing: border-box;
 }
