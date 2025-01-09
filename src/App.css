@@ -13,6 +13,9 @@
   --nav-bg-color: #ffffff;
   --userName-color: rgb(104 100 100 / 60%);
   --navigation-search-color: white;
+  --description-color: #6b6b6b;
+  --icon-boxbg-color:#6a6868;
+  --icon-boxbg-hover-color:#4a4949;
 }
 
 [data-theme="dark"] {
@@ -23,6 +26,9 @@
   --nav-bg-color: #232222;
   --userName-color: rgba(233, 231, 231, 0.604);
   --navigation-search-color: white;
+  --description-color: #a0a0a0;
+  --icon-boxbg-color:#2d2d2d;
+  --icon-boxbg-hover-color:#3d3d3d;
 }
 
 body {
@@ -52,7 +58,7 @@ body {
   position: relative;
 }
 
-.main-content{
+.main-content {
   display: flex;
   width: 100%;
   box-sizing: border-box;
