@@ -1,6 +1,6 @@
 .sidebar {
-  width: 19%;
-  color: #d7dadc;
+  width: 325px;
+  color: var(--color);
   padding: 15px 15px 10px 15px;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   position: sticky;
   top: 60px;
   overflow: auto;
-  border-right: 1px solid #666666;
+  border-right: 1px solid var(--border-color);
 
   &::-webkit-scrollbar {
     display: none;
@@ -38,15 +38,19 @@
   transition: all 0.2s ease;
   position: relative;
 
+
   span {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color);
   }
 }
 
 .menu-item:hover {
   background-color: rgba(255, 255, 255, 0.08);
-  color: #ffffff;
+  color:rgb(48, 155, 232);
   border-radius: 10px;
 }
 
