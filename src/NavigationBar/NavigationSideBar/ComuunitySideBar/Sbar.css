@@ -1,9 +1,9 @@
 .art-bar {
-    background: #1a1a1a;
-    border: 1px solid #666666;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 30px 16px 48px 16px;
-    color: white;
+    color: var(--color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: fit-content;
     width: 80%;
@@ -19,7 +19,7 @@
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 16px;
-    color: #f5f5f5;
+    color: var(--color);
 }
 
 .poppulr-arts b {
@@ -44,17 +44,17 @@
 }
 
 .art-list li:hover {
-    background-color: #2d2d2d;
+    background-color: var(--icon-boxbg-color);
 }
 
 .page-a-icon {
-    color: #60a5fa;
+    color: var(--color);
     margin-right: 12px;
     font-size: 20px !important;
 }
 
 .nmes-li {
-    color: #e5e5e5;
+    color: var(--color);
     font-size: 15px;
 }
 
@@ -70,82 +70,3 @@
 .art-bar h4:hover {
     color: #60a5fa;
 }
-
-/* .art-bar {
-    margin-top: 145px;
-    padding: 6px;
-    height: 310px;
-    width: 100%;
-    position: sticky;
-    top: 97px;
-}
-
-
-.art-bar .art-side-bar {
-    width: 90%;
-    height: 100%;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 6px;
-}
-
-.art-bar .art-side-bar .poppulr-arts {
-    width: 100%;
-    margin-bottom: 24px;
-}
-
-.art-side-bar .poppulr-arts h3 {
-    color: var(--color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
-    font-weight: 380;
-    font-size: 15px;
-    letter-spacing: 1px;
-    padding: 2.8px;
-    padding-left: 10px;
-}
-
-
-.art-side-bar .cl-list {
-    width: 100%;
-    padding: 4px;
-}
-
-.art-side-bar .cl-list .art-list {
-    width: 100%;
-    list-style: none;
-    color: var(--color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 13.8px;
-}
-
-.cl-list .art-list li {
-    margin-bottom: 9px;
-    letter-spacing: 1.4px;
-    display: flex;
-    cursor: pointer;
-}
-
-.cl-list .art-list li:hover {
-    font-weight: lighter;
-}
-
-.art-list li .page-a-icon {
-    margin: 10px;
-    height: 21px;
-    width: auto;
-    padding: 2px;
-    border-radius: 12px;
-    background-color: var(--bg-color);
-}
-
-.art-list li .nmes-li {
-    padding-top: 7px;
-}
-
-.art-bar h4 {
-    color: var(--color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 400;
-    margin-left: 25px;
-    cursor: default;
-} */
