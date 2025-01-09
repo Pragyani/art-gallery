@@ -57,7 +57,7 @@
 
 .re-container .product-fluid .products .product-box {
   width: 100%;
-  padding: 12px 14px 7px 14px;
+  padding: 8px 14px 7px 14px;
   border-radius: 12px;
 }
 
@@ -71,7 +71,9 @@
   height: 22pc;
   border-radius: 12px;
   transition: all 0.3s ease-in-out;
+  box-shadow: rgba(119, 125, 131, 0.374) 0px 8px 24px;
 }
+
 
 .re-container .product-fluid .products .product-breif {
   width: 100%;
@@ -202,18 +204,20 @@
 .user-i-post {
   color: var(--color);
   margin-right: 6px;
+  margin-top: 3px;
 }
 
 .user-plug div {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: medium;
+  font-size: 13px;
   font-weight: lighter;
-  color: var(--color);
+  color: var(--description-color);
 }
 
 .user-plug div span {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 400;
+  color: var(--color);
 }
 
 .share-icon {
@@ -227,7 +231,8 @@
 .bookedMarks {
   font-size: 20px;
   cursor: pointer;
-  color: var(--color);
+  /* color: var(--color); */
+  color: white;
 }
 
 .post-icons {
@@ -342,12 +347,13 @@
 
 .cmnt-rct-i {
   font-size: 18px;
-  color: var(--color);
+  /* color: var(--color); */
+  color: white;
 }
 
 .cmnt-rct-i:hover {
   font-weight: bold;
-  color: rgb(87, 190, 242);
+  /* color: rgb(87, 190, 242); */
 }
 
 /* Heart Animation */
@@ -389,7 +395,7 @@
 }
 
 .designed-by {
-  color: #a0a0a0;
+  color: var(--description-color);
   font-size: 14px;
 }
 
@@ -403,7 +409,7 @@
 .tag {
   font-weight: 600;
   font-size: 0.75rem;
-  padding: 3px 8px;
+  padding: 3px 7px;
   border-width: 1px;
   align-items: center;
   display: inline-flex;
@@ -413,9 +419,12 @@
   right: 0;
   color: white;
   border-top-left-radius: 8px;
-  border-top-right-radius: 0;
+  border-top-right-radius: 10px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 8px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 
 .tag.danger {
@@ -431,6 +440,7 @@
   align-items: center;
   gap: 12px;
   margin: 16px 0 4px;
+  color: var(--color);
 }
 
 .current-price {
@@ -439,7 +449,7 @@
 }
 
 .original-price {
-  color: #a0a0a0;
+  color: var(--description-color);
   text-decoration: line-through;
   font-size: 16px;
 }
@@ -450,7 +460,7 @@
 }
 
 .description {
-  color: #a0a0a0;
+  color: var(--description-color);
   margin: 16px 0;
   font-size: 16px;
   line-height: 1.5;
@@ -487,9 +497,9 @@
 }
 
 .icon-button {
-  background-color: #2d2d2d;
+  background:var(--icon-boxbg-color);
   border: none;
-  color: white;
+  color: var(--color);
   width: 40px;
   height: 40px;
   border-radius: 8px;
@@ -501,17 +511,19 @@
 }
 
 .icon-button:hover {
-  background-color: #3d3d3d;
+  background: var(--icon-boxbg-hover-color);
 }
 
 .ripple-button {
-  background-color: #2d2d2d;
+  background-color: var(--icon-boxbg-color);
   background-position: center;
   transition: background 1s;
+  /* color: var(--color); */
 }
 
 .ripple-button:hover {
-  background: #3d3d3d radial-gradient(circle, transparent 1%, #3d3d3d 1%) center/15000%;
+  /* background: #3d3d3d radial-gradient(circle, transparent 1%, #3d3d3d 1%) center/15000%; */
+  background: var(--icon-boxbg-hover-color);
 }
 
 .ripple-button:active {
