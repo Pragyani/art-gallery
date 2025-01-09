@@ -1,7 +1,7 @@
 /**
  * React dependencies
  */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { HiOutlineShoppingCart, HiShoppingCart } from "react-icons/hi2";
 import { FiBookmark } from "react-icons/fi";
@@ -9,7 +9,7 @@ import { FaRegComment } from "react-icons/fa6";
 import { IoBookmark } from "react-icons/io5";
 import { FaComment } from "react-icons/fa";
 import { FcLikePlaceholder, FcLike } from "react-icons/fc";
-
+import { MdPersonPin } from "react-icons/md";
 /**
  * Internal dependencies
  */
@@ -29,9 +29,16 @@ const ProductDetail = ({ Products }) => {
     const cartProducts = useSelector((state) => state.cartProducts);
     const inputValue = useSelector((state) => state.inputSlice);
 
-    const filteredProducts = Products.filter((product) =>
-        product?.brand.toLowerCase().includes(inputValue?.toLowerCase())
-    );
+    const filteredProducts = Products.filter((product) => product?.brand.toLowerCase().includes(inputValue?.toLowerCase()));
+
+    useEffect(() => {
+        // Initialize from localStorage
+        const savedBookmarks = JSON.parse(localStorage.getItem("bookmarkedProducts")) || {};
+        const savedVotes = JSON.parse(localStorage.getItem("voteMarked")) || {};
+
+        setBookmarkedProducts(savedBookmarks);
+        setVoteMarked(savedVotes);
+    }, []);
 
     const handleSaveProduct = (product) => {
         dispatch(addPost(product));
@@ -46,21 +53,23 @@ const ProductDetail = ({ Products }) => {
     };
 
     const handleBookmarkToggle = (product) => {
-        setBookmarkedProducts((prev) => ({
-            ...prev,
-            [product.id]: !prev[product.id],
-        }));
+        setBookmarkedProducts((prev) => {
+            const newState = { ...prev, [product.id]: !prev[product.id] };
+            localStorage.setItem("bookmarkedProducts", JSON.stringify(newState)); // Persist state
+            return newState;
+        });
 
         if (!bookmarkedProducts[product.id]) {
             handleSaveProduct(product);
         }
     };
 
-    const handleVoteMarkToggle = (product, event) => {
-        setVoteMarked((prev) => ({
-            ...prev,
-            [product.id]: !prev[product.id],
-        }));
+    const handleVoteMarkToggle = (product) => {
+        setVoteMarked((prev) => {
+            const newState = { ...prev, [product.id]: !prev[product.id] };
+            localStorage.setItem("voteMarked", JSON.stringify(newState)); // Persist state
+            return newState;
+        });
 
         if (!voteMarked[product.id]) {
             handleSaveProduct(product);
@@ -88,14 +97,13 @@ const ProductDetail = ({ Products }) => {
                             {filteredProducts.length !== 0 ? (
                                 filteredProducts.map((item) => (
                                     <div className="products" key={item.id}>
-                                        {/* <div className="user-plug">
-                                            <PersonPinIcon className="user-i-post" />
+                                        <div className="user-plug">
+                                            <MdPersonPin className="user-i-post" />
                                             <div>Your Post : <b><span>{item?.brand}</span></b></div>
-                                        </div> */}
+                                        </div>
                                         <div className="product-box">
                                             <div className="product-img">
                                                 <img src={item?.image} alt="Product" />
-                                                {/* Heart animation */}
                                                 {heartAnimation === item.id && (
                                                     <div className="heart-animation"> ❤️ </div>
                                                 )}
@@ -115,71 +123,35 @@ const ProductDetail = ({ Products }) => {
                                                 </div>
                                             </div>
                                             <p className="description">
-                                                A unique collection of hand-drawn doodles perfect for
-                                                creative projects and designs.
+                                                A unique collection of hand-drawn doodles perfect for creative projects and designs.
                                             </p>
                                             <div className="action-buttons">
                                                 <button
                                                     className={`add-to-cart ripple-button ${cartProducts.some((product) => product.id === item.id) ? 'no-ripple' : ''}`}
-                                                    onClick={() => addToCarthandle(item)}
-                                                    disabled={cartProducts.some((product) => product.id === item.id)}
-                                                >
+                                                    onClick={() => addToCarthandle(item)} disabled={cartProducts.some((product) => product.id === item.id)}>
+
                                                     <span className="crt-st">
-                                                        {cartProducts.some((product) => product.id === item.id) ? (
-                                                            <HiShoppingCart className="shopin-crt" style={{ color: "goldenrod" }} />
-                                                        ) : (
-                                                            <HiOutlineShoppingCart className="shopin-crt" />
-                                                        )}
+                                                        {cartProducts.some((product) => product.id === item.id) ? (<HiShoppingCart className="shopin-crt" style={{ color: "goldenrod" }} />) : (<HiOutlineShoppingCart className="shopin-crt" />)}
                                                     </span>
-                                                    {cartProducts.some((product) => product.id === item.id)
-                                                        ? "Already in Cart"
-                                                        : "Add to Cart"}
+                                                    {cartProducts.some((product) => product.id === item.id) ? "Already in Cart" : "Add to Cart"}
                                                 </button>
                                                 <div className="secondary-buttons">
                                                     <button className="icon-button">
                                                         <span className="liked-ico">
-                                                            <span
-                                                                onClick={(event) =>
-                                                                    handleVoteMarkToggle(item, event)
-                                                                }
-                                                                className="hrt-st"
-                                                            >
-                                                                {voteMarked[item.id] ? (
-                                                                    <FcLike className="fc-like-i" />
-                                                                ) : (
-                                                                    <FcLikePlaceholder className="fc-like-i" />
-                                                                )}
+                                                            <span onClick={() => handleVoteMarkToggle(item)} className="hrt-st">
+                                                                {voteMarked[item.id] ? (<FcLike className="fc-like-i" />) : (<FcLikePlaceholder className="fc-like-i" />)}
                                                             </span>
                                                         </span>
                                                     </button>
                                                     <button className="icon-button">
-                                                        <span
-                                                            onClick={() => handleBookmarkToggle(item)}
-                                                            className="hrt-st"
-                                                        >
+                                                        <span onClick={() => handleBookmarkToggle(item)} className="hrt-st">
                                                             {bookmarkedProducts[item.id] ? (
-                                                                <IoBookmark
-                                                                    className="bookedMarks"
-                                                                    style={{ color: "#4169E1" }}
-                                                                />
-                                                            ) : (
-                                                                <FiBookmark className="bookedMarks" />
-                                                            )}
+                                                                <IoBookmark className="bookedMarks" style={{ color: "#4169E1" }} />) : (<FiBookmark className="bookedMarks" />)}
                                                         </span>
                                                     </button>
                                                     <button className="icon-button">
                                                         <span className="input-span-tag">
-                                                            {false ? (
-                                                                <FaComment
-                                                                    className="cmnt-rct-i"
-                                                                    style={{ color: "#9747FF" }}
-                                                                />
-                                                            ) : (
-                                                                <FaRegComment
-                                                                    className="cmnt-rct-i"
-                                                                    onClick={() => handleShowComments(item)}
-                                                                />
-                                                            )}
+                                                            {false ? (<FaComment className="cmnt-rct-i" style={{ color: "#9747FF" }} />) : (<FaRegComment className="cmnt-rct-i" onClick={() => handleShowComments(item)} />)}
                                                         </span>
                                                     </button>
                                                 </div>
@@ -195,13 +167,9 @@ const ProductDetail = ({ Products }) => {
                 </div>
             </div>
             {showCommentBox && selectedPost && (
-                <CommentBox
-                    postComment={selectedPost}
-                    onClose={() => setShowCommentBox(false)}
-                />
+                <CommentBox postComment={selectedPost} onClose={() => setShowCommentBox(false)} />
             )}
         </>
     );
 };
-
 export default ProductDetail;
