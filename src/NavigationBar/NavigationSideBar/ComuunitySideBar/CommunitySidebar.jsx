@@ -11,7 +11,7 @@ const CommunitySideBar = () => {
             <div className="art-bar">
                 <div className="art-side-bar">
                     <div className="poppulr-arts">
-                        <h3>Popular Pages by<b> Pragaya</b></h3>
+                        <h3>Popular Pages by<b> Pragya</b></h3>
                     </div>
 
                     <div className="cl-list">
