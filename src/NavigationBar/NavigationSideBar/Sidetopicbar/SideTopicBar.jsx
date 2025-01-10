@@ -7,7 +7,7 @@ import { useState } from "react";
  * Internal dependencies
  */
 import './sidetopic.css';
-import { SideBarImage2 } from "../../../utils";
+import { TopBarImage5 } from "../../../utils";
 import { dropdownSections } from "./utils";
 
 
@@ -44,7 +44,7 @@ const SideTopicBar = () => {
 
                     {expandedSections[id] && (
                         options?.map(({ id = "", label = "" }) => {
-                            return <div className="dropdown-content menu-item"><img src={SideBarImage2} key={id} alt={id} /><span className="li-cl-name">{label}</span></div>
+                            return <div className="dropdown-content menu-item"><img src={TopBarImage5} key={id} alt={id} /><span className="li-cl-name">{label}</span></div>
                         })
                     )}
                 </div>
