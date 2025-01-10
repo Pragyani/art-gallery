@@ -51,12 +51,17 @@ input:checked + .slider .toggle-circle {
 
 .toggle-label {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 17px;
+    font-weight: 450;
     color: var(--color);
     border-radius: 4px;
     cursor: pointer;
     display: flex;
     align-items: center;
     transition: background-color 0.2s ease;
+}
+
+.toggle-label:hover{
+  color: rgb(48, 155, 232);
+  font-weight: 500;
 }
