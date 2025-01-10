@@ -1,6 +1,6 @@
 .home-page {
     display: grid;
-    grid-template-columns: 800px 1fr;
+    grid-template-columns: 800px 515px;
     gap: 20px;
     width: 100%;
 }
