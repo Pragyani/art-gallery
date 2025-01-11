@@ -14,7 +14,7 @@ const SavedProducts = () => {
     return (<>
         <div className="saved-semiConatiner">
             <div className="saved-products-container">
-                <h4>Your saved items..</h4>
+                <h1>Your saved items..</h1>
                 <div className="saved-products-list">
                     {savedProducts.length === 0 ? (
                         <p className="home-cl-pge">No products saved yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
@@ -30,17 +30,23 @@ const SavedProducts = () => {
                                                     <img src={product.image} alt="product" />
                                                 </div>
                                             </div>
-
-                                            <div className="product-breif">
-                                                <div className="info-prod">
-                                                    <div className="info-data">
-                                                        <h4>Desgined By Pragya</h4>
-                                                        <h5 className="name">{product.name}</h5>
-                                                        <p>StockStatus - <h6>{product.stockStatus}</h6> </p>
-                                                        <h4>Brand Name - <b>{product.brand}</b></h4>
+                                            <div className="product-container">
+                                                <div className="price-section">
+                                                    <span className="current-price">Doodle Collection</span>
+                                                    <span className="current-price">₹{product?.price}</span>
+                                                    <span className="original-price">₹999</span>
+                                                    <span className="discount">30% OFF</span>
+                                                </div>
+                                                <div className="display-flex">
+                                                    <div className="designer-info">
+                                                        <span className="designed-by">By {product?.brand}</span>
                                                     </div>
                                                 </div>
+                                                <p className="description">
+                                                    A unique collection of hand-drawn doodles perfect for creative projects and designs.
+                                                </p>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
