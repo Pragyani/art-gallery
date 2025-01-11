@@ -30,17 +30,21 @@ const PopularPost = () => {
                                                     </div>
                                                 </div>
 
-                                                <div className="product-breif">
-                                                    <div className="info-prod">
-                                                        <div className="info-data">
-                                                            <h4>Desgined By Pragya</h4>
-                                                            <h5 className="name">{product.name}</h5>
-                                                            <h5 className="price-tag">Price - <span>{product.price}</span></h5>
-                                                            <h5>Rating -<Rating name="customized-10" defaultValue={product.rating} max={5} className="rating-crd" /></h5>
-                                                            <p>StockStatus - <h6>{product.stockStatus}</h6> </p>
-                                                            <h4>Brand Name - <b>{product.brand}</b></h4>
+                                                <div className="product-container">
+                                                    <div className="price-section">
+                                                        <span className="current-price">Doodle Collection</span>
+                                                        <span className="current-price">₹{product?.price}</span>
+                                                        <span className="original-price">₹999</span>
+                                                        <span className="discount">30% OFF</span>
+                                                    </div>
+                                                    <div className="display-flex">
+                                                        <div className="designer-info">
+                                                            <span className="designed-by">By {product?.brand}</span>
                                                         </div>
                                                     </div>
+                                                    <p className="description">
+                                                        A unique collection of hand-drawn doodles perfect for creative projects and designs.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
