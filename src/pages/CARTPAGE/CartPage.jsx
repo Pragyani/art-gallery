@@ -1,13 +1,13 @@
+/**internal dependencies */
 import React, { useEffect } from "react";
 import './CartPage.css';
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Rating from '@mui/material/Rating';
-import SideBar from "../../NavigationBar/NavigationSideBar/sideBar";
 import { setCartProducts } from "../../reducers/indx";
+
+/**external dependencies */
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { IoMdRemoveCircle } from "react-icons/io";
-import { FaOpencart } from "react-icons/fa6";
 
 const CartPage = () => {
     const dispatch = useDispatch();
@@ -64,7 +64,7 @@ const CartPage = () => {
                                             </p>
                                         </div>
 
-                                        {/* <div className="remove-item-button"  onClick={() => removeItem(product.id)}><IoMdRemoveCircle /></div > */}
+                                        <div className="remove-item-button" onClick={() => removeItem(product.id)}><IoMdRemoveCircle /></div >
                                     </div>
                                 </div>
                             </div>
@@ -75,5 +75,4 @@ const CartPage = () => {
         </div>
     );
 };
-
 export default CartPage;
