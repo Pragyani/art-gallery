@@ -208,4 +208,4 @@ export const AccountPageIMg = 'https://mdbcdn.b-cdn.net/img/Photos/new-templates
 
 // about page imageurl
 
-export const AboutPageImage = "https://i.pinimg.com/736x/29/a9/90/29a990a1762ef68b956765ad266b019f.jpg"
+export const AboutPageImage = "https://i.pinimg.com/736x/05/98/cb/0598cb80b9bfb35713501dac60eab820.jpg"
