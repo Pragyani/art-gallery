@@ -8,6 +8,7 @@ import { setCartProducts } from "../../reducers/indx";
 /**external dependencies */
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { IoMdRemoveCircle } from "react-icons/io";
+import { CartBar } from "./CartBar";
 
 const CartPage = () => {
     const dispatch = useDispatch();
@@ -32,7 +33,7 @@ const CartPage = () => {
     return (
         <div className="cart-products-container">
             <div className="cart-products-list">
-                {/* <h1><FaOpencart className="open-cart"/>CART ITEMS</h1> */}
+                <CartBar/>
                 {cartProducts.length === 0 ? (
                     <p className="stck-p">No products in cart yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
                 ) : (
