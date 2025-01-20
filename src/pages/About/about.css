@@ -10,10 +10,10 @@
 
 .abut-contnt .about-box {
     width: 78%;
-    margin: 5px;
-    margin-left: 10%;
+    /* margin: 5px; */
+    margin-left: 5%;
     height: auto;
-    /* margin-top: 48px; */
+    margin-top: 18px;
 }
 
 .abut-contnt .about-box .content-abt-boxf {
@@ -22,7 +22,7 @@
 }
 
 .content-abt-boxf .abut-p1 {
-    width: 46%;
+    width: 40%;
     height: auto;
     /* padding: 30px; */
 }
@@ -30,9 +30,10 @@
 .abut-p1 img {
     width: 100%;
     margin: 3px;
-    height: 54pc;
+    height: 730px;
     border-radius: 20px;
-    opacity: .8;
+    opacity: .9;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .content-abt-boxf .abut-p2 {
