@@ -1,10 +1,13 @@
+/**React Dependencies */
 import React from "react";
 import { useSelector } from "react-redux";
-import Rating from '@mui/material/Rating';
-import './savePost.css';
 import { Link } from "react-router-dom";
+
+/**Internal Dependency */
+import './savePost.css';
+
+/**external dependecies */
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import SideBar from "../../NavigationBar/NavigationSideBar/sideBar";
 
 const SavedProducts = () => {
     const savedProducts = useSelector((state) => state.savedPosts);
@@ -59,5 +62,4 @@ const SavedProducts = () => {
     </>
     );
 };
-
 export default SavedProducts;

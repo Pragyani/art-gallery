@@ -1,7 +1,5 @@
+/**React dependencies */
 import React, { useState, useEffect } from 'react';
-import './userpage.css';
-import { BasicModal } from './BasicModal/modal';
-import ProfileColumn from './ProfileBlock/ProfileColumn';
 import { LuLayoutGrid } from "react-icons/lu";
 import { FaRegBookmark } from "react-icons/fa";
 import { Link } from 'react-router-dom';
@@ -10,6 +8,11 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { BiSolidEditAlt } from "react-icons/bi";
 import { RiDeleteBin2Line } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
+
+/**Internal Dependencies */
+import './userpage.css';
+import { BasicModal } from './BasicModal/modal';
+import ProfileColumn from './ProfileBlock/ProfileColumn';
 
 const ProfilePage = ({ data }) => {
     const [artData, setArtData] = useState(() => {

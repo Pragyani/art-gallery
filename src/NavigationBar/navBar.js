@@ -1,11 +1,13 @@
+/**React Dependencies */
 import React from "react";
-import './nav.css';
 import { Link } from "react-router-dom";
-import SearchSharpIcon from '@mui/icons-material/SearchSharp';
-import { UseTheme } from "../theme-context/theme-context";
 import { useDispatch, useSelector } from "react-redux";
+import SearchSharpIcon from '@mui/icons-material/SearchSharp';
+/**Internal Dependencies */
+import { UseTheme } from "../theme-context/theme-context";
 import { setInput } from "../reducers/indx";
 import { UserIMAGE } from "../utils";
+import './nav.css';
 import Toggle from "../components/toggle";
 
 const NavBAr = () => {

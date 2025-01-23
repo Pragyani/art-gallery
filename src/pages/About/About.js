@@ -1,4 +1,7 @@
+/**React Dependencies */
 import React from "react";
+
+/**internal dependencies */
 import './about.css';
 import { AboutPageImage } from "../../utils";
 
