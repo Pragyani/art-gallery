@@ -1,57 +1,38 @@
+/**React Dependencies */
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
+/**Internal Dependencies */
+import { ThemeProvider } from './theme-context/theme-context';
+import MainContent from './MainContent';
 import './App.css';
 import DesignDummyData from './utils';
 import NavBAr from './NavigationBar/navBar';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home/home';
-import About from './pages/About/About';
-import AccountPage from './pages/semiPages/UserAcountPage/AccountPage';
-import ProfilePage from './pages/semiPages/UserAcountPage/UserPage/UserPage';
-import SavedPost from './pages/SavedPost/SavedPost';
-import CartPage from './pages/CARTPAGE/CartPage';
-import { ThemeProvider } from './theme-context/theme-context';
-import PopularPost from './pages/popularPostPage/PopularPost';
-import Sidebar from './NavigationBar/NavigationSideBar/sideBar';
+
 
 function App() {
-
   const [productData, setProductData] = useState([]);
 
-  // console.log('poroductItem',productData) //working console
   useEffect(() => {
-    getProductData()
-  }, [])
+    getProductData();
+  }, []);
 
   const getProductData = async () => {
     try {
       setProductData(DesignDummyData);
     } catch (error) {
-      console.log('this data is not working', error)
+      console.log('this data is not working', error);
     }
-  }
+  };
 
   return (
-    <>
-      <ThemeProvider>
-        <BrowserRouter>
-          <NavBAr />
-          <div className="main-content">
-            <Sidebar />
-            <div className="content">
-              <Routes>
-                <Route path="/" element={<Home data={productData} />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/your-account" element={<AccountPage />} />
-                <Route path="/profilepage" element={<ProfilePage data={productData} />} />
-                <Route path="/saved-post" element={<SavedPost />} />
-                <Route path="/add-to-cart" element={<CartPage />} />
-                <Route path="/popular-page" element={<PopularPost />} />
-              </Routes>
-            </div>
-          </div>
-        </BrowserRouter>
-      </ThemeProvider>
-    </>
+    <ThemeProvider>
+      <BrowserRouter>
+        <NavBAr />
+        <MainContent productData={productData} /> {/* Pass productData to MainContent */}
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
+
 export default App;
