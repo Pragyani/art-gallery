@@ -22,12 +22,24 @@
     /* border: 1px; */
 }
 
+.colun-flexbox img {
+    width: 309px;
+    height: 255px;
+    position: relative;
+    border-radius: 60%;
+    /* top: 10px; */
+    border: 3.5px solid rgba(0, 0, 0, 0.777);
+    left: 110px;
+    bottom: 17px;
+}
+
+
 .column-box .column-mt-1 .colun-flexbox .user-data {
-    margin-left: 18%;
+    margin-left: 169px;
     padding: 15px;
     /* border: 1px solid black;
     border-radius: 22px; */
-    width: 80%;
+    width: 30%;
 }
 
 .colun-flexbox .user-data span {
