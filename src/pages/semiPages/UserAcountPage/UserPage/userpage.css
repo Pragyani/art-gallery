@@ -1,45 +1,15 @@
 .profile-prt {
     width: 100%;
     height: auto;
-    padding: 40px;
+    /* padding: 40px; */
     /* border: 1px solid black; */
 }
 
 .profile-prt .profile-content {
     width: 100%;
     /* border: 1px solid red; */
-    margin-top: 3.3%;
-    padding: 30px;
-}
-
-.profile-prt .profile-content .user-profile {
-    width: 100%;
-    /* border: 2px beige dotted; */
-    padding: 25px;
-}
-
-.profile-prt .profile-content .user-profile .text-file {
-    width: 100%;
-    border-radius: 14px;
-    height: 240px;
-    position: relative;
-    margin-bottom: 4%;
-}
-
-.user-profile .text-file .user-pImg {
-    width: 45%;
-
-}
-
-.text-file .user-pImg img {
-    width: 270%;
-    height: 18pc;
-    position: relative;
-    border-radius: 60%;
-    /* top: 10px; */
-    border: 3.5px solid rgba(0, 0, 0, 0.777);
-    left: 110px;
-    bottom: 17px;
+    /* margin-top: 3.3%; */
+    /* padding: 30px; */
 }
 
 .profile-prt .profile-content .user-profile .profile-details {
