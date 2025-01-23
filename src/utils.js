@@ -175,7 +175,7 @@ export default DesignDummyData;
 
 //sidebar image url's
 
-export const UserIMAGE = 'https://i.pinimg.com/736x/3b/a8/9b/3ba89b3065a1afec8f126aa32ef5a1c0.jpg';
+export const UserIMAGE = 'https://i.pinimg.com/736x/40/18/a5/4018a5fe004ae295d1bf4c378704ac3b.jpg';
 
 export const SideBarImage1 = 'https://i.pinimg.com/564x/a0/ca/a4/a0caa4c1da70e2bd26c0d636cb42278a.jpg';
 
