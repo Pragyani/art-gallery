@@ -76,7 +76,7 @@
 }
 
 .cart-products-list .fluid-post {
-    width: 63%;
+    width: 62%;
     /* padding: 30px; */
     margin-top: 50px;
     margin-bottom: 40px;
@@ -111,10 +111,13 @@
     color: var(--color);
     font-size: 30px;
     text-align: end;
+    /* border: 1px solid white; */
+    width: 56px;
+    margin-left: 560px;
 }
 
 .remove-item-button:hover {
-    color: rgb(255, 54, 54);
+    color: rgba(255, 54, 54, 0.778);
 }
 
 .open-cart {
