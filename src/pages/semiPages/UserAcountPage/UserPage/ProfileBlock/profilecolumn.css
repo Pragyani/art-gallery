@@ -2,7 +2,8 @@
     width: 100%;
     border-radius: 19px;
     padding: 30px;
-    margin-bottom: 4.2%;
+    margin-bottom: 4px;
+    margin-top: 30px;
 }
 
 .column-box .column-mt-1 {
@@ -23,7 +24,7 @@
 }
 
 .colun-flexbox img {
-    width: 309px;
+    width: 279px;
     height: 255px;
     position: relative;
     border-radius: 60%;
@@ -46,22 +47,17 @@
     display: flex;
 }
 
-.colun-flexbox .user-data .brnd-name {
-    padding-top: 18px;
-    margin-bottom: 15px;
-    position: relative;
-    padding-left: 12px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
-    color: var(--color);
-}
-
 .colun-flexbox .user-data .brnd-name h1 {
     margin-left: 22px;
     position: relative;
     bottom: 6px;
+    padding-left: 10px;
+    padding-top: 18px;
+    margin-bottom: 15px;
     font-weight: 480;
     cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
     transition: all 0.3s ease-in-out;
     color: var(--color);
 }
@@ -71,18 +67,6 @@
     transform: scale(1.1);
 }
 
-
-.colun-flexbox .user-data .user-id {
-    padding-top: 18px;
-    padding-bottom: 12px;
-    margin-bottom: 15px;
-    position: relative;
-    padding-left: 12px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
-    color: var(--color);
-}
-
 .colun-flexbox .user-data .user-id h3 {
     margin-left: 22px;
     position: relative;
@@ -90,6 +74,14 @@
     font-weight: 480;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    padding-top: 10px;
+    letter-spacing: 1px;
+    padding-bottom: 12px;
+    color: var(--color);
+    padding-left: 12px;
+    margin-bottom: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
 }
 
 .colun-flexbox .user-data .user-id h3:hover {
