@@ -71,38 +71,44 @@ const ProfilePage = ({ data }) => {
                                                 </div>
 
                                                 <div className="product-breif">
-                                                    <div className="info-prod">
-                                                        <div className="info-data">
-                                                            <h4>Designed By Pragya</h4>
-                                                            <h5 className="name">{item.name}</h5>
-                                                            <h5 className="price-tag">Price : <MdOutlineCurrencyRupee className='re-i-rupee' /><span>{item.price}</span></h5>
-                                                            <p>Stock Status :<h6>{item.stockStatus}</h6></p>
-                                                            <h4>Brand Name : <b>{item.brand}</b></h4>
-                                                            <div className="dropdown-e-d">
-                                                                {dropdownIndex === index ? (
-                                                                    <RiArrowDropUpLine onClick={() => DroprDownToggle(index)} />
-                                                                ) : (
-                                                                    <RiArrowDropDownLine onClick={() => DroprDownToggle(index)} />
-                                                                )}
-                                                            </div>
-                                                            {dropdownIndex === index && (
-                                                                <div className="products-icon">
-                                                                    <span className="product-chnges-icon" onClick={() => handleEditClick(item)}>
-                                                                        <BiSolidEditAlt className="edit-icon" />
-                                                                    </span>
-                                                                    <span className="product-chnges-icon" onClick={() => {
-                                                                        const newArray = artData.filter((_, idx) => idx !== index);
-                                                                        setArtData(newArray);
-                                                                    }}>
-                                                                        <RiDeleteBin2Line className="delete-icon" />
-                                                                    </span>
-                                                                </div>
-                                                            )}
+                                                    <div className="price-section">
+                                                        <span className="current-price">{item?.name}</span>
+                                                        <span className="current-price">₹{item?.price}</span>
+                                                        <span className="original-price">₹999</span>
+                                                        <span className="discount">30% OFF</span>
+                                                    </div>
+                                                    <div className="display-flex">
+                                                        <div className="designer-info">
+                                                            <span className="designed-by">By {item?.brand}</span>
                                                         </div>
                                                     </div>
+                                                    <p className="description">
+                                                        A unique collection of hand-drawn doodles perfect for creative projects and designs.
+                                                    </p>
+                                                    <div className="dropdown-e-d">
+                                                        {dropdownIndex === index ? (
+                                                            <RiArrowDropUpLine onClick={() => DroprDownToggle(index)} />
+                                                        ) : (
+                                                            <RiArrowDropDownLine onClick={() => DroprDownToggle(index)} />
+                                                        )}
+                                                    </div>
+                                                    {dropdownIndex === index && (
+                                                        <div className="products-icon">
+                                                            <span className="product-chnges-icon" onClick={() => handleEditClick(item)}>
+                                                                <BiSolidEditAlt className="edit-icon" />
+                                                            </span>
+                                                            <span className="product-chnges-icon" onClick={() => {
+                                                                const newArray = artData.filter((_, idx) => idx !== index);
+                                                                setArtData(newArray);
+                                                            }}>
+                                                                <RiDeleteBin2Line className="delete-icon" />
+                                                            </span>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>
+
                                     ))}
                                 </div>
                             </div>
