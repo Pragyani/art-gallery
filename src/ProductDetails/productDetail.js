@@ -112,7 +112,7 @@ const ProductDetail = ({ Products }) => {
                                         </div>
                                         <div className="product-container">
                                             <div className="price-section">
-                                                <span className="current-price">Doodle Collection</span>
+                                                <span className="current-price">{item?.name}</span>
                                                 <span className="current-price">₹{item?.price}</span>
                                                 <span className="original-price">₹999</span>
                                                 <span className="discount">30% OFF</span>
