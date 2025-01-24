@@ -11,14 +11,10 @@ const ProfileColumn = () => {
 
                         <img src={UserIMAGE} alt="image" />
 
-
-                        {/* <hr className="column-hr"/> */}
-
                         <div className="user-data">
-                            <span className="brnd-name">BRAND NAME : <h1>PragyAni Gallery</h1></span>
-                            <hr className="col-hr" />
-                            <span className="user-id">user id: <h3>@anipragss</h3></span>
-                            <hr className="col-hr" />
+                            <span className="brnd-name"><h1>PragyAni Gallery</h1></span>
+
+                            <span className="user-id"><h3>@anipragss</h3></span>
                         </div>
                     </div>
                 </div>
