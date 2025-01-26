@@ -1,4 +1,3 @@
-/**React dependencies */
 import React, { useState, useEffect } from 'react';
 import { LuLayoutGrid } from "react-icons/lu";
 import { FaRegBookmark } from "react-icons/fa";
@@ -13,6 +12,7 @@ import { RiArrowDropUpLine } from "react-icons/ri";
 import './userpage.css';
 import { BasicModal } from './BasicModal/modal';
 import ProfileColumn from './ProfileBlock/ProfileColumn';
+import ConfirmDeleteModal from './DeleteModal/Deletemodal';
 
 const ProfilePage = ({ data }) => {
     const [artData, setArtData] = useState(() => {
@@ -23,6 +23,8 @@ const ProfilePage = ({ data }) => {
     const [selectedItem, setSelectedItem] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
     const [dropdownIndex, setDropdownIndex] = useState(null);
+    const [confirmDeleteOpen, setConfirmDeleteOpen] = useState(false);
+    const [postToDelete, setPostToDelete] = useState(null);
 
     useEffect(() => {
         localStorage.setItem('artData', JSON.stringify(artData));
@@ -46,6 +48,22 @@ const ProfilePage = ({ data }) => {
 
     const DroprDownToggle = (index) => {
         setDropdownIndex(dropdownIndex === index ? null : index);
+    };
+
+    const handleDeleteClick = (item) => {
+        setPostToDelete(item);
+        setConfirmDeleteOpen(true);
+    };
+
+    const handleConfirmDelete = (item) => {
+        setArtData((prevData) => prevData.filter((post) => post !== item));
+        setConfirmDeleteOpen(false);
+        setPostToDelete(null);
+    };
+
+    const handleCancelDelete = () => {
+        setConfirmDeleteOpen(false);
+        setPostToDelete(null);
     };
 
     return (
@@ -97,10 +115,7 @@ const ProfilePage = ({ data }) => {
                                                             <span className="product-chnges-icon" onClick={() => handleEditClick(item)}>
                                                                 <BiSolidEditAlt className="edit-icon" />
                                                             </span>
-                                                            <span className="product-chnges-icon" onClick={() => {
-                                                                const newArray = artData.filter((_, idx) => idx !== index);
-                                                                setArtData(newArray);
-                                                            }}>
+                                                            <span className="product-chnges-icon" onClick={() => handleDeleteClick(item)}>
                                                                 <RiDeleteBin2Line className="delete-icon" />
                                                             </span>
                                                         </div>
@@ -108,7 +123,6 @@ const ProfilePage = ({ data }) => {
                                                 </div>
                                             </div>
                                         </div>
-
                                     ))}
                                 </div>
                             </div>
@@ -116,7 +130,9 @@ const ProfilePage = ({ data }) => {
                     </section>
                 </div>
             </div>
+
             <BasicModal open={modalOpen} handleClose={handleCloseModal} postToEdit={selectedItem} setArtData={setArtData} />
+            <ConfirmDeleteModal open={confirmDeleteOpen} onClose={handleCancelDelete} onConfirmDelete={handleConfirmDelete} postToDelete={postToDelete} />
         </>
     );
 };
