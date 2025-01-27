@@ -25,14 +25,14 @@
 
 .box-flex .input-container .input-box {
     width: 100%;
-    height: 37.5pc;
+    height: 32pc;
     box-shadow: rgba(30, 30, 30, 0.45) 0px 5px 25px;
     padding: 18px;
     display: flex;
 }
 
 .box-flex .input-container .input-box .post-content {
-    width: 53%;
+    width: 50%;
     height: 95%;
     margin-left: -15px;
     margin-right: 5px;
@@ -53,12 +53,12 @@
     font-size: larger;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: 10pc;
+    margin-left: 194px;
 }
 
 
 .box-flex .input-container .input-box .picture-tl form input {
-    margin-left: 11.6rem;
+    margin-left: 227px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -68,7 +68,7 @@
 
 .post-content .picture-tl .select {
     width: 47%;
-    margin-left: 135px;
+    margin-left: 167px;
     margin-top: 20px;
     margin-bottom: 10px;
     margin-right: 30px;
@@ -77,16 +77,18 @@
 
 .post-content .picture-tl .preview-image {
     border: 1px solid rgba(0, 0, 0, 0.133);
-    width: 98%;
-    border-radius: 22px;
+    width: 91%;
+    border-radius: 12px;
     position: relative;
     top: -285px;
-    left: 7px;
-    height: 35pc;
+    left: 20px;
+    height: 29pc;
+    margin-left: 12px;
+    margin-top: 8px;
 }
 
 .box-flex .input-container .input-box .post-Detailcontent {
-    width: 52%;
+    width: 49%;
     height: 95%;
     margin-left: 5px;
     margin-top: 10px;
@@ -116,12 +118,11 @@
 
 .close-image-icon {
     position: absolute;
-    left: 38pc;
+    left: 37pc;
     font-size: 32px;
-    top: 9.2pc;
+    top: 7.2pc;
     z-index: 2;
-    border: 1px solid black;
-    border-radius: 22px;
+    border-radius: 12px;
     padding: 5px;
 }
 
