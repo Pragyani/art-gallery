@@ -50,8 +50,7 @@
 .closed-icona:hover {
   color: #ffffff;
 }
-
-hr {
+.coment-line {
   border: none;
   border-top: 1px solid var(--border-color);
   margin: 0;
