@@ -95,11 +95,7 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
     }
 
     return (
-        <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description">
+        <Modal  open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
             <Box sx={style} className='box-flex'>
                 <h1>{postToEdit ? 'Edit Post' : 'Create New Post'}</h1>
                 <div className='input-container'>
@@ -121,22 +117,22 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
                         <div className='post-Detailcontent'>
                             <form onSubmit={handleSubmit} className="local-input">
                                 <div className="cl-local">
-                                    <div className="user-pic">
+                                    <div className="post-brief">
                                         <h4>
                                             <input type="text" placeholder="Your Name" value={inputName} onChange={handleChangeName} />
+                                            <hr />
                                         </h4>
-                                    </div>
-                                    <div className="post-brief">
                                         <div className="price-bref">
-                                            <h5 className="price-tg-txt">Add the price of drawing</h5>
                                             <input type="number" placeholder="Enter price..." value={inputPrice} onChange={handleChangePrice} />
-                                        </div>
-                                        <div className="stock-bar">
-                                            <h5> <BasicSelect value={stockStatus} onChange={handleStockChange} /></h5>
+                                            <hr />
                                         </div>
                                         <div className="brand-bar">
-                                            <h5>Brand Name</h5>
                                             <input type="text" placeholder="Enter your brand name..." value={inputBrand} onChange={handleChangeBrand} />
+                                            <hr />
+                                        </div>
+                                        <div className="stock-bar">
+                                            <input type='text' placeholder=' Add your Caption...' />
+                                            <hr />
                                         </div>
                                     </div>
                                 </div>
