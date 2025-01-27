@@ -56,7 +56,7 @@ const CommentBox = ({ postComment, onClose }) => {
                     <h2>Comments for {postComment?.brand || "Post"}</h2>
                     <span onClick={onClose} className="closed-icona"><IoClose /></span>
                 </div>
-                <hr />
+                <hr className="coment-line"/>
                 <div className="comments-list">
                     {reviews.map((review, index) => (
                         <div className="commet-col" key={index}>
