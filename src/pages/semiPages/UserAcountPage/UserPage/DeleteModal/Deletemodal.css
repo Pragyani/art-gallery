@@ -3,10 +3,35 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 600px;
+    height: auto;
     border: 'none';
     border-radius: 12px;
     background-color: aliceblue;
     box-shadow: 0 8px 26px rgba(0, 0, 0, 0.6);
-    padding: 3px
+    padding: 14px;
+
+    h2{
+        font-size: xx-large;
+        margin: 10px ;
+    }
+
+    h3{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0px 8px 4px 10px ;
+        font-weight: 370;
+    }
+
+    .confirm-btn{
+        width: 100%;
+        margin: 22px 0px 4px 0px;
+        text-align: end;
+
+        button{
+         margin: 4px;
+        }:hover{
+            font-weight: bold;
+        }
+
+    }
 }

@@ -7,9 +7,10 @@ import './Deletemodal.css';
 const ConfirmDeleteModal = ({ open, onClose, onConfirmDelete, postToDelete }) => (
     <Modal open={open} onClose={onClose}>
         <Box className='delete-box'>
-            <h2>Are you sure you want to delete this post?</h2>
-            <p>{postToDelete?.name}</p>
-            <div>
+            <h2>Alert !</h2>
+            <h3>The {postToDelete?.name} Post will permanently Delete after your Confirmation click.</h3>
+
+            <div className="confirm-btn">
                 <Button onClick={onClose}>Cancel</Button>
                 <Button onClick={() => onConfirmDelete(postToDelete)}>Yes, Delete</Button>
             </div>
