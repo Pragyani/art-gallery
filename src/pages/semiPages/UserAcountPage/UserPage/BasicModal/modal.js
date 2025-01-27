@@ -115,6 +115,7 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
                         </div>
                         <hr />
                         <div className='post-Detailcontent'>
+                            <h3>Add Post Info.</h3>
                             <form onSubmit={handleSubmit} className="local-input">
                                 <div className="cl-local">
                                     <div className="post-brief">
