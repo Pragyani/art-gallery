@@ -131,10 +131,6 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
                                             <input type="text" placeholder="Enter your brand name..." value={inputBrand} onChange={handleChangeBrand} />
                                             <hr />
                                         </div>
-                                        <div className="stock-bar">
-                                            <input type='text' placeholder=' Add your Caption...' />
-                                            <hr />
-                                        </div>
                                     </div>
                                 </div>
                                 <Button onClick={() => modalClose()} className='sbmit-btnpost'>Cancle</Button>
