@@ -7,19 +7,6 @@ import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
 import BasicSelect from '../BasicSelect/BasicSelect';
 import { RxCross1 } from "react-icons/rx";
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 1340,
-    bgcolor: '#f5f5f5',
-    border: 'none',
-    borderRadius: '12px',
-    boxShadow: '0 8px 26px rgba(0, 0, 0, 0.6)',
-    p: 4,
-};
-
 export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
     const [inputName, setInputName] = useState('');
     const [inputPrice, setInputPrice] = useState('');
@@ -96,7 +83,7 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
 
     return (
         <Modal  open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
-            <Box sx={style} className='box-flex'>
+            <Box className='box-flex'>
                 <h1>{postToEdit ? 'Edit Post' : 'Create New Post'}</h1>
                 <div className='input-container'>
                     <div className='input-box'>
