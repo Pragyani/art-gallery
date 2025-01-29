@@ -147,9 +147,9 @@
 .input-box h3 {
     width: 100%;
     margin-top: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 29px;
-    font-weight: 350;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: 545;
     text-transform: capitalize;
     text-align: center;
 }
@@ -279,13 +279,13 @@
     border: none;
     padding: 9px;
     border-radius: 6px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    margin-bottom: 8px;
     width: 32pc;
     background-color: transparent;
     letter-spacing: 1px;
     outline: none;
-    font-family: "Playwrite_IN variant0", Tofu;
-    font-size: 16.4px;
+    font-size: 19.4px;
     color: black;
 }
 
@@ -374,12 +374,13 @@
     padding: 7px;
     border-radius: 6px;
     margin-left: 10px;
+    margin-bottom: 8px;
     width: 95%;
     background-color: transparent;
     letter-spacing: 1px;
     outline: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15.7px;
+    font-size: 19.4px;
 }
 
 .post-brief input :hover {
@@ -473,7 +474,7 @@
 }
 
 .re-contaier .product-fl .products-w {
-    width: 100%;
+    width: 98.4%;
     height: auto;
     border: 1px solid var(--border-color);
     border-radius: 12px;
@@ -530,7 +531,7 @@
 .products-icon {
     margin-top: 0px;
     display: flex;
-    margin-left: 72%;
+    /* margin-left: 87%; */
     margin-right: 5px;
 }
 
@@ -553,7 +554,7 @@
 
 .edit-icon:hover {
     color: rgb(0, 187, 255);
-    font-size: 26px;
+    /* font-size: 26px; */
 }
 
 .product-chnges-icon .delete-icon {
@@ -563,7 +564,7 @@
 
 .delete-icon:hover {
     color: rgb(255, 80, 22);
-    font-size: 27px;
+    /* font-size: 27px; */
 }
 
 .dots-icon:hover {
@@ -622,5 +623,5 @@
     cursor: pointer;
     text-align: end;
     position: relative;
-    left: 360px;
+    left: 350px;
 }
