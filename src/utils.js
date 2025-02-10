@@ -6,7 +6,6 @@ const DesignDummyData = [
         description: 'Latest Design ',
         price: 699,
         rating: 4,
-        stockStatus: 'In Stock',
         brand: 'artGallery',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
@@ -20,7 +19,6 @@ const DesignDummyData = [
         description: 'Latest Design ',
         price: 599,
         rating: 4,
-        stockStatus: 'In Stock',
         brand: 'PragyAni',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
@@ -34,7 +32,6 @@ const DesignDummyData = [
         description: 'Latest Desgin',
         price: 589,
         rating: 4,
-        stockStatus: 'In Stock',
         brand: 'Pragya',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
@@ -48,7 +45,6 @@ const DesignDummyData = [
         description: 'Latest Design',
         price: 550,
         rating: 4,
-        stockStatus: 'In Stock',
         brand: 'shinoyee_pragya',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
@@ -62,7 +58,6 @@ const DesignDummyData = [
         description: 'Latest Design',
         price: 650,
         rating: 4,
-        stockStatus: 'In Stock',
         brand: 'PragyAni',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
@@ -76,7 +71,6 @@ const DesignDummyData = [
         description: 'Latest Design',
         price: 600,
         rating: 3,
-        stockStatus: 'In Stock',
         brand: 'PragyAni',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
@@ -90,7 +84,6 @@ const DesignDummyData = [
         description: 'Latest Design',
         price: 580,
         rating: 5,
-        stockStatus: 'In Stock',
         brand: 'Pragya Pandey',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
@@ -104,7 +97,6 @@ const DesignDummyData = [
         description: 'Latest Design',
         price: 350,
         rating: 3,
-        stockStatus: 'In Stock',
         brand: 'PragyAni',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
@@ -118,7 +110,6 @@ const DesignDummyData = [
         description: 'Latest Design',
         price: 680,
         rating: 5,
-        stockStatus: 'In Stock',
         brand: 'aniPragya',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
@@ -132,7 +123,6 @@ const DesignDummyData = [
         description: 'Latest Design',
         price: 570,
         rating: 4,
-        stockStatus: 'In Stock',
         brand: 'shinoyee_pragya',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
@@ -146,7 +136,6 @@ const DesignDummyData = [
         description: 'Latest Design',
         price: 580,
         rating: 5,
-        stockStatus: 'In Stock',
         brand: 'PragyAni',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
@@ -160,7 +149,6 @@ const DesignDummyData = [
         description: 'Latest Design',
         price: 500,
         rating: 4,
-        stockStatus: 'In Stock',
         brand: 'PragyAni',
         reviews: [
             { user: "Alice", comment: "Great art, love the quality!", rating: 5 },
