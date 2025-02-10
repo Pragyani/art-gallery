@@ -101,7 +101,7 @@ const ProfilePage = ({ data }) => {
                                                         </div>
                                                     </div>
                                                     <p className="description">
-                                                        A unique collection of hand-drawn doodles perfect for creative projects and designs.
+                                                        {item?.caption ? item.caption : 'A unique collection of hand-drawn doodles perfect for creative projects and designs.'}
                                                     </p>
                                                     <div className="dropdown-e-d">
                                                         {dropdownIndex === index ? (
