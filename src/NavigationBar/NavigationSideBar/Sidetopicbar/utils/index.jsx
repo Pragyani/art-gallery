@@ -63,30 +63,39 @@ export const menuItems = (activeItem = '') => [
 export const dropdownSections = [
     {
         id: "artTypes", label: "Types", options: [
-            { id: "Mandala", label: "Mandala", img: SideBarImage1 },
-            { id: "Sketeches", label: "Sketeches", img: SideBarImage2 },
-            { id: "Quilling", label: "Quilling", img: SideBarImage3 },
-            { id: "Painting", label: "Painting", img: SideBarImage4 },
+            { id: "Doodle Art", label: "Doodle Art", img: SideBarImage1 },
+            { id: "Sketech", label: "Sketech", img: SideBarImage2 },
+            { id: "Mandala Art", label: "Mandala Art", img: SideBarImage3 },
         ]
     },
     {
         id: "artist", label: "Artist", options: [
-            { id: "Pragya", label: "Pragya", img: SideBarImage1 },
-            { id: "Pragyani", label: "Pragyani", img: SideBarImage2 },
-            { id: "Anirudh", label: "Anirudh", img: SideBarImage3 },
+            { id: "artGallery", label: "artGallery", img: SideBarImage1 },
+            { id: "PragyAni", label: "PragyAni", img: SideBarImage2 },
+            { id: "aniPragya", label: "aniPragya", img: SideBarImage3 },
+            { id: "Pragya", label: "Pragya", img: SideBarImage3 },
+            { id: "shinoyee_pragya", label: "shinoyee_pragya", img: SideBarImage3 },
+            { id: "Pragya Pandey", label: "Pragya Pandey", img: SideBarImage3 },
         ]
     },
     {
         id: "material",
         label: "Material",
         options: [
-            { id: "oilPaint", label: "Oil Paint", img: SideBarImage1 },
-            { id: "watercolor", label: "Watercolor", img: SideBarImage1 },
-            { id: "acrylicPaint", label: "Acrylic Paint", img: SideBarImage1 },
-            { id: "sculpture", label: "Sculpture", img: SideBarImage1 },
-            { id: "photography", label: "Photography", img: SideBarImage1 },
-            { id: "printmaking", label: "Printmaking", img: SideBarImage1 },
-            { id: "mixedMedia", label: "Mixed Media", img: SideBarImage1 }
+            { id: "Mandala Art", label: "Mandala Art", img: SideBarImage3 },
+            { id: "Doodle Art", label: "Doodle Art", img: SideBarImage1 },
+            { id: "Sketech", label: "Sketech", img: SideBarImage2 },
+            { id: "Mandala Art", label: "Mandala Art", img: SideBarImage3 },
+        ]
+    },
+    {
+        id: "priceRange",
+        label: "Price Range (INR)",
+        options: [
+            { id: "under500", label: "Under ₹500", img: SideBarImage1 },
+            { id: "500to2000", label: "₹500 - ₹2,000", img: SideBarImage1 },
+            { id: "2000to5000", label: "₹2,000 - ₹5,000", img: SideBarImage1 },
+            { id: "over5000", label: "Over ₹5,000", img: SideBarImage1 }
         ]
     },
     {
@@ -98,16 +107,6 @@ export const dropdownSections = [
             { id: "21stCentury", label: "21st Century", img: SideBarImage1 },
             { id: "medievalArt", label: "Medieval Art", img: SideBarImage1 },
             { id: "ancientArt", label: "Ancient Art", img: SideBarImage1 }
-        ]
-    },
-    {
-        id: "priceRange",
-        label: "Price Range (INR)",
-        options: [
-            { id: "under500", label: "Under ₹40,000", img: SideBarImage1 },
-            { id: "500to2000", label: "₹40,000 - ₹1,60,000", img: SideBarImage1 },
-            { id: "2000to5000", label: "₹1,60,000 - ₹4,00,000", img: SideBarImage1 },
-            { id: "over5000", label: "Over ₹4,00,000", img: SideBarImage1 }
         ]
     },
     {
@@ -125,10 +124,7 @@ export const dropdownSections = [
         label: "Artist Nationality",
         options: [
             { id: "indian", label: "Indian", img: SideBarImage1 },
-            { id: "american", label: "American", img: SideBarImage1 },
-            { id: "european", label: "European", img: SideBarImage1 },
-            { id: "asian", label: "Asian", img: SideBarImage1 },
-            { id: "african", label: "African", img: SideBarImage1 }
+
         ]
     }
 ];
