@@ -1,11 +1,13 @@
+/**Internal Dependencies */
+import React, { useState, useEffect } from 'react';
+import './modal.css';
+import { RxCross1 } from "react-icons/rx";
+
+/**External Depenedencies */
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-import React, { useState, useEffect } from 'react';
 import { Button } from "@mui/material";
-import './modal.css';
 import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
-import BasicSelect from '../BasicSelect/BasicSelect';
-import { RxCross1 } from "react-icons/rx";
 
 export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
     const [inputName, setInputName] = useState('');
@@ -13,7 +15,7 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
     const [inputBrand, setInputBrand] = useState('');
     const [inputImage, setInputImage] = useState(null);
     const [inputImageUrl, setInputImageUrl] = useState('');
-    const [stockStatus, setStockStatus] = useState('In Stock');
+    const [inputCaption, setInputCaption] = useState('');
 
     useEffect(() => {
         if (postToEdit) {
@@ -21,13 +23,15 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
             setInputPrice(postToEdit.price || '');
             setInputBrand(postToEdit.brand || '');
             setInputImageUrl(postToEdit.image || '');
-            setStockStatus(postToEdit.stockStatus || 'In Stock');
+            setInputCaption(postToEdit.caption || '');
+
         } else {
             setInputName('');
             setInputPrice('');
             setInputBrand('');
             setInputImageUrl('');
-            setStockStatus('In Stock');
+            setInputCaption('');
+
 
         }
     }, [postToEdit]);
@@ -35,6 +39,7 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
     const handleChangeName = (e) => setInputName(e.target.value);
     const handleChangePrice = (e) => setInputPrice(e.target.value);
     const handleChangeBrand = (e) => setInputBrand(e.target.value);
+    const handleChangeCaption = (e) => setInputCaption(e.target.value);
     const handleChangeImage = (e) => {
         const file = e.target.files[0];
         if (file) {
@@ -42,7 +47,6 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
             setInputImageUrl(URL.createObjectURL(file));
         }
     };
-    const handleStockChange = (value) => { setStockStatus(value); };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -50,14 +54,14 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
             name: inputName,
             price: inputPrice,
             brand: inputBrand,
-            stockStatus: stockStatus,
             image: inputImageUrl,
+            caption: inputCaption,
         };
 
         if (postToEdit) {
             setArtData(prevData =>
                 prevData.map(post =>
-                    post === postToEdit ? newPost : post
+                    post === postToEdit ? { ...post, ...newPost } : post
                 )
             );
         } else {
@@ -68,7 +72,6 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
         setInputBrand('');
         setInputImage(null);
         setInputImageUrl('');
-        setStockStatus('In Stock');
 
         handleClose();
     };
@@ -82,7 +85,7 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
     }
 
     return (
-        <Modal  open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+        <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
             <Box className='box-flex'>
                 <h1>{postToEdit ? 'Edit Post' : 'Create New Post'}</h1>
                 <div className='input-container'>
@@ -100,23 +103,25 @@ export function BasicModal({ open, handleClose, postToEdit, setArtData }) {
                                 </form>
                             </div>
                         </div>
-                        <hr />
+                        <hr className='modal-line' />
                         <div className='post-Detailcontent'>
                             <h3>Add Post Info.</h3>
                             <form onSubmit={handleSubmit} className="local-input">
                                 <div className="cl-local">
                                     <div className="post-brief">
-                                        <h4>
-                                            <input type="text" placeholder="Your Name" value={inputName} onChange={handleChangeName} />
-                                            <hr />
-                                        </h4>
-                                        <div className="price-bref">
-                                            <input type="number" placeholder="Enter price..." value={inputPrice} onChange={handleChangePrice} />
-                                            <hr />
+                                        <div className='brand-bar'>
+                                            <input type="text" placeholder=" Give your artwork a name " value={inputName} onChange={handleChangeName} />
                                         </div>
                                         <div className="brand-bar">
-                                            <input type="text" placeholder="Enter your brand name..." value={inputBrand} onChange={handleChangeBrand} />
-                                            <hr />
+                                            <input type="number" placeholder="Set the price for your art" value={inputPrice} onChange={handleChangePrice} />                                        </div>
+
+                                        <div className="brand-bar">
+                                            <input type="text" placeholder="By Who’s the brand? " value={inputBrand} onChange={handleChangeBrand} />
+                                        </div>
+
+                                        <div className="brand-bar">
+                                            <input
+                                                type="text" placeholder="Write a short caption" value={inputCaption} onChange={handleChangeCaption} />
                                         </div>
                                     </div>
                                 </div>
