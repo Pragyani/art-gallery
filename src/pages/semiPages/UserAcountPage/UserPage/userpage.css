@@ -239,7 +239,6 @@
     border-radius: 12px;
     height: auto;
     padding: 5px;
-    margin-top: 20px;
 }
 
 
@@ -277,7 +276,7 @@
 
 .post-brief h4 input {
     border: none;
-    padding: 9px;
+    padding: 6px;
     border-radius: 6px;
     /* margin-left: 20px; */
     margin-bottom: 8px;
@@ -286,7 +285,9 @@
     letter-spacing: 1px;
     outline: none;
     font-size: 19.4px;
+    font-weight: lighter;
     color: black;
+    font-family: cursive;
 }
 
 
@@ -349,44 +350,41 @@
     text-transform: capitalize;
     color: rgba(0, 0, 0, 0.622);
 }
-
-.brand-bar input {
-    border: none;
-    padding: 7px;
-    border-radius: 6px;
-    margin-left: 10px;
-    width: 95%;
-    background-color: transparent;
-    letter-spacing: 1px;
-    outline: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15.7px;
-}
-
 .brand-bar input :hover {
     border: none;
     background-color: rgba(0, 0, 0, 0.086);
 }
-
 
 .post-brief input {
     border: none;
     padding: 7px;
     border-radius: 6px;
     margin-left: 10px;
-    margin-bottom: 8px;
+    margin: 6px;
     width: 95%;
     background-color: transparent;
     letter-spacing: 1px;
     outline: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 19.4px;
+    font-size: 16px;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-weight: 360;
 }
 
 .post-brief input :hover {
     border: none;
     background-color: rgba(0, 0, 0, 0.086);
 }
+
+.post-brief input::placeholder{
+    color: rgba(0, 0, 0, 0.601);
+    transition: opacity 0.3s ease;
+}
+
+.post-brief input:hover::placeholder {
+    opacity: .2; /* Makes placeholder fade out */
+}
+
 
 .post-brief .stock-bar {
     width: 100%;
@@ -416,19 +414,17 @@
     box-shadow: rgba(0, 0, 0, 0.015) 1.95px 1.95px 2.6px;
 }
 
-.stock-bar h5:hover {
-    background-color: rgba(0, 0, 0, 0.011);
-    box-shadow: rgba(0, 0, 0, 0.063) 1.95px 1.95px 2.6px 1.95px;
-    border: 1.5px solid rgba(0, 0, 0, 0.703);
+.brand-bar{
+    width: 100%;
+    box-shadow: rgba(36, 36, 36, 0.063) 1.95px 1.95px 2.6px 2px;
+    border-radius: 11px;
+    margin-top: 22px;
+    padding: 5px;
+    /* border: 1px solid rgba(0, 0, 0, 0.208); */
 }
 
-.brand-bar {
-    width: 100%;
-    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px 2px; */
-    border-radius: 12px;
-    margin-top: 22px;
-    /* border: 1px solid rgba(0, 0, 0, 0.208); */
-
+.brand-bar:hover{
+    box-shadow: rgba(0, 0, 0, 0.255) 1.95px 1.95px 2.6px 2px;
 }
 
 .brand-bar:hover hr {
@@ -474,7 +470,7 @@
 }
 
 .re-contaier .product-fl .products-w {
-    width: 98.4%;
+    width: 91%;
     height: auto;
     border: 1px solid var(--border-color);
     border-radius: 12px;
@@ -623,5 +619,5 @@
     cursor: pointer;
     text-align: end;
     position: relative;
-    left: 350px;
+    left: 320px;
 }
