@@ -24,8 +24,8 @@
 }
 
 .colun-flexbox img {
-    width: 279px;
-    height: 255px;
+    width: 156px;
+    height: 140px;
     position: relative;
     border-radius: 60%;
     /* top: 10px; */
@@ -36,10 +36,9 @@
 
 
 .column-box .column-mt-1 .colun-flexbox .user-data {
-    margin-left: 169px;
-    padding: 15px;
-    /* border: 1px solid black;
-    border-radius: 22px; */
+    margin-left: 113px;
+    padding: 15px 0px 10px 0px;
+
     width: 30%;
 }
 
@@ -52,12 +51,12 @@
     position: relative;
     bottom: 6px;
     padding-left: 10px;
-    padding-top: 18px;
+    /* padding-top: 18px; */
     margin-bottom: 15px;
     font-weight: 480;
     cursor: pointer;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: xx-large;
+    font-size: 22px;
     transition: all 0.3s ease-in-out;
     color: var(--color);
 }
@@ -74,19 +73,17 @@
     font-weight: 480;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    padding-top: 10px;
     letter-spacing: 1px;
     padding-bottom: 12px;
-    color: var(--color);
+    color: var(--description-color);
     padding-left: 12px;
     margin-bottom: 15px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: x-large;
+    font-size: large;
 }
 
 .colun-flexbox .user-data .user-id h3:hover {
     color: var(--color);
-    transform: scale(1.1);
 }
 
 .colun-flexbox .user-data .totalpost {
