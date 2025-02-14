@@ -103,3 +103,10 @@ h1 {
     position: relative;
     /* right: 12pc; */
 }
+
+.saved-cl-page {
+    color: var(--color);
+    margin: 72px 0;
+    font-size: 26px;
+    line-height: 1.5;
+}
