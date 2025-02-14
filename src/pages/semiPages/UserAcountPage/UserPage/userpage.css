@@ -455,17 +455,17 @@
 
 .re-contaier {
     width: 100%;
-    margin: 10px 20px 10px 26px;
+    margin: 0px 20px 10px 26px;
     display: flex;
     /* gap: 4px; */
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
 
 
 .re-contaier .product-fl {
-    margin: 25px;
+    margin-bottom: 35px;
     width: 29%;
 }
 
@@ -572,7 +572,7 @@
 }
 
 .cl-as-post {
-    margin-left: 550px;
+    margin-left: 300px;
     /* position: relative;
     bottom: 70px; */
 }
@@ -595,7 +595,7 @@
     color: var(--color);
     border: 1px solid rgba(66, 65, 65, 0.911);
     position: relative;
-    bottom: 45px;
+    bottom: 70px;
 }
 
 .add-new-post-btn a {
