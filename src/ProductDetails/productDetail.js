@@ -100,6 +100,7 @@ const ProductDetail = ({ Products }) => {
                                         <div className="user-plug">
                                             <MdPersonPin className="user-i-post" />
                                             <div>Your Post : <b><span>{item?.brand}</span></b></div>
+                                            <div className="post-time">{item?.postedTime}</div>
                                         </div>
                                         <div className="product-box">
                                             <div className="product-img">
