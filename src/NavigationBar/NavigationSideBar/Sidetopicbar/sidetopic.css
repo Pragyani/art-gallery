@@ -17,7 +17,7 @@
 }
 
 .dropdown-section .dropdown-content img {
-   width: 24px;
+    width: 24px;
     height: 24px;
     border-radius: 32px;
 }
@@ -29,4 +29,21 @@
     font-size: 12px;
     bottom: 12px;
     margin-left: 19px;
+}
+
+
+.clear-btn {
+    padding: 6.5px;
+    border: none;
+    background: none;
+    color: var(--description-color);
+
+}
+
+.clear-btn:hover {
+    color: var(--color);
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    border-radius: 13px;
+    background-color: rgba(0, 170, 255, 0.773);
 }
