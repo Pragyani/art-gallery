@@ -6,30 +6,20 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from './theme-context/theme-context';
 import MainContent from './MainContent';
 import './App.css';
-import DesignDummyData from './utils';
 import NavBAr from './NavigationBar/navBar';
+import { useSelector } from 'react-redux';
 
 
 function App() {
-  const [productData, setProductData] = useState([]);
 
-  useEffect(() => {
-    getProductData();
-  }, []);
-
-  const getProductData = async () => {
-    try {
-      setProductData(DesignDummyData);
-    } catch (error) {
-      console.log('this data is not working', error);
-    }
-  };
+  const productData = useSelector(state => state.productDetailsSlice.productList);
+  console.log('app data', productData);
 
   return (
     <ThemeProvider>
       <BrowserRouter>
         <NavBAr />
-        <MainContent productData={productData} /> {/* Pass productData to MainContent */}
+        <MainContent productData={productData} />
       </BrowserRouter>
     </ThemeProvider>
   );
