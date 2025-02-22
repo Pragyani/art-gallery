@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import DesignDummyData from "../utils";
 
 // Saved Posts Slice
 export const SavedPostSlice = createSlice({
@@ -34,7 +35,7 @@ export const cartProductsSlice = createSlice({
         toggleCartProduct: (state, action) => {
             const existingProduct = state.find(product => product.id === action.payload.id);
             if (existingProduct) {
-                return state.filter(product => product.id !== action.payload.id); 
+                return state.filter(product => product.id !== action.payload.id);
             } else {
                 state.push(action.payload);
             }
@@ -76,10 +77,42 @@ export const inputSliceIndex = createSlice({
 
 export const { setInput } = inputSliceIndex.actions;
 
+//getting DEesignDummyData from the store nd also filter functionlity
+export const productDetailsSlice = createSlice({
+    name: 'products',
+    initialState: {
+        productList: DesignDummyData,
+    },
+    reducers: {
+        setProducts: (state, action) => {
+            state.productList = action.payload;
+        },
+        clearProducts: (state) => {
+            state.productList = DesignDummyData;
+        },
+        setFilter: (state, action) => {
+            const filter = action.payload;
+
+            const filteredProducts = DesignDummyData.filter((product) => {
+                return (
+                    product.name.toLowerCase().includes(filter.toLowerCase()) ||
+                    product.brand.toLowerCase().includes(filter.toLowerCase()) ||
+                    product.postedTime.toLowerCase().includes(filter.toLowerCase())
+                );
+            });
+
+            state.productList = filteredProducts;
+        }
+
+    }
+});
+export const { setProducts, clearProducts, setFilter } = productDetailsSlice.actions;
+
 // Export reducers
 export default {
     savedPostsReducer: SavedPostSlice.reducer,
     cartProductsReducer: cartProductsSlice.reducer,
     popularPostReducer: popularPostSlice.reducer,
-    inputSliceIndexReducer: inputSliceIndex.reducer
+    inputSliceIndexReducer: inputSliceIndex.reducer,
+    productSliceReducer: productDetailsSlice.reducer,
 };
