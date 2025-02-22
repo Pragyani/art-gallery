@@ -79,6 +79,19 @@ export const dropdownSections = [
         ]
     },
     {
+        id: "timePeriod",
+        label: "Time Period",
+        options: [
+            { id: "LatestDesign", label: "Latest Design", img: SideBarImage1 },
+            { id: "1DayAgo", label: "1 Day ago", img: SideBarImage1 },
+            { id: "3DayAgo", label: "3 Day ago", img: SideBarImage1 },
+            { id: "1weeksago", label: "1 Weeks Ago", img: SideBarImage1 },
+            { id: "3weeksago", label: "3 Weeks Ago", img: SideBarImage1 },
+            { id: "1months", label: "1 months Ago", img: SideBarImage1 },
+            { id: "3months", label: "3 months Ago", img: SideBarImage1 },
+        ]
+    },
+    {
         id: "material",
         label: "Material",
         options: [
@@ -88,43 +101,4 @@ export const dropdownSections = [
             { id: "Mandala Art", label: "Mandala Art", img: SideBarImage3 },
         ]
     },
-    {
-        id: "priceRange",
-        label: "Price Range (INR)",
-        options: [
-            { id: "under500", label: "Under ₹500", img: SideBarImage1 },
-            { id: "500to2000", label: "₹500 - ₹2,000", img: SideBarImage1 },
-            { id: "2000to5000", label: "₹2,000 - ₹5,000", img: SideBarImage1 },
-            { id: "over5000", label: "Over ₹5,000", img: SideBarImage1 }
-        ]
-    },
-    {
-        id: "timePeriod",
-        label: "Time Period",
-        options: [
-            { id: "19thCentury", label: "19th Century", img: SideBarImage1 },
-            { id: "20thCentury", label: "20th Century", img: SideBarImage1 },
-            { id: "21stCentury", label: "21st Century", img: SideBarImage1 },
-            { id: "medievalArt", label: "Medieval Art", img: SideBarImage1 },
-            { id: "ancientArt", label: "Ancient Art", img: SideBarImage1 }
-        ]
-    },
-    {
-        id: "sizeDimensions",
-        label: "Size",
-        options: [
-            { id: "small", label: "Small", img: SideBarImage1 },
-            { id: "medium", label: "Medium", img: SideBarImage1 },
-            { id: "large", label: "Large", img: SideBarImage1 },
-            { id: "customSize", label: "Custom Size", img: SideBarImage1 }
-        ]
-    },
-    {
-        id: "artistNationality",
-        label: "Artist Nationality",
-        options: [
-            { id: "indian", label: "Indian", img: SideBarImage1 },
-
-        ]
-    }
 ];
