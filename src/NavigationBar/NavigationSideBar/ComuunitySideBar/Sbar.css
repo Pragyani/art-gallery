@@ -6,7 +6,7 @@
     color: var(--color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: fit-content;
-    width: 80%;
+    width: 82%;
     position: sticky;
     top: 100px;
 }
