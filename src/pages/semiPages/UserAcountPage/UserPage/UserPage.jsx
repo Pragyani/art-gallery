@@ -2,18 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { FaPlus } from "react-icons/fa";
 import { FaRegBookmark } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { BiSolidEditAlt } from "react-icons/bi";
-import { RiDeleteBin2Line } from "react-icons/ri";
-import { SlOptionsVertical } from "react-icons/sl";
-
 
 /**Internal Dependencies */
 import './userpage.css';
 import { BasicModal } from './BasicModal/modal';
 import ProfileColumn from './ProfileBlock/ProfileColumn';
 import ConfirmDeleteModal from './DeleteModal/Deletemodal';
+import LongMenu from './optionMenu';
 
 const ProfilePage = ({ data }) => {
+
     const [artData, setArtData] = useState(() => {
         const savedData = localStorage.getItem('artData');
         return savedData ? JSON.parse(savedData) : data;
@@ -21,7 +19,6 @@ const ProfilePage = ({ data }) => {
 
     const [selectedItem, setSelectedItem] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
-    const [dropdownIndex, setDropdownIndex] = useState(null);
     const [confirmDeleteOpen, setConfirmDeleteOpen] = useState(false);
     const [postToDelete, setPostToDelete] = useState(null);
 
@@ -32,7 +29,6 @@ const ProfilePage = ({ data }) => {
     const handleEditClick = (item) => {
         setSelectedItem(item);
         setModalOpen(true);
-        setDropdownIndex(null);
     };
 
     const handleAddNewClick = () => {
@@ -43,10 +39,6 @@ const ProfilePage = ({ data }) => {
     const handleCloseModal = () => {
         setModalOpen(false);
         setSelectedItem(null);
-    };
-
-    const DroprDownToggle = (index) => {
-        setDropdownIndex(dropdownIndex === index ? null : index);
     };
 
     const handleDeleteClick = (item) => {
@@ -91,8 +83,12 @@ const ProfilePage = ({ data }) => {
                                                     <div className="price-section">
                                                         <span className="current-price">{item?.name}</span>
                                                         <span className="current-price">₹{item?.price}</span>
+
                                                         <span className="original-price">₹999</span>
                                                         <span className="discount">30% OFF</span>
+                                                        <div className="dropdown-e-d">
+                                                        <LongMenu item={item} onEdit={handleEditClick}  onDelete={handleDeleteClick} className='menu-option'/>
+                                                    </div>
                                                     </div>
                                                     <div className="display-flex">
                                                         <div className="designer-info">
@@ -102,19 +98,6 @@ const ProfilePage = ({ data }) => {
                                                     <p className="description">
                                                         {item?.caption ? item.caption : 'A unique collection of hand-drawn doodles perfect for creative projects and designs.'}
                                                     </p>
-                                                    <div className="dropdown-e-d">
-                                                        <SlOptionsVertical onClick={() => DroprDownToggle(index)} className='menu-option' />
-                                                    </div>
-                                                    {dropdownIndex === index && (
-                                                        <div className="products-icon">
-                                                            <span className="product-chnges-icon" onClick={() => handleEditClick(item)}>
-                                                                <BiSolidEditAlt className="edit-icon" />
-                                                            </span>
-                                                            <span className="product-chnges-icon" onClick={() => handleDeleteClick(item)}>
-                                                                <RiDeleteBin2Line className="delete-icon" />
-                                                            </span>
-                                                        </div>
-                                                    )}
                                                 </div>
                                             </div>
                                         </div>
