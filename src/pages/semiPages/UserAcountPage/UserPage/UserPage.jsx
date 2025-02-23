@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { FaPlus } from "react-icons/fa";
 import { FaRegBookmark } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { MdOutlineCurrencyRupee } from "react-icons/md";
-import { RiArrowDropDownLine } from "react-icons/ri";
 import { BiSolidEditAlt } from "react-icons/bi";
 import { RiDeleteBin2Line } from "react-icons/ri";
-import { RiArrowDropUpLine } from "react-icons/ri";
+import { SlOptionsVertical } from "react-icons/sl";
+
 
 /**Internal Dependencies */
 import './userpage.css';
@@ -104,11 +103,7 @@ const ProfilePage = ({ data }) => {
                                                         {item?.caption ? item.caption : 'A unique collection of hand-drawn doodles perfect for creative projects and designs.'}
                                                     </p>
                                                     <div className="dropdown-e-d">
-                                                        {dropdownIndex === index ? (
-                                                            <RiArrowDropUpLine onClick={() => DroprDownToggle(index)} />
-                                                        ) : (
-                                                            <RiArrowDropDownLine onClick={() => DroprDownToggle(index)} />
-                                                        )}
+                                                        <SlOptionsVertical onClick={() => DroprDownToggle(index)} className='menu-option' />
                                                     </div>
                                                     {dropdownIndex === index && (
                                                         <div className="products-icon">
