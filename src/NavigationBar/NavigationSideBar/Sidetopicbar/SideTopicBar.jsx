@@ -1,8 +1,9 @@
-/**
- * react dependencies
- */
+/*** react dependencies*/
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { RiFilterLine } from "react-icons/ri";
+import { RiFilterFill } from "react-icons/ri";
+
 
 /**internal dependencies */
 import { clearProducts, setFilter } from "../../../reducers/indx";
@@ -10,6 +11,8 @@ import { dropdownSections } from "./utils";
 import './sidetopic.css';
 
 const SideTopicBar = () => {
+    const [showClearFilter, setShowClearFilter] = useState(false);
+    const [filterActiveIcon, setFilterActiveIcon] = useState(false);
 
     const dispatch = useDispatch();
     const [expandedSections, setExpandedSections] = useState({
@@ -28,16 +31,24 @@ const SideTopicBar = () => {
     };
 
     const handleFilterSelect = (filterValue) => {
-        dispatch(setFilter(filterValue))
-        console.log('filter dispatched', setFilter(filterValue))
+        dispatch(setFilter(filterValue));
+        setShowClearFilter(true);
+        setFilterActiveIcon(true);
+        console.log('filter dispatched', setFilter(filterValue));
     };
-    
-    const handleclear = () => {dispatch(clearProducts())}
+
+    const handleclear = () => {
+        dispatch(clearProducts());
+        setShowClearFilter(false);
+        setFilterActiveIcon(false);
+    }
 
     return (
         <div className="dropdown-section">
-            <button onClick={handleclear} className="clear-btn">Clear Filter</button>
-
+            <div className="statics-btn">
+                <button className="add-filter">{filterActiveIcon ? <RiFilterFill className="filter-i" /> : <RiFilterLine className="filter-i" />}Filter</button>
+                {showClearFilter && <button onClick={handleclear} className="clear-btn">Clear Filter</button>}
+            </div>
             {dropdownSections.map(({ id = "", label = "", options = [] }) => (
                 <div key={id} className="mt-8">
                     <div
