@@ -87,13 +87,13 @@
 
 .post-content .picture-tl .preview-image {
     border: 1px solid rgba(0, 0, 0, 0.133);
-    width: 91%;
+    width: 99%;
     border-radius: 12px;
     position: relative;
-    top: -285px;
-    left: 20px;
-    height: 29pc;
-    margin-left: 12px;
+    top: -299px;
+    left: 8px;
+    height: 30pc;
+    /* margin-left: 12px; */
     margin-top: 8px;
 }
 

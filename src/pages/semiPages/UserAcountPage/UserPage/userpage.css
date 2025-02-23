@@ -457,7 +457,7 @@
     width: 100%;
     margin: 0px 20px 10px 26px;
     display: flex;
-    /* gap: 4px; */
+    gap: 41px;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
@@ -527,7 +527,6 @@
 .products-icon {
     margin-top: 0px;
     display: flex;
-    /* margin-left: 87%; */
     margin-right: 5px;
 }
 
@@ -535,12 +534,6 @@
     margin-right: 10px;
     color: var(--color);
     cursor: pointer;
-    /* font-size: large; */
-}
-
-.product-chnges-icon .dots-icon {
-    font-size: 21px;
-    margin-top: 9.5px;
 }
 
 .product-chnges-icon .edit-icon {
@@ -561,14 +554,6 @@
 .delete-icon:hover {
     color: rgb(255, 80, 22);
     /* font-size: 27px; */
-}
-
-.dots-icon:hover {
-    border-radius: 20px;
-    /* margin: 1px; */
-    cursor: pointer;
-    color: rgba(90, 178, 216, 0.909);
-    font-size: 20px;
 }
 
 .cl-as-post {
@@ -595,7 +580,8 @@
     color: var(--color);
     border: 1px solid rgba(66, 65, 65, 0.911);
     position: relative;
-    bottom: 70px;
+    left: 240px;
+    bottom: 190px;
 }
 
 .add-new-post-btn a {
@@ -619,5 +605,11 @@
     cursor: pointer;
     text-align: end;
     position: relative;
-    left: 320px;
+    left: 360px;
+
+    
+.menu-option{
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
 }
