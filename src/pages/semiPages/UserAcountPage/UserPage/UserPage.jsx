@@ -8,7 +8,7 @@ import './userpage.css';
 import { BasicModal } from './BasicModal/modal';
 import ProfileColumn from './ProfileBlock/ProfileColumn';
 import ConfirmDeleteModal from './DeleteModal/Deletemodal';
-import LongMenu from './optionMenu';
+import LongMenu from './longMenu';
 
 const ProfilePage = ({ data }) => {
 
