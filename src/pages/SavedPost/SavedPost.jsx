@@ -1,33 +1,34 @@
-/**React Dependencies */
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-/**Internal Dependency */
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import './savePost.css';
 
-/**external dependecies */
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-
 const SavedProducts = () => {
-    const savedProducts = useSelector((state) => state.savedPosts);
+    const [savedProducts, setSavedProducts] = useState([]);
 
-    console.log('aniSAVEDPOS', savedProducts)
+    useEffect(() => {
+        const storedSavedProducts = JSON.parse(localStorage.getItem("bookmarkedProductsList")) || [];
+        setSavedProducts(storedSavedProducts);
+    }, []);
 
-    return (<>
+    return (
         <div className="saved-semiConatiner">
             <div className="saved-products-container">
                 <h1>Your saved items..</h1>
                 <div className="saved-products-list">
                     {savedProducts.length === 0 ? (
-                        <p className="saved-cl-page">No products saved yet! <br /> <span><Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link></span></p>
-
+                        <p className="saved-cl-page">
+                            No products saved yet! <br />
+                            <span>
+                                <Link to={'/'}>BACK TO HOME <ArrowForwardIosIcon className="arr" /></Link>
+                            </span>
+                        </p>
                     ) : (
                         savedProducts.map((product) => (
-                            <div className="fluid-post">
+                            <div className="fluid-post" key={product.id}>
                                 <div className="re-container">
                                     <div className="product-fluid">
-                                        <div key={product.id} className="products">
+                                        <div className="products">
                                             <div className="product-box">
                                                 <div className="product-img">
                                                     <img src={product.image} alt="product" />
@@ -49,7 +50,6 @@ const SavedProducts = () => {
                                                     A unique collection of hand-drawn doodles perfect for creative projects and designs.
                                                 </p>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@ const SavedProducts = () => {
                 </div>
             </div>
         </div>
-    </>
     );
 };
+
 export default SavedProducts;
