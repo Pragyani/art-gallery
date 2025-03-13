@@ -18,20 +18,22 @@ function MainContent({ productData }) {
   const showSidebar = location.pathname !== '/profilepage';
 
   return (
-    <div className="main-content">
-      {showSidebar && <Sidebar />}
-      <div className="content">
-        <Routes>
-          <Route path="/" element={<Home data={productData} />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/your-account" element={<AccountPage />} />
-          <Route path="/profilepage" element={<ProfilePage data={productData} />} />
-          <Route path="/saved-post" element={<SavedPost />} />
-          <Route path="/add-to-cart" element={<CartPage />} />
-          <Route path="/popular-page" element={<PopularPost />} />
-        </Routes>
+    <>
+      <div className="main-content">
+        {showSidebar && <Sidebar />}
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home data={productData} />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/your-account" element={<AccountPage />} />
+            <Route path="/profilepage" element={<ProfilePage data={productData} />} />
+            <Route path="/saved-post" element={<SavedPost />} />
+            <Route path="/add-to-cart" element={<CartPage />} />
+            <Route path="/popular-page" element={<PopularPost />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 export default MainContent;
